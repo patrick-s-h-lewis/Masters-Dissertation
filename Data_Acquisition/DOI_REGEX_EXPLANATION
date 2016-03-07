@@ -1,0 +1,9 @@
+\b(10[.][0-9]{3,}(?:[.][0-9]+)*/(?:(?!["&\'])\S)+)
+\b reject all words that do not start with required pattern
+10[.] recogonise '10.'
+[0-9]{3,} recognise 3 or more integers in sequence
+(?:[.][0-9]+) recogise one or more optional integer sequence subdivisions after full stop
+*/ recognise prefix-suffix divider
+?:(?!["&']) recognise all characters, unless they are "&' 
+\S finish matching when whitespace is detected
++ match one or more patterns
