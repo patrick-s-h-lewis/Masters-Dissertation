@@ -1,16 +1,47 @@
-\begin{thebibliography}{1}
+\begin{thebibliography}{5}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
   \providecommand{\doi}[1]{doi: #1}\else
   \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
 
-\bibitem[Einstein(1905)]{einstein}
-Albert Einstein.
-\newblock {Zur Elektrodynamik bewegter K{\"o}rper}. ({German}) [{On} the
-  electrodynamics of moving bodies].
-\newblock \emph{Annalen der Physik}, 322\penalty0 (10):\penalty0 891--921,
-  1905.
-\newblock \doi{http://dx.doi.org/10.1002/andp.19053221004}.
+\bibitem[Mikolov et~al.(2013{\natexlab{a}})Mikolov, Sutskever, Chen, Corrado,
+  and Dean]{word2vec2}
+Tomas Mikolov, Ilya Sutskever, Kai Chen, Greg Corrado, and Jeffrey Dean.
+\newblock Distributed representations of words and phrases and their
+  compositionality.
+\newblock \emph{CoRR}, abs/1310.4546, 2013{\natexlab{a}}.
+\newblock URL \url{http://arxiv.org/abs/1310.4546}.
+
+\bibitem[Mikolov et~al.(2013{\natexlab{b}})Mikolov, tau Yih, and
+  Zweig]{word2veckingqueen}
+Tomas Mikolov, Wen tau Yih, and Geoffrey Zweig.
+\newblock Linguistic regularities in continuous space word representations.
+\newblock In \emph{Proceedings of the 2013 Conference of the North American
+  Chapter of the Association for Computational Linguistics: Human Language
+  Technologies (NAACL-HLT-2013)}. Association for Computational Linguistics,
+  May 2013{\natexlab{b}}.
+\newblock URL
+  \url{http://research.microsoft.com/apps/pubs/default.aspx?id=189726}.
+
+\bibitem[Mikolov et~al.(2013{\natexlab{c}})Mikolov, Chen, Corrado, and
+  Dean]{word2vec1}
+Tomas Mikolov, Kai Chen, Greg Corrado, and Jeffrey Dean.
+\newblock Efficient estimation of word representations in vector space.
+\newblock \emph{CoRR}, abs/1301.3781, 2013{\natexlab{c}}.
+\newblock URL \url{http://arxiv.org/abs/1301.3781}.
+
+\bibitem[{\v R}eh{\r u}{\v r}ek and Sojka(2010)]{gensim}
+Radim {\v R}eh{\r u}{\v r}ek and Petr Sojka.
+\newblock {Software Framework for Topic Modelling with Large Corpora}.
+\newblock In \emph{{Proceedings of the LREC 2010 Workshop on New Challenges for
+  NLP Frameworks}}, pages 45--50, Valletta, Malta, May 2010. ELRA.
+\newblock \url{http://is.muni.cz/publication/884893/en}.
+
+\bibitem[Le and Mikolov(2014)]{doc2vec}
+Quoc~V. Le and Tomas Mikolov.
+\newblock Distributed representations of sentences and documents.
+\newblock \emph{CoRR}, abs/1405.4053, 2014.
+\newblock URL \url{http://arxiv.org/abs/1405.4053}.
 
 \end{thebibliography}

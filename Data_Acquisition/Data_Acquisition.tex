@@ -184,7 +184,7 @@ The overall efficiency of the process is 56.4\%. This is mainly down to ACS ban 
      \label{fig:LARGESANK}
 \end{figure}
 
-The successfully captured 714,370 records were then inspected and merged with the UK results. Records were then rejected with short titles or short abstracts (likely to be addenda, informal articles, retractions etc.) Records were also removed if the majority of the title and abstract were not written in acscii characters \footnote{ascii is an encoding for English characters a-z, A-Z, some punctuation and 1-9.} (removing majority Japanese and Chinese script). This was done to provide better quality data for training the algorithm described in chapter \ref{chapt:ALGORITHM}. This filtering resulted in a final database of 464712 articles. The entire database formation process is shown in figure \ref{fig:DATABASES}.
+The successfully captured 714,370 records were then inspected and merged with the UK results. Records were then rejected with short titles or short abstracts (likely to be addenda, informal articles, retractions etc.) Records were also removed if the majority of the title and abstract were not written in acscii characters \footnote{ascii is an encoding for English characters a-z, A-Z, some punctuation and 1-9.} (removing majority Japanese and Chinese script). This was done to provide better quality data for training the algorithm described in chapter \ref{chapt:ALGORITHM}. This filtering resulted in a final training database of 464712 articles. This dataset is henceforth referred to as \emph{the training dataset}. The entire database formation process is shown in figure \ref{fig:DATABASES}.
 \begin{figure}[H]
     \centering
     \textbf{Summary of Data Preparation}\par\medskip
@@ -196,6 +196,7 @@ The successfully captured 714,370 records were then inspected and merged with th
 
 It was instructive to examine these databases and derive some simple statistical results. The following section briefly explores some of these.
 \subsubsection{Observations}
+\label{sec:CORPUSOBSERVATIONS}
 The publisher `market share' can be approximated from examining the Large Scale Scape Doi database, shown in \ref{fig:PUBPI}. 
 \begin{figure}[H]
     \centering
@@ -231,7 +232,7 @@ A summary of the corpus statistics are shown below:
 \hline
 Total Word Count & 61,296,410\\
 Total Unique Words & 2,326,725\\
-Total Sentence Count & 464,712\\
+Total Document Count & 464,712\\
 Mode Words per Title &  11\\
 Mean Words per Title &  12.2\\
 Mode Words per Abstract & 156\\

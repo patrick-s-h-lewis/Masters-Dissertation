@@ -32,6 +32,7 @@ Table \ref{tab:BAGOFWORDS} shows the vector representations for Documents A and 
 \section{Bag of Citations}
 The \emph{bag of citations} model is also widely used for analysis for academic papers. The principle is the same as the bag of words model, but vector components are the presence or absence of citations.  
 \section{Word2Vec}
+\label{sec:WORD2VEC}
 The \emph{Bag of Words} model treats words as atomic units. This is beneficial for robust and fast computations. However, words can have degrees of similarity to each other, and these relationships are not captured by bag of words models \cite{WORD2VECKINGQUEEN}. Distributed representations of words have been used to address this for some time \cite{olddistributed}.
 
  A recent successful approach has been the Word2Vec algorithm \cite{word2vec1} \cite{word2vec2}. The Word2Vec algorithm attempts to use a neural net to represent words as vectors in a continuous space rather than a discrete one. Vectors for words with similar meanings will point in similar directions in this `Semantic space'.The Word2Vec algorithm is fed a corpus of language sentence by sentence. The words within the sentences have a semantic relationship, which the algorithm tries to infer. 
@@ -52,12 +53,13 @@ The model has added sophistications built in to reduce the importance of very co
 \begin{figure}[H]
     \centering
     \textbf{Word Vector Relationships}\par\medskip
-    \includegraphics[scale=0.8]{Natural_Language_Processing/KINGQUEEN.png}
+    \includegraphics[scale=0.6]{Natural_Language_Processing/KINGQUEEN.png}
     \caption{Schematic Representation of how concepts can be represented in word vector space. Word2Vec is able to replicate this behaviour. The vector found by vec(‘King’)- vec(‘Man’)+vec(‘Woman’) is approximately equal to vec(‘Queen’). The model has been tested on thousands of similar examples\cite{word2vec2}\cite{word2veckingqueen}.}
      \label{fig:KINGQUEEN}
 \end{figure}
-Word2Vec models are able to represent concepts by vector algebraic operations on their word representations. Figure \ref{fig:KingQueen} shows one famous example a WORD2VEC model trained on the `Google News' text corpus was able to identify. 
+Word2Vec models are able to represent concepts by vector algebraic operations on their word representations. Figure \ref{fig:KingQueen} shows one famous example a Word2Vec model trained on the `Google News' text corpus was able to identify. 
 
-The nature of the collected metadata detailed in section \ref{sec:DATA_ACQUISITION} lends itself naturally to the WORD2VEC algorthim, as it is a large store of natural language,rich with encoded information. The focus of the machine learning analysis phase of the project was directed at applying the Word2Vec and related Doc2Vec algorithms to the dataset to try and automatically learn and classify chemical semantic concepts. These investigations are detailed in the following sections.
 \section{Doc2Vec}
-To Do
+The Doc2Vec algorithm \cite{gensim}(implementation of Paragraph Vectors \cite{doc2vec}) allows the Word2vec process to directly learn vectors that represent paragraphs. The CBOW model is adapted so that, in addition to word vectors, each document is associated with its own vector that contributes to the vector sum predictions in training. The result is that documents can be represented in their own semantic space.
+
+The nature of the collected metadata detailed in section \ref{sec:DATA_ACQUISITION} lends itself naturally to the Word2Vec and Doc2Vec algorithms, as it is a large store of natural language,rich with encoded information. The focus of the machine learning analysis phase of the project was directed at applying the Word2Vec and Doc2Vec algorithms to the dataset to try and automatically learn and classify chemical semantic concepts. These investigations are detailed in the following sections.

@@ -1,12 +1,130 @@
 \chapter{Algorithm Development}
 \label{chapt:ALGORITHM}
 \section{Premise}
-To Do
+The aim of the machine learning phase was to apply the Word2Vec and Doc2Vec algorithms to the training dataset described in \ref{chapt:DATA_ACQUISITION}. An article was considered to be represented by a document consisting of its title and abstract. The aim was to represent these documents as vectors in semantic space, so that advanced analyses could be performed. 
 \section{Data Sanitisation}
-To Do
+The documents (titles + abstracts) in the training dataset required preprocessing before  they effective used in training. The training process requires inputs to be as clean as possible in order to get good results (encapsulated by the well known computer science idiom `Garbage in, Garbage out'). 
+
+The first step was to cast all words to lower case, so that the algorithm did not produce different vectors for `Molecule' and `molecule'.
+
+The raw documents also frequently contained artefacts from the source webpages, such as unwanted white space, vestigial html tags, `newline' characters and carriage returns. The algorithm training a word vector for a `\textbackslash n' is clearly undesired behaviour, so these special symbols were all removed and whitespace normalised.
+
+It was also observed that, as unicode text scraped from a wide variety of sources, there was varied and reduntant punctuation. Punctuation would be treated as separate words by the algorithm, so had to be carefully removed. This was not straight forward as unicode has very wide variety of different punctuations. For example, unicode encodes 24 different types of hyphen. Table \ref{fig:punct} shows the punctuation that was filtered out of the documents. Large sections of unicode script (Non-western language) was also removed as the algorithm works best on a smaller vocabulary.
+
+\begin{figure}[H]
+    \centering
+    \textbf{Filtered Punctation }\par\medskip
+    \includegraphics[scale=0.2]{Algorithm/punct_table.png}
+    \caption{All the punctuation removed in scraping. Only these were found in appreciable quantities in the training dataset. }
+     \label{fig:punct}
+\end{figure}
+Removing hyphens and primes also meant chemical names were fragmented. This was considered acceptable as the fragment words had greater freedom than very specific (possibly singleton) fully formed words, e.g. \texttt{5-methyl-1-heptanol} is split to \texttt{5 methyl 1 heptanol}, this allows the \texttt{heptanol} fragment to be associated with other mentions of heptanol in the training set, rather than assoicate with much less frequent 5-methyl-1-heptanol. 
+
+Next, English stopwords were removed \footnote{Stopwords are commonly occurring words in a corpus that hold little information, e.g. ('the', 'a', 'and'...)} from the Porter stopwords corpus\cite{NLTK} \cite{Porter}. From inspection of the zipfian frequency table, (section \ref{sec:CORPUSOBSERVATIONS}), it was apparent that chemistry literature also generates stopwords. Table \ref{tab:CHEMSTOP} details `Chemistry' stopwords that were identified and removed, as they carried little specific information. 
+\begin{table}[h!]
+\begin{center}
+\caption{Chemistry stopwords}
+\begin{tabular}{||c|c|c|c|c||}
+\hline
+chemistry & containing & 7 & six & water\\
+structure & novel & 8 & seven & also\\
+structural & study & 9 & eight & method\\
+study & studies & 0 & nine & molecular\\
+new & 1 & zero & ten & studied\\
+using & 2 & one & phase& \\
+based & 3 & two & based& \\
+reaction & 4 & three & compounds & \\
+reactions & 5 & four & high & \\
+chemical & 6 & five & results & \\
+\hline
+
+\end{tabular}
+\end{center}
+\end{table}
+
+Finally, the processed words were sent through a `stemming algorithm'\footnote{A stemming algorithm seeks to map derived words onto the same root, such as polymer and polymers, but some also attempt more complex cases such as morphologic and morphology}. Several stemming algorithms were assessed (Porter \cite{porter}, Snowball \cite{snowball}\cite{nltk}, Lancaster \cite{lancaster} and the Wordnet Lemmatizer \cite{wordnet1},\cite{wordnet2},\cite{wordnet3}). The Snowball \footnote{Also known as Porter2}) stemmer was found to strike a good balance between making an appreciable number of contractions (Wordnet) whilst minimising conflations and over-contraction (Lancaster). See Table \ref{tab:stems}
+\begin{table}[h!]
+\begin{center}
+\caption{Stemming}
+\begin{tabular}{||c|c|c|c||}
+\hline
+Word & Porter Stemmed & Snowball Stemmed & Comment\\
+\hline     
+phyllenthus & phyllenthu & phyllenthus & Overagressive stemming by Porter\\
+\hline
+angularly & angularli & angular & Adverbs map to root better\\
+\hline
+infinitly & infinitli & infinit & \multirow{2}{*}{Snowball maps these to correct root}\\
+\cline{1-3}
+infinite & infinit & infinit&\\
+\hline
+\hline
+Word & Lancaster Stemmed & Snowball Stemmed & Comment\\
+\hline
+pigment & pig & pigment & Lancaster collapses too far\\
+\hline
+conductive & conduc & conduct & \multirow{2}{*}{Lancaster conflates these different words}\\
+\cline{1-3}
+conducive & conduc & conduct & \\
+\hline
+scripting & scripting & script & Lancaster doesn't consider present participles\\
+\hline
+aroma & arom & arom & \multirow{2}{*}{For chemistry work,preferable not to map aroma and aromatic}\\
+\cline{1-3}
+aromatic & arom & aromat & \\
+\hline
+\end{tabular}
+\end{center}
+\end{table}
+The document preprocessing pipeline is shown diagrammatically in figure \ref{fig:SANPIPE}:
+
+\begin{figure}[H]
+    \centering
+    \textbf{Pre processing pipeline}\par\medskip
+    \includegraphics[scale=0.2]{Algorithm/Data_Sanitation.png}
+    \caption{All documents in the training database were preprocessed with this pipeline schema before being used in training models}
+     \label{fig:SANPIPE}
+\end{figure}
+The process is best illustrated by real collected abstract from the dataset:
+
+$<$ p $>$
+\texttt{ n A 9-silafluorene-containing biphenolic monomer, 9,9-bis(4-hydroxyphenyl)-9-silafluorene, was prepared from 9,9-dichloro-9-silafluorene and employed for the synthesis of polyesters using a fluorene-based homoditopic acid chloride.} $< \setminus$ p $>$.
+\cite{sanex} 
+
+is processed into:
+
+\texttt{silafluoren biphenol monom bis hydroxyphenyl silafluoren prepar dichloro silafluoren employ synthesi polyest fluoren homoditop acid chlorid}
+
+Whilst difficult for a human to read, text order is preserved and low information words (or words with complicated, diverse meanings such as numbers) have been removed to give good quality input data. Note how chemical names have been fragmented so that more, simpler, chemical vectors can be learned, rather than the fewer complex vectors (\texttt{9,9-dichloro-9-silafluorene} vs \texttt{dichloro} and\texttt{silafluoren}).
+
 \section{Word2Vec Models}
-To Do
-\subsection{Aggregation Techniques}
-To Do
+The processed data was used to train two Word2Vec models using the gensim python implementation \cite{gensim}.The hyperparameters used for training were consistent for the two models.
+Training was carried out on all documents in the training dataset. The model was trained with sentences formed by simple splitting of documents using full stops\footnote{Whilst not perfect, this method was a good compromise for partitioning on actual sentences and false partitioning.}. One model was was trained using the CBOW architecture, the other using Skip-gram. After examination of different hyperparameters, the models were run using mainly default hyperparameters, representing good balance of specificity, speed and generality\cite{gensim}. Namely the hyper parameters used are detailed in table \ref{tab:hyperparams}.
+\begin{table}[h!]
+\begin{center}
+\label{tab:hyperparams}
+\caption{Word2vec Parameters}
+\begin{tabular}{||c|c||}
+\hline
+Model Parameter &CBOW and skipgram\\
+\hline
+Vector Dimensionality & 100\\
+Minimum word frequency & 1 (all words)\\
+Initial learning rate $\alpha$ & 0.025 \\
+Minimum learning rate $\alpha_{min}$&0.0001\\
+Epochs of training & 24\\
+Sliding word window size & 5\\
+Negative sampling & Yes \\
+Downsampling parameter & 0.001\\
+Hierarchical Softmax & No\\
+CBOW Mean: Yes\footnote{Not applicable for Skipgram. Vector mean of surrounding words is used for predicting current word, rather than vector sum.}
+\hline
+\end{tabular}
+\end{center}
+\end{table}
+In order to represent documents as vectors using these models, the component word vectors had to aggregated into a single vector. There were several possible aggregation techniques, described below.
+\subsection{TF-IDF}
+TF-IDF\footnote{Term-frequency Inverse-Document_Frequency} is an empirical measure for weighting the importance of words in a sentence. If averaging word vectors, it is intuitive equal weighting should not be given to information heavy words and trivial words. The TF-IDF weight, defined as 
+$$ $$
 \section{Doc2Vec Models}
 To Do
