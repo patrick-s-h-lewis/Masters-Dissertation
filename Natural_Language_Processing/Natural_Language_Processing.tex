@@ -1,11 +1,63 @@
 \chapter{Techniques for Language Processing}
 \section{Background}
-To Do
+Natural Language Processing (henceforth NLP) is the application of computer science to study, model and understand human languages using computers. Machine learning, a class of algorithms for fitting and predicting patterns in data, is a powerful technique for Natural Language processing. NLP of chemistry journal articles enables subtle patterns in the to be detected. This section explores approaches to representing journal articles in a quantitative manner.
 \section{Bag of Words}
-To Do
+A simple approach to representing a document is a \emph{bag of words} model. The document is split into component words in an unordered set. The model first computes the number of distinct words that occur in a corpus of documents, $N$. It then assigns a each document in the corpus an $N$ dimensional vector $\mathbf{v}$. If the document contains word $i$ 2 times, then $v_{i}$ is set to 2. A simple example is given below:
+
+Document A: \texttt{A good yield was obtained for a nucleophile}
+
+Document B: \texttt{The nucleophile is a good donor}
+\begin{table}[H]
+\label{tab:BAGOFWORDS}
+\caption{Bag of words}
+\begin{center}
+\begin{tabular}{||c|c|c||}
+\hline
+Vocabulary &  $\mathbf{v}_A$ & $\mathbf{v}_B$\\
+\hline
+A & 2 & 1\\
+Good & 1 & 1\\
+Nucleophile & 1 & 1 \\
+Yield & 1 & 0\\
+For & 1& 0\\
+Is & 0 & 1\\
+The & 1 & 0\\
+Donor & 0 & 1\\
+Was & 1 & 0\\
+\hline
+\end{tabular}
+\end{center}
+\end{table}
+Table \ref{tab:BAGOFWORDS} shows the vector representations for Documents A and B. The higher the scalar product of normalised $\mathbf{V}_A \cdot \mathbf{V}_A$, the more similar the documents are predicted to be. This model is used extensively in industry.
 \section{Bag of Citations}
-To Do
+The \emph{bag of citations} model is also widely used for analysis for academic papers. The principle is the same as the bag of words model, but vector components are the presence or absence of citations.  
 \section{Word2Vec}
-To Do
+The \emph{Bag of Words} model treats words as atomic units. This is beneficial for robust and fast computations. However, words can have degrees of similarity to each other, and these relationships are not captured by bag of words models \cite{WORD2VECKINGQUEEN}. Distributed representations of words have been used to address this for some time \cite{olddistributed}.
+
+ A recent successful approach has been the Word2Vec algorithm \cite{word2vec1} \cite{word2vec2}. The Word2Vec algorithm attempts to use a neural net to represent words as vectors in a continuous space rather than a discrete one. Vectors for words with similar meanings will point in similar directions in this `Semantic space'.The Word2Vec algorithm is fed a corpus of language sentence by sentence. The words within the sentences have a semantic relationship, which the algorithm tries to infer. 
+ 
+This is achieved with two architectures, the Continuous Bag of Words (henceforth CBOW) and skip-gram models. The CBOW architecture uses a neural net type learning algorithm to predict a word's vector by summing the vectors of the words that appear near it in a training sentence and comparing this to the model's current vector for the word. The skip-gram algorithm compares the predicted and current vectors of the words surrounding the current training word. By training with many input sentences, prediction vectors are gradually improved. 
+
+\begin{figure}[H]
+    \centering
+    \textbf{Word2Vec architectures}\par\medskip
+    \includegraphics[scale=0.8]{Natural_Language_Processing/cbow_v_skip.pdf}
+    \caption{The training architectures of the Word2Vec training algorithm. Word vectors are denoted $v(i)$ for word i. In CBOW word i is predicted by the vector found by summing vectors surrounding i, and $v(i)$ is adjusted to be closer to this prediction. In skip-gram, word i's vector is pairwise compared to its context words, here i-1 and i+1 as a basis to improve $v(i)$.)}
+     \label{fig:CBOWSKIP}
+\end{figure}
+
+The training process is shown in figure \ref{fig:CBOWSKIP}. CBOW uses a fixed window of words surround current training word. The order of words within the window does not matter, but because the window `slides' along as the algorithm considers words i+1, i+2... word order is represented in the model . In Skip-gram, a random number of nearby words are used for the prediction vectors for word i. 
+
+The model has added sophistications built in to reduce the importance of very commonly occurring words, and to identify phrases. The word vectors that are produced encapsulate both semantic and syntactic meanings and can be manipulated to represent concepts and relationships.
+\begin{figure}[H]
+    \centering
+    \textbf{Word Vector Relationships}\par\medskip
+    \includegraphics[scale=0.8]{Natural_Language_Processing/KINGQUEEN.png}
+    \caption{Schematic Representation of how concepts can be represented in word vector space. Word2Vec is able to replicate this behaviour. The vector found by vec(‘King’)- vec(‘Man’)+vec(‘Woman’) is approximately equal to vec(‘Queen’). The model has been tested on thousands of similar examples\cite{word2vec2}\cite{word2veckingqueen}.}
+     \label{fig:KINGQUEEN}
+\end{figure}
+Word2Vec models are able to represent concepts by vector algebraic operations on their word representations. Figure \ref{fig:KingQueen} shows one famous example a WORD2VEC model trained on the `Google News' text corpus was able to identify. 
+
+The nature of the collected metadata detailed in section \ref{sec:DATA_ACQUISITION} lends itself naturally to the WORD2VEC algorthim, as it is a large store of natural language,rich with encoded information. The focus of the machine learning analysis phase of the project was directed at applying the Word2Vec and related Doc2Vec algorithms to the dataset to try and automatically learn and classify chemical semantic concepts. These investigations are detailed in the following sections.
 \section{Doc2Vec}
 To Do

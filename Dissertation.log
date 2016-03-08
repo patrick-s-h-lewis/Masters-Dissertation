@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2014.10.14)  6 MAR 2016 00:28
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2014.10.14)  8 MAR 2016 00:19
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -246,14 +246,7 @@ Package: natbib 2010/09/13 8.31b (PWD, AO)
 LaTeX Info: Redefining \cite on input line 694.
 \c@NAT@ctr=\count104
 )
-(./Dissertation.aux
-
-LaTeX Warning: Label `sec:CROSSREFSCRAPE' multiply defined.
-
-
-LaTeX Warning: Label `tab:LARGESCRAPERES' multiply defined.
-
-)
+(./Dissertation.aux)
 \openout1 = `Dissertation.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 30.
@@ -369,23 +362,23 @@ ifier (name{page.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.34 \end{abstract}
-                    [1] (./Dissertation.tocpdfTeX warning (ext4): destination w
-ith the same identifier (name{page.1}) has been already used, duplicate ignored
-
-<to be read again> 
-                   \relax 
-l.31 ...{5}Validation of Algorithm}{22}{chapter.5}
-                                                   [1
-
-])
+                    [1] (./Dissertation.toc)
 \tf@toc=\write4
 \openout4 = `Dissertation.toc'.
 
- [2] (./Dissertation.lof)
+pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has 
+been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.36 \listoffigures
+                    [1
+
+] (./Dissertation.lof)
 \tf@lof=\write5
 \openout5 = `Dissertation.lof'.
 
- (./Introduction/Introduction.tex [3
+ (./Introduction/Introduction.tex
+[2
 
 ]
 Chapter 1.
@@ -413,12 +406,15 @@ File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10.95> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 9.
- [4
+ [3
 
 ])
-(./Data_Acquisition/Data_Acquisition.tex [5]
+(./Data_Acquisition/Data_Acquisition.tex [4]
 Chapter 2.
-<Data_Acquisition/html_tree.pdf, id=291, 690.58pt x 263.98625pt>
+
+LaTeX Warning: Reference `fig:HTMLTREE' on page 5 undefined on input line 8.
+
+<Data_Acquisition/html_tree.pdf, id=75, 690.58pt x 263.98625pt>
 File: Data_Acquisition/html_tree.pdf Graphic file (type pdf)
 
 <use Data_Acquisition/html_tree.pdf>
@@ -429,7 +425,7 @@ Overfull \hbox (65.14902pt too wide) in paragraph at lines 12--13
  [][] 
  []
 
-[6
+[5
 
  <./Data_Acquisition/html_tree.pdf>]
 Underfull \hbox (badness 10000) in paragraph at lines 29--30
@@ -456,15 +452,21 @@ Underfull \hbox (badness 10000) in paragraph at lines 32--33
  []
 
 
-LaTeX Warning: Reference `sec:SCRAPINGPROGRAM' on page 7 undefined on input lin
+LaTeX Warning: Reference `sec:DOI' on page 6 undefined on input line 38.
+
+
+LaTeX Warning: Reference `sec:SCRAPINGPROGRAM' on page 6 undefined on input lin
 e 38.
 
-[7]
+[6]
 
-Package natbib Warning: Citation `CROSSREF-FORMATION' on page 8 undefined on in
+Package natbib Warning: Citation `CROSSREF-FORMATION' on page 7 undefined on in
 put line 41.
 
-<Data_Acquisition/DOI2.png, id=314, 1987.425pt x 885.3075pt>
+
+LaTeX Warning: Reference `fig:DOI' on page 7 undefined on input line 41.
+
+<Data_Acquisition/DOI2.png, id=98, 1987.425pt x 885.3075pt>
 File: Data_Acquisition/DOI2.png Graphic file (type png)
 
 <use Data_Acquisition/DOI2.png>
@@ -495,13 +497,16 @@ Missing character: There is no ˜ in font cmr10!
 Missing character: There is no â in font cmr10!
 Missing character: There is no € in font cmr10!
 Missing character: There is no ™ in font cmr10!
-<Data_Acquisition/Regex.pdf, id=317, 637.38126pt x 262.9825pt>
+
+LaTeX Warning: Reference `fig:REGEX' on page 7 undefined on input line 51.
+
+<Data_Acquisition/Regex.pdf, id=100, 637.38126pt x 262.9825pt>
 File: Data_Acquisition/Regex.pdf Graphic file (type pdf)
 
 <use Data_Acquisition/Regex.pdf>
 Package pdftex.def Info: Data_Acquisition/Regex.pdf used on input line 55.
 (pdftex.def)             Requested size: 318.68985pt x 131.49092pt.
- [8 <./Data_Acquisition/DOI2.png>]
+ [7 <./Data_Acquisition/DOI2.png>]
 LaTeX Font Info:    Try loading font information for OMS+cmtt on input line 62.
 
 LaTeX Font Info:    No file OMScmtt.fd. on input line 62.
@@ -511,7 +516,10 @@ LaTeX Font Warning: Font shape `OMS/cmtt/m/n' undefined
 (Font)              using `OMS/cmsy/m/n' instead
 (Font)              for symbol `textbraceleft' on input line 62.
 
-<Data_Acquisition/Cherry.pdf, id=329, 897.3525pt x 352.31625pt>
+
+LaTeX Warning: Reference `fig:Cherry' on page 8 undefined on input line 65.
+
+<Data_Acquisition/Cherry.pdf, id=113, 897.3525pt x 352.31625pt>
 File: Data_Acquisition/Cherry.pdf Graphic file (type pdf)
 
 <use Data_Acquisition/Cherry.pdf>
@@ -522,13 +530,32 @@ Overfull \hbox (30.42146pt too wide) in paragraph at lines 69--70
  [][] 
  []
 
-[9 <./Data_Acquisition/Regex.pdf>]
 
-LaTeX Warning: Reference ` sec:CROSSREFSCRAPE' on page 10 undefined on input li
-ne 91.
+LaTeX Warning: Reference `sec:DOI' on page 8 undefined on input line 70.
 
-[10 <./Data_Acquisition/Cherry.pdf>]
-<Data_Acquisition/uk_sankey.png, id=429, 6825.5pt x 2409.0pt>
+
+LaTeX Warning: Reference `sec:DOI' on page 8 undefined on input line 70.
+
+[8 <./Data_Acquisition/Regex.pdf>]
+
+LaTeX Warning: Reference `fig:Cherry' on page 9 undefined on input line 73.
+
+
+LaTeX Warning: Reference `sec:UKSCRAPE' on page 9 undefined on input line 91.
+
+
+LaTeX Warning: Reference ` sec:CROSSREFSCRAPE' on page 9 undefined on input lin
+e 91.
+
+
+LaTeX Warning: Reference `sec:SCRAPING_PROGRAM' on page 9 undefined on input li
+ne 95.
+
+
+LaTeX Warning: Reference `fig:UKSANK' on page 9 undefined on input line 118.
+
+[9 <./Data_Acquisition/Cherry.pdf>]
+<Data_Acquisition/uk_sankey.png, id=211, 6825.5pt x 2409.0pt>
 File: Data_Acquisition/uk_sankey.png Graphic file (type png)
 
 <use Data_Acquisition/uk_sankey.png>
@@ -540,8 +567,12 @@ Overfull \hbox (59.58015pt too wide) in paragraph at lines 123--124
  [][] 
  []
 
-[11] [12 <./Data_Acquisition/uk_sankey.png>]
-<Data_Acquisition/ACS_crash_line.png, id=447, 696.6828pt x 394.5942pt>
+[10] [11 <./Data_Acquisition/uk_sankey.png>]
+
+LaTeX Warning: Reference `sec:SCRAPEANALYSIS' on page 12 undefined on input lin
+e 138.
+
+<Data_Acquisition/ACS_crash_line.png, id=231, 696.6828pt x 394.5942pt>
 File: Data_Acquisition/ACS_crash_line.png Graphic file (type png)
 
 <use Data_Acquisition/ACS_crash_line.png>
@@ -553,12 +584,23 @@ Overfull \hbox (139.0933pt too wide) in paragraph at lines 150--151
  [][] 
  []
 
-[13]
+[12]
 
-LaTeX Warning: Reference `sec:LARGESCRAPERES' on page 14 undefined on input lin
+LaTeX Warning: Reference `fig:ACSBAN' on page 13 undefined on input line 154.
+
+
+LaTeX Warning: Reference `sec:LARGESCRAPERES' on page 13 undefined on input lin
 e 156.
 
-<Data_Acquisition/large_sankey.png, id=457, 6825.5pt x 2409.0pt>
+
+LaTeX Warning: Reference `sec:UKSCRAPE' on page 13 undefined on input line 178.
+
+
+
+LaTeX Warning: Reference `fig:LARGESANK' on page 13 undefined on input line 178
+.
+
+<Data_Acquisition/large_sankey.png, id=237, 6825.5pt x 2409.0pt>
 File: Data_Acquisition/large_sankey.png Graphic file (type png)
 
 <use Data_Acquisition/large_sankey.png>
@@ -573,16 +615,27 @@ Overfull \hbox (59.58015pt too wide) in paragraph at lines 182--183
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[14 <./Data_Acquisition/ACS_crash_line.png>]
-<Data_Acquisition/Databases.pdf, id=466, 484.81125pt x 288.07625pt>
+[13 <./Data_Acquisition/ACS_crash_line.png>]
+
+LaTeX Warning: Reference `chapt:ALGORITHM' on page 14 undefined on input line 1
+87.
+
+
+LaTeX Warning: Reference `fig:DATABASES' on page 14 undefined on input line 187
+.
+
+<Data_Acquisition/Databases.pdf, id=246, 484.81125pt x 288.07625pt>
 File: Data_Acquisition/Databases.pdf Graphic file (type pdf)
 
 <use Data_Acquisition/Databases.pdf>
 Package pdftex.def Info: Data_Acquisition/Databases.pdf used on input line 191.
 
 (pdftex.def)             Requested size: 290.88899pt x 172.84708pt.
- [15 <./Data_Acquisition/large_sankey.png>] <Data_Acquisition/publishers_pie.pn
-g, id=475, 1148.29pt x 496.85625pt>
+ [14 <./Data_Acquisition/large_sankey.png>]
+
+LaTeX Warning: Reference `fig:PUBPI' on page 15 undefined on input line 199.
+
+<Data_Acquisition/publishers_pie.png, id=255, 1148.29pt x 496.85625pt>
 File: Data_Acquisition/publishers_pie.png Graphic file (type png)
 
 <use Data_Acquisition/publishers_pie.png>
@@ -594,61 +647,175 @@ Overfull \hbox (41.05418pt too wide) in paragraph at lines 203--204
  [][] 
  []
 
-[16 <./Data_Acquisition/Databases.pdf>]
+[15 <./Data_Acquisition/Databases.pdf>]
 
-LaTeX Warning: Reference `UKPUBPI' on page 17 undefined on input line 207.
+LaTeX Warning: Reference `UKPUBPI' on page 16 undefined on input line 207.
 
-<Data_Acquisition/uk_publishers_pie.png, id=507, 1009.7725pt x 470.75874pt>
+<Data_Acquisition/uk_publishers_pie.png, id=289, 1009.7725pt x 470.75874pt>
 File: Data_Acquisition/uk_publishers_pie.png Graphic file (type png)
 
 <use Data_Acquisition/uk_publishers_pie.png>
 Package pdftex.def Info: Data_Acquisition/uk_publishers_pie.png used on input l
 ine 212.
 (pdftex.def)             Requested size: 403.90184pt x 188.30016pt.
- [17 <./Data_Acquisition/publishers_pie.png>]
+ [16 <./Data_Acquisition/publishers_pie.png>]
 
-Package natbib Warning: Citation `zipf' on page 18 undefined on input line 217.
+Package natbib Warning: Citation `zipf' on page 17 undefined on input line 217.
 
 
 
-LaTeX Warning: Reference `fig:zipf' on page 18 undefined on input line 217.
+LaTeX Warning: Reference `fig:ZIPF' on page 17 undefined on input line 217.
 
-<Data_Acquisition/zipf.png, id=515, 513.8397pt x 359.9046pt>
+<Data_Acquisition/zipf.png, id=297, 513.8397pt x 359.9046pt>
 File: Data_Acquisition/zipf.png Graphic file (type png)
 
 <use Data_Acquisition/zipf.png>
-Package pdftex.def Info: Data_Acquisition/zipf.png used on input line 220.
+Package pdftex.def Info: Data_Acquisition/zipf.png used on input line 221.
 (pdftex.def)             Requested size: 205.53224pt x 143.95929pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-) (./Natural_Language_Processing/Natural_Language_Processing.tex [18 <./Data_Ac
-quisition/uk_publishers_pie.png> <./Data_Acquisition/zipf.png>] [19]
+) (./Natural_Language_Processing/Natural_Language_Processing.tex [17 <./Data_Ac
+quisition/uk_publishers_pie.png> <./Data_Acquisition/zipf.png>] [18]
 Chapter 3.
-) (./Algorithm/Algorithm.tex [20
+[19
 
 ]
+
+Package natbib Warning: Citation `WORD2VECKINGQUEEN' on page 20 undefined on in
+put line 35.
+
+
+Package natbib Warning: Citation `olddistributed' on page 20 undefined on input
+ line 35.
+
+
+Package natbib Warning: Citation `word2vec1' on page 20 undefined on input line
+ 37.
+
+
+Package natbib Warning: Citation `word2vec2' on page 20 undefined on input line
+ 37.
+
+
+<Natural_Language_Processing/cbow_v_skip.pdf, id=328, 616.3025pt x 288.07625pt>
+File: Natural_Language_Processing/cbow_v_skip.pdf Graphic file (type pdf)
+<use Natural_Language_Processing/cbow_v_skip.pdf>
+Package pdftex.def Info: Natural_Language_Processing/cbow_v_skip.pdf used on in
+put line 44.
+(pdftex.def)             Requested size: 493.04266pt x 230.4613pt.
+
+Overfull \hbox (74.78899pt too wide) in paragraph at lines 44--45
+ [][] 
+ []
+
+[20]
+
+LaTeX Warning: Reference `fig:CBOWSKIP' on page 21 undefined on input line 49.
+
+<Natural_Language_Processing/KINGQUEEN.png, id=335, 268.3626pt x 247.6452pt>
+File: Natural_Language_Processing/KINGQUEEN.png Graphic file (type png)
+
+<use Natural_Language_Processing/KINGQUEEN.png>
+Package pdftex.def Info: Natural_Language_Processing/KINGQUEEN.png used on inpu
+t line 55.
+(pdftex.def)             Requested size: 214.69037pt x 198.11641pt.
+Missing character: There is no â in font cmr10!
+Missing character: There is no € in font cmr10!
+Missing character: There is no ˜ in font cmr10!
+Missing character: There is no â in font cmr10!
+Missing character: There is no € in font cmr10!
+Missing character: There is no ™ in font cmr10!
+Missing character: There is no â in font cmr10!
+Missing character: There is no € in font cmr10!
+Missing character: There is no ˜ in font cmr10!
+Missing character: There is no â in font cmr10!
+Missing character: There is no € in font cmr10!
+Missing character: There is no ™ in font cmr10!
+Missing character: There is no â in font cmr10!
+Missing character: There is no € in font cmr10!
+Missing character: There is no ˜ in font cmr10!
+Missing character: There is no â in font cmr10!
+Missing character: There is no € in font cmr10!
+Missing character: There is no ™ in font cmr10!
+Missing character: There is no â in font cmr10!
+Missing character: There is no € in font cmr10!
+Missing character: There is no ˜ in font cmr10!
+Missing character: There is no â in font cmr10!
+Missing character: There is no € in font cmr10!
+Missing character: There is no ™ in font cmr10!
+
+
+Package natbib Warning: Citation `word2vec2' on page 21 undefined on input line
+ 56.
+
+
+Package natbib Warning: Citation `word2veckingqueen' on page 21 undefined on in
+put line 56.
+
+Missing character: There is no â in font cmr10!
+Missing character: There is no € in font cmr10!
+Missing character: There is no ˜ in font cmr10!
+Missing character: There is no â in font cmr10!
+Missing character: There is no € in font cmr10!
+Missing character: There is no ™ in font cmr10!
+Missing character: There is no â in font cmr10!
+Missing character: There is no € in font cmr10!
+Missing character: There is no ˜ in font cmr10!
+Missing character: There is no â in font cmr10!
+Missing character: There is no € in font cmr10!
+Missing character: There is no ™ in font cmr10!
+Missing character: There is no â in font cmr10!
+Missing character: There is no € in font cmr10!
+Missing character: There is no ˜ in font cmr10!
+Missing character: There is no â in font cmr10!
+Missing character: There is no € in font cmr10!
+Missing character: There is no ™ in font cmr10!
+Missing character: There is no â in font cmr10!
+Missing character: There is no € in font cmr10!
+Missing character: There is no ˜ in font cmr10!
+Missing character: There is no â in font cmr10!
+Missing character: There is no € in font cmr10!
+Missing character: There is no ™ in font cmr10!
+
+Package natbib Warning: Citation `word2vec2' on page 21 undefined on input line
+ 56.
+
+
+Package natbib Warning: Citation `word2veckingqueen' on page 21 undefined on in
+put line 56.
+
+[21 <./Natural_Language_Processing/cbow_v_skip.pdf>]
+
+LaTeX Warning: Reference `fig:KingQueen' on page 22 undefined on input line 59.
+
+
+
+LaTeX Warning: Reference `sec:DATA_ACQUISITION' on page 22 undefined on input l
+ine 61.
+
+) (./Algorithm/Algorithm.tex [22 <./Natural_Language_Processing/KINGQUEEN.png>]
 Chapter 4.
-) (./Validation/Validation.tex [21
+) (./Validation/Validation.tex [23
 
 ]
 Chapter 5.
-) (./Analysis/Analysis.tex [22
+) (./Analysis/Analysis.tex [24
 
 ]
 Chapter 6.
-) (./Conclusions/Conclusions.tex [23
+) (./Conclusions/Conclusions.tex [25
 
 ]
 Chapter 7.
-) (./Recommendations/Recommendations.tex [24
+) (./Recommendations/Recommendations.tex [26
 
 ]
 Chapter 8.
-) (./Dissertation.bbl [25
+) (./Dissertation.bbl [27
 
-]) (./Appendix/Appendix.tex [26
+]) (./Appendix/Appendix.tex [28
 
 ]
 Chapter 9.
@@ -657,13 +824,13 @@ Overfull \hbox (388.03348pt too wide) in paragraph at lines 3--44
 [] 
  []
 
-[27
+[29
 
 ]
 Overfull \vbox (41.01297pt too high) has occurred while \output is active []
 
 
-[28])
+[30])
 
 Package natbib Warning: There were undefined citations.
 
@@ -678,14 +845,25 @@ Underfull \hbox (badness 10000) in paragraph at lines 45--48
 
  []
 
-[29]
+[31]
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 48.
- (./Dissertation.aux)
+ (./Dissertation.aux
+
+Package natbib Warning: Citation(s) may have changed.
+(natbib)                Rerun to get citations correct.
+
+)
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 48.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 48.
-Package rerunfilecheck Info: File `Dissertation.out' has not changed.
-(rerunfilecheck)             Checksum: A78349405149F8AE3E8D64ADE3CFF4C3;2609.
 
+
+Package rerunfilecheck Warning: File `Dissertation.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `Dissertation.out':
+(rerunfilecheck)             Before: ED3C1E65C384C2A94DE3B5B551CC7D8A;578
+(rerunfilecheck)             After:  A78349405149F8AE3E8D64ADE3CFF4C3;2609.
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
@@ -693,36 +871,38 @@ LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 LaTeX Warning: There were undefined references.
 
 
-LaTeX Warning: There were multiply-defined labels.
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 48.
  ) 
 Here is how much of TeX's memory you used:
  6925 strings out of 493117
- 102533 string characters out of 6135432
- 202723 words of memory out of 5000000
- 10141 multiletter control sequences out of 15000+600000
- 14970 words of font info for 57 fonts, out of 8000000 for 9000
+ 102788 string characters out of 6135432
+ 198096 words of memory out of 5000000
+ 10132 multiletter control sequences out of 15000+600000
+ 15591 words of font info for 59 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 29i,8n,28p,801b,485s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 29i,10n,28p,801b,485s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb
 ></usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb>
 </usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb></
-usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></us
-r/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/
-local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/lo
-cal/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local
-/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/te
-xlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/local/texli
-ve/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texliv
-e/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb></usr/local/texlive/
-2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2
-014/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/local/texlive/20
-14/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb>
-Output written on Dissertation.pdf (31 pages, 1423834 bytes).
+usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></u
+sr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr
+/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/l
+ocal/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/loc
+al/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/local
+/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/te
+xlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texli
+ve/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/local/texlive/
+2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2
+014/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb></usr/local/texlive/201
+4/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2014
+/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/local/texlive/2014/
+texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb>
+Output written on Dissertation.pdf (33 pages, 1497399 bytes).
 PDF statistics:
- 712 PDF objects out of 1000 (max. 8388607)
- 594 compressed objects within 6 object streams
- 105 named destinations out of 1000 (max. 500000)
- 384 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 554 PDF objects out of 1000 (max. 8388607)
+ 431 compressed objects within 5 object streams
+ 110 named destinations out of 1000 (max. 500000)
+ 146 words of extra memory for PDF output out of 10000 (max. 10000000)
 
