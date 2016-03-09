@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2014.10.14)  4 MAR 2016 19:38
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2014.10.14)  8 MAR 2016 23:42
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -68,15 +68,6 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <7> on input line 3.
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <5> on input line 3.
-! Undefined control sequence.
-l.4 \toprule
-            
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
 Missing character: There is no D in font nullfont!
 Missing character: There is no e in font nullfont!
 Missing character: There is no p in font nullfont!
@@ -87,9 +78,9 @@ Missing character: There is no m in font nullfont!
 Missing character: There is no e in font nullfont!
 Missing character: There is no n in font nullfont!
 Missing character: There is no t in font nullfont!
-Missing character: There is no u in font nullfont!
-Missing character: There is no r in font nullfont!
-Missing character: There is no l in font nullfont!
+Missing character: There is no U in font nullfont!
+Missing character: There is no R in font nullfont!
+Missing character: There is no L in font nullfont!
 Missing character: There is no A in font nullfont!
 Missing character: There is no b in font nullfont!
 Missing character: There is no e in font nullfont!
@@ -2362,6 +2353,36 @@ Missing character: There is no c in font nullfont!
 Missing character: There is no e in font nullfont!
 Missing character: There is no s in font nullfont!
 Missing character: There is no / in font nullfont!
+
+Overfull \hbox (20.0pt too wide) in paragraph at lines 1--44
+[]
+ []
+
+
+! LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.45  \begin{tabular}
+                     {||l|l}
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+Missing character: There is no D in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no p in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no m in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no U in font nullfont!
+Missing character: There is no R in font nullfont!
+Missing character: There is no L in font nullfont!
 Missing character: There is no N in font nullfont!
 Missing character: There is no o in font nullfont!
 Missing character: There is no t in font nullfont!
@@ -2373,7 +2394,7 @@ Missing character: There is no h in font nullfont!
 Missing character: There is no a in font nullfont!
 Missing character: There is no m in font nullfont!
 ! Undefined control sequence.
-l.43  Nottingham                         & \url
+l.49  Nottingham                         & \url
                                                {http://www.nottingham.ac.uk/...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -2445,7 +2466,7 @@ Missing character: There is no i in font nullfont!
 Missing character: There is no t in font nullfont!
 Missing character: There is no y in font nullfont!
 ! Undefined control sequence.
-l.44  Nottingham Trent University        & \url
+l.50  Nottingham Trent University        & \url
                                                {http://www.ntu.ac.uk/sat/abo...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -2516,8 +2537,18 @@ Missing character: There is no O in font nullfont!
 Missing character: There is no p in font nullfont!
 Missing character: There is no e in font nullfont!
 Missing character: There is no n in font nullfont!
+Missing character: There is no U in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no v in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no y in font nullfont!
 ! Undefined control sequence.
-l.45  Open                               & \url
+l.51  Open Univserity                    & \url
                                                {http://www.open.ac.uk/scienc...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -2572,7 +2603,7 @@ Missing character: There is no o in font nullfont!
 Missing character: There is no r in font nullfont!
 Missing character: There is no d in font nullfont!
 ! Undefined control sequence.
-l.46  Oxford                             & \url
+l.52  Oxford                             & \url
                                                {http://www.chem.ox.ac.uk/}  ...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -2635,7 +2666,7 @@ Missing character: There is no a in font nullfont!
 Missing character: There is no n in font nullfont!
 Missing character: There is no d in font nullfont!
 ! Undefined control sequence.
-l.47  University of the West of Scotland & \url
+l.53  University of the West of Scotland & \url
                                                {http://www.uws.ac.uk/schools...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -2746,7 +2777,7 @@ Missing character: There is no u in font nullfont!
 Missing character: There is no t in font nullfont!
 Missing character: There is no h in font nullfont!
 ! Undefined control sequence.
-l.48  Plymouth                           & \url
+l.54  Plymouth                           & \url
                                                {https://www.plymouth.ac.uk/s...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -2859,7 +2890,7 @@ Missing character: There is no i in font nullfont!
 Missing character: There is no n in font nullfont!
 Missing character: There is no g in font nullfont!
 ! Undefined control sequence.
-l.49  Reading                            & \url
+l.55  Reading                            & \url
                                                {http://www.reading.ac.uk/che...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -2915,7 +2946,7 @@ Missing character: There is no d in font nullfont!
 Missing character: There is no o in font nullfont!
 Missing character: There is no n in font nullfont!
 ! Undefined control sequence.
-l.50  Robert Gordon                      & \url
+l.56  Robert Gordon                      & \url
                                                {http://www.rgu.ac.uk/about/f...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -3065,7 +3096,7 @@ Missing character: There is no e in font nullfont!
 Missing character: There is no w in font nullfont!
 Missing character: There is no s in font nullfont!
 ! Undefined control sequence.
-l.51  St Andrews                         & \url
+l.57  St Andrews                         & \url
                                                {http://ch-www.st-and.ac.uk/}...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -3108,7 +3139,7 @@ Missing character: There is no o in font nullfont!
 Missing character: There is no r in font nullfont!
 Missing character: There is no d in font nullfont!
 ! Undefined control sequence.
-l.52  Salford                            & \url
+l.58  Salford                            & \url
                                                {http://www.salford.ac.uk/env...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -3196,7 +3227,7 @@ Missing character: There is no e in font nullfont!
 Missing character: There is no l in font nullfont!
 Missing character: There is no d in font nullfont!
 ! Undefined control sequence.
-l.53  Sheffield                          & \url
+l.59  Sheffield                          & \url
                                                {http://www.sheffield.ac.uk/c...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -3256,7 +3287,7 @@ Missing character: There is no l in font nullfont!
 Missing character: There is no a in font nullfont!
 Missing character: There is no m in font nullfont!
 ! Undefined control sequence.
-l.54  Sheffield Hallam                   & \url
+l.60  Sheffield Hallam                   & \url
                                                {http://www.shu.ac.uk/schools...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -3313,7 +3344,7 @@ Missing character: There is no l in font nullfont!
 Missing character: There is no e in font nullfont!
 Missing character: There is no s in font nullfont!
 ! Undefined control sequence.
-l.55  South Wales                        & \url
+l.61  South Wales                        & \url
                                                {http://www.southwales.ac.uk/...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -3371,7 +3402,7 @@ Missing character: There is no t in font nullfont!
 Missing character: There is no o in font nullfont!
 Missing character: There is no n in font nullfont!
 ! Undefined control sequence.
-l.56  Southampton                        & \url
+l.62  Southampton                        & \url
                                                {http://www.soton.ac.uk/chemi...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -3424,7 +3455,7 @@ Missing character: There is no y in font nullfont!
 Missing character: There is no d in font nullfont!
 Missing character: There is no e in font nullfont!
 ! Undefined control sequence.
-l.57  Strathclyde                        & \url
+l.63  Strathclyde                        & \url
                                                {http://www.strath.ac.uk/chem...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -3477,7 +3508,7 @@ Missing character: There is no a in font nullfont!
 Missing character: There is no n in font nullfont!
 Missing character: There is no d in font nullfont!
 ! Undefined control sequence.
-l.58  Sunderland                         & \url
+l.64  Sunderland                         & \url
                                                {http://www.sunderland.ac.uk/...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -3572,7 +3603,7 @@ Missing character: There is no r in font nullfont!
 Missing character: There is no e in font nullfont!
 Missing character: There is no y in font nullfont!
 ! Undefined control sequence.
-l.59  Surrey                             & \url
+l.65  Surrey                             & \url
                                                {http://www.surrey.ac.uk/chem...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -3621,7 +3652,7 @@ Missing character: There is no s in font nullfont!
 Missing character: There is no e in font nullfont!
 Missing character: There is no x in font nullfont!
 ! Undefined control sequence.
-l.60  Sussex                             & \url
+l.66  Sussex                             & \url
                                                {http://www.sussex.ac.uk/chem...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -3672,7 +3703,7 @@ Missing character: There is no i in font nullfont!
 Missing character: There is no d in font nullfont!
 Missing character: There is no e in font nullfont!
 ! Undefined control sequence.
-l.61  Teesside                           & \url
+l.67  Teesside                           & \url
                                                {http://www.tees.ac.uk/school...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -3718,7 +3749,7 @@ Missing character: There is no U in font nullfont!
 Missing character: There is no E in font nullfont!
 Missing character: There is no A in font nullfont!
 ! Undefined control sequence.
-l.62  UEA                                & \url
+l.68  UEA                                & \url
                                                {http://www.uea.ac.uk/chemist...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -3764,7 +3795,7 @@ Missing character: There is no i in font nullfont!
 Missing character: There is no c in font nullfont!
 Missing character: There is no k in font nullfont!
 ! Undefined control sequence.
-l.63  Warwick                            & \url
+l.69  Warwick                            & \url
                                                {http://www2.warwick.ac.uk/fa...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -3821,7 +3852,7 @@ Missing character: There is no o in font nullfont!
 Missing character: There is no r in font nullfont!
 Missing character: There is no k in font nullfont!
 ! Undefined control sequence.
-l.64  York                               & \url
+l.70  York                               & \url
                                                {http://www.york.ac.uk/depts/...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -3881,7 +3912,7 @@ Missing character: There is no I in font nullfont!
 Missing character: There is no R in font nullfont!
 Missing character: There is no C in font nullfont!
 ! Undefined control sequence.
-l.65  Bradford Ploymer IRC               & \url
+l.71  Bradford Ploymer IRC               & \url
                                                {http://www.brad.ac.uk/acad/i...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -3936,7 +3967,7 @@ Missing character: There is no a in font nullfont!
 Missing character: There is no c in font nullfont!
 Missing character: There is no y in font nullfont!
 ! Undefined control sequence.
-l.66  Cardiff Pharmacy                   & \url
+l.72  Cardiff Pharmacy                   & \url
                                                {http://www.cardiff.ac.uk/pha...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -4018,7 +4049,7 @@ Missing character: There is no t in font nullfont!
 Missing character: There is no r in font nullfont!
 Missing character: There is no y in font nullfont!
 ! Undefined control sequence.
-l.67  Burbeck Chemistry                  & \url
+l.73  Burbeck Chemistry                  & \url
                                                {http://www.bbk.ac.uk/bcs/}  ...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -4074,7 +4105,7 @@ Missing character: There is no p in font nullfont!
 Missing character: There is no h in font nullfont!
 Missing character: There is no y in font nullfont!
 ! Undefined control sequence.
-l.68  Burbeck Crystallography            & \url
+l.74  Burbeck Crystallography            & \url
                                                {http://www.cryst.bbk.ac.uk/}...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -4131,7 +4162,7 @@ Missing character: There is no d in font nullfont!
 Missing character: There is no o in font nullfont!
 Missing character: There is no n in font nullfont!
 ! Undefined control sequence.
-l.69  Imperial College London            & \url
+l.75  Imperial College London            & \url
                                                {http://www.imperial.ac.uk/ch...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -4195,7 +4226,7 @@ Missing character: There is no d in font nullfont!
 Missing character: There is no o in font nullfont!
 Missing character: There is no n in font nullfont!
 ! Undefined control sequence.
-l.70  King's College London              & \url
+l.76  King's College London              & \url
                                                {http://www.kcl.ac.uk/nms/dep...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -4270,7 +4301,7 @@ Missing character: There is no d in font nullfont!
 Missing character: There is no o in font nullfont!
 Missing character: There is no n in font nullfont!
 ! Undefined control sequence.
-l.71  Queen Mary London                  & \url
+l.77  Queen Mary London                  & \url
                                                {http://www.sbcs.qmul.ac.uk/}...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -4325,7 +4356,7 @@ Missing character: There is no a in font nullfont!
 Missing character: There is no c in font nullfont!
 Missing character: There is no y in font nullfont!
 ! Undefined control sequence.
-l.72  UCL School of Pharmacy             & \url
+l.78  UCL School of Pharmacy             & \url
                                                {http://www.ucl.ac.uk/pharmac...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -4386,7 +4417,7 @@ Missing character: There is no d in font nullfont!
 Missing character: There is no o in font nullfont!
 Missing character: There is no n in font nullfont!
 ! Undefined control sequence.
-l.73  University College London          & \url
+l.79  University College London          & \url
                                                {http://www.ucl.ac.uk/chemist...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -4457,7 +4488,7 @@ Missing character: There is no t in font nullfont!
 Missing character: There is no r in font nullfont!
 Missing character: There is no y in font nullfont!
 ! Undefined control sequence.
-l.74  Sheffield Computational Chemistry  & \url
+l.80  Sheffield Computational Chemistry  & \url
                                                {http://www.sheffield.ac.uk/i...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -4535,10 +4566,10 @@ Missing character: There is no s in font nullfont!
 
  
 Here is how much of TeX's memory you used:
- 10 strings out of 493117
- 184 string characters out of 6135432
+ 9 strings out of 493117
+ 177 string characters out of 6135432
  65909 words of memory out of 5000000
- 3573 multiletter control sequences out of 15000+600000
+ 3572 multiletter control sequences out of 15000+600000
  3640 words of font info for 14 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  19i,7n,12p,212b,91s stack positions out of 5000i,500n,10000p,200000b,80000s

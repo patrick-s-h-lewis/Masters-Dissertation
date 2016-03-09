@@ -26,16 +26,17 @@
 \BOOKMARK [1][-]{section.4.1}{Premise}{chapter.4}% 26
 \BOOKMARK [1][-]{section.4.2}{Data Sanitisation}{chapter.4}% 27
 \BOOKMARK [1][-]{section.4.3}{Word2Vec Models}{chapter.4}% 28
-\BOOKMARK [2][-]{subsection.4.3.1}{Aggregation Techniques}{section.4.3}% 29
-\BOOKMARK [1][-]{section.4.4}{Doc2Vec Models}{chapter.4}% 30
-\BOOKMARK [0][-]{chapter.5}{Validation of Algorithm}{}% 31
-\BOOKMARK [1][-]{section.5.1}{Visualisation Techniques}{chapter.5}% 32
-\BOOKMARK [1][-]{section.5.2}{Simulated Inputs}{chapter.5}% 33
-\BOOKMARK [1][-]{section.5.3}{Word Similarities}{chapter.5}% 34
-\BOOKMARK [1][-]{section.5.4}{Document Similarities}{chapter.5}% 35
-\BOOKMARK [0][-]{chapter.6}{Analysis with Sample Dataset}{}% 36
-\BOOKMARK [0][-]{chapter.7}{Conclusions}{}% 37
-\BOOKMARK [0][-]{chapter.8}{Recommendations for Further Work}{}% 38
-\BOOKMARK [0][-]{chapter*.4}{Bibliography}{}% 39
-\BOOKMARK [0][-]{chapter.9}{Appendix}{}% 40
-\BOOKMARK [1][-]{section.9.1}{UK Departments scraped}{chapter.9}% 41
+\BOOKMARK [2][-]{subsection.4.3.1}{TF-IDF}{section.4.3}% 29
+\BOOKMARK [2][-]{subsection.4.3.2}{Aggregations}{section.4.3}% 30
+\BOOKMARK [1][-]{section.4.4}{Doc2Vec Models}{chapter.4}% 31
+\BOOKMARK [0][-]{chapter.5}{Validation of Algorithm}{}% 32
+\BOOKMARK [1][-]{section.5.1}{Visualisation Techniques}{chapter.5}% 33
+\BOOKMARK [1][-]{section.5.2}{Simulated Inputs}{chapter.5}% 34
+\BOOKMARK [1][-]{section.5.3}{Word Similarities}{chapter.5}% 35
+\BOOKMARK [1][-]{section.5.4}{Document Similarities}{chapter.5}% 36
+\BOOKMARK [0][-]{chapter.6}{Analysis with Sample Dataset}{}% 37
+\BOOKMARK [0][-]{chapter.7}{Conclusions}{}% 38
+\BOOKMARK [0][-]{chapter.8}{Recommendations for Further Work}{}% 39
+\BOOKMARK [0][-]{chapter*.4}{Bibliography}{}% 40
+\BOOKMARK [0][-]{chapter.9}{Appendix}{}% 41
+\BOOKMARK [1][-]{section.9.1}{UK Departments scraped}{chapter.9}% 42
