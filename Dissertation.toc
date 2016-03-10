@@ -1,42 +1,43 @@
-\contentsline {chapter}{List of Figures}{2}{chapter*.2}
-\contentsline {chapter}{\numberline {1}Introduction}{3}{chapter.1}
-\contentsline {section}{\numberline {1.1}Modern Scientific Publishing}{3}{section.1.1}
-\contentsline {section}{\numberline {1.2}Motivation}{3}{section.1.2}
-\contentsline {section}{\numberline {1.3}Aims}{3}{section.1.3}
-\contentsline {chapter}{\numberline {2}Data Acquisition}{5}{chapter.2}
-\contentsline {section}{\numberline {2.1}Background}{5}{section.2.1}
-\contentsline {subsection}{\numberline {2.1.1}HTML and Xpath}{5}{subsection.2.1.1}
-\contentsline {section}{\numberline {2.2}Automatic Xpath Generation}{6}{section.2.2}
-\contentsline {section}{\numberline {2.3}Collection Strategy}{6}{section.2.3}
-\contentsline {subsection}{\numberline {2.3.1}Document Object Identifiers}{7}{subsection.2.3.1}
-\contentsline {subsection}{\numberline {2.3.2}Scraping Program}{8}{subsection.2.3.2}
-\contentsline {section}{\numberline {2.4}Collection Results}{10}{section.2.4}
-\contentsline {subsection}{\numberline {2.4.1}UK University Department scraping}{10}{subsection.2.4.1}
-\contentsline {subsection}{\numberline {2.4.2}Very Large Scale Scraping}{11}{subsection.2.4.2}
-\contentsline {subsection}{\numberline {2.4.3}Problems with ACS and Taylor and Francis}{12}{subsection.2.4.3}
-\contentsline {subsection}{\numberline {2.4.4}Analysis of Collected data}{13}{subsection.2.4.4}
-\contentsline {subsubsection}{Observations}{15}{section*.3}
-\contentsline {chapter}{\numberline {3}Techniques for Language Processing}{19}{chapter.3}
-\contentsline {section}{\numberline {3.1}Background}{19}{section.3.1}
-\contentsline {section}{\numberline {3.2}Bag of Words}{19}{section.3.2}
-\contentsline {section}{\numberline {3.3}Bag of Citations}{20}{section.3.3}
-\contentsline {section}{\numberline {3.4}Word2Vec}{20}{section.3.4}
-\contentsline {section}{\numberline {3.5}Doc2Vec}{22}{section.3.5}
-\contentsline {chapter}{\numberline {4}Algorithm Development}{23}{chapter.4}
-\contentsline {section}{\numberline {4.1}Premise}{23}{section.4.1}
-\contentsline {section}{\numberline {4.2}Data Sanitisation}{23}{section.4.2}
-\contentsline {section}{\numberline {4.3}Word2Vec Models}{26}{section.4.3}
-\contentsline {subsection}{\numberline {4.3.1}TF-IDF}{27}{subsection.4.3.1}
-\contentsline {subsection}{\numberline {4.3.2}Aggregations}{27}{subsection.4.3.2}
-\contentsline {section}{\numberline {4.4}Doc2Vec Models}{27}{section.4.4}
-\contentsline {chapter}{\numberline {5}Validation of Algorithm}{29}{chapter.5}
-\contentsline {section}{\numberline {5.1}Visualisation Techniques}{29}{section.5.1}
-\contentsline {section}{\numberline {5.2}Simulated Inputs}{29}{section.5.2}
-\contentsline {section}{\numberline {5.3}Word Similarities}{29}{section.5.3}
-\contentsline {section}{\numberline {5.4}Document Similarities}{29}{section.5.4}
-\contentsline {chapter}{\numberline {6}Analysis with Sample Dataset}{30}{chapter.6}
-\contentsline {chapter}{\numberline {7}Conclusions}{31}{chapter.7}
-\contentsline {chapter}{\numberline {8}Recommendations for Further Work}{32}{chapter.8}
-\contentsline {chapter}{Bibliography}{33}{chapter*.4}
-\contentsline {chapter}{\numberline {9}Appendix}{34}{chapter.9}
-\contentsline {section}{\numberline {9.1}UK Departments scraped}{35}{section.9.1}
+\contentsline {chapter}{List of Figures}{3}{chapter*.2}
+\contentsline {chapter}{\numberline {1}Introduction}{5}{chapter.1}
+\contentsline {section}{\numberline {1.1}Modern Scientific Publishing}{5}{section.1.1}
+\contentsline {section}{\numberline {1.2}Motivation}{5}{section.1.2}
+\contentsline {section}{\numberline {1.3}Aims}{5}{section.1.3}
+\contentsline {chapter}{\numberline {2}Data Acquisition}{7}{chapter.2}
+\contentsline {section}{\numberline {2.1}Background}{7}{section.2.1}
+\contentsline {subsection}{\numberline {2.1.1}HTML and Xpath}{7}{subsection.2.1.1}
+\contentsline {section}{\numberline {2.2}Automatic Xpath Generation}{8}{section.2.2}
+\contentsline {section}{\numberline {2.3}Collection Strategy}{8}{section.2.3}
+\contentsline {subsection}{\numberline {2.3.1}Document Object Identifiers}{9}{subsection.2.3.1}
+\contentsline {subsection}{\numberline {2.3.2}Scraping Program}{10}{subsection.2.3.2}
+\contentsline {section}{\numberline {2.4}Collection Results}{12}{section.2.4}
+\contentsline {subsection}{\numberline {2.4.1}UK University Department scraping}{12}{subsection.2.4.1}
+\contentsline {subsection}{\numberline {2.4.2}Very Large Scale Scraping}{13}{subsection.2.4.2}
+\contentsline {subsection}{\numberline {2.4.3}Problems with ACS and Taylor and Francis}{14}{subsection.2.4.3}
+\contentsline {subsection}{\numberline {2.4.4}Analysis of Collected data}{15}{subsection.2.4.4}
+\contentsline {subsubsection}{Observations}{17}{section*.3}
+\contentsline {chapter}{\numberline {3}Techniques for Language Processing}{21}{chapter.3}
+\contentsline {section}{\numberline {3.1}Background}{21}{section.3.1}
+\contentsline {section}{\numberline {3.2}Bag of Words}{21}{section.3.2}
+\contentsline {section}{\numberline {3.3}Bag of Citations}{22}{section.3.3}
+\contentsline {section}{\numberline {3.4}Word2Vec}{22}{section.3.4}
+\contentsline {section}{\numberline {3.5}Doc2Vec}{24}{section.3.5}
+\contentsline {chapter}{\numberline {4}Algorithm Development}{25}{chapter.4}
+\contentsline {section}{\numberline {4.1}Premise}{25}{section.4.1}
+\contentsline {section}{\numberline {4.2}Data Sanitisation}{25}{section.4.2}
+\contentsline {section}{\numberline {4.3}Word2Vec Models}{28}{section.4.3}
+\contentsline {subsection}{\numberline {4.3.1}TF-IDF}{29}{subsection.4.3.1}
+\contentsline {subsection}{\numberline {4.3.2}Aggregations}{29}{subsection.4.3.2}
+\contentsline {section}{\numberline {4.4}Doc2Vec Models}{29}{section.4.4}
+\contentsline {chapter}{\numberline {5}Model Examination}{31}{chapter.5}
+\contentsline {section}{\numberline {5.1}Word Similarities}{31}{section.5.1}
+\contentsline {section}{\numberline {5.2}Document Similarities}{33}{section.5.2}
+\contentsline {section}{\numberline {5.3}Visualisation Techniques}{34}{section.5.3}
+\contentsline {subsection}{\numberline {5.3.1}Network Visualisation}{34}{subsection.5.3.1}
+\contentsline {subsection}{\numberline {5.3.2}Networks and Network Visualisation}{35}{subsection.5.3.2}
+\contentsline {chapter}{\numberline {6}Analysis with Sample Dataset}{36}{chapter.6}
+\contentsline {chapter}{\numberline {7}Conclusions}{37}{chapter.7}
+\contentsline {chapter}{\numberline {8}Recommendations for Further Work}{38}{chapter.8}
+\contentsline {chapter}{Bibliography}{39}{chapter*.4}
+\contentsline {chapter}{\numberline {9}Appendix}{41}{chapter.9}
+\contentsline {section}{\numberline {9.1}UK Departments scraped}{42}{section.9.1}
