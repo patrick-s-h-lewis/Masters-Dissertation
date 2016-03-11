@@ -1,4 +1,4 @@
-\begin{thebibliography}{16}
+\begin{thebibliography}{22}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -116,5 +116,53 @@ G.E. van~der Maaten, L.J.P.;~Hinton.
 \newblock Visualizing high-dimensional data using t-sne.
 \newblock \emph{Journal of Machine Learning Research}, 9:\penalty0 2579--2605,
   2008.
+
+\bibitem[Bastian et~al.(2009)Bastian, Heymann, and Jacomy]{gephi}
+Mathieu Bastian, Sebastien Heymann, and Mathieu Jacomy.
+\newblock Gephi: An open source software for exploring and manipulating
+  networks.
+\newblock 2009.
+\newblock URL \url{http://www.aaai.org/ocs/index.php/ICWSM/09/paper/view/154}.
+
+\bibitem[Vincent D~Blondel(2008)]{modularity1}
+Renaud Lambiotte Etienne~Lefebvre Vincent D~Blondel, Jean-Loup~Guillaume.
+\newblock Fast unfolding of communities in large networks.
+\newblock \emph{Journal of Statistical Mechanics: Thory and Experiment},
+  10:\penalty0 1000, 2008.
+
+\bibitem[Lambiotte et~al.()Lambiotte, Delvenne, and Barahona]{modularity2}
+R.~Lambiotte, J.-C. Delvenne, and M.~Barahona.
+\newblock Laplacian dynamics and multiscale modular structure in networks.
+\newblock \emph{IEEE Transactions on Network Science and Engineering}.
+
+\bibitem[R and C(1958)]{heatmapcluster}
+Sokal R and Michener C.
+\newblock A statistical method for evaluating systematic relationships.
+\newblock \emph{University of Kansas Science Bulletin}, 1958.
+
+\bibitem[drewokane; Paul Hobson; Yaroslav Halchenko; Saulius Lukauskas; Jordi
+  Warmenhoven; John B. Cole; Stephan Hoyer; Jake Vanderplas;~gkunter; Santi
+  Villalba; Eric Quintero; Marcel Martin; Alistair Miles; Kyle Meyer; Tom
+  Augspurger; Tal Yarkoni; Pete Bacha)drewokane; Paul Hobson; Yaroslav
+  Halchenko; Saulius Lukauskas; Jordi Warmenhoven; John B. Cole; Stephan Hoyer;
+  Jake Vanderplas;~gkunter; Santi Villalba; Eric Quintero; Marcel Martin;
+  Alistair Miles; Kyle Meyer; Tom Augspurger; Tal Yarkoni; Pete Bachant;
+  Constantine Evans; Clark Fitzgerald; Tamas Nagy; Erik Ziegler; Tobias Megies;
+  Daniel Wehner; Samuel St-Jean; Luis Pedro Coelho; Gregory Hitz; Antony Lee;
+  Luc~Rocher;]{seaborn}
+Michael Waskom; Olga~Botvinnik; drewokane; Paul Hobson; Yaroslav Halchenko;
+  Saulius Lukauskas; Jordi Warmenhoven; John B. Cole; Stephan Hoyer; Jake
+  Vanderplas;~gkunter; Santi Villalba; Eric Quintero; Marcel Martin; Alistair
+  Miles; Kyle Meyer; Tom Augspurger; Tal Yarkoni; Pete Bachant; Constantine
+  Evans; Clark Fitzgerald; Tamas Nagy; Erik Ziegler; Tobias Megies; Daniel
+  Wehner; Samuel St-Jean; Luis Pedro Coelho; Gregory Hitz; Antony Lee;
+  Luc~Rocher;.
+\newblock seaborn: v0.7.0 (january 2016).
+\newblock 2016.
+\newblock \doi{10.5281/zenodo.45133}.
+\newblock URL \url{http://dx.doi.org/10.5281/zenodo.45133}.
+
+\bibitem[sci()]{scipy}
+
 
 \end{thebibliography}

@@ -94,7 +94,8 @@ A striking feature of figure \ref{fig:AUTHORSIMS} is the cluster in the bottom r
 \end{center}
 The analysis's value is self evident. Clusters of similar staff members informs the department about the width of research (number of clusters), and how resources are partitioned (size of clusters). It should also be stressed that authors are associated without any human preconceptions or bias. Thus perhaps the most valuable author associations are the unexpected ones, and authors should be encouraged to examine their cluster and consider their `neighbours'.
 \section{Combining research clusters and authors}
-Finally, topic communities found in section \ref{sec:RESEARCHCLUSTERS} were linked to the authors in the department. Firstly, for a topic community $\mathfrak{C}$, with documents $d \in \mathfrak{C}$, and an author $\mathfrak{A}$ with documents $\delta \in \mathfrak{A}$, we can associate the author with the community if $\mathfrak{C} \cap \mathfrak{A} \neq \{ \}$, \footnote{or equivalently $\exists  \partial : \partial \in \mathfrak{C} \wedge \partial \in \mathfrak{A} $}. The function $f_{assoc}$ was defined as 
+As a final data examination, topic communities found in section \ref{sec:RESEARCHCLUSTERS} were linked to the authors in the department. Different metrics for author similarity were developed to see if they correlated with the maps produced in the previous section.
+Firstly, for a topic community $\mathfrak{C}$, with documents $d \in \mathfrak{C}$, and an author $\mathfrak{A}$ with documents $\delta \in \mathfrak{A}$, we can associate the author with the community if $\mathfrak{C} \cap \mathfrak{A} \neq \{ \}$, \footnote{or equivalently $\exists  \partial : \partial \in \mathfrak{C} \wedge \partial \in \mathfrak{A} $}. The function $f_{assoc}$ was defined as 
 \[ 
 f_{assoc}\left( \mathfrak{C} , \mathfrak{A} \right) = \begin{cases} 
       0 & \mathfrak{C} \cap \mathfrak{A} = \{ \} \\
@@ -124,3 +125,43 @@ Where $C$ is the total number of communities. An association matrix was created,
 \end{figure} 
 \end{center}
 Figure \ref{fig:commHEATMAP} indicates where authors have been detected to have similar research community occupations. High values should indicate that authors should ideally collaborate/communicate because they publish in the same research communities. Note also that the square patterns near the diagonal of the plot reproduce the clustering in figure \ref{fig:AUTHORSIMS}, lending weight to the validity of both analyses.\footnote{This is because the heatmap has been arranged according to the clustering found in section \ref{sec:AUTHORCLUSTERS}, but the matrix is derived in a completely different way (without applying any  clustering algorithm to the authors). Because clustering is qualitatively visible in figure \ref{fig:commHEATMAP}, there is a correlation between the two methods, i.e. they are consistent}.
+
+Having defined a framework for finding where authors share research interest, the next step was to find where authors were \emph{actually} collaborating. It was possible to identify .... documents in CCD that were co-authored by staff members in the analysis. A heatmap for actual collaboration between authors is shown below, as well as a metric equivalent to the $\mathbf{S}^{Assoc,scaled}$ where elements are the sum of the number of communities both staff members have collaborated in.
+
+\begin{figure}[H]
+  \centering
+  \begin{minipage}[b]{0.49\textwidth}
+  \label{fig:rawcollabs}
+    \includegraphics[width=\textwidth]{Analysis/raw_collabs.png}
+    \caption{Raw collaboration matrix (values scaled to range 0,1). Note the general lack of co-publishing between staff members. Again staff are ordered by clustering described in section \ref{sec:AUTHORCLUSTERS}, but no actual clustering has been performed. Hot spots near the diagonal suggest that author pairs clustered together in \ref{sec:AUTHORCLUSTERS} generally collaborate more than distant author pairs.  }
+  \end{minipage}
+  \hfill
+  \begin{minipage}[b]{0.49\textwidth}
+  \label{fig:collcollabs}
+    \includegraphics[width=\textwidth]{Analysis/comm_collabs.png}
+    \caption{Matrix formed by summing collaboration of author pairs over research communities (values scaled to range 0,1). Qualitatively similar to \ref{fig:rawcollabs}. Hot spots near diagonal again suggest authors closely clustered in section \ref{sec:AUTHORCLUSTERS} collaborate more frequently }
+  \end{minipage}
+\end{figure}
+
+Both pictures show the same qualitative picture. Similar author pairs (close to diagonal) are more likely to collaborate. 
+
+As a final data treatment, a matrix defined as the difference between an author similarity matrix (e.g figures \ref{fig:AUTHORSIMS}, \ref{fig:commHEATMAP}) and an author collaboration matrix (e.g. figures \ref{fig:rawcollabs}, \ref{fig:collcollabs}) is interpretable as a \emph{recommended collaboration matrix}, i.e. where values close to 1 indicate high similarity but low collaboration, and values close to zero indicate effective collaboration and values close to -1 indicate high collaboration but low author similarity. Author Pairs with values to 1 should be encouraged to work together. This matrix is shown below:
+\begin{center}
+\begin{figure}[H]
+\label{fig:RECOMM_MAT}
+  \centering
+    \includegraphics[scale=0.8]{Analysis/Recommending_Mat.png}
+    \caption{Recommending matrix. High values (Deep red) indicate authors that have similar research but do not collaborate on published works. Values $\sim$ 0 (grey/white) are where authors are neither similar nor collaborate. Values towards -1, (Blue) indicate authors that are collaborate but do share similar research (not strongly observed, as expected. High negative values would be somewhat paradoxical.) }
+\end{figure} 
+\end{center}
+This final piece of the analysis section illustrates how the framework developed over the research project reveals where it might be profitable for authors to collaborate. Returning to the Centre for Atmospheric Science, which was highlighted as a tight, separate research community, it can be seen that there are recommendations for greater collaboration between particular authors within the Centre. The matrix row for a particular staff member (Professor Goodman) is plotted below by way of example:
+\begin{center}
+\begin{figure}[H]
+\label{fig:RECOMM_MAT}
+  \centering
+    \includegraphics[scale=0.8]{Analysis/jmg.png}
+    \caption{Recommendations for a particular staff member, Professor Goodman. (Bars very close to zero have been removed). }
+\end{figure} 
+\end{center}
+The aim is that these maps and plots may trigger new, constructive debate and promote effective collaboration in the department. The analyses presented in this section are not exhaustive, and there is potential for more fruitful insights to be found. Please see section \ref{sec:RECOMMENDATIONS}
+

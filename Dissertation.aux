@@ -17,65 +17,234 @@
 \providecommand\HyField@AuxAddToFields[1]{}
 \providecommand\HyField@AuxAddToCoFields[2]{}
 \bibstyle{unsrtnat}
-\@writefile{toc}{\contentsline {chapter}{List of Figures}{2}{chapter*.2}}
-\citation{modularity1}
-\citation{modularity2}
-\@writefile{toc}{\contentsline {chapter}{\numberline {1}Analysis with Sample Dataset}{3}{chapter.1}}
+\@writefile{toc}{\contentsline {chapter}{List of Figures}{3}{chapter*.2}}
+\citation{word2vec2}
+\citation{word2veckingqueen}
+\@writefile{toc}{\contentsline {chapter}{\numberline {1}Introduction}{6}{chapter.1}}
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
-\@writefile{toc}{\contentsline {section}{\numberline {1.1}Cambridge Chemistry research clusters}{3}{section.1.1}}
-\newlabel{sec:RESEARCHCLUSTERS}{{1.1}{3}{Cambridge Chemistry research clusters}{section.1.1}{}}
-\newlabel{fig:CAMCOMMUNITIES}{{1.1}{4}{Cambridge Chemistry research clusters}{section.1.1}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {1.1}{\ignorespaces A Network visualisation of the CCD. Edges were placed between nodes with weight equalling cosine similarity if $S_{Cosine}$. Nodes are coloured into their detected communities, and node size is proportional to the number of connections a node has. nodes are arranged by modelling edges as springs.}}{4}{figure.1.1}}
-\newlabel{fig:COMMTREE}{{1.1}{5}{Cambridge Chemistry research clusters}{figure.1.1}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {1.2}{\ignorespaces Recursion Tree depicting how communities were found. The dataset was partitioned using the modularity algorithm. Partitions with more than 100 documents were then repartitioned recursively. Partitions of less than 100 documents were considered to be communities (shown red in the diagram). The figure shows the maximum depth of partition required was 8, and most communities were found after 3 partitions.}}{5}{figure.1.2}}
-\@writefile{lot}{\contentsline {table}{\numberline {1.1}{\ignorespaces Community 275}}{6}{table.1.1}}
-\newlabel{tabl:com275}{{1.1}{6}{Community 275}{table.1.1}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {1.1}Modern Scientific Publishing}{6}{section.1.1}}
+\@writefile{toc}{\contentsline {section}{\numberline {1.2}Motivation}{6}{section.1.2}}
+\@writefile{toc}{\contentsline {section}{\numberline {1.3}Aims}{6}{section.1.3}}
+\@writefile{toc}{\contentsline {chapter}{\numberline {2}Data Acquisition}{8}{chapter.2}}
+\@writefile{lof}{\addvspace {10\p@ }}
+\@writefile{lot}{\addvspace {10\p@ }}
+\newlabel{chapt:DATA_ACQUISITION}{{2}{8}{Data Acquisition}{chapter.2}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {2.1}Background}{8}{section.2.1}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.1.1}HTML and Xpath}{8}{subsection.2.1.1}}
+\@writefile{lof}{\contentsline {figure}{\numberline {2.1}{\ignorespaces Tree representation of HTML code. The html code here displays a table with 3 rows. The page has two peices of metadata associated with it, stored in the `head'.}}{8}{figure.2.1}}
+\newlabel{fig:HTMLTREE}{{2.1}{8}{Tree representation of HTML code. The html code here displays a table with 3 rows. The page has two peices of metadata associated with it, stored in the `head'}{figure.2.1}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {2.2}Automatic Xpath Generation}{9}{section.2.2}}
+\@writefile{toc}{\contentsline {section}{\numberline {2.3}Collection Strategy}{9}{section.2.3}}
+\citation{CROSSREF-FORMATION}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.3.1}Document Object Identifiers}{10}{subsection.2.3.1}}
+\newlabel{sec:DOI}{{2.3.1}{10}{Document Object Identifiers}{subsection.2.3.1}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {2.2}{\ignorespaces Doi structure. The structure consists of a numeric prefix (X and Y must be integers) and alphanumeric suffix (Z can be any Unicode encoded character) }}{10}{figure.2.2}}
+\newlabel{fig:DOI}{{2.2}{10}{Doi structure. The structure consists of a numeric prefix (X and Y must be integers) and alphanumeric suffix (Z can be any Unicode encoded character)}{figure.2.2}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {2.3}{\ignorespaces Perl Syntax Code that can identify the vast majority of DOIs within free text) }}{11}{figure.2.3}}
+\newlabel{fig:REGEX}{{2.3}{11}{Perl Syntax Code that can identify the vast majority of DOIs within free text)}{figure.2.3}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.3.2}Scraping Program}{11}{subsection.2.3.2}}
+\newlabel{sec:SCRAPING_PROGRAM}{{2.3.2}{11}{Scraping Program}{subsection.2.3.2}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {2.4}{\ignorespaces The data flow of the scraping program. An inputted list of websites to scrape are visited and dois are extracted in the process described in \ref  {sec:DOI}. The Crossref API service is then used to verify the extracted dois, and collects available meta-data. The program then accesses publisher webpages and collects the abstracts. The program also produces explanation of capture failures and some general statistics}}{12}{figure.2.4}}
+\newlabel{fig:Cherry}{{2.4}{12}{The data flow of the scraping program. An inputted list of websites to scrape are visited and dois are extracted in the process described in \ref {sec:DOI}. The Crossref API service is then used to verify the extracted dois, and collects available meta-data. The program then accesses publisher webpages and collects the abstracts. The program also produces explanation of capture failures and some general statistics}{figure.2.4}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {2.4}Collection Results}{13}{section.2.4}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.4.1}UK University Department scraping}{13}{subsection.2.4.1}}
+\newlabel{sec:UKSCRAPE}{{2.4.1}{13}{UK University Department scraping}{subsection.2.4.1}{}}
+\newlabel{tab:UKSCRAPERES}{{2.4.1}{13}{UK University Department scraping}{subsection.2.4.1}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {2.1}{\ignorespaces UK Scraping results}}{13}{table.2.1}}
+\@writefile{lof}{\contentsline {figure}{\numberline {2.5}{\ignorespaces The loss processes are coloured red, successfully captured full records in green, and the maximum possible yield in blue.}}{14}{figure.2.5}}
+\newlabel{fig:UKSANK}{{2.5}{14}{The loss processes are coloured red, successfully captured full records in green, and the maximum possible yield in blue}{figure.2.5}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.4.2}Very Large Scale Scraping}{14}{subsection.2.4.2}}
+\newlabel{sec:CROSSREFSCRAPE}{{2.4.2}{14}{Very Large Scale Scraping}{subsection.2.4.2}{}}
+\newlabel{sec:CROSSREFSCRAPE}{{2.4.2}{15}{Very Large Scale Scraping}{subsection.2.4.2}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.4.3}Problems with ACS and Taylor and Francis}{15}{subsection.2.4.3}}
+\@writefile{lof}{\contentsline {figure}{\numberline {2.6}{\ignorespaces The request frequency is plotted in blue, the received pages frequency in red. The vertical dashed line shows where the server detected the scape and banned the IP.}}{16}{figure.2.6}}
+\newlabel{fig:ACSBAN}{{2.6}{16}{The request frequency is plotted in blue, the received pages frequency in red. The vertical dashed line shows where the server detected the scape and banned the IP}{figure.2.6}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.4.4}Analysis of Collected data}{16}{subsection.2.4.4}}
+\newlabel{tab:LARGESCRAPERES}{{2.4.4}{17}{Analysis of Collected data}{subsection.2.4.4}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {2.2}{\ignorespaces Large Scale Scraping Results}}{17}{table.2.2}}
+\@writefile{lof}{\contentsline {figure}{\numberline {2.7}{\ignorespaces The loss processes are coloured red, successfully captured full records in green, and the maximum possible yield in blue.}}{17}{figure.2.7}}
+\newlabel{fig:LARGESANK}{{2.7}{17}{The loss processes are coloured red, successfully captured full records in green, and the maximum possible yield in blue}{figure.2.7}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {2.8}{\ignorespaces Blue databases represent data with dois and metadata. Green databases represent meta-data, dois and abstracts. The purple database is the combined complete records, and the red database is the data deemed suitable for the training algorithm. database sizes and losses are annotated.}}{18}{figure.2.8}}
+\newlabel{fig:DATABASES}{{2.8}{18}{Blue databases represent data with dois and metadata. Green databases represent meta-data, dois and abstracts. The purple database is the combined complete records, and the red database is the data deemed suitable for the training algorithm. database sizes and losses are annotated}{figure.2.8}{}}
+\@writefile{toc}{\contentsline {subsubsection}{Observations}{18}{section*.3}}
+\newlabel{sec:CORPUSOBSERVATIONS}{{2.4.4}{18}{Observations}{section*.3}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {2.9}{\ignorespaces Articles grouped by publisher in the Large Scale Scrape doi database. Only the top 12 publishers are shown.}}{19}{figure.2.9}}
+\newlabel{fig:PUBPI}{{2.9}{19}{Articles grouped by publisher in the Large Scale Scrape doi database. Only the top 12 publishers are shown}{figure.2.9}{}}
+\citation{zipf}
+\@writefile{lof}{\contentsline {figure}{\numberline {2.10}{\ignorespaces Articles grouped by publisher in the UK Doi database published by by each publisher. Only the top 12 publishers are shown.}}{20}{figure.2.10}}
+\newlabel{fig:UKPUBPI}{{2.10}{20}{Articles grouped by publisher in the UK Doi database published by by each publisher. Only the top 12 publishers are shown}{figure.2.10}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {2.11}{\ignorespaces The log Frequency of words vs the log of their position in the rank in the word frequency table in blue. Best fit line in Red, gradient = -1.11, intercept 6.3. }}{20}{figure.2.11}}
+\newlabel{fig:ZIPF}{{2.11}{20}{The log Frequency of words vs the log of their position in the rank in the word frequency table in blue. Best fit line in Red, gradient = -1.11, intercept 6.3}{figure.2.11}{}}
+\newlabel{sec:SCRAPEANALYSIS}{{2.4.4}{20}{Observations}{table.2.3}{}}
+\newlabel{tab:CORPUS STATS}{{2.4.4}{21}{Observations}{figure.2.11}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {2.3}{\ignorespaces Titles and Abstracts in Training Database}}{21}{table.2.3}}
+\@writefile{toc}{\contentsline {chapter}{\numberline {3}Techniques for Language Processing}{22}{chapter.3}}
+\@writefile{lof}{\addvspace {10\p@ }}
+\@writefile{lot}{\addvspace {10\p@ }}
+\@writefile{toc}{\contentsline {section}{\numberline {3.1}Background}{22}{section.3.1}}
+\@writefile{toc}{\contentsline {section}{\numberline {3.2}Bag of Words}{22}{section.3.2}}
+\newlabel{tab:BAGOFWORDS}{{3.2}{22}{Bag of Words}{section.3.2}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {3.1}{\ignorespaces Bag of words}}{22}{table.3.1}}
+\citation{WORD2VECKINGQUEEN}
+\citation{olddistributed}
+\citation{word2vec1}
+\citation{word2vec2}
+\@writefile{toc}{\contentsline {section}{\numberline {3.3}Bag of Citations}{23}{section.3.3}}
+\@writefile{toc}{\contentsline {section}{\numberline {3.4}Word2Vec}{23}{section.3.4}}
+\newlabel{sec:WORD2VEC}{{3.4}{23}{Word2Vec}{section.3.4}{}}
+\citation{word2vec2}
+\citation{word2veckingqueen}
+\citation{word2vec2}
+\citation{word2veckingqueen}
+\@writefile{lof}{\contentsline {figure}{\numberline {3.1}{\ignorespaces The training architectures of the Word2Vec training algorithm. Word vectors are denoted $v(i)$ for word i. In CBOW word i is predicted by the vector found by summing vectors surrounding i, and $v(i)$ is adjusted to be closer to this prediction. In skip-gram, word i's vector is pairwise compared to its context words, here i-1 and i+1 as a basis to improve $v(i)$.)}}{24}{figure.3.1}}
+\newlabel{fig:CBOWSKIP}{{3.1}{24}{The training architectures of the Word2Vec training algorithm. Word vectors are denoted $v(i)$ for word i. In CBOW word i is predicted by the vector found by summing vectors surrounding i, and $v(i)$ is adjusted to be closer to this prediction. In skip-gram, word i's vector is pairwise compared to its context words, here i-1 and i+1 as a basis to improve $v(i)$.)}{figure.3.1}{}}
+\citation{gensim}
+\citation{doc2vec}
+\@writefile{lof}{\contentsline {figure}{\numberline {3.2}{\ignorespaces Schematic Representation of how concepts can be represented in word vector space. Word2Vec is able to replicate this behaviour. The vector found by vec(‘King’)- vec(‘Man’)+vec(‘Woman’) is approximately equal to vec(‘Queen’). The model has been tested on thousands of similar examples\cite  {word2vec2}\cite  {word2veckingqueen}.}}{25}{figure.3.2}}
+\newlabel{fig:KINGQUEEN}{{3.2}{25}{Schematic Representation of how concepts can be represented in word vector space. Word2Vec is able to replicate this behaviour. The vector found by vec(‘King’)- vec(‘Man’)+vec(‘Woman’) is approximately equal to vec(‘Queen’). The model has been tested on thousands of similar examples\cite {word2vec2}\cite {word2veckingqueen}}{figure.3.2}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {3.5}Doc2Vec}{25}{section.3.5}}
+\@writefile{toc}{\contentsline {chapter}{\numberline {4}Algorithm Development}{26}{chapter.4}}
+\@writefile{lof}{\addvspace {10\p@ }}
+\@writefile{lot}{\addvspace {10\p@ }}
+\newlabel{chapt:ALGORITHM}{{4}{26}{Algorithm Development}{chapter.4}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {4.1}Premise}{26}{section.4.1}}
+\@writefile{toc}{\contentsline {section}{\numberline {4.2}Data Sanitisation}{26}{section.4.2}}
+\citation{NLTK}
+\citation{Porter}
+\citation{porter}
+\citation{snowball}
+\citation{nltk}
+\citation{lancaster}
+\citation{wordnet1}
+\citation{wordnet2}
+\citation{wordnet3}
+\@writefile{lof}{\contentsline {figure}{\numberline {4.1}{\ignorespaces All the punctuation removed in scraping. Only these were found in appreciable quantities in the training dataset. }}{27}{figure.4.1}}
+\newlabel{fig:punct}{{4.1}{27}{All the punctuation removed in scraping. Only these were found in appreciable quantities in the training dataset}{figure.4.1}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {4.1}{\ignorespaces Chemistry stopwords}}{27}{table.4.1}}
+\citation{sanex}
+\@writefile{lot}{\contentsline {table}{\numberline {4.2}{\ignorespaces Stemming}}{28}{table.4.2}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4.2}{\ignorespaces All documents in the training database were preprocessed with this pipeline schema before being used in training models}}{28}{figure.4.2}}
+\newlabel{fig:SANPIPE}{{4.2}{28}{All documents in the training database were preprocessed with this pipeline schema before being used in training models}{figure.4.2}{}}
+\citation{gensim}
+\citation{gensim}
+\citation{gensim}
+\@writefile{toc}{\contentsline {section}{\numberline {4.3}Word2Vec Models}{29}{section.4.3}}
+\newlabel{tab:hyperparams}{{4.3}{29}{Word2Vec Models}{section.4.3}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {4.3}{\ignorespaces Word2vec Parameters}}{29}{table.4.3}}
+\citation{doc2vec}
+\citation{gensim}
+\citation{gensim}
+\citation{doc2vec}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.3.1}TF-IDF}{30}{subsection.4.3.1}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.3.2}Aggregations}{30}{subsection.4.3.2}}
+\newlabel{tab:hyperparams}{{4.3.2}{30}{Aggregations}{subsection.4.3.2}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {4.4}{\ignorespaces Word2vec Document Vector Models}}{30}{table.4.4}}
+\@writefile{toc}{\contentsline {section}{\numberline {4.4}Doc2Vec Models}{30}{section.4.4}}
+\newlabel{tab:hyperparams}{{4.4}{31}{Doc2Vec Models}{section.4.4}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {4.5}{\ignorespaces Word2vec Parameters}}{31}{table.4.5}}
+\citation{word2vec}
+\@writefile{toc}{\contentsline {chapter}{\numberline {5}Model Examination}{32}{chapter.5}}
+\@writefile{lof}{\addvspace {10\p@ }}
+\@writefile{lot}{\addvspace {10\p@ }}
+\@writefile{toc}{\contentsline {section}{\numberline {5.1}Word Similarities}{32}{section.5.1}}
+\citation{word2vec1}
+\citation{word2vec2}
+\citation{doc2vec}
+\citation{docassay}
+\citation{docassay}
+\@writefile{lot}{\contentsline {table}{\numberline {5.1}{\ignorespaces Closest words to test words using cosine similarity}}{33}{table.5.1}}
+\newlabel{tab:COSINESIMS}{{5.1}{33}{Closest words to test words using cosine similarity}{table.5.1}{}}
+\newlabel{tab:EUCLIDSIMS}{{5.1}{33}{Word Similarities}{table.5.1}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {5.2}{\ignorespaces Closest words to test words using Euclidean similarity}}{33}{table.5.2}}
+\citation{PCA}
+\citation{TSNE}
+\citation{scikitlearn}
+\@writefile{toc}{\contentsline {section}{\numberline {5.2}Document Similarities}{34}{section.5.2}}
+\@writefile{lot}{\contentsline {table}{\numberline {5.3}{\ignorespaces Document Vector Similarities to \cite  {docassay}}}{34}{table.5.3}}
+\newlabel{tab:DOCSIMS}{{5.3}{34}{Document Vector Similarities to \cite {docassay}}{table.5.3}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {5.3}Visualisation Techniques}{35}{section.5.3}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.3.1}Network Visualisation}{35}{subsection.5.3.1}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.1}{\ignorespaces PCA map of 10,000 documents in the corpus. PCA has not any particular structure. The dimensional reduction task is probably too difficult for PCA.}}{35}{figure.5.1}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.2}{\ignorespaces TSNE map of the same 10,000 documents. Document vectors have gathered into noticeable clusters, with non negligible outlier documents between clusters. }}{35}{figure.5.2}}
+\citation{gephi}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.3.2}Networks and Network Visualisation}{36}{subsection.5.3.2}}
+\newlabel{sec:COSINEMAT}{{5.3.2}{36}{Networks and Network Visualisation}{subsection.5.3.2}{}}
+\newlabel{fig:gephi_exp}{{5.3.2}{37}{Networks and Network Visualisation}{subsection.5.3.2}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.3}{\ignorespaces A Network visualisation of the 10,000 document sample. Nodes (blue) are spatially distibuted by modelling the edges (purple) as springs connecting nodes with spring constants equal to cosine similarity, then allowing the system to approach equilibrium. Edges were only placed between nodes with cosine similarity greater than 0.35 for computational tractability. The edges have been curved to aid visualisation.}}{37}{figure.5.3}}
+\citation{modularity1}
+\citation{modularity2}
+\@writefile{toc}{\contentsline {chapter}{\numberline {6}Analysis with Sample Dataset}{38}{chapter.6}}
+\@writefile{lof}{\addvspace {10\p@ }}
+\@writefile{lot}{\addvspace {10\p@ }}
+\@writefile{toc}{\contentsline {section}{\numberline {6.1}Cambridge Chemistry research clusters}{38}{section.6.1}}
+\newlabel{sec:RESEARCHCLUSTERS}{{6.1}{38}{Cambridge Chemistry research clusters}{section.6.1}{}}
+\newlabel{fig:CAMCOMMUNITIES}{{6.1}{39}{Cambridge Chemistry research clusters}{section.6.1}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {6.1}{\ignorespaces A Network visualisation of the CCD. Edges were placed between nodes with weight equalling cosine similarity if $S_{Cosine}$. Nodes are coloured into their detected communities, and node size is proportional to the number of connections a node has. nodes are arranged by modelling edges as springs.}}{39}{figure.6.1}}
+\newlabel{fig:COMMTREE}{{6.1}{40}{Cambridge Chemistry research clusters}{figure.6.1}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {6.2}{\ignorespaces Recursion Tree depicting how communities were found. The dataset was partitioned using the modularity algorithm. Partitions with more than 100 documents were then repartitioned recursively. Partitions of less than 100 documents were considered to be communities (shown red in the diagram). The figure shows the maximum depth of partition required was 8, and most communities were found after 3 partitions.}}{40}{figure.6.2}}
+\@writefile{lot}{\contentsline {table}{\numberline {6.1}{\ignorespaces Community 275}}{41}{table.6.1}}
+\newlabel{tabl:com275}{{6.1}{41}{Community 275}{table.6.1}{}}
 \citation{heatmapcluster}
 \citation{seaborn}
 \citation{scipy}
-\@writefile{toc}{\contentsline {section}{\numberline {1.2}Cambridge Staff Member Similarities}{7}{section.1.2}}
-\newlabel{sec:AUTHORCLUSTERS}{{1.2}{7}{Cambridge Staff Member Similarities}{section.1.2}{}}
-\newlabel{fig:AUTHORSIMS}{{1.2}{8}{Cambridge Staff Member Similarities}{section.1.2}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {1.3}{\ignorespaces This figure shows a heatmap of Author similarity. Dark pixels correspond to the author in the pixel's row having similar research interests to the author in the pixcel's column. The authors are arranged by clusters found in UPGMA of authors. The authors are also diagrammatically connected by a dendrogram. This shows the hierarchical structure of the clustering.}}{8}{figure.1.3}}
-\newlabel{fig:DENDRO}{{1.2}{9}{Cambridge Staff Member Similarities}{figure.1.3}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {1.4}{\ignorespaces The dendrogram of figure \ref  {fig:AUTHORSIMS}}}{9}{figure.1.4}}
-\newlabel{fig:LABELLEDDENDRO}{{1.2}{10}{Cambridge Staff Member Similarities}{figure.1.4}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {1.5}{\ignorespaces Cluster labels overlayed over the distinct branches of the dendrogram.}}{10}{figure.1.5}}
-\@writefile{toc}{\contentsline {section}{\numberline {1.3}Combining research clusters and authors}{11}{section.1.3}}
-\newlabel{fig:commbar}{{1.3}{12}{Combining research clusters and authors}{section.1.3}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {1.6}{\ignorespaces Number of research communities authors are associated with. High values indicate an author publishing across many communities, suggest more interdisciplinary work, but also higher publication count per author. (The same plot, scaled for publication count) is included in the appendix}}{12}{figure.1.6}}
-\newlabel{fig:commHEATMAP}{{1.3}{14}{Combining research clusters and authors}{figure.1.6}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {1.7}{\ignorespaces Heatmap showing author-author pair values for how often authors publish works in the same communities. High values indicated that Authors are predicted to have similar publication profiles. Note the authors are arranged with the ordering from figure \ref  {fig:AUTHORSIMS}.}}{14}{figure.1.7}}
-\@writefile{toc}{\contentsline {chapter}{\numberline {2}Conclusions}{16}{chapter.2}}
+\@writefile{toc}{\contentsline {section}{\numberline {6.2}Cambridge Staff Member Similarities}{42}{section.6.2}}
+\newlabel{sec:AUTHORCLUSTERS}{{6.2}{42}{Cambridge Staff Member Similarities}{section.6.2}{}}
+\newlabel{fig:AUTHORSIMS}{{6.2}{43}{Cambridge Staff Member Similarities}{section.6.2}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {6.3}{\ignorespaces This figure shows a heatmap of Author similarity. Dark pixels correspond to the author in the pixel's row having similar research interests to the author in the pixcel's column. The authors are arranged by clusters found in UPGMA of authors. The authors are also diagrammatically connected by a dendrogram. This shows the hierarchical structure of the clustering.}}{43}{figure.6.3}}
+\newlabel{fig:DENDRO}{{6.2}{44}{Cambridge Staff Member Similarities}{figure.6.3}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {6.4}{\ignorespaces The dendrogram of figure \ref  {fig:AUTHORSIMS}}}{44}{figure.6.4}}
+\newlabel{fig:LABELLEDDENDRO}{{6.2}{45}{Cambridge Staff Member Similarities}{figure.6.4}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {6.5}{\ignorespaces Cluster labels overlayed over the distinct branches of the dendrogram.}}{45}{figure.6.5}}
+\@writefile{toc}{\contentsline {section}{\numberline {6.3}Combining research clusters and authors}{46}{section.6.3}}
+\newlabel{fig:commbar}{{6.3}{47}{Combining research clusters and authors}{section.6.3}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {6.6}{\ignorespaces Number of research communities authors are associated with. High values indicate an author publishing across many communities, suggest more interdisciplinary work, but also higher publication count per author. (The same plot, scaled for publication count) is included in the appendix}}{47}{figure.6.6}}
+\newlabel{fig:commHEATMAP}{{6.3}{49}{Combining research clusters and authors}{figure.6.6}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {6.7}{\ignorespaces Heatmap showing author-author pair values for how often authors publish works in the same communities. High values indicated that Authors are predicted to have similar publication profiles. Note the authors are arranged with the ordering from figure \ref  {fig:AUTHORSIMS}.}}{49}{figure.6.7}}
+\newlabel{fig:rawcollabs}{{6.3}{50}{Combining research clusters and authors}{figure.6.7}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {6.8}{\ignorespaces Raw collaboration matrix (values scaled to range 0,1). Note the general lack of co-publishing between staff members. Again staff are ordered by clustering described in section \ref  {sec:AUTHORCLUSTERS}, but no actual clustering has been performed. Hot spots near the diagonal suggest that author pairs clustered together in \ref  {sec:AUTHORCLUSTERS} generally collaborate more than distant author pairs. }}{50}{figure.6.8}}
+\newlabel{fig:collcollabs}{{6.3}{50}{Combining research clusters and authors}{figure.6.8}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {6.9}{\ignorespaces Matrix formed by summing collaboration of author pairs over research communities (values scaled to range 0,1). Qualitatively similar to \ref  {fig:rawcollabs}. Hot spots near diagonal again suggest authors closely clustered in section \ref  {sec:AUTHORCLUSTERS} collaborate more frequently }}{50}{figure.6.9}}
+\newlabel{fig:RECOMM_MAT}{{6.3}{52}{Combining research clusters and authors}{figure.6.9}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {6.10}{\ignorespaces Recommending matrix. High values (Deep red) indicate authors that have similar research but do not collaborate on published works. Values $\sim $ 0 (grey/white) are where authors are neither similar nor collaborate. Values towards -1, (Blue) indicate authors that are collaborate but do share similar research (not strongly observed, as expected. High negative values would be somewhat paradoxical.) }}{52}{figure.6.10}}
+\newlabel{fig:RECOMM_MAT}{{6.3}{54}{Combining research clusters and authors}{figure.6.10}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {6.11}{\ignorespaces Recommendations for a particular staff member, Professor Goodman. (Bars very close to zero have been removed). }}{54}{figure.6.11}}
+\@writefile{toc}{\contentsline {chapter}{\numberline {7}Conclusions}{56}{chapter.7}}
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
 \bibdata{References}
-\@writefile{toc}{\contentsline {chapter}{\numberline {3}Recommendations for Further Work}{17}{chapter.3}}
+\@writefile{toc}{\contentsline {chapter}{\numberline {8}Recommendations for Further Work}{57}{chapter.8}}
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
-\newlabel{chapt:RECOMMENDATIONS}{{3}{17}{Recommendations for Further Work}{chapter.3}{}}
-\bibcite{word2vec2}{{1}{2013{a}}{{Mikolov et~al.}}{{Mikolov, Sutskever, Chen, Corrado, and Dean}}}
-\bibcite{word2veckingqueen}{{2}{2013{b}}{{Mikolov et~al.}}{{Mikolov, tau Yih, and Zweig}}}
+\newlabel{chapt:RECOMMENDATIONS}{{8}{57}{Recommendations for Further Work}{chapter.8}{}}
+\bibcite{word2vec2}{{1}{2013{}}{{Mikolov et~al.}}{{Mikolov, Sutskever, Chen, Corrado, and Dean}}}
+\bibcite{word2veckingqueen}{{2}{2013{}}{{Mikolov et~al.}}{{Mikolov, tau Yih, and Zweig}}}
 \bibcite{zipf}{{3}{2010}{{Ullah and Giles}}{{}}}
-\bibcite{word2vec1}{{4}{2013{c}}{{Mikolov et~al.}}{{Mikolov, Chen, Corrado, and Dean}}}
+\bibcite{word2vec1}{{4}{2013{}}{{Mikolov et~al.}}{{Mikolov, Chen, Corrado, and Dean}}}
 \bibcite{gensim}{{5}{2010}{{{\v R}eh{\r u}{\v r}ek and Sojka}}{{}}}
 \bibcite{doc2vec}{{6}{2014}{{Le and Mikolov}}{{}}}
 \bibcite{NLTK}{{7}{2009}{{Bird et~al.}}{{Bird, Klein, and Loper}}}
 \bibcite{Porter}{{8}{1980}{{Porter}}{{}}}
 \bibcite{lancaster}{{9}{1990}{{Paice}}{{}}}
 \bibcite{wordnet1}{{10}{2016}{{Feinerer and Hornik}}{{}}}
+\@writefile{toc}{\contentsline {chapter}{Bibliography}{58}{chapter*.4}}
 \bibcite{wordnet2}{{11}{2007}{{Wallace}}{{}}}
-\@writefile{toc}{\contentsline {chapter}{Bibliography}{18}{chapter*.3}}
 \bibcite{wordnet3}{{12}{1998}{{Fellbaum}}{{}}}
 \bibcite{sanex}{{13}{2007}{{Seesukphronrarak and Takata}}{{}}}
 \bibcite{docassay}{{14}{2012}{{Tsaplev}}{{}}}
 \bibcite{PCA}{{15}{1901}{{Pearson}}{{}}}
 \bibcite{TSNE}{{16}{2008}{{van~der Maaten}}{{}}}
-\@writefile{toc}{\contentsline {chapter}{\numberline {4}Appendix}{20}{chapter.4}}
+\bibcite{gephi}{{17}{2009}{{Bastian et~al.}}{{Bastian, Heymann, and Jacomy}}}
+\bibcite{modularity1}{{18}{2008}{{Vincent D~Blondel}}{{}}}
+\bibcite{modularity2}{{19}{}{{Lambiotte et~al.}}{{Lambiotte, Delvenne, and Barahona}}}
+\bibcite{heatmapcluster}{{20}{1958}{{R and C}}{{}}}
+\bibcite{seaborn}{{drewokane; Paul Hobson; Yaroslav Halchenko; Saulius Lukauskas; Jordi Warmenhoven; John B. Cole; Stephan Hoyer; Jake Vanderplas;~gkunter; Santi Villalba; Eric Quintero; Marcel Martin; Alistair Miles; Kyle Meyer; Tom Augspurger; Tal Yarkoni; Pete Bacha)drewokane; Paul Hobson; Yaroslav Halchenko; Saulius Lukauskas; Jordi Warmenhoven; John B. Cole; Stephan Hoyer; Jake Vanderplas;~gkunter; Santi Villalba; Eric Quintero; Marcel Martin; Alistair Miles; Kyle Meyer; Tom Augspurger; Tal Yarkoni; Pete Bachant; Constantine Evans; Clark Fitzgerald; Tamas Nagy; Erik Ziegler; Tobias Megies; Daniel Wehner; Samuel St-Jean; Luis Pedro Coelho; Gregory Hitz; Antony Lee; Luc~Rocher;}{}{{}}{{}}}
+\bibcite{scipy}{{22}{}{{sci}}{{}}}
+\@writefile{toc}{\contentsline {chapter}{\numberline {9}Appendix}{61}{chapter.9}}
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
-\@writefile{toc}{\contentsline {section}{\numberline {4.1}UK Departments scraped}{21}{section.4.1}}
-\@writefile{toc}{\contentsline {section}{\numberline {4.2}}{24}{section.4.2}}
-\newlabel{fig:LABELLEDDENDRO}{{4.2}{24}{}{section.4.2}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {4.1}{\ignorespaces Number of research communities authors are associated with. High values suggest more interdisciplinary work. The bars have been scaled relative to the author's total publication count. }}{24}{figure.4.1}}
+\@writefile{toc}{\contentsline {section}{\numberline {9.1}UK Departments scraped}{62}{section.9.1}}
+\@writefile{toc}{\contentsline {section}{\numberline {9.2}}{65}{section.9.2}}
+\newlabel{fig:LABELLEDDENDRO}{{9.2}{65}{}{section.9.2}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {9.1}{\ignorespaces Number of research communities authors are associated with. High values suggest more interdisciplinary work. The bars have been scaled relative to the author's total publication count. }}{65}{figure.9.1}}
+\providecommand\NAT@force@numbers{}\NAT@force@numbers
