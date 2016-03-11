@@ -1,6 +1,7 @@
 \chapter{Analysis with Sample Dataset}
 Having developed a framework to examine the models, attention was turned to some example analyses that could be carried out. Many possible applications for the framework suggest themselves, but the finite nature of the project necessitated focussing on analyses that could be achieved within the time-frame. \footnote{Please refer to section \ref{chapt:RECOMMENDATIONS} for more treatments}. With this in mind, it was decided to focus analysis on the a smaller subset of the training dataset, namely documents from the University of Cambridge Chemistry Department. This dataset is henceforth referred to as \emph{CCD}\footnote{Cambridge Chemistry Dataset}.
 \section{Cambridge Chemistry research clusters}
+\label{sec:RESEARCHCLUSTERS}
 The CCD contained 9467 documents. The cosine matrix was calculated and a network was constructed from the matrix. \emph{communities} within the network (clusters of strongly connected nodes) were identified by applying a high performance modularity algorithm\cite{modularity1}\cite{modularity2}. The result is shown in figure \ref{fig:CAMCOMMUNITIES}.
 \begin{center}
 \begin{figure}[H]
@@ -56,6 +57,8 @@ The uses of this kind of analysis include:
 \end{itemize}
 
 \section{Cambridge Staff Member Similarities}
+\label{sec:AUTHORCLUSTERS}
+
 It is not only articles themselves that can be grouped and analysed, but articles can be aggregated together to represent higher collections, such as staff members or research groups, or potentially even departments. 
 To investigate this further, \texttt{http://www.ch.cam.ac.uk/publications/authors} was scraped in order to associate the documents in the CCD with particular staff members groups. A staff member vector $\textbf{f}$ was defined as $\mathbf{f}=\frac{1}{N}\sum_{i}^{N} \mathbf{v}_i$ , for an author with $N$ published articles in the CCD, with document vectors $\mathbf{v}_i$ (vector mean).
 
@@ -80,5 +83,44 @@ Figure \ref{fig:AUTHORSIMS} shows the result of generating $\textbf{S}$ and perf
     \caption{The dendrogram of figure \ref{fig:AUTHORSIMS}} plotted for clarity
 \end{figure} 
 \end{center}
-A striking feature of figure \ref{fig:AUTHORSIMS} is the cluster in the bottom right corner. The members of this cluster (as shown in the dendrogram) occupy a separate branch of research space than the rest of the department. The staff members involved, Professor Jones, Dr. Harris, Professor Pyle Dr. Archibald and Dr. Kalberer are all in the Centre for Atmospheric Science. The unsupervised model has thus successfully predicted their department, and indicates that their work is quite far removed from most of the work in the Chemistry Department. This is a real success for the model.
-\section{Combining research clusters and Authors}
+A striking feature of figure \ref{fig:AUTHORSIMS} is the cluster in the bottom right corner. The dendrogram tree shows the members of this cluster occupy a separate branch of research space than the rest of the department. The staff members involved, Professor Jones, Dr. Harris, Professor Pyle Dr. Archibald and Dr. Kalberer are all members of the Centre for Atmospheric Science. The unsupervised model thus successfully `predicted' their department, and indicated that their work is quite far removed from most of the work in the Chemistry Department. This is a real success for the model. The dendrogram was then further examined and broken into distinct branches. Each branch was examined and manually labelled. The results are shown in figure \ref{sec:LABELLEDDENDRO}. Most clusters make intuitive sense, but there is one core of well connected, more disparate members (wj10 to jrn34). These members could be interpreted as being an interdisciplinary cluster.  
+\begin{center}
+\begin{figure}[H]
+\label{fig:LABELLEDDENDRO}
+  \centering
+    \includegraphics[scale=0.8]{Analysis/dendro_overlay2.png}
+    \caption{Cluster labels overlayed over the distinct branches of the dendrogram.}
+\end{figure} 
+\end{center}
+The analysis's value is self evident. Clusters of similar staff members informs the department about the width of research (number of clusters), and how resources are partitioned (size of clusters). It should also be stressed that authors are associated without any human preconceptions or bias. Thus perhaps the most valuable author associations are the unexpected ones, and authors should be encouraged to examine their cluster and consider their `neighbours'.
+\section{Combining research clusters and authors}
+Finally, topic communities found in section \ref{sec:RESEARCHCLUSTERS} were linked to the authors in the department. Firstly, for a topic community $\mathfrak{C}$, with documents $d \in \mathfrak{C}$, and an author $\mathfrak{A}$ with documents $\delta \in \mathfrak{A}$, we can associate the author with the community if $\mathfrak{C} \cap \mathfrak{A} \neq \{ \}$, \footnote{or equivalently $\exists  \partial : \partial \in \mathfrak{C} \wedge \partial \in \mathfrak{A} $}. The function $f_{assoc}$ was defined as 
+\[ 
+f_{assoc}\left( \mathfrak{C} , \mathfrak{A} \right) = \begin{cases} 
+      0 & \mathfrak{C} \cap \mathfrak{A} = \{ \} \\
+      1 & \mathfrak{C} \cap \mathfrak{A} \neq \{ \} 
+   \end{cases}
+\]
+It was noted that there was significant variation in the number of communities that researchers were associated with. A plot of $\sum_c^C f_{assoc} \left( \mathfrak{C}_c , \mathfrak{A} \right)$ for each author is shown below.:
+\begin{center}
+\begin{figure}[H]
+\label{fig:commbar}
+  \centering
+    \includegraphics[scale=0.8]{Analysis/community_detection.png}
+    \caption{Number of research communities authors are associated with. High values indicate an author publishing across many communities, suggest more interdisciplinary work, but also higher publication count per author. (The same plot, scaled for publication count) is included in the appendix}
+\end{figure} 
+\end{center}
+It can be seen that some authors are widely distributed between communities, whereas others are concentrated.
+It should be appreciated that communities are not uniformly distributed across work done in the department. For example there are many communities in `Life Sciences' but few in Atmospheric Chemistry, as such, interpretation of high values in Figure \ref{fig:commbar} corresponding 1:1 to wide research interests is cautious.
+
+An association metric $S_{coincidence}$ between authors $\mathfrak{A}$ and $\mathfrak{B}$ was then defined as $$S_{coincidence}\left( \mathfrak{A} , \mathfrak{B} \right) = \sum_c^C \left(f_{assoc} \left( \mathfrak{C}_c , \mathfrak{A} \right) f_{assoc}\left( \mathfrak{C}_c , \mathfrak{B} \right) \right) $$
+Where $C$ is the total number of communities. An association matrix was created, $\mathbf{S}^{Assoc}_{\mathfrak{A} , \mathfrak{B}} = S_{coincidence}\left( \mathfrak{A} , \mathfrak{B} \right)$, where high values for author pair $\mathfrak{A} , \mathfrak{B}$ indicate they appear in lots of research communities together. The matrix was then scaled such that: $\mathbf{S}^{Assoc,scaled}_{\mathfrak{A} , \mathfrak{B}} =  \mathbf{S}^{Assoc}_{\mathfrak{A} , \mathfrak{B}} /  \left( \mathbf{S}^{Assoc}_{\mathfrak{A} , \mathfrak{A}} + \mathbf{S}^{Assoc}_{\mathfrak{B} , \mathfrak{B}} \right) $, and normalised to the range 0,1. This was a measure of how often researchers can be found in the same communities. The matrix is shown below. 
+\begin{center}
+\begin{figure}[H]
+\label{fig:commHEATMAP}
+  \centering
+    \includegraphics[scale=0.8]{Analysis/author_comm_heatmap.png}
+    \caption{Heatmap showing author-author pair values for how often authors publish works in the same communities. High values indicated that Authors are predicted to have similar publication profiles. Note the authors are arranged with the ordering from figure \ref{fig:AUTHORSIMS}.}
+\end{figure} 
+\end{center}
+Figure \ref{fig:commHEATMAP} indicates where authors have been detected to have similar research community occupations. High values should indicate that authors should ideally collaborate/communicate because they publish in the same research communities. Note also that the square patterns near the diagonal of the plot reproduce the clustering in figure \ref{fig:AUTHORSIMS}, lending weight to the validity of both analyses.\footnote{This is because the heatmap has been arranged according to the clustering found in section \ref{sec:AUTHORCLUSTERS}, but the matrix is derived in a completely different way (without applying any  clustering algorithm to the authors). Because clustering is qualitatively visible in figure \ref{fig:commHEATMAP}, there is a correlation between the two methods, i.e. they are consistent}.
