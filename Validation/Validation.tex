@@ -110,6 +110,7 @@ Figures \ref{fig:PCA_snap} and \ref{fig:TSNE_snap} show PCA and TSNE reductions 
 The PCA redution shows a dark central area, suggesting most vectors lie are smeared around a common direction. The map is not entirely symmetric which is what would be expected for random vectors. It was expected that document vectors would be distributed into clusters representing particular topics within the literature. This is borne out by the TSNE reduction, which has found many clusters. There is a significant portion of document vectors scattered between dark cluster spots, which may be could interpreted as `interdisciplinary'.
 TSNE is based upon euclidean distance, which is noted not to be the best similarity measure so, whilst qualitatively useful, TSNE maps were interpreted cautiously.
 \subsection{Networks and Network Visualisation}
+\label{sec:COSINEMAT}
 A similarity matrix $\mathbf{C}$ was defined between a sets of documents. For a set of documents  A (with $a$ documents) and B (with $b$ documents) define document matrices of document vectors $A$ and $B$ such that 
 
 $$\mathbf{A} = \left( \begin{array}{cccc}
@@ -121,4 +122,13 @@ $$\mathbf{A} = \left( \begin{array}{cccc}
 \vdots & \vdots & \vdots & \vdots \\ \end{array} \right)$$ where $w$ and $v$ are document vectors.
 The cosine matrix $\mathbf{C}$ is then defined as $C_{i,j} = cosine \left(\theta_{i,j} \right)$ where element i j contains the cosine between $i$th document vector in A and $j$th document vector in B:
 $$\mathbf{C}=\mathbf{A}^T \mathbf{B} \oslash \left( diag(\mathbf{A}^T \mathbf{A})^T diag(\mathbf{B}^T \mathbf{B}) \right)^{\circ\frac12}$$
-where $\oslash$ and $^{\circ\frac12}$ indicate Hadamard division and Hadamard square root \footnote{Elementwise division and Elementwise square root}, $diag(Q)$ the $1 \times n$ matrix formed from the diagonal of matrix $Q$. This matrix represents a network where each document in A is a node with an edge to every document in B with a weight equal to the cosine. If A is B, then the matrix is a fully connected network\footnote{That is to say, every document node has an edge to every other document in the set}. This network can be visualised using software, such as gephi. Figure \ref{gephi_exp} visualises the same 10,000 document sample. 
+where $\oslash$ and $^{\circ\frac12}$ indicate Hadamard division and Hadamard square root \footnote{Elementwise division and Elementwise square root}, $diag(Q)$ the $1 \times n$ matrix formed from the diagonal of matrix $Q$. This matrix represents a network where each document in A is a node with an edge to every document in B with a weight equal to the cosine. If A is B, then the matrix is a fully connected network\footnote{That is to say, every document node has an edge to every other document in the set}. This network can be visualised using software, such as gephi \cite{gephi}. Figure \ref{fig:gephi_exp} visualises the same 10,000 document sample as a graph.
+\begin{center}
+\begin{figure}[H]
+\label{fig:gephi_exp}
+  \centering
+    \includegraphics[scale=0.5]{Validation/sample.pdf}
+    \caption{A Network visualisation of the 10,000 document sample. Nodes (blue) are spatially distibuted by modelling the edges (purple) as springs connecting nodes with spring constants equal to cosine similarity, then allowing the system to approach equilibrium. Edges were only placed between nodes with cosine similarity greater than 0.35 for computational tractability. The edges have been curved to aid visualisation.}
+\end{figure} 
+\end{center}
+It can be seen that clusters of communities of documents also form in the network visualisation. There are noticeable outlier documents far from the central clusters \footnote{These articles are predicted to be short, or qualitively different from the majority, e.g. addenda or retraction notices, rather than proper articles.} Also note that the network visualisation technique is dependent only on cosine similarity, so was considered a better quality analytical tool than TSNE.
