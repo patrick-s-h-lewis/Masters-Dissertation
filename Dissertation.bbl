@@ -1,28 +1,16 @@
-\begin{thebibliography}{22}
+\begin{thebibliography}{26}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
   \providecommand{\doi}[1]{doi: #1}\else
   \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
 
-\bibitem[Mikolov et~al.(2013{\natexlab{a}})Mikolov, Sutskever, Chen, Corrado,
-  and Dean]{word2vec2}
-Tomas Mikolov, Ilya Sutskever, Kai Chen, Greg Corrado, and Jeffrey Dean.
-\newblock Distributed representations of words and phrases and their
-  compositionality.
-\newblock \emph{CoRR}, abs/1310.4546, 2013{\natexlab{a}}.
-\newblock URL \url{http://arxiv.org/abs/1310.4546}.
-
-\bibitem[Mikolov et~al.(2013{\natexlab{b}})Mikolov, tau Yih, and
-  Zweig]{word2veckingqueen}
-Tomas Mikolov, Wen tau Yih, and Geoffrey Zweig.
-\newblock Linguistic regularities in continuous space word representations.
-\newblock In \emph{Proceedings of the 2013 Conference of the North American
-  Chapter of the Association for Computational Linguistics: Human Language
-  Technologies (NAACL-HLT-2013)}. Association for Computational Linguistics,
-  May 2013{\natexlab{b}}.
-\newblock URL
-  \url{http://research.microsoft.com/apps/pubs/default.aspx?id=189726}.
+\bibitem[Foundation(2009)]{crossref-formation}
+Crossref Foundation.
+\newblock \emph{The Formation of CrossRef: A Short History}.
+\newblock 2009.
+\newblock URL \url{http://www.crossref.org/08downloads/CrossRef10Years.pdf}.
+\newblock [Online; accessed 2016-03-10].
 
 \bibitem[Ullah and Giles(2010)]{zipf}
 A.~Ullah and D.E.A. Giles.
@@ -31,12 +19,40 @@ A.~Ullah and D.E.A. Giles.
 \newblock ISBN 9781420070361.
 \newblock URL \url{https://books.google.co.uk/books?id=QAUv9R6bJzwC}.
 
-\bibitem[Mikolov et~al.(2013{\natexlab{c}})Mikolov, Chen, Corrado, and
+\bibitem[Mikolov et~al.(2013{\natexlab{a}})Mikolov, tau Yih, and
+  Zweig]{word2veckingqueen}
+Tomas Mikolov, Wen tau Yih, and Geoffrey Zweig.
+\newblock Linguistic regularities in continuous space word representations.
+\newblock In \emph{Proceedings of the 2013 Conference of the North American
+  Chapter of the Association for Computational Linguistics: Human Language
+  Technologies (NAACL-HLT-2013)}. Association for Computational Linguistics,
+  May 2013{\natexlab{a}}.
+\newblock URL
+  \url{http://research.microsoft.com/apps/pubs/default.aspx?id=189726}.
+
+\bibitem[Rumelhart et~al.(1986)Rumelhart, McClelland, and PDP
+  Research~Group]{distributedrepresentations}
+David~E. Rumelhart, James~L. McClelland, and CORPORATE PDP Research~Group,
+  editors.
+\newblock \emph{Parallel Distributed Processing: Explorations in the
+  Microstructure of Cognition, Vol. 1: Foundations}.
+\newblock MIT Press, Cambridge, MA, USA, 1986.
+\newblock ISBN 0-262-68053-X.
+
+\bibitem[Mikolov et~al.(2013{\natexlab{b}})Mikolov, Chen, Corrado, and
   Dean]{word2vec1}
 Tomas Mikolov, Kai Chen, Greg Corrado, and Jeffrey Dean.
 \newblock Efficient estimation of word representations in vector space.
-\newblock \emph{CoRR}, abs/1301.3781, 2013{\natexlab{c}}.
+\newblock \emph{CoRR}, abs/1301.3781, 2013{\natexlab{b}}.
 \newblock URL \url{http://arxiv.org/abs/1301.3781}.
+
+\bibitem[Mikolov et~al.(2013{\natexlab{c}})Mikolov, Sutskever, Chen, Corrado,
+  and Dean]{word2vec2}
+Tomas Mikolov, Ilya Sutskever, Kai Chen, Greg Corrado, and Jeffrey Dean.
+\newblock Distributed representations of words and phrases and their
+  compositionality.
+\newblock \emph{CoRR}, abs/1310.4546, 2013{\natexlab{c}}.
+\newblock URL \url{http://arxiv.org/abs/1310.4546}.
 
 \bibitem[{\v R}eh{\r u}{\v r}ek and Sojka(2010)]{gensim}
 Radim {\v R}eh{\r u}{\v r}ek and Petr Sojka.
@@ -51,16 +67,20 @@ Quoc~V. Le and Tomas Mikolov.
 \newblock \emph{CoRR}, abs/1405.4053, 2014.
 \newblock URL \url{http://arxiv.org/abs/1405.4053}.
 
-\bibitem[Bird et~al.(2009)Bird, Klein, and Loper]{NLTK}
+\bibitem[Bird et~al.(2009)Bird, Klein, and Loper]{nltk}
 Steven Bird, Ewan Klein, and Edward Loper.
 \newblock \emph{Natural Language Processing with Python}.
 \newblock O'Reilly Media, Inc., 1st edition, 2009.
 \newblock ISBN 0596516495, 9780596516499.
 
-\bibitem[Porter(1980)]{Porter}
+\bibitem[Porter(1980)]{porter}
 M.~F. Porter.
 \newblock \emph{An Algorithm for Suffix Stripping}, volume~14.
 \newblock 1980.
+
+\bibitem[Porter(2002)]{snowball}
+M.~F. Porter.
+\newblock {The Porter2 stemming algorithm}, 2002.
 
 \bibitem[Paice(1990)]{lancaster}
 Chris~D. Paice.
@@ -117,6 +137,16 @@ G.E. van~der Maaten, L.J.P.;~Hinton.
 \newblock \emph{Journal of Machine Learning Research}, 9:\penalty0 2579--2605,
   2008.
 
+\bibitem[Pedregosa et~al.(2011)Pedregosa, Varoquaux, Gramfort, Michel, Thirion,
+  Grisel, Blondel, Prettenhofer, Weiss, Dubourg, Vanderplas, Passos,
+  Cournapeau, Brucher, Perrot, and Duchesnay]{scikitlearn}
+F.~Pedregosa, G.~Varoquaux, A.~Gramfort, V.~Michel, B.~Thirion, O.~Grisel,
+  M.~Blondel, P.~Prettenhofer, R.~Weiss, V.~Dubourg, J.~Vanderplas, A.~Passos,
+  D.~Cournapeau, M.~Brucher, M.~Perrot, and E.~Duchesnay.
+\newblock Scikit-learn: Machine learning in {P}ython.
+\newblock \emph{Journal of Machine Learning Research}, 12:\penalty0 2825--2830,
+  2011.
+
 \bibitem[Bastian et~al.(2009)Bastian, Heymann, and Jacomy]{gephi}
 Mathieu Bastian, Sebastien Heymann, and Mathieu Jacomy.
 \newblock Gephi: An open source software for exploring and manipulating
@@ -124,45 +154,36 @@ Mathieu Bastian, Sebastien Heymann, and Mathieu Jacomy.
 \newblock 2009.
 \newblock URL \url{http://www.aaai.org/ocs/index.php/ICWSM/09/paper/view/154}.
 
-\bibitem[Vincent D~Blondel(2008)]{modularity1}
-Renaud Lambiotte Etienne~Lefebvre Vincent D~Blondel, Jean-Loup~Guillaume.
+\bibitem[Blondel et~al.(2008)Blondel, Guillaume, and
+  Renaud~Lambiotte]{modularity1}
+Vincent~D Blondel, Jean-Loup Guillaume, and Etienne~Lefebvre Renaud~Lambiotte.
 \newblock Fast unfolding of communities in large networks.
 \newblock \emph{Journal of Statistical Mechanics: Thory and Experiment},
   10:\penalty0 1000, 2008.
 
-\bibitem[Lambiotte et~al.()Lambiotte, Delvenne, and Barahona]{modularity2}
+\bibitem[Lambiotte et~al.(2015)Lambiotte, Delvenne, and Barahona]{modularity2}
 R.~Lambiotte, J.-C. Delvenne, and M.~Barahona.
 \newblock Laplacian dynamics and multiscale modular structure in networks.
-\newblock \emph{IEEE Transactions on Network Science and Engineering}.
+\newblock \emph{IEEE Transactions on Network Science and Engineering},
+  1:\penalty0 76--90, 2015.
 
 \bibitem[R and C(1958)]{heatmapcluster}
 Sokal R and Michener C.
 \newblock A statistical method for evaluating systematic relationships.
-\newblock \emph{University of Kansas Science Bulletin}, 1958.
+\newblock \emph{University of Kansas Science Bulletin}, 38:\penalty0
+  1409--–1438, 1958.
 
-\bibitem[drewokane; Paul Hobson; Yaroslav Halchenko; Saulius Lukauskas; Jordi
-  Warmenhoven; John B. Cole; Stephan Hoyer; Jake Vanderplas;~gkunter; Santi
-  Villalba; Eric Quintero; Marcel Martin; Alistair Miles; Kyle Meyer; Tom
-  Augspurger; Tal Yarkoni; Pete Bacha)drewokane; Paul Hobson; Yaroslav
-  Halchenko; Saulius Lukauskas; Jordi Warmenhoven; John B. Cole; Stephan Hoyer;
-  Jake Vanderplas;~gkunter; Santi Villalba; Eric Quintero; Marcel Martin;
-  Alistair Miles; Kyle Meyer; Tom Augspurger; Tal Yarkoni; Pete Bachant;
-  Constantine Evans; Clark Fitzgerald; Tamas Nagy; Erik Ziegler; Tobias Megies;
-  Daniel Wehner; Samuel St-Jean; Luis Pedro Coelho; Gregory Hitz; Antony Lee;
-  Luc~Rocher;]{seaborn}
-Michael Waskom; Olga~Botvinnik; drewokane; Paul Hobson; Yaroslav Halchenko;
-  Saulius Lukauskas; Jordi Warmenhoven; John B. Cole; Stephan Hoyer; Jake
-  Vanderplas;~gkunter; Santi Villalba; Eric Quintero; Marcel Martin; Alistair
-  Miles; Kyle Meyer; Tom Augspurger; Tal Yarkoni; Pete Bachant; Constantine
-  Evans; Clark Fitzgerald; Tamas Nagy; Erik Ziegler; Tobias Megies; Daniel
-  Wehner; Samuel St-Jean; Luis Pedro Coelho; Gregory Hitz; Antony Lee;
-  Luc~Rocher;.
+\bibitem[et~al.(2016)]{seaborn}
+Michael~Waskom et~al.
 \newblock seaborn: v0.7.0 (january 2016).
 \newblock 2016.
 \newblock \doi{10.5281/zenodo.45133}.
 \newblock URL \url{http://dx.doi.org/10.5281/zenodo.45133}.
 
-\bibitem[sci()]{scipy}
-
+\bibitem[Jones et~al.(2001--)Jones, Oliphant, Peterson, et~al.]{scipy}
+Eric Jones, Travis Oliphant, Pearu Peterson, et~al.
+\newblock {SciPy}: Open source scientific tools for {Python}, 2001--.
+\newblock URL \url{http://www.scipy.org/}.
+\newblock [Online; accessed 2016-03-10].
 
 \end{thebibliography}

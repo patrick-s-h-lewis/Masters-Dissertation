@@ -8,6 +8,10 @@
 \usepackage{enumitem}
 \usepackage{subfiles}
 \usepackage{multirow}
+\usepackage{array}
+\newcolumntype{L}{>{\centering\arraybackslash}m{3.2cm}}
+\newcolumntype{N}{>{\centering\arraybackslash}m{2.5cm}}
+\newcolumntype{X}{>{\centering\arraybackslash}m{9cm}}
 
 
 
@@ -26,7 +30,7 @@
 
 \makeatletter
 \def\@makechapterhead#1{%
-  \vspace*{0\p@}%
+  \vspace*{50\p@}%
   {\parindent \z@ \raggedright \normalfont
     \interlinepenalty\@M
     \Huge\bfseries  \thechapter.\quad #1\par\nobreak
