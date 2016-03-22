@@ -4,3 +4,16 @@
 \BOOKMARK [1][-]{section.1.1}{Modern Scientific Publishing}{chapter.1}% 4
 \BOOKMARK [1][-]{section.1.2}{Motivation}{chapter.1}% 5
 \BOOKMARK [1][-]{section.1.3}{Aims}{chapter.1}% 6
+\BOOKMARK [0][-]{chapter.2}{Data Acquisition}{}% 7
+\BOOKMARK [1][-]{section.2.1}{Background}{chapter.2}% 8
+\BOOKMARK [2][-]{subsection.2.1.1}{HTML and Xpath}{section.2.1}% 9
+\BOOKMARK [1][-]{section.2.2}{Automatic Xpath Generation}{chapter.2}% 10
+\BOOKMARK [1][-]{section.2.3}{Collection Strategy}{chapter.2}% 11
+\BOOKMARK [2][-]{subsection.2.3.1}{DOIS : Document Object Identifiers}{section.2.3}% 12
+\BOOKMARK [2][-]{subsection.2.3.2}{Scraping Program}{section.2.3}% 13
+\BOOKMARK [1][-]{section.2.4}{Collection Results}{chapter.2}% 14
+\BOOKMARK [2][-]{subsection.2.4.1}{UK University Department scraping}{section.2.4}% 15
+\BOOKMARK [2][-]{subsection.2.4.2}{Very Large Scale Scraping}{section.2.4}% 16
+\BOOKMARK [2][-]{subsection.2.4.3}{Problems with ACS and Taylor \046 Francis}{section.2.4}% 17
+\BOOKMARK [2][-]{subsection.2.4.4}{Analysis of Collected data}{section.2.4}% 18
+\BOOKMARK [3][-]{section*.5}{Observations}{subsection.2.4.4}% 19

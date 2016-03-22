@@ -40,9 +40,9 @@ This is achieved with two architectures, Continuous Bag of Words (henceforth CBO
 
 \begin{figure}[H]
     \centering
-    \textbf{Word2Vec architectures}\par\medskip
+    \textbf{Word2Vec Training Architectures}\par\medskip
     \includegraphics[width=\textwidth]{Natural_Language_Processing/cbow_v_skip.pdf}
-    \caption{The training architectures of the Word2Vec training algorithm. Word vectors are denoted $v(i)$ for word i. In CBOW word i is predicted by the vector found by summing vectors surrounding i, and $v(i)$ is adjusted to be closer to this prediction. In skip-gram, word i's vector is pairwise compared to its context words, here i-1 and i+1 as a basis to improve $v(i)$.). CBOW attemtps to make words similar the sum of the surrounding words, skipgram attempts to minimise distance to each surrounding word.}
+    \caption[Word2Vec Training Architectures ]{The training architectures of the Word2Vec training algorithm. Word vectors are denoted $v(i)$ for word i. In CBOW word i is predicted by the vector found by summing vectors surrounding i, and $v(i)$ is adjusted to be closer to this prediction. In skip-gram, word i's vector is pairwise compared to its context words, here i-1 and i+1 as a basis to improve $v(i)$.). CBOW attemtps to make words similar the sum of the surrounding words, skipgram attempts to minimise distance to each surrounding word.}
      \label{fig:CBOWSKIP}
 \end{figure}
 
@@ -53,7 +53,7 @@ The model has added sophistication built in to reduce the importance of very com
     \centering
     \textbf{Word Vector Relationships}\par\medskip
     \includegraphics[height=6.5cm]{Natural_Language_Processing/KINGQUEEN.png}
-    \caption{Schematic Representation of how concepts can be represented in word vector space. Word2Vec is able to replicate this behaviour. The vector found by vec(‘King’)- vec(‘Man’)+vec(‘Woman’) is approximately equal to vec(‘Queen’). The model has been tested on thousands of similar examples\cite{word2vec2}\cite{word2veckingqueen}.}
+    \caption[Word Vector Relationships]{Schematic Representation of how concepts can be represented in word vector space. Word2Vec is able to replicate this behaviour. The vector found by vec(‘King’)- vec(‘Man’)+vec(‘Woman’) is approximately equal to vec(‘Queen’). The model has been tested on thousands of similar examples\cite{word2vec2}\cite{word2veckingqueen}.}
      \label{fig:KINGQUEEN}
 \end{figure}
 Word2Vec models are able to represent concepts by vector algebraic operations on their word representations. Figure \ref{fig:KINGQUEEN} shows one famous example a Word2Vec model trained on the `Google News' text corpus was able to identify. 

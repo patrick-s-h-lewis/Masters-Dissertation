@@ -6,8 +6,9 @@ The CCD contained 9467 documents. The cosine matrix was calculated and a network
 \begin{center}
 \begin{figure}[H]
   \centering
+  \textbf{CCD Network Visualisation}
     \includegraphics[width=\textwidth]{Analysis/cam.png}
-    \caption{A Network visualisation of the CCD. Edges were placed between nodes with weights corresponding to cosine similarity if $S_{cosine}$. Nodes are coloured by their detected communities, and node size is proportional to the number of connections a node has. nodes are arranged by modelling edges as springs.}
+    \caption[Network Visualisation of University of Cambridge Chemistry Department Documents]{A Network visualisation of the CCD. Edges were placed between nodes with weights corresponding to cosine similarity if $S_{cosine}$. Nodes are coloured by their detected communities, and node size is proportional to the number of connections a node has. nodes are arranged by modelling edges as springs.}
     \label{fig:CAMCOMMUNITIES}
 
 \end{figure} 
@@ -16,8 +17,9 @@ It is apparent that the CCD contains contains clear communities of documents. Th
 \begin{center}
 \begin{figure}[H]
   \centering
+  \textbf{Recursion Tree for Community Generation Process}
     \includegraphics[width=\textwidth]{Analysis/comms.png}
-    \caption{Recursion Tree for how communities were derived. The dataset was partitioned using the modularity algorithm. Sets with more than 100 documents were then repartitioned recursively. Sets of less than 100 documents were considered to be communities (red nodes in the diagram). If the algorithm could not partition a set any further, the recursion was stopped and the set was considered a community, even if it was larger than 100 documents.  The figure shows the maximum depth of partitioning required was 8, and most communities were found after 3 partitions.}
+    \caption[Recursion Tree for Document Community Generation]{Recursion Tree for how communities were derived. The dataset was partitioned using the modularity algorithm. Sets with more than 100 documents were then repartitioned recursively. Sets of less than 100 documents were considered to be communities (red nodes in the diagram). If the algorithm could not partition a set any further, the recursion was stopped and the set was considered a community, even if it was larger than 100 documents.  The figure shows the maximum depth of partitioning required was 8, and most communities were found after 3 partitions.}
     \label{fig:COMMTREE}
 
 \end{figure} 
@@ -72,8 +74,9 @@ A similar technique to that described in  \S\ref{sec:RESEARCHCLUSTERS} could hav
 \begin{center}
 \begin{figure}[H]
   \centering
+  \textbf{Cambridge Author Similarity Clustermap}
     \makebox[\textwidth][c]{\includegraphics[width=1.2\textwidth]{Analysis/authorsims.png}}
-    \caption{This figure shows a heatmap of author similarity. Dark pixels correspond to the author in the pixel's row having similar research interests to the author in the pixel's column. The matrix has been scaled to the range ($0 \rightarrow 1$).  The authors are arranged by clusters found in UPGMA. The hierarchical clustering structure is demonstrated by the dendrogram tree connecting author pairs together.}
+    \caption[Cambrdige Author Similarity Clustermap]{This figure shows a heatmap of author similarity. Dark pixels correspond to the author in the pixel's row having similar research interests to the author in the pixel's column. The matrix has been scaled to the range ($0 \rightarrow 1$).  The authors are arranged by clusters found in UPGMA. The hierarchical clustering structure is demonstrated by the dendrogram tree connecting author pairs together.}
     \label{fig:AUTHORSIMS}
 
 \end{figure} 
@@ -82,8 +85,9 @@ Figure \ref{fig:AUTHORSIMS} shows the result of generating $\textbf{S}$ and perf
 \begin{center}
 \begin{figure}[H]
   \centering
+  \textbf{Cambridge Author Similarity Dendrogram}
     \includegraphics[width=\textwidth]{Analysis/dendro.png}
-    \caption{The dendrogram of figure \ref{fig:AUTHORSIMS}} plotted for clarity
+    \caption[Cambridge Author Similarity Dendrogram]{The dendrogram of figure \ref{fig:AUTHORSIMS}} plotted for clarity
 \end{figure} 
 \label{fig:DENDRO}
 
@@ -92,9 +96,10 @@ A striking feature of figure \ref{fig:AUTHORSIMS} is the cluster in the bottom r
 \begin{center}
 \begin{figure}[H]
   \centering
+  \textbf{Annotated Dendrogram}
     \includegraphics[scale=0.8]{Analysis/dendro_overlay2.png}
-    \caption{Cluster labels overlayed over the distinct branches of the dendrogram.}
-    \label{fig:LABELLEDDENDRO}
+    \caption[Dendrogram annotated with labelled fields]{Cluster labels overlayed over the distinct branches of the dendrogram.}
+    \label{fig:LABELLEDDENDRO
 
 \end{figure} 
 \end{center}
@@ -112,8 +117,9 @@ It was noted that there was significant variation in the number of communities t
 \begin{center}
 \begin{figure}[H]
   \centering
+  \textbf{Author Community Spread}
     \includegraphics[width=\textwidth]{Analysis/community_detection.png}
-    \caption{Number of research communities authors are associated with. High values indicate an author publishing across many communities, suggest more interdisciplinary work, but also higher publication count per author. (The same plot, scaled for publication count) is included in the appendix}
+    \caption[Author community Spread]{Number of research communities authors are associated with. High values indicate an author publishing across many communities, suggest more interdisciplinary work, but also higher publication count per author. (The same plot, scaled for publication count) is included in the appendix}
 \label{fig:commbar}
 
 \end{figure} 
@@ -126,8 +132,9 @@ Where $C$ is the total number of communities. An association matrix was created,
 \begin{center}
 \begin{figure}[H]
   \centering
+  \textbf{Author Coincidence Heatmap}
     \includegraphics[width=\textwidth]{Analysis/author_comm_heatmap.png}
-    \caption{Heatmap showing author-author pair values for how often author pairs publish works in the same communities. High values indicated that aduthors are predicted to have similar publication profiles. Note the authors are arranged with the ordering from figure \ref{fig:AUTHORSIMS}.}
+    \caption[Author Coincidence Matrix Heatmap]{Heatmap showing author-author pair values for how often author pairs publish works in the same communities. High values indicated that aduthors are predicted to have similar publication profiles. Note the authors are arranged with the ordering from figure \ref{fig:AUTHORSIMS}.}
     \label{fig:commHEATMAP}
 
 \end{figure} 
@@ -138,13 +145,16 @@ Having defined a framework for finding where authors share research interest, th
 
 \begin{figure}[H]
   \centering
+  \textbf{Author Collaboration Heatmap}
     \includegraphics[width=\textwidth]{Analysis/raw_collabs.png}
-    \caption{Raw collaboration matrix (values scaled to range $0 \rightarrow 1$). Note the general lack of co-publishing between staff members. Again staff are ordered by clustering described in \S\ref{sec:AUTHORCLUSTERS}, but no actual clustering has been performed. Hot spots near the diagonal suggest that author pairs clustered close together in \S\ref{sec:AUTHORCLUSTERS} generally collaborate more than distant author pairs.}
+    \caption[Author Collaboration Heatmap]{Raw collaboration matrix (values scaled to range $0 \rightarrow 1$). Note the general lack of co-publishing between staff members. Again staff are ordered by clustering described in \S\ref{sec:AUTHORCLUSTERS}, but no actual clustering has been performed. Hot spots near the diagonal suggest that author pairs clustered close together in \S\ref{sec:AUTHORCLUSTERS} generally collaborate more than distant author pairs.}
       \label{fig:rawcollabs}
   \end{figure}
   \begin{figure}
+  \centering
+  \textbf{Community-summed Author Collaboration Heatmap}
     \includegraphics[width=\textwidth]{Analysis/comm_collabs.png}
-    \caption{Matrix formed by summing collaboration of author pairs over research communities (values scaled to range $0 \rightarrow 1$). Qualitatively similar to figure \ref{fig:rawcollabs}. Hot spots near diagonal again suggest authors closely clustered in \S\ref{sec:AUTHORCLUSTERS} collaborate more frequently }
+    \caption[Community-summed Author Collaboration Heatmap]{Matrix formed by summing collaboration of author pairs over research communities (values scaled to range $0 \rightarrow 1$). Qualitatively similar to figure \ref{fig:rawcollabs}. Hot spots near diagonal again suggest authors closely clustered in \S\ref{sec:AUTHORCLUSTERS} collaborate more frequently }
       \label{fig:collcollabs}
 
 \end{figure}
@@ -155,8 +165,9 @@ As a final data step, a matrix defined as the difference between an author simil
 \begin{center}
 \begin{figure}[H]
   \centering
+  \textbf{Recommended Collaboration Matrix}
     \includegraphics[width=\textwidth]{Analysis/Recommending_Mat.png}
-    \caption{Recommending matrix. High values (Deep red) indicate authors that have similar research but for which there is little evidence of collaboration on published works. Values $\sim$ 0 (grey/white) are where authors are neither similar nor collaborate, or are similar and collaborate closely. Values towards -1, (Blue) indicate authors that are collaborate but do share similar research (not strongly observed, as expected. High negative values would be somewhat paradoxical.) }
+    \caption[Recommended Collaboration Matrix]{High values (Deep red) indicate authors that have similar research but for which there is little evidence of collaboration on published works. Values $\sim$ 0 (grey/white) are where authors are neither similar nor collaborate, or are similar and collaborate closely. Values towards -1, (Blue) indicate authors that are collaborate but do share similar research (not strongly observed, as expected. High negative values would be somewhat paradoxical.) }
     \label{fig:RECOMM_MAT}
 
 \end{figure} 
@@ -165,8 +176,9 @@ This final piece of the analysis section illustrates how the framework developed
 \begin{center}
 \begin{figure}[H]
   \centering
+  \textbf{Recommended Collaboration Scores for Particular Staff Member, Professor Goodman}
     \includegraphics[width=\textwidth]{Analysis/jmg.png}
-    \caption{Recommendations for a particular staff member from the recommendation matrix, plotted in bar form, (Professor Goodman). (Bars very close to zero have been removed). }
+    \caption[Recommended Collaboration Scores for Particular Staff Member]{Recommendations for a particular staff member from the recommendation matrix, plotted in bar form, (Professor Goodman). (Bars very close to zero have been removed). }
     \label{fig:RECOMM_BAR}
 \end{figure} 
 \end{center}

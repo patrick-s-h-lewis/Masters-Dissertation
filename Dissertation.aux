@@ -25,9 +25,62 @@
 \@glsorder{word}
 \@writefile{toc}{\contentsline {chapter}{List of Figures}{2}{chapter*.2}}
 \@writefile{toc}{\contentsline {chapter}{Glossary}{3}{section*.3}}
-\@writefile{toc}{\contentsline {chapter}{\numberline {1}Introduction}{4}{chapter.1}}
+\@writefile{toc}{\contentsline {chapter}{\numberline {1}Introduction}{6}{chapter.1}}
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
-\@writefile{toc}{\contentsline {section}{\numberline {1.1}Modern Scientific Publishing}{4}{section.1.1}}
-\@writefile{toc}{\contentsline {section}{\numberline {1.2}Motivation}{4}{section.1.2}}
-\@writefile{toc}{\contentsline {section}{\numberline {1.3}Aims}{5}{section.1.3}}
+\@writefile{toc}{\contentsline {section}{\numberline {1.1}Modern Scientific Publishing}{6}{section.1.1}}
+\@writefile{toc}{\contentsline {section}{\numberline {1.2}Motivation}{6}{section.1.2}}
+\@writefile{toc}{\contentsline {section}{\numberline {1.3}Aims}{7}{section.1.3}}
+\@writefile{toc}{\contentsline {chapter}{\numberline {2}Data Acquisition}{8}{chapter.2}}
+\@writefile{lof}{\addvspace {10\p@ }}
+\@writefile{lot}{\addvspace {10\p@ }}
+\newlabel{chapt:DATA_ACQUISITION}{{2}{8}{Data Acquisition}{chapter.2}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {2.1}Background}{8}{section.2.1}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.1.1}HTML and Xpath}{8}{subsection.2.1.1}}
+\@writefile{lof}{\contentsline {figure}{\numberline {2.1}{\ignorespaces Tree representation of HTML Code}}{8}{figure.2.1}}
+\newlabel{fig:HTMLTREE}{{2.1}{8}{Tree representation of HTML Code}{figure.2.1}{}}
+\citation{crossref-formation}
+\@writefile{toc}{\contentsline {section}{\numberline {2.2}Automatic Xpath Generation}{9}{section.2.2}}
+\@writefile{toc}{\contentsline {section}{\numberline {2.3}Collection Strategy}{9}{section.2.3}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.3.1}DOIS : Document Object Identifiers}{10}{subsection.2.3.1}}
+\newlabel{sec:DOI}{{2.3.1}{10}{DOIS : Document Object Identifiers}{subsection.2.3.1}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {2.2}{\ignorespaces Doi structure. The structure consists of a numeric prefix (X and Y must be integers) and alphanumeric suffix (Z can be any Unicode encoded character) }}{10}{figure.2.2}}
+\newlabel{fig:DOI}{{2.2}{10}{Doi structure. The structure consists of a numeric prefix (X and Y must be integers) and alphanumeric suffix (Z can be any Unicode encoded character)}{figure.2.2}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {2.3}{\ignorespaces Perl Syntax Regex Code that can identify the vast majority of DOIs within free text) }}{11}{figure.2.3}}
+\newlabel{fig:REGEX}{{2.3}{11}{Perl Syntax Regex Code that can identify the vast majority of DOIs within free text)}{figure.2.3}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.3.2}Scraping Program}{11}{subsection.2.3.2}}
+\newlabel{sec:SCRAPING_PROGRAM}{{2.3.2}{11}{Scraping Program}{subsection.2.3.2}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {2.4}{\ignorespaces The data flow of the scraping program. Websites from an inputted list of websites are visited and dois are extracted in the process described in \S  \ref  {sec:DOI}. The Crossref API service is then used to verify the extracted dois, and collects available meta-data. The program then accesses publisher webpages and collects abstracts. The program also produces explanation of capture failures and some general statistics}}{12}{figure.2.4}}
+\newlabel{fig:Cherry}{{2.4}{12}{The data flow of the scraping program. Websites from an inputted list of websites are visited and dois are extracted in the process described in \S \ref {sec:DOI}. The Crossref API service is then used to verify the extracted dois, and collects available meta-data. The program then accesses publisher webpages and collects abstracts. The program also produces explanation of capture failures and some general statistics}{figure.2.4}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {2.4}Collection Results}{13}{section.2.4}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.4.1}UK University Department scraping}{13}{subsection.2.4.1}}
+\newlabel{sec:UKSCRAPE}{{2.4.1}{13}{UK University Department scraping}{subsection.2.4.1}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {2.1}{\ignorespaces UK Scraping results}}{13}{table.2.1}}
+\newlabel{tab:UKSCRAPERES}{{2.1}{13}{UK Scraping results}{table.2.1}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {2.5}{\ignorespaces The loss processes are coloured red, successfully captured full records in green, and the maximum possible yield in blue.}}{14}{figure.2.5}}
+\newlabel{fig:UKSANK}{{2.5}{14}{The loss processes are coloured red, successfully captured full records in green, and the maximum possible yield in blue}{figure.2.5}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.4.2}Very Large Scale Scraping}{14}{subsection.2.4.2}}
+\newlabel{sec:CROSSREFSCRAPE}{{2.4.2}{14}{Very Large Scale Scraping}{subsection.2.4.2}{}}
+\newlabel{sec:CROSSREFSCRAPE}{{2.4.2}{15}{Very Large Scale Scraping}{subsection.2.4.2}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.4.3}Problems with ACS and Taylor \& Francis}{15}{subsection.2.4.3}}
+\@writefile{lof}{\contentsline {figure}{\numberline {2.6}{\ignorespaces The request frequency is plotted in blue, the received pages frequency in red. The vertical dashed line shows where the server detected the scape and banned the IP.}}{16}{figure.2.6}}
+\newlabel{fig:ACSBAN}{{2.6}{16}{The request frequency is plotted in blue, the received pages frequency in red. The vertical dashed line shows where the server detected the scape and banned the IP}{figure.2.6}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.4.4}Analysis of Collected data}{16}{subsection.2.4.4}}
+\@writefile{lot}{\contentsline {table}{\numberline {2.2}{\ignorespaces Large Scale Scraping Results}}{17}{table.2.2}}
+\newlabel{tab:LARGESCRAPERES}{{2.2}{17}{Large Scale Scraping Results}{table.2.2}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {2.7}{\ignorespaces The loss processes are coloured red, successfully captured full records in green, and the maximum possible yield in blue.}}{17}{figure.2.7}}
+\newlabel{fig:LARGESANK}{{2.7}{17}{The loss processes are coloured red, successfully captured full records in green, and the maximum possible yield in blue}{figure.2.7}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {2.8}{\ignorespaces Blue databases represent data with dois and metadata. Green databases represent meta-data, dois and abstracts. The purple database is the combined complete records, and the red database is the data deemed suitable for the training algorithm. database sizes and losses are annotated.}}{18}{figure.2.8}}
+\newlabel{fig:DATABASES}{{2.8}{18}{Blue databases represent data with dois and metadata. Green databases represent meta-data, dois and abstracts. The purple database is the combined complete records, and the red database is the data deemed suitable for the training algorithm. database sizes and losses are annotated}{figure.2.8}{}}
+\@writefile{toc}{\contentsline {subsubsection}{Observations}{18}{section*.5}}
+\newlabel{sec:CORPUSOBSERVATIONS}{{2.4.4}{18}{Observations}{section*.5}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {2.9}{\ignorespaces Articles grouped by publisher in the Large Scale Scrape doi database (marked 'Large Scale Scrape Dois' in figure \ref  {fig:DATABASES}). Only the top 12 publishers are shown.}}{19}{figure.2.9}}
+\newlabel{fig:PUBPI}{{2.9}{19}{Articles grouped by publisher in the Large Scale Scrape doi database (marked 'Large Scale Scrape Dois' in figure \ref {fig:DATABASES}). Only the top 12 publishers are shown}{figure.2.9}{}}
+\citation{zipf}
+\@writefile{lof}{\contentsline {figure}{\numberline {2.10}{\ignorespaces Articles grouped by publisher in the UK Doi database published by by each publisher. Only the top 12 publishers are shown.}}{20}{figure.2.10}}
+\newlabel{fig:UKPUBPI}{{2.10}{20}{Articles grouped by publisher in the UK Doi database published by by each publisher. Only the top 12 publishers are shown}{figure.2.10}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {2.11}{\ignorespaces The log Frequency of words vs the log of their position in the rank in the word frequency table in blue. Best fit line in red, gradient = -1.11, intercept 6.3. }}{21}{figure.2.11}}
+\newlabel{fig:ZIPF}{{2.11}{21}{The log Frequency of words vs the log of their position in the rank in the word frequency table in blue. Best fit line in red, gradient = -1.11, intercept 6.3}{figure.2.11}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {2.3}{\ignorespaces Titles and Abstracts in Training Database}}{21}{table.2.3}}
+\newlabel{tab:CORPUS STATS}{{2.3}{21}{Titles and Abstracts in Training Database}{table.2.3}{}}
+\newlabel{sec:SCRAPEANALYSIS}{{2.4.4}{21}{Observations}{table.2.3}{}}

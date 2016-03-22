@@ -13,9 +13,9 @@ It was also observed that, as unicode text scraped from a wide variety of source
 
 \begin{figure}[H]
     \centering
-    \textbf{Filtered Punctation }\par\medskip
+    \textbf{Filtered Punctuation }\par\medskip
     \includegraphics[scale=0.2]{Algorithm/punct_table.png}
-    \caption{All the punctuation removed in scraping. Only these were found in appreciable quantities in the training dataset. }
+    \caption[Punctuation removed in sanitation processing]{All the punctuation removed in sanitation. Only these were found in appreciable quantities in the training dataset. }
      \label{fig:punct}
 \end{figure}
 Removing hyphens and primes also meant chemical names were fragmented. This was considered acceptable as the fragment words had greater freedom than specific (possibly singleton) fully formed names, e.g. \texttt{5-methyl-1-heptanol} is split to \texttt{5 methyl 1 heptanol}, this allows the \texttt{heptanol} fragment to be associated with other mentions of heptanol in the training set, rather than only associate with mentions of the much less frequent 5-methyl-1-heptanol. 
@@ -85,7 +85,7 @@ The document preprocessing pipeline is shown diagrammatically in figure \ref{fig
     \centering
     \textbf{Preprocessing pipeline}\par\medskip
   \makebox[\textwidth][c]{\includegraphics[width=1.15\textwidth]{Algorithm/Data_Sanitation.pdf}}%
-    \caption{All documents in the training database were preprocessed with this pipeline schema before being used in training models}
+    \caption[Preprocessing Pipeline]{All documents in the training database were preprocessed with this pipeline schema before being used in training models}
      \label{fig:SANPIPE}
 \end{figure}
 The process is best illustrated by real example from the dataset:

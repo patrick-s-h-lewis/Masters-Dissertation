@@ -1,1 +1,58 @@
-\glossaryentry{MachineLearning?\glossentry{MachineLearning}|setentrycounter[]{page}\glsnumberformat}{1}
+\glossaryentry{Machine Learning?\glossentry{MachineLearning}|setentrycounter[]{page}\glsnumberformat}{1}
+\glossaryentry{SciFinder\textsuperscript {\textregistered }?\glossentry{SciFinder}|setentrycounter[]{page}\glsnumberformat}{1}
+\glossaryentry{Web Of Science \textsuperscript {TM}?\glossentry{WebOfScience}|setentrycounter[]{page}\glsnumberformat}{1}
+\glossaryentry{Scraping?\glossentry{Scraping}|setentrycounter[]{page}\glsnumberformat}{1}
+\glossaryentry{Crawling?\glossentry{Crawling}|setentrycounter[]{page}\glsnumberformat}{1}
+\glossaryentry{Meta-data?\glossentry{Metadata}|setentrycounter[]{page}\glsnumberformat}{1}
+\glossaryentry{Python?\glossentry{python}|setentrycounter[]{page}\glsnumberformat}{1}
+\glossaryentry{MongoDB?\glossentry{MongoDB}|setentrycounter[]{page}\glsnumberformat}{1}
+\glossaryentry{HTML?\glossentry{HTML}|setentrycounter[]{page}\glsnumberformat}{1}
+\glossaryentry{XML?\glossentry{XML}|setentrycounter[]{page}\glsnumberformat}{1}
+\glossaryentry{XPath?\glossentry{XPath}|setentrycounter[]{page}\glsnumberformat}{1}
+\glossaryentry{Regex?\glossentry{Regex}|setentrycounter[]{page}\glsnumberformat}{1}
+\glossaryentry{DOI?\glossentry{DOI}|setentrycounter[]{page}\glsnumberformat}{1}
+\glossaryentry{Crossref?\glossentry{Crossref}|setentrycounter[]{page}\glsnumberformat}{1}
+\glossaryentry{PILA?\glossentry{PILA}|setentrycounter[]{page}\glsnumberformat}{1}
+\glossaryentry{IDF?\glossentry{IDF}|setentrycounter[]{page}\glsnumberformat}{1}
+\glossaryentry{UTF-8?\glossentry{UTF-8}|setentrycounter[]{page}\glsnumberformat}{1}
+\glossaryentry{Unicode?\glossentry{Unicode}|setentrycounter[]{page}\glsnumberformat}{1}
+\glossaryentry{Perl?\glossentry{Perl}|setentrycounter[]{page}\glsnumberformat}{1}
+\glossaryentry{API?\glossentry{API}|setentrycounter[]{page}\glsnumberformat}{1}
+\glossaryentry{ACS?\glossentry{ACS}|setentrycounter[]{page}\glsnumberformat}{1}
+\glossaryentry{Taylor \& Francis?\glossentry{TaylorFrancis}|setentrycounter[]{page}\glsnumberformat}{1}
+\glossaryentry{IP Address?\glossentry{IPADDRESS}|setentrycounter[]{page}\glsnumberformat}{1}
+\glossaryentry{Training Dataset?\glossentry{Training Dataset}|setentrycounter[]{page}\glsnumberformat}{1}
+\glossaryentry{RSC?\glossentry{RSC}|setentrycounter[]{page}\glsnumberformat}{1}
+\glossaryentry{Zipf's Law?\glossentry{Zipfslaw}|setentrycounter[]{page}\glsnumberformat}{1}
+\glossaryentry{Corpus?\glossentry{Corpus}|setentrycounter[]{page}\glsnumberformat}{1}
+\glossaryentry{NLP?\glossentry{NLP}|setentrycounter[]{page}\glsnumberformat}{1}
+\glossaryentry{Bag Of Words?\glossentry{BagOfWords}|setentrycounter[]{page}\glsnumberformat}{1}
+\glossaryentry{BagOfCitations?\glossentry{BagOfCitations}|setentrycounter[]{page}\glsnumberformat}{1}
+\glossaryentry{Word2Vec?\glossentry{Word2vec}|setentrycounter[]{page}\glsnumberformat}{1}
+\glossaryentry{Neural Net?\glossentry{NeuralNet}|setentrycounter[]{page}\glsnumberformat}{1}
+\glossaryentry{CBOW?\glossentry{CBOW}|setentrycounter[]{page}\glsnumberformat}{1}
+\glossaryentry{Skipgram?\glossentry{Skipgram}|setentrycounter[]{page}\glsnumberformat}{1}
+\glossaryentry{Doc2Vec?\glossentry{Doc2Vec}|setentrycounter[]{page}\glsnumberformat}{1}
+\glossaryentry{Paragraph Vectors?\glossentry{Paragraphvectors}|setentrycounter[]{page}\glsnumberformat}{1}
+\glossaryentry{Stop Words?\glossentry{Stopwords}|setentrycounter[]{page}\glsnumberformat}{1}
+\glossaryentry{Stemmer?\glossentry{Stemmer}|setentrycounter[]{page}\glsnumberformat}{1}
+\glossaryentry{Snowball?\glossentry{SNOWBALL}|setentrycounter[]{page}\glsnumberformat}{1}
+\glossaryentry{Lancaster?\glossentry{Lancaster}|setentrycounter[]{page}\glsnumberformat}{1}
+\glossaryentry{Porter?\glossentry{Porter}|setentrycounter[]{page}\glsnumberformat}{1}
+\glossaryentry{WordNet?\glossentry{WordNet}|setentrycounter[]{page}\glsnumberformat}{1}
+\glossaryentry{TF-IDF?\glossentry{TF-IDF}|setentrycounter[]{page}\glsnumberformat}{1}
+\glossaryentry{Gensim?\glossentry{Gensim}|setentrycounter[]{page}\glsnumberformat}{1}
+\glossaryentry{Hyperparameters?\glossentry{Hyperparameters}|setentrycounter[]{page}\glsnumberformat}{1}
+\glossaryentry{Training Epoch?\glossentry{TrainingEpoch}|setentrycounter[]{page}\glsnumberformat}{1}
+\glossaryentry{Cosine Similarity?\glossentry{CosineSim}|setentrycounter[]{page}\glsnumberformat}{1}
+\glossaryentry{EuclideanSimilarity?\glossentry{euclideansim}|setentrycounter[]{page}\glsnumberformat}{1}
+\glossaryentry{PCA?\glossentry{PCA}|setentrycounter[]{page}\glsnumberformat}{1}
+\glossaryentry{TSNE?\glossentry{TSNE}|setentrycounter[]{page}\glsnumberformat}{1}
+\glossaryentry{Hadamard Division?\glossentry{Hadamarddiv}|setentrycounter[]{page}\glsnumberformat}{1}
+\glossaryentry{Hadamard Square Root?\glossentry{Hadamardsqrt}|setentrycounter[]{page}\glsnumberformat}{1}
+\glossaryentry{Gephi?\glossentry{Gephi}|setentrycounter[]{page}\glsnumberformat}{1}
+\glossaryentry{CCD?\glossentry{CCD}|setentrycounter[]{page}\glsnumberformat}{1}
+\glossaryentry{Communities?\glossentry{Communities}|setentrycounter[]{page}\glsnumberformat}{1}
+\glossaryentry{UPGMA?\glossentry{UPGMA}|setentrycounter[]{page}\glsnumberformat}{1}
+\glossaryentry{Dendrogram?\glossentry{Dendrogram}|setentrycounter[]{page}\glsnumberformat}{1}
+\glossaryentry{Cluster Map?\glossentry{Clustermap}|setentrycounter[]{page}\glsnumberformat}{1}

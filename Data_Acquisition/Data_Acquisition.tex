@@ -10,7 +10,7 @@ A program written to automatically interpret webpages to extract information, is
     \centering
     \textbf{HTML and XPaths}\par\medskip
     \includegraphics[width=\textwidth]{Data_Acquisition/html_tree.pdf}
-    \caption{Tree representation of HTML code. The html code here displays a table with 3 rows. The page has two peices of metadata associated with it, stored in the `head'.}
+    \caption[Tree representation of HTML Code]{Tree representation of HTML code. The html code here displays a table with 3 rows. The page has two peices of metadata associated with it, stored in the `head'.}
         \label{fig:HTMLTREE}
 
 \end{figure}
@@ -42,9 +42,9 @@ DOIs are computer-friendly labels for articles. DOIs are issued by a number of a
     \centering
     \textbf{Anatomy of a DOI}\par\medskip
     \includegraphics[width=\textwidth]{Data_Acquisition/DOI2.png}
-    \caption{Doi structure. The structure consists of a numeric prefix (X and Y must be integers) and alphanumeric suffix (Z can be any Unicode encoded character) \label{fig:DOI}}
+    \caption[Anatomy of a DOI]{Doi structure. The structure consists of a numeric prefix (X and Y must be integers) and alphanumeric suffix (Z can be any Unicode encoded character) \label{fig:DOI}}
 \end{figure}
-DOIs consist of a prefix and suffix. The prefix is subdivided into the ‘Directory Indicator’ (always integer ‘10’) separated from the ‘Registrant Code’, assigned by the issuing body. Registrant codes are numeric and can be a minimum of 3 integers, with further otpional subdivisions separated by full stops. The suffix is provided by the registrant themselves. It can take any form as long as it is encodable by UTF-8.
+DOIs consist of a prefix and suffix. The prefix is subdivided into the ‘Directory Indicator’ (always integer ‘10’) separated from the ‘Registrant Code’, assigned by the issuing body. Registrant codes are numeric and can be a minimum of 3 integers, with further otpional subdivisions separated by full stops. The suffix is provided by the registrant themselves. It can take any form as long as it is unicode encoded.
 
 
 It was possible to write a `Regular Expression' pattern matcher (regex) to automatically recognise DOIs within a body of text, (See Figure \ref{fig:REGEX}) The flexibility of the registrant code specification means that DOIs cannot always be unambiguously identified in html documents. 
@@ -52,7 +52,7 @@ It was possible to write a `Regular Expression' pattern matcher (regex) to autom
     \centering
     \textbf{Pattern Matching Procedure for DOIs}\par\medskip
     \includegraphics[width=\textwidth]{Data_Acquisition/Regex.pdf}
-    \caption{Perl Syntax Regex Code that can identify the vast majority of DOIs within free text) \label{fig:REGEX}}
+    \caption[Pattern Matching Procdure for DOIs]{Perl Syntax Regex Code that can identify the vast majority of DOIs within free text) \label{fig:REGEX}}
 \end{figure}
 Despite this, the regex was able to identify 90.4\% of the dois on the Cambridge University Chemistry Department website \url{http://www.ch.cam.ac.uk/publications}. 
 \subsection{Scraping Program}
@@ -63,8 +63,8 @@ With this methodology in place, a scraping program was written in python to coll
 \begin{figure}[H]
     \centering
     \textbf{Scraping Procedure}\par\medskip
-    \includegraphics[width=\textwidth]{Data_Acquisition/Cherry.pdf}
-    \caption{The data flow of the scraping program. Websites from an inputted list of websites are visited and dois are extracted in the process described in  \S\ref{sec:DOI}. The Crossref API service is then used to verify the extracted dois, and collects available meta-data. The program then accesses publisher webpages and collects abstracts. The program also produces explanation of capture failures and some general statistics}
+    \includegraphics[width=\textwidth]{Data_Acquisition/Cherry2.pdf}
+    \caption[Data Flow in Scraping Procedure]{The data flow of the scraping program. Websites from an inputted list of websites are visited and dois are extracted in the process described in  \S\ref{sec:DOI}. The Crossref API service is then used to verify the extracted dois, and collects available meta-data. The program then accesses publisher webpages and collects abstracts. The program also produces explanation of capture failures and some general statistics}
      \label{fig:Cherry}
 \end{figure}
 The programmatic steps depicted in \ref{fig:Cherry} are:
@@ -99,7 +99,7 @@ The program was first used to collect the data from the UK. The Goodman group's 
 \hline
 Process & \# records & \% of maximum yield\\
 \hline
-Dois collected & 22442 & 100.0\%\\
+Dois collected & 22442 & N/A\%\\
 Dois found with metadata & 22397 & 99.8\%\\
 Articles successfully resolved & 16363 & 72.9\%\\
 Losses due to failed requests & 2753 & 12.3\%\\
@@ -116,7 +116,7 @@ The efficiency is depicted in figure \ref{fig:UKSANK}
     \centering
     \textbf{Efficiency of UK Department Scraping}\par\medskip
     \includegraphics[scale=0.07]{Data_Acquisition/uk_sankey.png}
-    \caption{The loss processes are coloured red, successfully captured full records in green, and the maximum possible yield in blue.}
+    \caption[Efficiency of UK Department Scraping]{The loss processes are coloured red, successfully captured full records in green, and the maximum possible yield in blue.}
      \label{fig:UKSANK}
 \end{figure}
 
@@ -143,7 +143,7 @@ The ACS banning occurred because of a bug in the randomisation of requests. The 
     \centering
     \textbf{ACS BANNING}\par\medskip
     \includegraphics[width=\textwidth]{Data_Acquisition/ACS_crash_line.png}
-    \caption{The request frequency is plotted in blue, the received pages frequency in red. The vertical dashed line shows where the server detected the scape and banned the IP.}
+    \caption[Request Frequency Leading to ACS Ban]{The request frequency is plotted in blue, the received pages frequency in red. The vertical dashed line shows where the server detected the scape and banned the IP.}
      \label{fig:ACSBAN}
 \end{figure}
 The program was capable of making a total number of approximately 30 requests per seconds. As canbe seen in figure \ref{fig:ACSBAN}, the program began to run out of requests to other publishers after approximately 140,000 seconds, resulting in an increase in the proportion of total requests per second to ACS. The ban occurred after approximately 150,000 seconds, after which there were no more responses received.
@@ -158,7 +158,9 @@ The yield of the large scale scraping run was cut significantly by the ACS banni
 \hline
 Process & \# records & \% of maximum yield\\
 \hline
-DOIS collected in stage 1 &  1267495 &100.0\%\\
+DOIS collected &  1267495 &N/A\\
+DOIS collected with meta-data &  1267495 &100.0\%\\
+
 \hline
 Predicted maximum capture & 1071506 &  84.5\%\\
 Predicted Capture without ACS & 581797 & 45.9\%\\
@@ -175,18 +177,18 @@ Missing Publications \& Program Errors & 195989 & 15.5\%\\
     \centering
     \textbf{Efficiency of Large Scale Scraping}\par\medskip
     \includegraphics[width=\textwidth]{Data_Acquisition/large_sankey.png}
-    \caption{The loss processes are coloured red, successfully captured full records in green, and the maximum possible yield in blue.}
+    \caption[Efficiency of Large Scale Scraping]{The loss processes are coloured red, successfully captured full records in green, and the maximum possible yield in blue.}
      \label{fig:LARGESANK}
 \end{figure}
 
-The overall efficiency of the process is 56.4\%, but excluding the acs records lost in the ban, the program's efficiency jumps to 74.0\%, similar to the efficiency of the UK scraping run (\S\ref{sec:UKSCRAPE}). 
+The overall efficiency of the process is 56.4\%, but excluding the acs records lost in the ban, the program's efficiency jumps to 74.0\%, similar to the efficiency of the UK scraping run (\S\ref{sec:UKSCRAPE}). \footnote{Also note that 100\% of dois were converted to dois with metadata. This is because the format of the webpages scraped was consistent for every doi collected.}
 
 The successfully captured 714,370 records were inspected and merged with the UK results. Records were rejected with short titles or abstracts (likely to be addenda, informal articles, retractions etc.) Records were also removed if the majority of the title and abstract were not writen in ascii characters \footnote{ascii is an encoding for English characters a-z, A-Z, some punctuation and 1-9.} (removing majority Japanese and Chinese script). This was done to provide better quality data for training the algorithm described in  \S\ref{chapt:ALGORITHM}. This filtering resulted in a final training database of 464712 articles. This dataset is henceforth referred to as \emph{the training dataset}. The entire database formation process is shown in figure \ref{fig:DATABASES}.
 \begin{figure}[H]
     \centering
-    \textbf{Summary of Data Preparation}\par\medskip
+    \textbf{Summary of Database Preparation}\par\medskip
     \includegraphics[scale=0.6]{Data_Acquisition/Databases.pdf}
-    \caption{Blue databases represent data with dois and metadata. Green databases represent meta-data, dois and abstracts. The purple database is the combined complete records, and the red database is the data deemed suitable for the training algorithm. database sizes and losses are annotated.}
+    \caption[Summary of Database Preparation]{Blue databases represent data with dois and metadata. Green databases represent meta-data, dois and abstracts. The purple database is the combined complete records, and the red database is the data deemed suitable for the training algorithm. database sizes and losses are annotated.}
      \label{fig:DATABASES}
 \end{figure}
 
@@ -199,7 +201,7 @@ The publisher `market share' can be approximated from examining the database\foo
     \centering
     \textbf{Publisher Share in Chemistry Literature}\par\medskip
     \includegraphics[width=\textwidth]{Data_Acquisition/publishers_pie.png}
-    \caption{Articles grouped by publisher in the Large Scale Scrape doi database (marked 'Large Scale Scrape Dois' in figure \ref{fig:DATABASES}). Only the top 12 publishers are shown.}
+    \caption[Publisher Share in Chemistry Literature]{Articles grouped by publisher in the Large Scale Scrape doi database (marked 'Large Scale Scrape Dois' in figure \ref{fig:DATABASES}). Only the top 12 publishers are shown.}
      \label{fig:PUBPI}
 \end{figure}
 As shown in  shown in figure \ref{fig:PUBPI}, it can be seen that 90\% of all the chemistry literature collected was published by just 12 publishers, the majority from ACS, Wiley-Blackwell, Springer and Elsevier BV. Looking at the UK scraping DOI dataset (Figure \ref{fig:UKPUBPI}), the same large publishers are represented, but the Royal Society of Chemistry has a much larger share. This is to be expected, as the RSC is a UK based body. In the UK, there is a more even distribution between the large publishers. 
@@ -208,16 +210,16 @@ As shown in  shown in figure \ref{fig:PUBPI}, it can be seen that 90\% of all th
     \centering
     \textbf{Publisher Share in UK Chemistry Literature}\par\medskip
     \includegraphics[width=\textwidth]{Data_Acquisition/uk_publishers_pie.png}
-    \caption{Articles grouped by publisher in the UK Doi database published by by each publisher. Only the top 12 publishers are shown.}
+    \caption[Publisher Share in UK Chemistry Literature]{Articles grouped by publisher in the UK Doi database published by by each publisher. Only the top 12 publishers are shown.}
      \label{fig:UKPUBPI}
 \end{figure}
 
 The corpus of combined titles and abstracts of the complete training database was then examined. The word frequencies across all the data were found to be approximately Zipfian, with a gradient of -1.11\footnote{A Zipfian distribution is a subset of the Pareto distribution, stating that the frequency of a word is proportional to its ranking in the word frequencies table. Ideally, the gradient of a log(frequency) vs log(rank) should be -1.0 \cite{zipf}} See figure \ref{fig:ZIPF}
 \begin{figure}[H]
     \centering
-    \textbf{Approximate Ziphian Distribution}\par\medskip
+    \textbf{Approximate Zipfian Distribution of Collected Corpus}\par\medskip
     \includegraphics[scale=0.6]{Data_Acquisition/zipf.png}
-    \caption{The log Frequency of words vs the log of their position in the rank in the word frequency table in blue. Best fit line in red, gradient = -1.11, intercept 6.3. }
+    \caption[Zipfian Plot of Collected Corpus]{The log Frequency of words vs the log of their position in the rank in the word frequency table in blue. Best fit line in red, gradient = -1.11, intercept 6.3. }
      \label{fig:ZIPF}
 \end{figure}
 A summary of the corpus statistics are shown below:
