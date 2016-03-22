@@ -1,7 +1,7 @@
 \chapter{Algorithm Development}
 \label{chapt:ALGORITHM}
 \section{Premise}
-The aim of the machine learning phase was to apply the Word2Vec and Doc2Vec algorithms to the training dataset described in chapter \ref{chapt:DATA_ACQUISITION}. An article was considered to be represented by a document consisting of its title and abstract. The aim was to represent these documents as vectors in semantic space, so that advanced computational analyses and statistical methods could be performed. 
+The aim of the machine learning phase was to apply the Word2Vec and Doc2Vec algorithms to the training dataset described in \S\ref{chapt:DATA_ACQUISITION}. An article was considered to be represented by a document consisting of its title and abstract. The aim was to represent these documents as vectors in semantic space, so that advanced computational analyses and statistical methods could be performed. 
 \section{Data Sanitisation} 
 The documents (titles and abstracts) in the training dataset required preprocessing before they could be effectively used in training. The training process requires inputs to be as clean as possible in order to get good results (encapsulated by the well known computer science idiom `Garbage in, Garbage out'). 
 
@@ -20,7 +20,7 @@ It was also observed that, as unicode text scraped from a wide variety of source
 \end{figure}
 Removing hyphens and primes also meant chemical names were fragmented. This was considered acceptable as the fragment words had greater freedom than specific (possibly singleton) fully formed names, e.g. \texttt{5-methyl-1-heptanol} is split to \texttt{5 methyl 1 heptanol}, this allows the \texttt{heptanol} fragment to be associated with other mentions of heptanol in the training set, rather than only associate with mentions of the much less frequent 5-methyl-1-heptanol. 
 
-Next, English stopwords were removed \footnote{Stopwords are commonly occurring words in a corpus that hold little information, e.g. (`the', `a', `and'...)} (stopwords were taken from the Porter stopwords corpus\cite{nltk} \cite{porter}). From inspection of the zipfian frequency table, (section \ref{sec:CORPUSOBSERVATIONS}), it was apparent that chemistry literature also generates stopwords. Table \ref{tab:CHEMSTOP} details `Chemistry' stopwords that were identified and removed, as they carried little specific information. 
+Next, English stopwords were removed \footnote{Stopwords are commonly occurring words in a corpus that hold little information, e.g. (`the', `a', `and'...)} (stopwords were taken from the Porter stopwords corpus\cite{nltk} \cite{porter}). From inspection of the zipfian frequency table, (\S \ref{sec:CORPUSOBSERVATIONS}), it was apparent that chemistry literature also generates stopwords. Table \ref{tab:CHEMSTOP} details `Chemistry' stopwords that were identified and removed, as they carried little specific information. 
 \begin{table}[h!]
 \begin{center}
 \caption{Chemistry stopwords}
@@ -153,7 +153,7 @@ CBOW-TFIDF-S & CBOW-S with TFIDF weighting on word vectors & SG-TFIDF-S & SG-S w
 \end{table}
 
 \section{Doc2Vec Models}
-A Doc2Vec model was trained with a \emph{distributed memory} architecture\footnote{Distributed memory is the Paragraph Vector algorithm equivalent of CBOW, the performance of this architecture is optimal\cite{doc2vec}} using the gensim framework in python \cite{gensim} using the same training data as for the Word2Vec models. The training sentences were labelled with the document (journal article doi) they came from. 100 dimensional vectors were chosen as a compromise of training speed and specificity\footnote{as well as for computational considerations of analytical techniques, see sections \ref{chapt:VALIDATION},\ref{chapt:ANALYSIS}}, and also so that dimensions were consistent across all models. The Doc2Vec model was trained for 24 epochs, with hyperparamters detailed in \ref{tab:doc2vechyperparams}
+A Doc2Vec model was trained with a \emph{distributed memory} architecture\footnote{Distributed memory is the Paragraph Vector algorithm equivalent of CBOW, the performance of this architecture is optimal\cite{doc2vec}} using the gensim framework in python \cite{gensim} using the same training data as for the Word2Vec models. The training sentences were labelled with the document (journal article doi) they came from. 100 dimensional vectors were chosen as a compromise of training speed and specificity\footnote{as well as for computational considerations of analytical techniques, see \S\ref{chapt:VALIDATION},\S\ref{chapt:ANALYSIS}}, and also so that dimensions were consistent across all models. The Doc2Vec model was trained for 24 epochs, with hyperparamters detailed in table \ref{tab:doc2vechyperparams}
 \begin{table}[H]
 \begin{center}
 \label{tab:doc2vechyperparams}
@@ -177,4 +177,4 @@ CBOW Mean & Yes (Not applicable for Skipgram) \\
 \end{table}
 
 The model took considerably longer to train than Word2Vec, as there were appreciably more work required per  document. Negative sampling was disabled as per recommendations in the literature. \cite{gensim} \cite{doc2vec}.
-The Doc2Vec and Word2Vec models are assessed in section \ref{chapt:VALIDATION}
+The Doc2Vec and Word2Vec models are assessed in  \S\ref{chapt:VALIDATION}

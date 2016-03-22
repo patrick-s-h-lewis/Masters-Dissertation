@@ -5,7 +5,7 @@
 
 Internet webpages are written in a markup language called HTML, (HyperText Markup Language). When a webpage is accessed, the html code is sent to the user, and the browser processes and displays the webpage in a human readable format. 
 
-A program written to automatically interpret webpages to extract information, is known as a `scraping' program. The program must process the raw HTML file and access the useful information on the page in an automated fashion. Information is arranged in an html document in a tree-like structure (Figure \ref{fig:HTMLTREE}). This example page would display in a browser as a table with 3 rows, each row containing `Table Data A/B/C'. The method of tree traversal is by specifying a path through the document tree on the right, using an `xpath'. 
+A program written to automatically interpret webpages to extract information, is known as a `scraping' program. The program must process the raw HTML file and access the useful information on the page in an automated fashion. Information is arranged in an html document in a tree-like structure (figure \ref{fig:HTMLTREE}). This example page would display in a browser as a table with 3 rows, each row containing `Table Data A/B/C'. The method of tree traversal is by specifying a path through the document tree on the right, using an `xpath'. 
 \begin{figure}[H]
     \centering
     \label{fig:HTMLTREE}
@@ -33,7 +33,7 @@ The initial approach was to to analyse the html tree to automatically recognise 
 \end{sloppypar}
 The heuristic thresholds are adjustable parameters. The approach was successful for webpages with large numbers of records, formatted in repeating fashion, but performed poorly for smaller collections of data. As such it was not flexible enough for the task of scraping large for chemical data, and was not implemented in final solution.
 \section{Collection Strategy}
-As generating xpaths proved unsuitable, a new strategy was required. Chemical information is usually disseminated as journal articles, mostly accompanied by a DOI. By programmatically collecting DOIs, (see section \ref{sec:DOI}) it was possible to build up a large database of chemical information (see section \ref{sec:SCRAPING_PROGRAM})
+As generating xpaths proved unsuitable, a new strategy was required. Chemical information is usually disseminated as journal articles, mostly accompanied by a DOI. By programmatically collecting DOIs, (\S\ref{sec:DOI}) it was possible to build up a large database of chemical information (see  \S\ref{sec:SCRAPING_PROGRAM})
 \subsection{DOIS : Document Object Identifiers}
 \label{sec:DOI}
 DOIs are computer-friendly labels for articles. DOIs are issued by a number of accredited bodies, with the vast majority of chemistry related articles issued by Crossref.\footnote{Crossref is a not-for-profit body comprised from Publishers International Linking Association (PILA), an association of many academic publishers} \cite{crossref-formation}. By pre-pending a DOI string with the url stub \texttt{http://dx.doi.org/}, the International DOI foundation (IDF) service redirects the request to the publisher's website to display the article the DOI refers to. The structure of a DOI is shown in Figure \ref{fig:DOI}.
@@ -63,7 +63,7 @@ With this methodology in place, a scraping program was written in python to coll
     \centering
     \textbf{Scraping Procedure}\par\medskip
     \includegraphics[width=\textwidth]{Data_Acquisition/Cherry.pdf}
-    \caption{The data flow of the scraping program. Websites from an inputted list of websites are visited and dois are extracted in the process described in section \ref{sec:DOI}. The Crossref API service is then used to verify the extracted dois, and collects available meta-data. The program then accesses publisher webpages and collects abstracts. The program also produces explanation of capture failures and some general statistics}
+    \caption{The data flow of the scraping program. Websites from an inputted list of websites are visited and dois are extracted in the process described in  \S\ref{sec:DOI}. The Crossref API service is then used to verify the extracted dois, and collects available meta-data. The program then accesses publisher webpages and collects abstracts. The program also produces explanation of capture failures and some general statistics}
      \label{fig:Cherry}
 \end{figure}
 The programmatic steps depicted in \ref{fig:Cherry} are:
@@ -84,7 +84,7 @@ The programmatic steps depicted in \ref{fig:Cherry} are:
 \item \texttt{use xpath to collect article abstracts.}
 \end{enumerate}
 \end{sloppypar}
-The program exports complete records as .json files, but also feeds directly to a MongoDB database. Once the program was written, the next priority was to obtain a list of webpages to scrape. This is described in sections \ref{sec:UKSCRAPE} and \ref{sec:CROSSREFSCRAPE} 
+The program exports complete records as .json files, but also feeds directly to a MongoDB database. Once the program was written, the next priority was to obtain a list of webpages to scrape. This is described in  \S\ref{sec:UKSCRAPE} and \S\ref{sec:CROSSREFSCRAPE} 
 \section{Collection Results}
 \subsection{UK University Department scraping}
 \label{sec:UKSCRAPE}
@@ -108,7 +108,7 @@ Missing Publication Errors & 3148 & 14.0\% \\
 \end{center}
 \end{table}
 Conversion losses were due to 4 components. 45 losses for non-existant dois, 2753 losses to request errors (404 : not-found errors or permission problems), 133 to the program throwing internal errors and 3148 conversions were lost due missing publication xpaths. The 26 specified xpaths \footnote{Corresponding to 37 publishers} were sufficient to convert 83.8\% of successful requests. This was deemed acceptable, as most major publishers had been covered \footnote{see appendix for list of covered publishers}, and the missing publishers each covered a small number of articles it would take another 11 xpaths of the missing most popular publishers to increase the conversion rate from 83.8\% to 90\%.
-The efficiency is depicted in \ref{fig:UKSANK}
+The efficiency is depicted in figure \ref{fig:UKSANK}
 
 \begin{figure}[H]
     \centering
@@ -128,7 +128,7 @@ The program was instructed to scrape the search results pages of these queries. 
 
 At the intermediate point, the program had collected 1,267,495 records, which was deemed very successful, and would provide enough data to train a powerful machine learning algorithm.
 
-The records were then inspected and publisher distributions were considered. Some of this analysis is presented in \ref{sec:SCRAPEANALYSIS}. After careful considerations of request server loads and predicting capture probabilities, the second half of the scraping routine was set off to run for 3 days.
+The records were then inspected and publisher distributions were considered. Some of this analysis is presented in \S\ref{sec:SCRAPEANALYSIS}. After careful considerations of request server loads and predicting capture probabilities, the second half of the scraping routine was set off to run for 3 days.
 \label{sec:CROSSREFSCRAPE}
 \subsection{Problems with ACS and Taylor and Francis}
 Some publishers automatically track request volumes sent to their site as they wish to discourage automatic scraping of their data. Scraping their websites is not illegal, and the data collected was freely available, not behind pay-walls, or protected. However, during the scraping run, a bug in the randomisation of request frequencies resulted in detection by the ACS \footnote{American Chemical Society} and Taylor \& Francis. Both publishers responded by banning the IP address of the computer running the program. The department Librarians were able to restore access, and it was agreed that no further large scale scraping runs would be performed. 
@@ -146,7 +146,7 @@ The ACS banning occurred because of a bug in the randomisation of requests. The 
 \end{figure}
 The program was capable of making a total number of approximately 30 requests per seconds. As can be seen in figure \ref{fig:ACSBAN}, the program began to run out of requests to other publishers after $\sim$ 140,000 seconds, resulting in an increase in the proportion of total requests per second to ACS. The ban occurred after approximately 150,000 seconds, after which there were no more responses received.
 \subsection{Analysis of Collected data}
-The yield of the large scale scraping run was cut significantly by the ACS banning event. A summary is tablulated in \ref{tab:LARGESCRAPERES}, and shown graphically in figure \ref{fig:LARGESANK}.
+The yield of the large scale scraping run was cut significantly by the ACS banning event. A summary is tabulated in \ref{tab:LARGESCRAPERES}, and shown graphically in figure \ref{fig:LARGESANK}.
 \begin{table}[h!]
 \label{tab:LARGESCRAPERES}
 \caption{Large Scale Scraping Results}
@@ -176,9 +176,9 @@ Missing Publications \& Program Errors & 195989 & 15.5\%\\
      \label{fig:LARGESANK}
 \end{figure}
 
-The overall efficiency of the process is 56.4\%, but excluding the acs records lost in the ban, the program's efficiency jumps to 74.0\%, similar to the efficiency of the UK scraping run (section \ref{sec:UKSCRAPE}). 
+The overall efficiency of the process is 56.4\%, but excluding the acs records lost in the ban, the program's efficiency jumps to 74.0\%, similar to the efficiency of the UK scraping run (\S\ref{sec:UKSCRAPE}). 
 
-The successfully captured 714,370 records were inspected and merged with the UK results. Records were rejected with short titles or abstracts (likely to be addenda, informal articles, retractions etc.) Records were also removed if the majority of the title and abstract were not writen in ascii characters \footnote{ascii is an encoding for English characters a-z, A-Z, some punctuation and 1-9.} (removing majority Japanese and Chinese script). This was done to provide better quality data for training the algorithm described in chapter \ref{chapt:ALGORITHM}. This filtering resulted in a final training database of 464712 articles. This dataset is henceforth referred to as \emph{the training dataset}. The entire database formation process is shown in figure \ref{fig:DATABASES}.
+The successfully captured 714,370 records were inspected and merged with the UK results. Records were rejected with short titles or abstracts (likely to be addenda, informal articles, retractions etc.) Records were also removed if the majority of the title and abstract were not writen in ascii characters \footnote{ascii is an encoding for English characters a-z, A-Z, some punctuation and 1-9.} (removing majority Japanese and Chinese script). This was done to provide better quality data for training the algorithm described in  \S\ref{chapt:ALGORITHM}. This filtering resulted in a final training database of 464712 articles. This dataset is henceforth referred to as \emph{the training dataset}. The entire database formation process is shown in figure \ref{fig:DATABASES}.
 \begin{figure}[H]
     \centering
     \textbf{Summary of Data Preparation}\par\medskip
@@ -213,7 +213,7 @@ The corpus of combined titles and abstracts of the complete training database wa
 \begin{figure}[H]
     \centering
     \textbf{Approximate Ziphian Distribution}\par\medskip
-    \includegraphics[scle=0.6]{Data_Acquisition/zipf.png}
+    \includegraphics[scale=0.6]{Data_Acquisition/zipf.png}
     \caption{The log Frequency of words vs the log of their position in the rank in the word frequency table in blue. Best fit line in red, gradient = -1.11, intercept 6.3. }
      \label{fig:ZIPF}
 \end{figure}
