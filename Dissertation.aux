@@ -17,41 +17,17 @@
 \providecommand\HyField@AuxAddToFields[1]{}
 \providecommand\HyField@AuxAddToCoFields[2]{}
 \bibstyle{unsrtnat}
+\providecommand\@newglossary[4]{}
+\@newglossary{main}{glg}{gls}{glo}
+\providecommand\@glsorder[1]{}
+\providecommand\@istfilename[1]{}
+\@istfilename{Dissertation.ist}
+\@glsorder{word}
 \@writefile{toc}{\contentsline {chapter}{List of Figures}{2}{chapter*.2}}
-\citation{modularity1}
-\citation{modularity2}
-\@writefile{toc}{\contentsline {chapter}{\numberline {1}Analysis with Sample Dataset}{3}{chapter.1}}
+\@writefile{toc}{\contentsline {chapter}{Glossary}{3}{section*.3}}
+\@writefile{toc}{\contentsline {chapter}{\numberline {1}Introduction}{4}{chapter.1}}
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
-\@writefile{toc}{\contentsline {section}{\numberline {1.1}Cambridge Chemistry research clusters}{3}{section.1.1}}
-\newlabel{sec:RESEARCHCLUSTERS}{{1.1}{3}{Cambridge Chemistry research clusters}{section.1.1}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {1.1}{\ignorespaces A Network visualisation of the CCD. Edges were placed between nodes with weights corresponding to cosine similarity if $S_{cosine}$. Nodes are coloured by their detected communities, and node size is proportional to the number of connections a node has. nodes are arranged by modelling edges as springs.}}{4}{figure.1.1}}
-\newlabel{fig:CAMCOMMUNITIES}{{1.1}{4}{A Network visualisation of the CCD. Edges were placed between nodes with weights corresponding to cosine similarity if $S_{cosine}$. Nodes are coloured by their detected communities, and node size is proportional to the number of connections a node has. nodes are arranged by modelling edges as springs}{figure.1.1}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {1.2}{\ignorespaces Recursion Tree for how communities were derived. The dataset was partitioned using the modularity algorithm. Sets with more than 100 documents were then repartitioned recursively. Sets of less than 100 documents were considered to be communities (red nodes in the diagram). If the algorithm could not partition a set any further, the recursion was stopped and the set was considered a community, even if it was larger than 100 documents. The figure shows the maximum depth of partitioning required was 8, and most communities were found after 3 partitions.}}{5}{figure.1.2}}
-\newlabel{fig:COMMTREE}{{1.2}{5}{Recursion Tree for how communities were derived. The dataset was partitioned using the modularity algorithm. Sets with more than 100 documents were then repartitioned recursively. Sets of less than 100 documents were considered to be communities (red nodes in the diagram). If the algorithm could not partition a set any further, the recursion was stopped and the set was considered a community, even if it was larger than 100 documents. The figure shows the maximum depth of partitioning required was 8, and most communities were found after 3 partitions}{figure.1.2}{}}
-\@writefile{lot}{\contentsline {table}{\numberline {1.1}{\ignorespaces Community 275}}{6}{table.1.1}}
-\newlabel{tab:com275}{{1.1}{6}{Community 275}{table.1.1}{}}
-\citation{heatmapcluster}
-\citation{seaborn}
-\citation{scipy}
-\@writefile{toc}{\contentsline {section}{\numberline {1.2}Cambridge Staff Member Similarities}{7}{section.1.2}}
-\newlabel{sec:AUTHORCLUSTERS}{{1.2}{7}{Cambridge Staff Member Similarities}{section.1.2}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {1.3}{\ignorespaces This figure shows a heatmap of author similarity. Dark pixels correspond to the author in the pixel's row having similar research interests to the author in the pixel's column. The matrix has been scaled to the range ($0 \rightarrow 1$). The authors are arranged by clusters found in UPGMA. The hierarchical clustering structure is demonstrated by the dendrogram tree connecting author pairs together.}}{8}{figure.1.3}}
-\newlabel{fig:AUTHORSIMS}{{1.3}{8}{This figure shows a heatmap of author similarity. Dark pixels correspond to the author in the pixel's row having similar research interests to the author in the pixel's column. The matrix has been scaled to the range ($0 \rightarrow 1$). The authors are arranged by clusters found in UPGMA. The hierarchical clustering structure is demonstrated by the dendrogram tree connecting author pairs together}{figure.1.3}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {1.4}{\ignorespaces The dendrogram of figure \ref  {fig:AUTHORSIMS}}}{10}{figure.1.4}}
-\newlabel{fig:DENDRO}{{1.2}{10}{Cambridge Staff Member Similarities}{figure.1.4}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {1.5}{\ignorespaces Cluster labels overlayed over the distinct branches of the dendrogram.}}{11}{figure.1.5}}
-\newlabel{fig:LABELLEDDENDRO}{{1.5}{11}{Cluster labels overlayed over the distinct branches of the dendrogram}{figure.1.5}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {1.3}Combining research clusters and authors}{12}{section.1.3}}
-\@writefile{lof}{\contentsline {figure}{\numberline {1.6}{\ignorespaces Number of research communities authors are associated with. High values indicate an author publishing across many communities, suggest more interdisciplinary work, but also higher publication count per author. (The same plot, scaled for publication count) is included in the appendix}}{13}{figure.1.6}}
-\newlabel{fig:commbar}{{1.6}{13}{Number of research communities authors are associated with. High values indicate an author publishing across many communities, suggest more interdisciplinary work, but also higher publication count per author. (The same plot, scaled for publication count) is included in the appendix}{figure.1.6}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {1.7}{\ignorespaces Heatmap showing author-author pair values for how often author pairs publish works in the same communities. High values indicated that aduthors are predicted to have similar publication profiles. Note the authors are arranged with the ordering from figure \ref  {fig:AUTHORSIMS}.}}{14}{figure.1.7}}
-\newlabel{fig:commHEATMAP}{{1.7}{14}{Heatmap showing author-author pair values for how often author pairs publish works in the same communities. High values indicated that aduthors are predicted to have similar publication profiles. Note the authors are arranged with the ordering from figure \ref {fig:AUTHORSIMS}}{figure.1.7}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {1.8}{\ignorespaces Raw collaboration matrix (values scaled to range $0 \rightarrow 1$). Note the general lack of co-publishing between staff members. Again staff are ordered by clustering described in \S  \ref  {sec:AUTHORCLUSTERS}, but no actual clustering has been performed. Hot spots near the diagonal suggest that author pairs clustered close together in \S  \ref  {sec:AUTHORCLUSTERS} generally collaborate more than distant author pairs.}}{16}{figure.1.8}}
-\newlabel{fig:rawcollabs}{{1.8}{16}{Raw collaboration matrix (values scaled to range $0 \rightarrow 1$). Note the general lack of co-publishing between staff members. Again staff are ordered by clustering described in \S \ref {sec:AUTHORCLUSTERS}, but no actual clustering has been performed. Hot spots near the diagonal suggest that author pairs clustered close together in \S \ref {sec:AUTHORCLUSTERS} generally collaborate more than distant author pairs}{figure.1.8}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {1.9}{\ignorespaces Matrix formed by summing collaboration of author pairs over research communities (values scaled to range $0 \rightarrow 1$). Qualitatively similar to figure \ref  {fig:rawcollabs}. Hot spots near diagonal again suggest authors closely clustered in \S  \ref  {sec:AUTHORCLUSTERS} collaborate more frequently }}{17}{figure.1.9}}
-\newlabel{fig:collcollabs}{{1.9}{17}{Matrix formed by summing collaboration of author pairs over research communities (values scaled to range $0 \rightarrow 1$). Qualitatively similar to figure \ref {fig:rawcollabs}. Hot spots near diagonal again suggest authors closely clustered in \S \ref {sec:AUTHORCLUSTERS} collaborate more frequently}{figure.1.9}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {1.10}{\ignorespaces Recommending matrix. High values (Deep red) indicate authors that have similar research but for which there is little evidence of collaboration on published works. Values $\sim $ 0 (grey/white) are where authors are neither similar nor collaborate, or are similar and collaborate closely. Values towards -1, (Blue) indicate authors that are collaborate but do share similar research (not strongly observed, as expected. High negative values would be somewhat paradoxical.) }}{18}{figure.1.10}}
-\newlabel{fig:RECOMM_MAT}{{1.10}{18}{Recommending matrix. High values (Deep red) indicate authors that have similar research but for which there is little evidence of collaboration on published works. Values $\sim $ 0 (grey/white) are where authors are neither similar nor collaborate, or are similar and collaborate closely. Values towards -1, (Blue) indicate authors that are collaborate but do share similar research (not strongly observed, as expected. High negative values would be somewhat paradoxical.)}{figure.1.10}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {1.11}{\ignorespaces Recommendations for a particular staff member from the recommendation matrix, plotted in bar form, (Professor Goodman). (Bars very close to zero have been removed). }}{19}{figure.1.11}}
-\newlabel{fig:RECOMM_BAR}{{1.11}{19}{Recommendations for a particular staff member from the recommendation matrix, plotted in bar form, (Professor Goodman). (Bars very close to zero have been removed)}{figure.1.11}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {1.1}Modern Scientific Publishing}{4}{section.1.1}}
+\@writefile{toc}{\contentsline {section}{\numberline {1.2}Motivation}{4}{section.1.2}}
+\@writefile{toc}{\contentsline {section}{\numberline {1.3}Aims}{5}{section.1.3}}

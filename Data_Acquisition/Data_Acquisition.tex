@@ -8,10 +8,11 @@ Internet webpages are written in a markup language called HTML, (HyperText Marku
 A program written to automatically interpret webpages to extract information, is known as a `scraping' program. The program must process the raw HTML file and access the useful information on the page in an automated fashion. Information is arranged in an html document in a tree-like structure (figure \ref{fig:HTMLTREE}). This example page would display in a browser as a table with 3 rows, each row containing `Table Data A/B/C'. The method of tree traversal is by specifying a path through the document tree on the right, using an `xpath'. 
 \begin{figure}[H]
     \centering
-    \label{fig:HTMLTREE}
     \textbf{HTML and XPaths}\par\medskip
     \includegraphics[width=\textwidth]{Data_Acquisition/html_tree.pdf}
     \caption{Tree representation of HTML code. The html code here displays a table with 3 rows. The page has two peices of metadata associated with it, stored in the `head'.}
+        \label{fig:HTMLTREE}
+
 \end{figure}
 Xpaths are just paths through the document tree to the desired information. In order the `scrape' the data in the table, the following xpath could be used:
 \begin{center}
@@ -90,8 +91,9 @@ The program exports complete records as .json files, but also feeds directly to 
 \label{sec:UKSCRAPE}
 The program was first used to collect the data from the UK. The Goodman group's website hosts a list of UK chemistry departments \url{http://www-jmg.ch.cam.ac.uk/data/c2k/uk.html}. The list was manually checked and some urls were changed to give a list of 68 departments\footnote{Details can be found in the appendix}. The program was run with this list as an input, the results of which are detailed in table \ref{tab:UKSCRAPERES}.
 \begin{table}[h!]
-\label{tab:UKSCRAPERES}
 \caption{UK Scraping results}
+\label{tab:UKSCRAPERES}
+
 \begin{center}
 \begin{tabular}{||l|l|l||}
 \hline
@@ -126,16 +128,16 @@ The UK scrape was a respectable start, but much more data would be required to t
 
 The program was instructed to scrape the search results pages of these queries. Because the scraping job was so large, the program was set up to `pause' before the publisher abstract collection stage.The results of up scrape up to this point were examined before setting off the second stage to collect abstracts.
 
-At the intermediate point, the program had collected 1,267,495 records, which was deemed very successful, and would provide enough data to train a powerful machine learning algorithm.
+At the intermediate point, the program had collected 1,267,495 records, which was deemed successful, and would provide enough data to train a powerful machine learning algorithm.
 
 The records were then inspected and publisher distributions were considered. Some of this analysis is presented in \S\ref{sec:SCRAPEANALYSIS}. After careful considerations of request server loads and predicting capture probabilities, the second half of the scraping routine was set off to run for 3 days.
 \label{sec:CROSSREFSCRAPE}
-\subsection{Problems with ACS and Taylor and Francis}
-Some publishers automatically track request volumes sent to their site as they wish to discourage automatic scraping of their data. Scraping their websites is not illegal, and the data collected was freely available, not behind pay-walls, or protected. However, during the scraping run, a bug in the randomisation of request frequencies resulted in detection by the ACS \footnote{American Chemical Society} and Taylor \& Francis. Both publishers responded by banning the IP address of the computer running the program. The department Librarians were able to restore access, and it was agreed that no further large scale scraping runs would be performed. 
+\subsection{Problems with ACS and Taylor \& Francis}
+Some publishers automatically track request volumes sent to their site as they wish to discourage automatic scraping of their data. Scraping their websites is not illegal, and the data collected was freely available, not behind pay-walls, or protected. However, during the scraping run, a bug in the randomisation of request frequencies resulted in detection by the ACS \footnote{American Chemical Society} and Taylor \& Francis. Both publishers responded by banning the IP address of the computer running the program. The department librarians were able to restore access, and it was agreed that no further large scale scraping runs would be performed. 
 
 Taylor \& Francis banned the IP address after it detected over 100 requests were made within 5 minutes. This corresponds to a request every 3 seconds. This is modest server load compared to other publishers, and was not foreseen to cause problems.
 
-The ACS banning occurred because of a bug in the randomisation of requests. The program was instructed to take a doi from a random publisher every time it made a request, rather than just a random doi. Since the largest publisher was ACS, the program eventually exhausted dois from the other publishers papers, until there were only ACS dois to `randomly' draw requests from. This meant the request frequency to the ACS server went up dramatically. This uptick broke the threshold of allowed requests at the ACS server which then banned the IP (approximately 10 requests a second).
+The ACS banning occurred because of a bug in the randomisation of requests. The program was instructed to take a doi from a random publisher every time it made a request, rather than just a random doi. Since the largest publisher was ACS, the program eventually exhausted dois from the other publishers, until there were only ACS dois to `randomly' draw requests from. This meant the request frequency to the ACS server went up dramatically. This uptick broke the threshold of allowed requests at the ACS server which then banned the IP (approximately 10 requests a second).
 
 \begin{figure}[H]
     \centering
@@ -144,12 +146,13 @@ The ACS banning occurred because of a bug in the randomisation of requests. The 
     \caption{The request frequency is plotted in blue, the received pages frequency in red. The vertical dashed line shows where the server detected the scape and banned the IP.}
      \label{fig:ACSBAN}
 \end{figure}
-The program was capable of making a total number of approximately 30 requests per seconds. As can be seen in figure \ref{fig:ACSBAN}, the program began to run out of requests to other publishers after $\sim$ 140,000 seconds, resulting in an increase in the proportion of total requests per second to ACS. The ban occurred after approximately 150,000 seconds, after which there were no more responses received.
+The program was capable of making a total number of approximately 30 requests per seconds. As canbe seen in figure \ref{fig:ACSBAN}, the program began to run out of requests to other publishers after approximately 140,000 seconds, resulting in an increase in the proportion of total requests per second to ACS. The ban occurred after approximately 150,000 seconds, after which there were no more responses received.
 \subsection{Analysis of Collected data}
 The yield of the large scale scraping run was cut significantly by the ACS banning event. A summary is tabulated in \ref{tab:LARGESCRAPERES}, and shown graphically in figure \ref{fig:LARGESANK}.
 \begin{table}[h!]
-\label{tab:LARGESCRAPERES}
 \caption{Large Scale Scraping Results}
+\label{tab:LARGESCRAPERES}
+
 \begin{center}
 \begin{tabular}{||l|l|l||}
 \hline
@@ -191,12 +194,12 @@ The successfully captured 714,370 records were inspected and merged with the UK 
 It was instructive to examine these databases and derive some simple statistical results. The following section briefly explores some of these.
 \subsubsection{Observations}
 \label{sec:CORPUSOBSERVATIONS}
-The publisher `market share' can be approximated from examining the Large Scale Scape Doi database.
+The publisher `market share' can be approximated from examining the database\footnote{Data was taken from `Large Scale Scrape Dois' database, shown in figure \ref{fig:DATABASES}}.
 \begin{figure}[H]
     \centering
     \textbf{Publisher Share in Chemistry Literature}\par\medskip
     \includegraphics[width=\textwidth]{Data_Acquisition/publishers_pie.png}
-    \caption{Articles grouped by publisher in the Large Scale Scrape doi database. Only the top 12 publishers are shown.}
+    \caption{Articles grouped by publisher in the Large Scale Scrape doi database (marked 'Large Scale Scrape Dois' in figure \ref{fig:DATABASES}). Only the top 12 publishers are shown.}
      \label{fig:PUBPI}
 \end{figure}
 As shown in  shown in figure \ref{fig:PUBPI}, it can be seen that 90\% of all the chemistry literature collected was published by just 12 publishers, the majority from ACS, Wiley-Blackwell, Springer and Elsevier BV. Looking at the UK scraping DOI dataset (Figure \ref{fig:UKPUBPI}), the same large publishers are represented, but the Royal Society of Chemistry has a much larger share. This is to be expected, as the RSC is a UK based body. In the UK, there is a more even distribution between the large publishers. 
@@ -219,8 +222,8 @@ The corpus of combined titles and abstracts of the complete training database wa
 \end{figure}
 A summary of the corpus statistics are shown below:
 \begin{table}[h!]
-\label{tab:CORPUS STATS}
 \caption{Titles and Abstracts in Training Database}
+\label{tab:CORPUS STATS}
 \begin{center}
 \begin{tabular}{||l|c||}
 \hline

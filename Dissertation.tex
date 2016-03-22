@@ -39,21 +39,74 @@
     \vskip 40\p@
   }}
 \makeatother
+
+\makeatletter
+\newcommand\ackname{Acknowledgements}
+\if@titlepage
+ \newenvironment{acknowledgements}{%
+     \titlepage
+     \null\vfil
+     \@beginparpenalty\@lowpenalty
+     \begin{center}%
+       \bfseries \ackname
+       \@endparpenalty\@M
+     \end{center}}%
+    {\par\vfil\null\endtitlepage}
+\else
+ \newenvironment{acknowledgements}{%
+     \if@twocolumn
+       \section*{\abstractname}%
+     \else
+       \small
+       \begin{center}%
+         {\bfseries \ackname\vspace{-.5em}\vspace{\z@}}%
+       \end{center}%
+       \quotation
+       
+     \fi}
+     {\if@twocolumn\else\endquotation\fi}
+\fi
+\makeatother
+
+\makeatletter
+\newcommand\disname{ }
+ \newenvironment{disclaimer}{%
+    \titlepage
+     \null\vfil
+     \@beginparpenalty\@lowpenalty
+     \begin{center}%
+       \bfseries \disname
+       \@endparpenalty\@M
+     \end{center}}%
+    {\par\vfil\null\endtitlepage}
+
+\makeatother
+\usepackage[toc,nonumberlist]{glossaries}
+\makeglossaries
+\input{Glossary/Glossary}
 \begin{document}
+\glsaddall
 \maketitle
+\begin{disclaimer}
+\input{Disclaimer/Disclaimer}
+\end{disclaimer}
+\begin{acknowledgements}
+\input{Acknowledgements/Acknowledgements}
+\end{acknowledgements}
 \begin{abstract}
 \input{Abstract/Abstract}
 \end{abstract}
+
 \tableofcontents
 \listoffigures
-
-%\input{Introduction/Introduction}
-%\input{Data_Acquisition/Data_Acquisition}
+\printglossaries
+\input{Introduction/Introduction}
+%\input{Data_Acqition/Data_Acquisition}
 %\input{Natural_Language_Processing/Natural_Language_Processing}
 %\input{Algorithm/Algorithm}
 %\input{Validation/Validation}
 %\input{Analysis/Analysis}
-\input{Conclusions/Conclusions}
+%\input{Conclusions/Conclusions}
 %\input{Recommendations/Recommendations}
 %\bibliography{References}
 %\input{Appendix/Appendix}

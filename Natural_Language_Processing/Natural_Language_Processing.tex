@@ -3,7 +3,7 @@
 \section{Background}
 Natural Language Processing (henceforth NLP) is the application of computer science to study, model and understand human languages using computers. Machine learning, a class of algorithms for fitting and predicting patterns in data, is a powerful technique, with many applicatings in NLP. This section explores approaches to representing journal articles in a quantitative manner using NLP.
 \section{Bag of Words}
-A simple approach to representing a document is a \emph{bag of words} model. The document is split into component words in an unordered set. The model computes the number of distinct words in a corpus of documents, $N$. It then assigns each document in the corpus an $N$ dimensional vector $\mathbf{v}$. If the document contains word $i$ 2 times, then $v_{i}$ is set to 2. A simple example is given below:
+A simple approach to representing a document is a \emph{bag of words} model. The document is split into component words in an unordered set. The model computes the number of distinct words in a corpus of documents, $N$. It then assigns each document in the corpus an $N$ dimensional vector $\mathbf{v}$. If document $A$ contains word $i$ 2 times, then $v_{A, i } = 2$. A simple example is given below:
 
 Document A: \texttt{A good yield was obtained for a nucleophile}
 
@@ -29,7 +29,7 @@ Was & 1 & 0\\
 \end{tabular}
 \end{center}
 \end{table}
-Table \ref{tab:BAGOFWORDS} shows the vector representations for Documents A and B. The higher the scalar product of normalised $\mathbf{V}_A \cdot \mathbf{V}_A$, the more similar the documents are predicted to be. This model is used extensively in industry. A related model, the \emph{bag of citations} model sets vector components are the presence or absence of citations. Both models are widely used in industry for analysing the publishing landscape.
+Table \ref{tab:BAGOFWORDS} shows the vector representations for Documents A and B. The higher the scalar product of normalised $\mathbf{v}_A \cdot \mathbf{v}_A$, the more similar the documents are predicted to be. This model is used extensively in industry. A related model, the \emph{bag of citations} model sets vector components are the presence or absence of citations. Both models are widely used in industry for analysing the publishing landscape.
 \section{Word2Vec}
 \label{sec:WORD2VEC}
 The \emph{Bag of Words} model treats words as atomic units, beneficial for robust and fast computation. However, words can have degrees of similarity to each other, and these relationships are not captured by bag of words models \cite{word2veckingqueen}. Distributed representations of words have been used to address this for some time \cite{distributedrepresentations}.

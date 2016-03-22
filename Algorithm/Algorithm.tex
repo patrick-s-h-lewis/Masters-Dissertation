@@ -7,7 +7,7 @@ The documents (titles and abstracts) in the training dataset required preprocess
 
 The first step was to cast all words to lower case, so that the algorithm did not produce different vectors for e.g.  `Molecule' and `molecule'.
 
-The raw documents also frequently contained artefacts from the source webpages (unwanted white space, vestigial html tags, `newline' characters and carriage returns). The algorithm training word vectors for these symbols is clearly undesired behaviour, so these were removed and whitespace normalised.
+The raw documents also frequently contained artefacts from the source webpages (unwanted whitspace, vestigial html tags, `newline' characters and carriage returns). The algorithm training word vectors for these symbols is clearly undesired behaviour, so these were removed and whitespace normalised.
 
 It was also observed that, as unicode text scraped from a wide variety of sources, there was varied and redundant punctuation. Punctuation would be treated as separate words by the algorithm, so had to be carefully removed. Unicode has very wide variety of different punctuations. For example, unicode encodes 24 different types of hyphen. Table \ref{fig:punct} shows the punctuation that was filtered out of the documents. Large sections of unicode script (sections of non-western languages) was also removed as the algorithm works best on a smaller vocabulary.
 
@@ -46,8 +46,8 @@ chemical & 6 & five & results & \\
 Finally, the processed words were sent through a `stemming algorithm'\footnote{A stemming algorithm seeks to map derived words onto the same root, such as polymer and polymers, but some also attempt more complex cases such as morphologic and morphology}. Several stemming algorithms were assessed (Porter \cite{porter}, Snowball \cite{snowball}\cite{nltk}, Lancaster \cite{lancaster} and the Wordnet Lemmatizer \cite{wordnet1}\cite{wordnet2}\cite{wordnet3}). The Snowball \footnote{Also known as Porter2} stemmer was found to strike a good balance between making an appreciable number of contractions (superior to Wordnet) whilst minimising conflations and over-contraction (superior to Lancaster and Porter). See Table \ref{tab:stems}
 \begin{table}[H]
 \begin{center}
+\caption{Stemming Comparisons}
 \label{tab:stems}
-\caption{Stemming}
 \begin{tabular}{||c|c|c|p{5cm}||}
 \hline
 Word & Porter Stemmed & Snowball Stemmed & Comment\\
@@ -71,7 +71,7 @@ conducive & conduc & conduct & \\
 \hline
 scripting & scripting & script & Lancaster doesn't consider present participles\\
 \hline
-aroma & arom & arom & \multirow{2}{5cm}{preferable not to map aroma and aromatic to same root}\\
+aroma & arom & arom & \multirow{2}{5cm}{Preferable not to map aroma and aromatic to same root}\\
 \cline{1-3}
 aromatic & arom & aromat & \\
 \hline
@@ -93,8 +93,7 @@ The process is best illustrated by real example from the dataset:
 $<$ p $>$
 \texttt{ n A 9-silafluorene-containing biphenolic monomer,\\ 9,9-bis(4-hydroxyphenyl)-9-silafluorene, \\ was prepared from 9,9-dichloro-9-silafluorene and employed for the synthesis of polyesters using a fluorene-based homoditopic acid chloride.} $< \setminus$ p $>$.
 \cite{sanex} 
-
-This processed into:
+processed into:
 
 \texttt{silafluoren biphenol monom bis hydroxyphenyl silafluoren prepar dichloro silafluoren employ synthesi polyest fluoren homoditop acid chlorid}
 
@@ -105,8 +104,9 @@ The processed data was used to train two Word2Vec models (one CBOW, one skipgram
 Training was carried out on all documents in the training dataset. The model was trained with sentences formed by simple splitting of documents using full stops\footnote{Whilst not perfect, this method was a fair compromise for partitioning on actual sentences and false partitioning.}. After examination of different hyperparameters, the models were run using hyperparameters representing good balance of specificity, speed and generality. The hyper parameters used are detailed in table \ref{tab:hyperparams}.
 \begin{table}[h!]
 \begin{center}
-\label{tab:hyperparams}
 \caption{Word2vec Parameters}
+\label{tab:hyperparams}
+
 \begin{tabular}{||c|c||}
 \hline
 Model Parameter &CBOW and skipgram\\
@@ -131,11 +131,11 @@ TF-IDF \footnote{Term - frequency Inverse - Document - Frequency} is an empirica
 multiplied by inverse document frequency $IDF(w) = log_{2} \left( \frac{|D|}{\sum_d df_{w \in d})} \right)$ where $|D|$ is the number of documents in the corpus, $df$ is 1 if word $w$ is in document $d$, otherwise otherwise 0 \cite{gensim}.
 TF-IDF assigns small weights to words that are common across the corpus. It assigns high weights to words that appear often in a document but rarely in the corpus.
 \subsection{Aggregations}
-Document vectors could be created by averaging word vectors into sentence vectors followed by averaging sentence vectors into document vectors, or by simpy averaging word vectors directly into documents. 8 models for document vectors composed of Word2Vec models were constructed.
+Document vectors could be created by averaging word vectors into sentence vectors followed by averaging sentence vectors into document vectors, or by simpy averaging word vectors directly into documents. 8 models for document vectors composed of Word2Vec models were constructed, detailed in table \ref{tab:aggmods}
 \begin{table}[h!]
 \begin{center}
-\label{tab:aggmods}
 \caption{Word2vec Document Vector Models}
+\label{tab:aggmods}
 \begin{tabular}{||L|p{3.8cm}|N|p{3.8cm}||}
 \hline
 Model Name & Description & Model Name & Description\\
