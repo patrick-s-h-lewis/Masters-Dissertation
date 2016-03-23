@@ -1,8 +1,5 @@
 \glossarysection[\glossarytoctitle]{\glossarytitle}\glossarypreamble
 \begin{theglossary}\glossaryheader
-\glsgroupheading{glssymbols}\relax \glsresetentrylist %
-\glossentry{NLP}{\glossaryentrynumbers{\relax 
-		\setentrycounter[]{page}\glsnumberformat{1}}}\glsgroupskip
 \glsgroupheading{A}\relax \glsresetentrylist %
 \glossentry{ACS}{\glossaryentrynumbers{\relax 
 		\setentrycounter[]{page}\glsnumberformat{1}}}%
@@ -71,6 +68,8 @@
 		\setentrycounter[]{page}\glsnumberformat{1}}}\glsgroupskip
 \glsgroupheading{N}\relax \glsresetentrylist %
 \glossentry{NeuralNet}{\glossaryentrynumbers{\relax 
+		\setentrycounter[]{page}\glsnumberformat{1}}}%
+\glossentry{NLP}{\glossaryentrynumbers{\relax 
 		\setentrycounter[]{page}\glsnumberformat{1}}}\glsgroupskip
 \glsgroupheading{P}\relax \glsresetentrylist %
 \glossentry{Paragraphvectors}{\glossaryentrynumbers{\relax 

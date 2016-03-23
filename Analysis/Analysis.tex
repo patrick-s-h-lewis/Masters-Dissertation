@@ -92,15 +92,14 @@ Figure \ref{fig:AUTHORSIMS} shows the result of generating $\textbf{S}$ and perf
 \label{fig:DENDRO}
 
 \end{center}
-A striking feature of figure \ref{fig:AUTHORSIMS} is the cluster in the bottom right corner. The dendrogram tree shows the members of this cluster occupy a separate branch of research space than the rest of the department. The staff members involved (Professors Jones and Pyle, Drs. Harris, Archibald and Kalbere) are all members of the Centre for Atmospheric Science. The unsupervised model thus successfully `predicted' their department, and indicated that their work is quite separate from most of the work in the Chemistry Department. This is a real success for the model. The dendrogram was then further examined and broken into distinct branches. Each branch was examined and manually labelled (see figure \ref{fig:LABELLEDDENDRO}. Most clusters make intuitive sense, but there is one core of well connected, more disparate members (wj10 to jrn34). These members could be interpreted as forming an interdisciplinary cluster.  
+A striking feature of figure \ref{fig:AUTHORSIMS} is the cluster in the bottom right corner. The dendrogram tree shows the members of this cluster occupy a separate branch of research space than the rest of the department. The staff members involved (Professors Jones and Pyle, Drs. Harris, Archibald and Kalberer) are all members of the Centre for Atmospheric Science. The unsupervised model thus successfully `predicted' their department, and indicated that their work is quite separate from most of the work in the Chemistry Department. This is a real success for the model. The dendrogram was then further examined and broken into distinct branches. Each branch was examined and manually labelled (see figure \ref{fig:LABELLEDDENDRO}. Most clusters make intuitive sense, but there is one core of well connected, more disparate members (wj10 to jrn34). These members could be interpreted as forming an interdisciplinary cluster.  
 \begin{center}
 \begin{figure}[H]
   \centering
   \textbf{Annotated Dendrogram}
     \includegraphics[scale=0.8]{Analysis/dendro_overlay2.png}
     \caption[Dendrogram annotated with labelled fields]{Cluster labels overlayed over the distinct branches of the dendrogram.}
-    \label{fig:LABELLEDDENDRO
-
+    \label{fig:LABELLEDDENDRO}
 \end{figure} 
 \end{center}
 The value of this method is self evident. Clustering staff members informs the department about the width of research (number of clusters), and how resources are partitioned (size of clusters). It should also be stressed that authors are associated without any human preconceptions or bias. Thus perhaps the most valuable author associations are the unexpected ones, and authors should be encouraged to examine their cluster and consider their `neighbours'.
@@ -118,7 +117,7 @@ It was noted that there was significant variation in the number of communities t
 \begin{figure}[H]
   \centering
   \textbf{Author Community Spread}
-    \includegraphics[width=\textwidth]{Analysis/community_detection_with_ordering.png}
+    \includegraphics[width=\textwidth]{Analysis/Community_detection_with_ordering.png}
     \caption[Author community Spread]{Number of research communities authors are associated with. High values (towards red) indicate an author publishing across many communities, suggest more interdisciplinary work, but also higher publication count per author. The authors are ordered by publication count (highest at top). As expected, there is a correlation between publication count and number of communities an author appears in. The blue dotted line-of-best-fit divided the authors into those that publish more widely given their publication count (Bar to the right of the line) form those who publish more narrowly for their publication count (Bar to the left of the line)}
 \label{fig:commbar}
 
@@ -172,13 +171,47 @@ As a final data step, a matrix defined as the difference between an author simil
 
 \end{figure} 
 \end{center}
-This final piece of the analysis section illustrates how the framework developed over the research project reveals where it might be profitable for authors to collaborate. Returning to the Centre for Atmospheric Science, which was highlighted as a tight, separate research community, it can be seen that there are recommendations for greater collaboration between particular authors within the Centre. The matrix row for a particular staff member (Professor Goodman) is plotted below by way of example of what the model considers a staff member's recommendations to be.
+This final piece of the analysis section illustrates how the framework developed over the research project reveals where it might be profitable for authors to collaborate. Returning to the Centre for Atmospheric Science, which was highlighted as a tight, separate research community, it can be seen that there are recommendations for greater collaboration between particular authors within the Centre. Table \ref{tab:topcollabs} shows the top 20 scores in the Recommended Collaboration Matrix, where there is stronger evidence to suggest these author pairs should collaborate but little evidence that they are collaborating.
+
+\begin{table}[H]
+\centering
+\caption{Community 275}
+\label{tab:topcollabs}
+\begin{tabular}{||c|Z|Z|Z||}
+\hline
+Rank & Author CRSID & Author CRSID & Recommended Collaboration Matrix Score \\
+\hline
+1 & ata27 & nrh1000 & 1.000 \\ 
+2 & dw34 & df246 & 0.916 \\ 
+3 & dw34 & ms284 & 0.875 \\ 
+4 & rlj1001 & ata27 & 0.875 \\ 
+5 & dw34 & sre1 & 0.795 \\ 
+6 & adb29 & ptw22 & 0.765 \\ 
+7 & cmd44 & mjd13 & 0.757 \\ 
+8 & df246 & ms284 & 0.755 \\ 
+9 & ca26 & drs36 & 0.753 \\ 
+10 & sca10 & ajc54 & 0.737 \\ 
+11 & sre1 & ms284 & 0.737 \\ 
+12 & adb29 & wj10 & 0.736 \\ 
+13 & mv245 & pdb30 & 0.731 \\ 
+14 & asa10 & ms284 & 0.730 \\ 
+15 & jc162 & pdb30 & 0.724 \\ 
+16 & adb29 & jmg11 & 0.714 \\ 
+17 & mv245 & sb10031 & 0.713 \\ 
+18 & ca26 & fjl1 & 0.708 \\ 
+19 & df246 & sre1 & 0.679 \\ 
+20 & adb29 & svl1000 & 0.676 \\ 
+\hline
+\end{tabular}
+\end{table}
+
+The matrix row for a particular staff member (Professor Goodman) is plotted below by way of example of what the model considers a staff member's recommendations to be.
 \begin{center}
 \begin{figure}[H]
   \centering
   \textbf{Recommended Collaboration Scores for Particular Staff Member, Professor Goodman}
-    \includegraphics[width=\textwidth]{Analysis/jmg.png}
-    \caption[Recommended Collaboration Scores for Particular Staff Member]{Recommendations for a particular staff member from the recommendation matrix, plotted in bar form, (Professor Goodman). (Bars very close to zero have been removed). }
+    \includegraphics[width=\textwidth]{Analysis/jmg_dots_line.png}
+    \caption[Recommended Collaboration Scores for Particular Staff Member]{Recommendations for a particular staff member from the recommendation matrix, plotted in bar form, (Professor Goodman). (Bars very close to zero have been removed). Large values (Long bars, deeper blue) indicate the author publishes in many similar communities to Professor Goodman, but little evidence was found of collaboration, thus the recommendation to collaborate. The vertical line indicates the \emph{mean} value in the Recommended Collaboration Matrix. Bars breaking through the line to the right are higher than the mean, and thus are where new collaborations should be considered.}
     \label{fig:RECOMM_BAR}
 \end{figure} 
 \end{center}

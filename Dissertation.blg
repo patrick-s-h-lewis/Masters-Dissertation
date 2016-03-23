@@ -3,49 +3,46 @@ Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: Dissertation.aux
 The style file: unsrtnat.bst
 Database file #1: References.bib
-Warning--empty publisher in crossref-formation
-Warning--empty publisher in porter
-Warning--empty journal in gephi
 Warning--empty journal in seaborn
-You've used 26 entries,
+You've used 5 entries,
             2481 wiz_defined-function locations,
-            725 strings with 9078 characters,
-and the built_in function-call counts, 9461 in all, are:
-= -- 810
-> -- 473
-< -- 18
-+ -- 192
-- -- 138
-* -- 710
-:= -- 1554
-add.period$ -- 105
-call.type$ -- 26
-change.case$ -- 45
-chr.to.int$ -- 24
-cite$ -- 30
-duplicate$ -- 488
-empty$ -- 858
-format.name$ -- 176
-if$ -- 1992
-int.to.chr$ -- 3
-int.to.str$ -- 27
-missing$ -- 27
-newline$ -- 162
-num.names$ -- 79
-pop$ -- 213
+            583 strings with 5269 characters,
+and the built_in function-call counts, 1848 in all, are:
+= -- 155
+> -- 91
+< -- 2
++ -- 36
+- -- 26
+* -- 136
+:= -- 305
+add.period$ -- 18
+call.type$ -- 5
+change.case$ -- 10
+chr.to.int$ -- 5
+cite$ -- 6
+duplicate$ -- 89
+empty$ -- 170
+format.name$ -- 33
+if$ -- 386
+int.to.chr$ -- 1
+int.to.str$ -- 6
+missing$ -- 4
+newline$ -- 36
+num.names$ -- 15
+pop$ -- 42
 preamble$ -- 1
-purify$ -- 26
+purify$ -- 5
 quote$ -- 0
-skip$ -- 280
+skip$ -- 54
 stack$ -- 0
-substring$ -- 311
-swap$ -- 69
-text.length$ -- 2
+substring$ -- 77
+swap$ -- 9
+text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 164
-warning$ -- 4
-while$ -- 71
+type$ -- 35
+warning$ -- 1
+while$ -- 14
 width$ -- 0
-write$ -- 383
-(There were 4 warnings)
+write$ -- 75
+(There was 1 warning)
