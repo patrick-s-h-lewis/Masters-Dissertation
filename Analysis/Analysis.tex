@@ -118,14 +118,14 @@ It was noted that there was significant variation in the number of communities t
 \begin{figure}[H]
   \centering
   \textbf{Author Community Spread}
-    \includegraphics[width=\textwidth]{Analysis/community_detection.png}
-    \caption[Author community Spread]{Number of research communities authors are associated with. High values indicate an author publishing across many communities, suggest more interdisciplinary work, but also higher publication count per author. (The same plot, scaled for publication count) is included in the appendix}
+    \includegraphics[width=\textwidth]{Analysis/community_detection_with_ordering.png}
+    \caption[Author community Spread]{Number of research communities authors are associated with. High values (towards red) indicate an author publishing across many communities, suggest more interdisciplinary work, but also higher publication count per author. The authors are ordered by publication count (highest at top). As expected, there is a correlation between publication count and number of communities an author appears in. The blue dotted line-of-best-fit divided the authors into those that publish more widely given their publication count (Bar to the right of the line) form those who publish more narrowly for their publication count (Bar to the left of the line)}
 \label{fig:commbar}
 
 \end{figure} 
 \end{center}
 It can be seen that some authors are widely distributed between communities, whereas others are concentrated.
-It should be appreciated that communities are not uniformly distributed. For example there are many communities in `Life Sciences' but few in Atmospheric Chemistry, as such, interpretation of high values in Figure \ref{fig:commbar} directly corresponding to wide research interests should be tentative.
+It should be appreciated that communities are not uniformly distributed. For example there are many communities in `Life Sciences' but few in Atmospheric Chemistry, as such, interpretation of high values in Figure \ref{fig:commbar} directly corresponding to wide research interests should be tentative\footnote{It should also be noted that figure \ref{fig:commbar} treats strong connects equally to weak connections, i.e. 100 papers published in one community is just as strong a connection to 1 paper published in a community}.
 
 An association metric $S_{coincidence}$ between authors $\mathfrak{A}$ and $\mathfrak{B}$ was then defined as $$S_{coincidence}\left( \mathfrak{A} , \mathfrak{B} \right) = \sum_c^C \left(f_{assoc} \left( \mathfrak{C}_c , \mathfrak{A} \right) f_{assoc}\left( \mathfrak{C}_c , \mathfrak{B} \right) \right) $$
 Where $C$ is the total number of communities. An association matrix was created, $\mathbf{S}^{Assoc}_{\mathfrak{A} , \mathfrak{B}} = S_{coincidence}\left( \mathfrak{A} , \mathfrak{B} \right)$, where high values for author pair $\mathfrak{A} , \mathfrak{B}$ indicate they appear in many research communities together. The matrix was then scaled such that: $\mathbf{S}^{Assoc,scaled}_{\mathfrak{A} , \mathfrak{B}} =  \mathbf{S}^{Assoc}_{\mathfrak{A} , \mathfrak{B}} /  \left( \mathbf{S}^{Assoc}_{\mathfrak{A} , \mathfrak{A}} + \mathbf{S}^{Assoc}_{\mathfrak{B} , \mathfrak{B}} \right) $, and scaled from $0 \rightarrow 1$. This was a measure of how often authors could be found in the same communities. The matrix is shown below:

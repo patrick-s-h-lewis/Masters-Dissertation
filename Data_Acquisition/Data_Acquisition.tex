@@ -122,7 +122,7 @@ The efficiency is depicted in figure \ref{fig:UKSANK}
 
 Interestingly, 9467 out of 16363 successful collections were sourced from \url{http://www.ch.cam.ac.uk}. This could be because the department at Cambridge has an extensive website and also hosts the majority of its information under its own domain name, whereas other departments` data are hosted on central university domains. The scraping program was confined to scrape only webpages belonging directly to chemistry department domains, not the university website as a whole. As a result, it is worth baring in mind that the Cambridge chemistry department may be overrepresented in the UK chemistry data set.
 
-\subsection{Very Large Scale Scraping}
+\subsection{Global Scale Scraping}
 \label{sec:CROSSREFSCRAPE}
 The UK scrape was a respectable start, but much more data would be required to train a machine learning model successfully. One approach would have been expand the scrape to world-wide chemistry departments, and other learn\`{e}d bodies. However, Crossref also exposes a search service that can be used to query its vast internal database. The program was then set up to query the Crossref service for search terms `Chemistry', `Chemical', `Molecule' and Molecular' for journal articles and journal titles. This suggested possible yields in the millions of articles. 
 
@@ -133,7 +133,7 @@ At the intermediate point, the program had collected 1,267,495 records, which wa
 The records were then inspected and publisher distributions were considered. Some of this analysis is presented in \S\ref{sec:SCRAPEANALYSIS}. After careful considerations of request server loads and predicting capture probabilities, the second half of the scraping routine was set off to run for 3 days.
 \label{sec:CROSSREFSCRAPE}
 \subsection{Problems with ACS and Taylor \& Francis}
-Some publishers automatically track request volumes sent to their site as they wish to discourage automatic scraping of their data. Scraping their websites is not illegal, and the data collected was freely available, not behind pay-walls, or protected. However, during the scraping run, a bug in the randomisation of request frequencies resulted in detection by the ACS \footnote{American Chemical Society} and Taylor \& Francis. Both publishers responded by banning the IP address of the computer running the program. The department librarians were able to restore access, and it was agreed that no further large scale scraping runs would be performed. 
+Some publishers automatically track request volumes sent to their site as they wish to discourage automatic scraping of their data. Scraping their websites constitutes fair use and is legal in the UK , and despite the university owning a Licence to full access of these publishers' publications, the material collected was freely available without licence\cite{thelaw} \cite{contnentminelegal}. However, during the scraping run, a bug in the randomisation of request frequencies resulted in detection by the ACS \footnote{American Chemical Society} and Taylor \& Francis. Both publishers responded by banning the IP address of the computer running the program. The department librarians were able to restore access, and it was agreed that no further large scale scraping runs would be performed. 
 
 Taylor \& Francis banned the IP address after it detected over 100 requests were made within 5 minutes. This corresponds to a request every 3 seconds. This is modest server load compared to other publishers, and was not foreseen to cause problems.
 
@@ -148,7 +148,7 @@ The ACS banning occurred because of a bug in the randomisation of requests. The 
 \end{figure}
 The program was capable of making a total number of approximately 30 requests per seconds. As canbe seen in figure \ref{fig:ACSBAN}, the program began to run out of requests to other publishers after approximately 140,000 seconds, resulting in an increase in the proportion of total requests per second to ACS. The ban occurred after approximately 150,000 seconds, after which there were no more responses received.
 \subsection{Analysis of Collected data}
-The yield of the large scale scraping run was cut significantly by the ACS banning event. A summary is tabulated in \ref{tab:LARGESCRAPERES}, and shown graphically in figure \ref{fig:LARGESANK}.
+The yield of the global scale scraping run was cut significantly by the ACS banning event. A summary is tabulated in \ref{tab:LARGESCRAPERES}, and shown graphically in figure \ref{fig:LARGESANK}.
 \begin{table}[h!]
 \caption{Large Scale Scraping Results}
 \label{tab:LARGESCRAPERES}

@@ -56,7 +56,7 @@ The model has added sophistication built in to reduce the importance of very com
     \caption[Word Vector Relationships]{Schematic Representation of how concepts can be represented in word vector space. Word2Vec is able to replicate this behaviour. The vector found by vec(‘King’)- vec(‘Man’)+vec(‘Woman’) is approximately equal to vec(‘Queen’). The model has been tested on thousands of similar examples\cite{word2vec2}\cite{word2veckingqueen}.}
      \label{fig:KINGQUEEN}
 \end{figure}
-Word2Vec models are able to represent concepts by vector algebraic operations on their word representations. Figure \ref{fig:KINGQUEEN} shows one famous example a Word2Vec model trained on the `Google News' text corpus was able to identify. 
+Word2Vec models are able to represent concepts by vector algebraic operations on their word representations. Figure \ref{fig:KINGQUEEN} shows one famous example a Word2Vec model trained on the `Google News' text corpus was able to identify. \footnote{It is interesting to consider if chemical examples could be developed. This is considered further in \S\ref{chapt:RECOMMENDATIONS}}
 
 \section{Doc2Vec}
 The Doc2Vec algorithm \cite{gensim}(an implementation of Paragraph Vectors \cite{doc2vec}) allows the Word2vec process to directly learn vectors that represent documents. The CBOW model is adapted so that, in addition to word vectors, each document is associated with its own vector that contributes to the vector sum predictions in training. The result is that an entire document can be represented by a vector in a document semantic space.
