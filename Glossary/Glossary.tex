@@ -1,242 +1,267 @@
 \newglossaryentry{MachineLearning}
 {
 name={Machine Learning},
-description={blah} 
+description={Field of computer science with the aim of developing algorithms that automatically improve its performance based on supplied examples \cite{glossarymachinelearning}} 
 }
 \newglossaryentry{SciFinder}
 {
 name={SciFinder\textsuperscript{\textregistered}},
-description={blah} 
+description={Bibliographic and citation Search Engine designed for use for chemical research provided by the American Chemical Society} 
 }
 \newglossaryentry{WebOfScience}
 {
 name={Web Of Science	\textsuperscript{TM}},
-description={blah} 
+description={Bibliographic and Citation Search Engine provided by information media company Thomson Reuters } 
 }
 \newglossaryentry{Scraping}
 {
 name={Scraping},
-description={blah} 
+description={Programming technique to automatically extract data from online resources } 
 }
 \newglossaryentry{Crawling}
 {
 name={Crawling},
-description={blah} 
+description={Programming technique to automatically navigate through the online landscape identifying candidate websites for scraping (See Scraping)} 
 }
 \newglossaryentry{Metadata}
 {
 name={Meta-data},
-description={blah}
+description={Meta-data refers to data about data. In the context of this project, it refers to data that refers to data describing a chemistry article, i.e. Title, Abstract, DOI (See DOI), Authors, Affiliations, Journal, Publisher, Date of publication}
 }
 \newglossaryentry{python}
 {
 name={Python},
-description={blah} 
+description={Interpreted, dynamically typed programming language. Unless explicitly mentioned, Python was the language used for all development and analysis in this project} 
 }
 \newglossaryentry{MongoDB}
 {
 name={MongoDB},
-description={blah} 
+description={Schema-less `NoSQL' database used for document storage retrieval used in this project.} 
 }
 \newglossaryentry{HTML}
 {
 name={HTML},
-description={blah} 
+description={Hypertext Markup Language. A Tag-based language used to encode web-pages in a hierarchical structure. Webpages are written as html files, which get interpretted by an internet browser to display the page's content to the user } 
 }
 \newglossaryentry{XML}
 {
 name={XML},
-description={blah} 
+description={eXtensible Markup Language. A tag-based markup language, closely related to HTML. XML is a method of encoding any type of data in a manner that is machine readable but intelligible by humans. } 
 }
 \newglossaryentry{XPath}
 {
 name={XPath},
-description={blah} 
+description={Query method for extracting data from XML documents. As HTML is closely related to XML, XPath strings can be used to access data in HTML documents. } 
 }
-\newglossaryentry{Regex}
+\newglossaryentry{REGEX}
 {
-name={Regex},
-description={blah} 
+name={REGEX},
+description={REGular EXpression. A REGEX is a string that is used to inform a programming language of patterns to identify in a body of text} 
 }
 \newglossaryentry{DOI}
 {
 name={DOI},
-description={blah} 
+description={Digital Object Identifier. A DOI is an unique identifier string used to index the vast majority of academic literature articles published since 2000.\cite{glossarydoi}} 
 }
 \newglossaryentry{Crossref}
 {
 name={Crossref},
-description={blah} 
+description={Crossref is an organisation promoting inter-publisher cooperation. With a mission statement to `support ... Persistent, sustainable infrastructure for scholarly communication'\cite{crossref-formation}. Crossref provides many tools for researchers to access a wide range of publishers' materials.} 
 }
 \newglossaryentry{PILA}
 {
 name={PILA},
-description={blah} 
+description={Publishers International Linking Association, Inc. . PILA is an independent not-for-profit body comprised of scientific prublishing entities that operates Crossref \cite{crossref-formation}. } 
 }
 \newglossaryentry{IDF}
-{
+{ 
 name={IDF},
-description={blah} 
+description={International Doi Foundation. The IDF is an independent not-for-profit body which governs the use and management of the DOI system. They provide the definitive service for resolving a DOI to its document \cite{doi_handbook2}.} 
 }
 \newglossaryentry{UTF-8}
 {
 name={UTF-8},
-description={blah} 
+description={Universal Coded Character Set + Transformation Format – 8-bit \cite{utf8}. An encoding specification for the Unicode character set, where each character is encoded by 8 bits. UTF-8 is the dominant encoding used online surpassing 50\% in 2010\cite{utf8stats}} 
 }
 \newglossaryentry{Unicode}
 {
 name={Unicode},
-description={blah} 
-}
-\newglossaryentry{Perl}
-{
-name={Perl},
-description={blah} 
+description={Unicode is a standard for encoding characters used in worldwide communication. The Unicode character set includes 120,000 characters including mathematical symbols, punctuations, and character languages (Mandarin, Japanese etc.)} 
 }
 \newglossaryentry{API}
 {
 name={API},
-description={blah} 
+description={Application Programmer Interface. An API is a set of well defined input and output operations to a program or service to enable programmers to easily use the service.} 
 }
 \newglossaryentry{ACS}
 {
 name={ACS},
-description={blah} 
+description={American Chemical Society. A Scientific society specialising in the chemistry domain with a large scientific academic publishing arm. The ACS also own the Chemical Abstracts Service and SciFinder\textsuperscript{\textregistered}} 
 }
 \newglossaryentry{TaylorFrancis}
 {
 name={Taylor \& Francis},
-description={blah} 
+description={Part of the Informa group. An academic publisher covering a range of scientific disciplines.} 
 }
 \newglossaryentry{IPADDRESS}
 {
 name={IP Address},
-description={blah} 
+description={Internet Protocol Address. An IP address is the identifier for any computer or device using a network that runs on Internet Protocol.} 
 }
-\newglossaryentry{Training Dataset}
+\newglossaryentry{d1}
 {
-name={Training Dataset},
-description={blah} 
+name={$\Delta1$},
+description={Database of article meta-data created from DOIs found on UK Chemistry department websites} 
+}
+\newglossaryentry{d2}
+{
+name={$\Delta2$},
+description={Database of complete article meta-data including abstracts found on UK Chemistry department websites  } 
+}
+\newglossaryentry{d3}
+{
+name={$\Delta3$},
+description={Database of article meta-data created from DOIs found in global scraping procedure} 
+} 
+\newglossaryentry{d4}
+{
+name={$\Delta4$},
+description={Database of complete article meta-data including abstracts found in global scraping procedure} 
+}
+\newglossaryentry{d5}
+{
+name={$\Delta5$},
+description={Database created by combining databases $\Delta2$ and $\Delta 4$} 
+}
+\newglossaryentry{d6}
+{
+name={$\Delta6$},
+description={Database comprised of records in Database $\Delta5$ deemed suitable for machine learning, i.e. records with sufficiently long titles and abstracts and predominantly ascii characters.} 
+}
+\newglossaryentry{d7}
+{
+name={$\Delta7$},
+description={Database comprised of records in Database $\Delta6$ which had originated from DOIs found on the Cambridge University Chemistry Department} 
 }
 \newglossaryentry{RSC}
 {
 name={RSC},
-description={blah} 
+description={Royal Society of Chemistry. British Learn\`ed society for chemical sciences.The RSC has an academic publishing arm.} 
 }
 \newglossaryentry{Zipfslaw}
 {
 name={Zipf's Law},
-description={blah} 
+description={Zipf's Law states that the relationship of log of the rank of a word to the log of the frequency of that word in large corpus of text approximates a directly proportional relationship\cite{zipf} states} 
 }
 \newglossaryentry{Corpus}
 {
 name={Corpus},
-description={blah} 
+description={In the Field of Language Processing, a corpus is a large body of natural language text. In the context of the project, a corpus is the combined titles and abstracts of all the records in a database.  } 
 }
 \newglossaryentry{NLP}
 {
 name={NLP},
-description={blah} 
+description={Natural Language Processing. NLP is the field of linguistics and computer science with the aim of processing human written (Natural) language with a computer. } 
 }
 \newglossaryentry{BagOfWords}
 {
 name={Bag Of Words},
-description={blah} 
+description={Simple Document Representation model which attempts to represent a document as a vector based on presence/absence of words.} 
 }
 \newglossaryentry{BagOfCitations}
 {
 name={BagOfCitations},
-description={blah} 
+description={Simple Document Representation model which attempts to represent a document based on presence/absence of citations.} 
 }
 \newglossaryentry{Word2vec}
 {
 name={Word2Vec},
-description={blah} 
+description={Sophisticated Distributed word vector model. Word2Vec uses a Neural Net to learn vector representations for component words in a corpus from their context by training sentence by sentence \cite{word2vec1}\cite{word2vec2}  } 
 }
 \newglossaryentry{NeuralNet}
 {
 name={Neural Net},
-description={blah} 
+description={Data structure capable of developing decision pathways based off supplied training examples.} 
 }
 \newglossaryentry{CBOW}
 {
 name={CBOW},
-description={blah} 
+description={Continuous Bag Of Words. A learning architecture used by the Word2Vec algorithm. Word Vector predictions are made from the sum or mean of the surrounding context words.} 
 }
 \newglossaryentry{Skipgram}
 {
 name={Skipgram},
-description={blah} 
+description={A learning architecture used by the Word2Vec algorithm. Word Vector predictions are made from random comparison between a word and a nearby context word.} 
 }
 \newglossaryentry{Doc2Vec}
 {
 name={Doc2Vec},
-description={blah} 
+description={Gensim Implementation of Paragraph Vectors algorithm (See Paragraph Vectors)} 
 }
 \newglossaryentry{Paragraphvectors}
 {
 name={Paragraph Vectors},
-description={blah} 
+description={Natural Language Processing algorithm based on Word2Vec for generating representation vectors for documents. } 
 }
 \newglossaryentry{Stopwords}
 {
 name={Stop Words},
-description={blah} 
+description={Words removed from a corpus before being processed as they are very common and/or do not encode significant information content.} 
 }
 \newglossaryentry{Stemmer}
 {
 name={Stemmer},
-description={blah} 
+description={An algorithm used to relate derived words (such as plurals, conjugated verbs) to their roots} 
 }
 \newglossaryentry{SNOWBALL}
 {
 name={Snowball},
-description={blah} 
+description={Also known as Porter2, the snowball stemmer is recent stemming algorithm\cite{snowball}. Snowball is also the name of the programming language developed for stemming that the algorithm is written in.} 
 }
 \newglossaryentry{Lancaster}
 {
 name={Lancaster},
-description={blah} 
+description={Stemming algorithm \cite{lancaster}} 
 }
 \newglossaryentry{Porter}
 {
 name={Porter},
-description={blah} 
+description={Early, widely used stemming algorithm \cite{porter}} 
 }
 \newglossaryentry{WordNet}
 {
 name={WordNet},
-description={blah} 
+description={Lemmatizing stemming algorithm, based on consulting grouping semantically connected word concepts \cite{wordnet1} \cite{wordnet2} \cite{wordnet3}.} 
 }
 \newglossaryentry{TF-IDF}
 {
 name={TF-IDF},
-description={blah} 
+description={Term-Frequency Inverse-Document-Frequency. Method for assigning weights to words in a document for how much information the word carries.} 
 }
 \newglossaryentry{Gensim}
 {
 name={Gensim},
-description={blah} 
+description={Gensim is an open-source library for Python programs for use in NLP applications} 
 }
 \newglossaryentry{Hyperparameters}
 {
 name={Hyperparameters},
-description={blah} 
+description={Parameters used by a Machine Learning algorithm. Known as hyperparameters to differentiate between external parameters supplied to the algorithm (hyperparameters) and internal parameters known by the algorithm.} 
 }
 \newglossaryentry{TrainingEpoch}
 {
 name={Training  Epoch},
-description={blah} 
+description={A complete iteration over the training data available to a learning algorithm.} 
 }
 \newglossaryentry{CosineSim}
 {
 name={Cosine Similarity},
-description={blah} 
+description={A similarity metric for vectors derived from the angle between them. $S_{cosine}=cos\left(\theta\right)$ for angle $\theta$ between two vectors } 
 }
 \newglossaryentry{euclideansim}
 {
-name={EuclideanSimilarity},
-description={blah} 
+name={Euclidean Similarity},
+description={A similarity metric for vectors derived from their distance in Euclidean space. $S_{euclid} = \sqrt{\sum_{i=1}^{D}(\nu_i^{\alpha}-\nu_i^{\beta})^{2}}$ for vectors $\alpha$ and $\beta$}
 }
 \newglossaryentry{PCA}
 {
@@ -261,11 +286,6 @@ description={blah}
 \newglossaryentry{Gephi}
 {
 name={Gephi},
-description={blah} 
-}
-\newglossaryentry{CCD}
-{
-name={CCD},
 description={blah} 
 }
 \newglossaryentry{Communities}

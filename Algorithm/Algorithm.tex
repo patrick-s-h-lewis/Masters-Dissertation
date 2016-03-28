@@ -1,9 +1,9 @@
 \chapter{Algorithm Development}
 \label{chapt:ALGORITHM}
 \section{Premise}
-The aim of the machine learning phase was to apply the Word2Vec and Doc2Vec algorithms to the training dataset described in \S\ref{chapt:DATA_ACQUISITION}. An article was considered to be represented by a document consisting of its title and abstract. The aim was to represent these documents as vectors in semantic space, so that advanced computational analyses and statistical methods could be performed. 
+The aim of the machine learning phase was to apply the Word2Vec and Doc2Vec algorithms to dataset \Delta6 described in \S\ref{chapt:DATA_ACQUISITION}. An article was considered to be represented by a document consisting of its title and abstract. The aim was to represent these documents as vectors in semantic space, so that advanced computational analyses and statistical methods could be performed. 
 \section{Data Sanitisation} 
-The documents (titles and abstracts) in the training dataset required preprocessing before they could be effectively used in training. The training process requires inputs to be as clean as possible in order to get good results (encapsulated by the well known computer science idiom `Garbage in, Garbage out'). 
+The documents (titles and abstracts) in \Delta6 required preprocessing before they could be effectively used in training. The training process requires inputs to be as clean as possible in order to get good results (encapsulated by the well known computer science idiom `Garbage in, Garbage out'). 
 
 The first step was to cast all words to lower case, so that the algorithm did not produce different vectors for e.g.  `Molecule' and `molecule'.
 
@@ -15,7 +15,7 @@ It was also observed that, as unicode text scraped from a wide variety of source
     \centering
     \textbf{Filtered Punctuation }\par\medskip
     \includegraphics[scale=0.2]{Algorithm/punct_table.png}
-    \caption[Punctuation removed in sanitation processing]{All the punctuation removed in sanitation. Only these were found in appreciable quantities in the training dataset. }
+    \caption[Punctuation removed in sanitation processing]{All the punctuation removed in sanitation. Only these were found in appreciable quantities in the \Delta6. }
      \label{fig:punct}
 \end{figure}
 Removing hyphens and primes also meant chemical names were fragmented. This was considered acceptable as the fragment words had greater freedom than specific (possibly singleton) fully formed names, e.g. \texttt{5-methyl-1-heptanol} is split to \texttt{5 methyl 1 heptanol}, this allows the \texttt{heptanol} fragment to be associated with other mentions of heptanol in the training set, rather than only associate with mentions of the much less frequent 5-methyl-1-heptanol. 
@@ -85,10 +85,10 @@ The document preprocessing pipeline is shown diagrammatically in figure \ref{fig
     \centering
     \textbf{Preprocessing pipeline}\par\medskip
   \makebox[\textwidth][c]{\includegraphics[width=1.15\textwidth]{Algorithm/Data_Sanitation.pdf}}%
-    \caption[Preprocessing Pipeline]{All documents in the training database were preprocessed with this pipeline schema before being used in training models}
+    \caption[Preprocessing Pipeline]{All documents in \Delta6 were preprocessed with this pipeline schema before being used in training models}
      \label{fig:SANPIPE}
 \end{figure}
-The process is best illustrated by real example from the dataset:
+The process is best illustrated by real example from \Delta6:
 
 $<$ p $>$
 \texttt{ n A 9-silafluorene-containing biphenolic monomer,\\ 9,9-bis(4-hydroxyphenyl)-9-silafluorene, \\ was prepared from 9,9-dichloro-9-silafluorene and employed for the synthesis of polyesters using a fluorene-based homoditopic acid chloride.} $< \setminus$ p $>$.
@@ -101,7 +101,7 @@ Whilst challenging to read, word order is preserved and low information words (o
 
 \section{Word2Vec Models}
 The processed data was used to train two Word2Vec models (one CBOW, one skipgram) using the gensim python implementation \cite{gensim}.The hyperparameters used for training were consistent for the two models.
-Training was carried out on all documents in the training dataset. The model was trained with sentences formed by simple splitting of documents using full stops\footnote{Whilst not perfect, this method was a fair compromise for partitioning on actual sentences and false partitioning.}. After examination of different hyperparameters, the models were run using hyperparameters representing good balance of specificity, speed and generality. The hyper parameters used are detailed in table \ref{tab:hyperparams}.
+Training was carried out on all documents in \Delta6. The model was trained with sentences formed by simple splitting of documents using full stops\footnote{Whilst not perfect, this method was a fair compromise for partitioning on actual sentences and false partitioning.}. After examination of different hyperparameters, the models were run using hyperparameters representing good balance of specificity, speed and generality. The hyper parameters used are detailed in table \ref{tab:hyperparams}.
 \begin{table}[h!]
 \begin{center}
 \caption{Word2vec Parameters}
@@ -153,7 +153,7 @@ CBOW-TFIDF-S & CBOW-S with TFIDF weighting on word vectors & SG-TFIDF-S & SG-S w
 \end{table}
 
 \section{Doc2Vec Models}
-A Doc2Vec model was trained with a \emph{distributed memory} architecture\footnote{Distributed memory is the Paragraph Vector algorithm equivalent of CBOW, the performance of this architecture is optimal\cite{doc2vec}} using the gensim framework in python \cite{gensim} using the same training data as for the Word2Vec models. The training sentences were labelled with the document (journal article doi) they came from. 100 dimensional vectors were chosen as a compromise of training speed and specificity\footnote{as well as for computational considerations of analytical techniques, see \S\ref{chapt:VALIDATION},\S\ref{chapt:ANALYSIS}}, and also so that dimensions were consistent across all models. The Doc2Vec model was trained for 24 epochs, with hyperparamters detailed in table \ref{tab:doc2vechyperparams}
+A Doc2Vec model was trained with a \emph{distributed memory} architecture\footnote{Distributed memory is the Paragraph Vector algorithm equivalent of CBOW, the performance of this architecture is optimal\cite{doc2vec}} using the gensim framework in python \cite{gensim} using \Delta6 with the same sanitiation pipeline as for the Word2Vec models. The training sentences were labelled with the document (journal article doi) they came from. 100 dimensional vectors were chosen as a compromise of training speed and specificity\footnote{as well as for computational considerations of analytical techniques, see \S\ref{chapt:VALIDATION},\S\ref{chapt:ANALYSIS}}, and also so that dimensions were consistent across all models. The Doc2Vec model was trained for 24 epochs, with hyperparamters detailed in table \ref{tab:doc2vechyperparams}
 \begin{table}[H]
 \begin{center}
 \label{tab:doc2vechyperparams}

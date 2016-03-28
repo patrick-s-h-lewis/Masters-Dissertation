@@ -9,19 +9,24 @@
 \glossaryentry{HTML?\glossentry{HTML}|setentrycounter[]{page}\glsnumberformat}{1}
 \glossaryentry{XML?\glossentry{XML}|setentrycounter[]{page}\glsnumberformat}{1}
 \glossaryentry{XPath?\glossentry{XPath}|setentrycounter[]{page}\glsnumberformat}{1}
-\glossaryentry{Regex?\glossentry{Regex}|setentrycounter[]{page}\glsnumberformat}{1}
+\glossaryentry{REGEX?\glossentry{REGEX}|setentrycounter[]{page}\glsnumberformat}{1}
 \glossaryentry{DOI?\glossentry{DOI}|setentrycounter[]{page}\glsnumberformat}{1}
 \glossaryentry{Crossref?\glossentry{Crossref}|setentrycounter[]{page}\glsnumberformat}{1}
 \glossaryentry{PILA?\glossentry{PILA}|setentrycounter[]{page}\glsnumberformat}{1}
 \glossaryentry{IDF?\glossentry{IDF}|setentrycounter[]{page}\glsnumberformat}{1}
 \glossaryentry{UTF-8?\glossentry{UTF-8}|setentrycounter[]{page}\glsnumberformat}{1}
 \glossaryentry{Unicode?\glossentry{Unicode}|setentrycounter[]{page}\glsnumberformat}{1}
-\glossaryentry{Perl?\glossentry{Perl}|setentrycounter[]{page}\glsnumberformat}{1}
 \glossaryentry{API?\glossentry{API}|setentrycounter[]{page}\glsnumberformat}{1}
 \glossaryentry{ACS?\glossentry{ACS}|setentrycounter[]{page}\glsnumberformat}{1}
 \glossaryentry{Taylor \& Francis?\glossentry{TaylorFrancis}|setentrycounter[]{page}\glsnumberformat}{1}
 \glossaryentry{IP Address?\glossentry{IPADDRESS}|setentrycounter[]{page}\glsnumberformat}{1}
-\glossaryentry{Training Dataset?\glossentry{Training Dataset}|setentrycounter[]{page}\glsnumberformat}{1}
+\glossaryentry{$\Delta 1$?\glossentry{d1}|setentrycounter[]{page}\glsnumberformat}{1}
+\glossaryentry{$\Delta 2$?\glossentry{d2}|setentrycounter[]{page}\glsnumberformat}{1}
+\glossaryentry{$\Delta 3$?\glossentry{d3}|setentrycounter[]{page}\glsnumberformat}{1}
+\glossaryentry{$\Delta 4$?\glossentry{d4}|setentrycounter[]{page}\glsnumberformat}{1}
+\glossaryentry{$\Delta 5$?\glossentry{d5}|setentrycounter[]{page}\glsnumberformat}{1}
+\glossaryentry{$\Delta 6$?\glossentry{d6}|setentrycounter[]{page}\glsnumberformat}{1}
+\glossaryentry{$\Delta 7$?\glossentry{d7}|setentrycounter[]{page}\glsnumberformat}{1}
 \glossaryentry{RSC?\glossentry{RSC}|setentrycounter[]{page}\glsnumberformat}{1}
 \glossaryentry{Zipf's Law?\glossentry{Zipfslaw}|setentrycounter[]{page}\glsnumberformat}{1}
 \glossaryentry{Corpus?\glossentry{Corpus}|setentrycounter[]{page}\glsnumberformat}{1}
@@ -51,7 +56,6 @@
 \glossaryentry{Hadamard Division?\glossentry{Hadamarddiv}|setentrycounter[]{page}\glsnumberformat}{1}
 \glossaryentry{Hadamard Square Root?\glossentry{Hadamardsqrt}|setentrycounter[]{page}\glsnumberformat}{1}
 \glossaryentry{Gephi?\glossentry{Gephi}|setentrycounter[]{page}\glsnumberformat}{1}
-\glossaryentry{CCD?\glossentry{CCD}|setentrycounter[]{page}\glsnumberformat}{1}
 \glossaryentry{Communities?\glossentry{Communities}|setentrycounter[]{page}\glsnumberformat}{1}
 \glossaryentry{UPGMA?\glossentry{UPGMA}|setentrycounter[]{page}\glsnumberformat}{1}
 \glossaryentry{Dendrogram?\glossentry{Dendrogram}|setentrycounter[]{page}\glsnumberformat}{1}

@@ -1,54 +1,15 @@
-\contentsline {chapter}{List of Figures}{3}{chapter*.2}
-\contentsline {chapter}{Glossary}{5}{section*.3}
-\contentsline {chapter}{\numberline {1}Introduction}{8}{chapter.1}
-\contentsline {section}{\numberline {1.1}Modern Scientific Publishing}{8}{section.1.1}
-\contentsline {section}{\numberline {1.2}Motivation}{8}{section.1.2}
-\contentsline {section}{\numberline {1.3}Aims}{9}{section.1.3}
-\contentsline {chapter}{\numberline {2}Data Acquisition}{10}{chapter.2}
-\contentsline {section}{\numberline {2.1}Background}{10}{section.2.1}
-\contentsline {subsection}{\numberline {2.1.1}HTML and Xpath}{10}{subsection.2.1.1}
-\contentsline {section}{\numberline {2.2}Automatic Xpath Generation}{11}{section.2.2}
-\contentsline {section}{\numberline {2.3}Collection Strategy}{11}{section.2.3}
-\contentsline {subsection}{\numberline {2.3.1}DOIS : Document Object Identifiers}{12}{subsection.2.3.1}
-\contentsline {subsection}{\numberline {2.3.2}Scraping Program}{13}{subsection.2.3.2}
-\contentsline {section}{\numberline {2.4}Collection Results}{15}{section.2.4}
-\contentsline {subsection}{\numberline {2.4.1}UK University Department scraping}{15}{subsection.2.4.1}
-\contentsline {subsection}{\numberline {2.4.2}Global Scale Scraping}{16}{subsection.2.4.2}
-\contentsline {subsection}{\numberline {2.4.3}Problems with ACS and Taylor \& Francis}{17}{subsection.2.4.3}
-\contentsline {subsection}{\numberline {2.4.4}Analysis of Collected data}{18}{subsection.2.4.4}
-\contentsline {subsubsection}{Observations}{20}{section*.5}
-\contentsline {chapter}{\numberline {3}Techniques for Language Processing}{24}{chapter.3}
-\contentsline {section}{\numberline {3.1}Background}{24}{section.3.1}
-\contentsline {section}{\numberline {3.2}Bag of Words}{24}{section.3.2}
-\contentsline {section}{\numberline {3.3}Word2Vec}{25}{section.3.3}
-\contentsline {section}{\numberline {3.4}Doc2Vec}{27}{section.3.4}
-\contentsline {chapter}{\numberline {4}Algorithm Development}{28}{chapter.4}
-\contentsline {section}{\numberline {4.1}Premise}{28}{section.4.1}
-\contentsline {section}{\numberline {4.2}Data Sanitisation}{28}{section.4.2}
-\contentsline {section}{\numberline {4.3}Word2Vec Models}{31}{section.4.3}
-\contentsline {subsection}{\numberline {4.3.1}TF-IDF}{32}{subsection.4.3.1}
-\contentsline {subsection}{\numberline {4.3.2}Aggregations}{32}{subsection.4.3.2}
-\contentsline {section}{\numberline {4.4}Doc2Vec Models}{33}{section.4.4}
-\contentsline {chapter}{\numberline {5}Model Examination}{35}{chapter.5}
-\contentsline {section}{\numberline {5.1}Word Similarities}{35}{section.5.1}
-\contentsline {section}{\numberline {5.2}Document Similarities}{37}{section.5.2}
-\contentsline {section}{\numberline {5.3}Visualisation Techniques}{38}{section.5.3}
-\contentsline {subsection}{\numberline {5.3.1}Network Visualisation}{38}{subsection.5.3.1}
-\contentsline {subsection}{\numberline {5.3.2}Networks and Network Visualisation}{39}{subsection.5.3.2}
-\contentsline {chapter}{\numberline {6}Analysis with Sample Dataset}{42}{chapter.6}
-\contentsline {section}{\numberline {6.1}Cambridge Chemistry research clusters}{42}{section.6.1}
-\contentsline {section}{\numberline {6.2}Cambridge Staff Member Similarities}{46}{section.6.2}
-\contentsline {section}{\numberline {6.3}Combining research clusters and authors}{51}{section.6.3}
-\contentsline {chapter}{\numberline {7}Conclusions}{61}{chapter.7}
-\contentsline {chapter}{\numberline {8}Recommendations for Further Work}{63}{chapter.8}
-\contentsline {section}{\numberline {8.1}Greater Dimensionality and Training Improvements}{63}{section.8.1}
-\contentsline {section}{\numberline {8.2}Greater use of word vectors}{63}{section.8.2}
-\contentsline {section}{\numberline {8.3}Time resolution in clustering}{64}{section.8.3}
-\contentsline {section}{\numberline {8.4}Open Source Chemistry Vectors}{64}{section.8.4}
-\contentsline {section}{\numberline {8.5}Structure stemming}{64}{section.8.5}
-\contentsline {section}{\numberline {8.6}Multiply labelled Documents}{64}{section.8.6}
-\contentsline {chapter}{Bibliography}{65}{chapter*.6}
-\contentsline {chapter}{\numberline {9}Appendix}{66}{chapter.9}
-\contentsline {section}{\numberline {9.1}UK Departments scraped}{67}{section.9.1}
-\contentsline {section}{\numberline {9.2}Publishers Considered in UK scraping}{70}{section.9.2}
-\contentsline {section}{\numberline {9.3}Scaled Communities for staff members in Cambridge}{71}{section.9.3}
+\contentsline {chapter}{List of Figures}{2}{chapter*.2}
+\contentsline {chapter}{Glossary}{3}{section*.3}
+\contentsline {chapter}{\numberline {1}Introduction}{7}{chapter.1}
+\contentsline {section}{\numberline {1.1}Modern Scientific Publishing}{7}{section.1.1}
+\contentsline {section}{\numberline {1.2}Motivation}{7}{section.1.2}
+\contentsline {section}{\numberline {1.3}Aims}{8}{section.1.3}
+\contentsline {chapter}{\numberline {2}Conclusions}{9}{chapter.2}
+\contentsline {chapter}{\numberline {3}Recommendations for Further Work}{11}{chapter.3}
+\contentsline {section}{\numberline {3.1}Greater Dimensionality and Training Improvements}{11}{section.3.1}
+\contentsline {section}{\numberline {3.2}Greater use of word vectors}{11}{section.3.2}
+\contentsline {section}{\numberline {3.3}Time resolution in clustering}{12}{section.3.3}
+\contentsline {section}{\numberline {3.4}Open Source Chemistry Vectors}{12}{section.3.4}
+\contentsline {section}{\numberline {3.5}Structure stemming}{12}{section.3.5}
+\contentsline {section}{\numberline {3.6}Multiply labelled Documents}{12}{section.3.6}
+\contentsline {chapter}{Bibliography}{13}{chapter*.5}

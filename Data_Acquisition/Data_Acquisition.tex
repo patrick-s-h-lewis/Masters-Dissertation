@@ -44,7 +44,7 @@ DOIs are computer-friendly labels for articles. DOIs are issued by a number of a
     \includegraphics[width=\textwidth]{Data_Acquisition/DOI2.png}
     \caption[Anatomy of a DOI]{Doi structure. The structure consists of a numeric prefix (X and Y must be integers) and alphanumeric suffix (Z can be any Unicode encoded character) \label{fig:DOI}}
 \end{figure}
-DOIs consist of a prefix and suffix. The prefix is subdivided into the ‘Directory Indicator’ (always integer ‘10’) separated from the ‘Registrant Code’, assigned by the issuing body. Registrant codes are numeric and can be a minimum of 3 integers, with further otpional subdivisions separated by full stops. The suffix is provided by the registrant themselves. It can take any form as long as it is unicode encoded.
+DOIs consist of a prefix and suffix. The prefix is subdivided into the ‘Directory Indicator’ (always integer ‘10’) separated from the ‘Registrant Code’, assigned by the issuing body \cite{doi_handbook1}. Registrant codes are numeric and can be a minimum of 3 integers, with further otpional subdivisions separated by full stops. The suffix is provided by the registrant themselves. It can take any form as long as it is unicode encoded\cite{doi_handbook1}.
 
 
 It was possible to write a `Regular Expression' pattern matcher (regex) to automatically recognise DOIs within a body of text, (See Figure \ref{fig:REGEX}) The flexibility of the registrant code specification means that DOIs cannot always be unambiguously identified in html documents. 
@@ -89,7 +89,7 @@ The program exports complete records as .json files, but also feeds directly to 
 \section{Collection Results}
 \subsection{UK University Department scraping}
 \label{sec:UKSCRAPE}
-The program was first used to collect the data from the UK. The Goodman group's website hosts a list of UK chemistry departments \url{http://www-jmg.ch.cam.ac.uk/data/c2k/uk.html}. The list was manually checked and some urls were changed to give a list of 68 departments\footnote{Details can be found in the appendix}. The program was run with this list as an input, the results of which are detailed in table \ref{tab:UKSCRAPERES}.
+The program was first used to collect the data from the UK. The Goodman group's website hosts a list of UK chemistry departments \url{http://www-jmg.ch.cam.ac.uk/data/c2k/uk.html}. The list was manually checked and some urls were changed to give a list of 68 departments\footnote{Details can be found in the appendix}. The program was run with this list as an input, the results of which are detailed in table \ref{tab:UKSCRAPERES}. The Dois collected were stored in a database \Delta1 and the complete results were stored in a database \Delta2.
 \begin{table}[h!]
 \caption{UK Scraping results}
 \label{tab:UKSCRAPERES}
@@ -115,7 +115,7 @@ The efficiency is depicted in figure \ref{fig:UKSANK}
 \begin{figure}[H]
     \centering
     \textbf{Efficiency of UK Department Scraping}\par\medskip
-    \includegraphics[scale=0.07]{Data_Acquisition/uk_sankey.png}
+    \includegraphics[width=\textwidth]{Data_Acquisition/uk_sankey.png}
     \caption[Efficiency of UK Department Scraping]{The loss processes are coloured red, successfully captured full records in green, and the maximum possible yield in blue.}
      \label{fig:UKSANK}
 \end{figure}
@@ -128,7 +128,7 @@ The UK scrape was a respectable start, but much more data would be required to t
 
 The program was instructed to scrape the search results pages of these queries. Because the scraping job was so large, the program was set up to `pause' before the publisher abstract collection stage.The results of up scrape up to this point were examined before setting off the second stage to collect abstracts.
 
-At the intermediate point, the program had collected 1,267,495 records, which was deemed successful, and would provide enough data to train a powerful machine learning algorithm.
+At the intermediate point, the program had collected 1,267,495 records, which was deemed successful, and would provide enough data to train a powerful machine learning algorithm. This database was named \Delta3.
 
 The records were then inspected and publisher distributions were considered. Some of this analysis is presented in \S\ref{sec:SCRAPEANALYSIS}. After careful considerations of request server loads and predicting capture probabilities, the second half of the scraping routine was set off to run for 3 days.
 \label{sec:CROSSREFSCRAPE}
@@ -148,7 +148,7 @@ The ACS banning occurred because of a bug in the randomisation of requests. The 
 \end{figure}
 The program was capable of making a total number of approximately 30 requests per seconds. As canbe seen in figure \ref{fig:ACSBAN}, the program began to run out of requests to other publishers after approximately 140,000 seconds, resulting in an increase in the proportion of total requests per second to ACS. The ban occurred after approximately 150,000 seconds, after which there were no more responses received.
 \subsection{Analysis of Collected data}
-The yield of the global scale scraping run was cut significantly by the ACS banning event. A summary is tabulated in \ref{tab:LARGESCRAPERES}, and shown graphically in figure \ref{fig:LARGESANK}.
+The yield of the global scale scraping run was cut significantly by the ACS banning event. A summary is tabulated in \ref{tab:LARGESCRAPERES}, and shown graphically in figure \ref{fig:LARGESANK}. The complete records were stored in a database \Delta4.
 \begin{table}[h!]
 \caption{Large Scale Scraping Results}
 \label{tab:LARGESCRAPERES}
@@ -181,27 +181,41 @@ Missing Publications \& Program Errors & 195989 & 15.5\%\\
      \label{fig:LARGESANK}
 \end{figure}
 
-The overall efficiency of the process is 56.4\%, but excluding the acs records lost in the ban, the program's efficiency jumps to 74.0\%, similar to the efficiency of the UK scraping run (\S\ref{sec:UKSCRAPE}). \footnote{Also note that 100\% of dois were converted to dois with metadata. This is because the format of the webpages scraped was consistent for every doi collected.}
+The overall efficiency of the process is 56.4\%, but excluding the ACS records lost in the ban, the program's efficiency jumped to 74.0\%, similar to the efficiency of the UK scraping run (\S\ref{sec:UKSCRAPE}). \footnote{Also note that 100\% of dois were converted to dois with metadata. This is because the format of the webpages scraped was consistent for every doi collected.}
 
-The successfully captured 714,370 records were inspected and merged with the UK results. Records were rejected with short titles or abstracts (likely to be addenda, informal articles, retractions etc.) Records were also removed if the majority of the title and abstract were not writen in ascii characters \footnote{ascii is an encoding for English characters a-z, A-Z, some punctuation and 1-9.} (removing majority Japanese and Chinese script). This was done to provide better quality data for training the algorithm described in  \S\ref{chapt:ALGORITHM}. This filtering resulted in a final training database of 464712 articles. This dataset is henceforth referred to as \emph{the training dataset}. The entire database formation process is shown in figure \ref{fig:DATABASES}.
+The successfully captured 714,370 records were inspected and merged with the UK results. Records were rejected with short titles or abstracts (likely to be addenda, informal articles, retractions etc.) Records were also removed if the majority of the title and abstract were not written in ascii characters \footnote{ascii is an encoding for English characters a-z, A-Z, some punctuation and 1-9.} (removing majority Japanese and Chinese script). This was done to provide better quality data for training the algorithm described in  \S\ref{chapt:ALGORITHM}. This filtering resulted in a final training database of 464712 articles. This dataset is henceforth referred to as \Delta6. The entire database formation process is shown in figure \ref{fig:DATABASES} and table \ref{tab:DATABASES}.
 \begin{figure}[H]
     \centering
     \textbf{Summary of Database Preparation}\par\medskip
-    \includegraphics[scale=0.6]{Data_Acquisition/Databases.pdf}
-    \caption[Summary of Database Preparation]{Blue databases represent data with dois and metadata. Green databases represent meta-data, dois and abstracts. The purple database is the combined complete records, and the red database is the data deemed suitable for the training algorithm. database sizes and losses are annotated.}
+    \includegraphics[scale=0.6]{Data_Acquisition/Databases2.pdf}
+    \caption[Summary of Database Preparation]{Blue databases (\Delta1, \Delta3) represent data with dois and metadata. Green databases (\Delta2, \Delta4 ) represent meta-data, dois and abstracts. The purple database (\Delta5) is the combined complete records, and the red database is the data deemed suitable for the training algorithm. database sizes and losses are annotated.}
      \label{fig:DATABASES}
 \end{figure}
+\begin{table}[H]
+\caption{Databases created in Data Acquisition Process}
+\label{tab:DATABASES}
+\begin{tabular}{||c|c|c|c||}
+\hline 
+Database &  Contents & # Records\\
+\Delta1 & Dois found on UK Chemistry Department websites & 22,397 \\
+\Delta2 & Complete meta-data obtained from records in \Delta1 & 16,363 \\
+\Delta3 & Dois found in global scraping using crossref API & 1,267,495  \\
+\Delta4 & Complete meta-data obtained from records in \Delta3 & 714,370 \\
+\Delta5 & Complete records obtained from combining \Delta2 and \Delta4 & 730,733 \\
+\Delta6 & Records appropriate for training taken from \Delta5 & 464,712 \\
+\end{tabular}
+\end{table}
 
 
 It was instructive to examine these databases and derive some simple statistical results. The following section briefly explores some of these.
 \subsubsection{Observations}
 \label{sec:CORPUSOBSERVATIONS}
-The publisher `market share' can be approximated from examining the database\footnote{Data was taken from `Large Scale Scrape Dois' database, shown in figure \ref{fig:DATABASES}}.
+The publisher `market share' can be approximated from examining \Delta3.
 \begin{figure}[H]
     \centering
     \textbf{Publisher Share in Chemistry Literature}\par\medskip
     \includegraphics[width=\textwidth]{Data_Acquisition/publishers_pie.png}
-    \caption[Publisher Share in Chemistry Literature]{Articles grouped by publisher in the Large Scale Scrape doi database (marked 'Large Scale Scrape Dois' in figure \ref{fig:DATABASES}). Only the top 12 publishers are shown.}
+    \caption[Publisher Share in Chemistry Literature]{Articles grouped by publisher in \Delta3. Only the top 12 publishers are shown.}
      \label{fig:PUBPI}
 \end{figure}
 As shown in  shown in figure \ref{fig:PUBPI}, it can be seen that 90\% of all the chemistry literature collected was published by just 12 publishers, the majority from ACS, Wiley-Blackwell, Springer and Elsevier BV. Looking at the UK scraping DOI dataset (Figure \ref{fig:UKPUBPI}), the same large publishers are represented, but the Royal Society of Chemistry has a much larger share. This is to be expected, as the RSC is a UK based body. In the UK, there is a more even distribution between the large publishers. 
@@ -210,11 +224,11 @@ As shown in  shown in figure \ref{fig:PUBPI}, it can be seen that 90\% of all th
     \centering
     \textbf{Publisher Share in UK Chemistry Literature}\par\medskip
     \includegraphics[width=\textwidth]{Data_Acquisition/uk_publishers_pie.png}
-    \caption[Publisher Share in UK Chemistry Literature]{Articles grouped by publisher in the UK Doi database published by by each publisher. Only the top 12 publishers are shown.}
+    \caption[Publisher Share in UK Chemistry Literature]{Articles grouped by publisher in \Delta1. Only the top 12 publishers are shown.}
      \label{fig:UKPUBPI}
 \end{figure}
 
-The corpus of combined titles and abstracts of the complete training database was then examined. The word frequencies across all the data were found to be approximately Zipfian, with a gradient of -1.11\footnote{A Zipfian distribution is a subset of the Pareto distribution, stating that the frequency of a word is proportional to its ranking in the word frequencies table. Ideally, the gradient of a log(frequency) vs log(rank) should be -1.0 \cite{zipf}} See figure \ref{fig:ZIPF}
+The corpus of combined titles and abstracts in \Delta6 was then examined. The word frequencies across all the data were found to be approximately Zipfian, with a gradient of -1.11\footnote{A Zipfian distribution is a subset of the Pareto distribution, stating that the frequency of a word is proportional to its ranking in the word frequencies table. Ideally, the gradient of a log(frequency) vs log(rank) should be -1.0 \cite{zipf}} See figure \ref{fig:ZIPF}
 \begin{figure}[H]
     \centering
     \textbf{Approximate Zipfian Distribution of Collected Corpus}\par\medskip

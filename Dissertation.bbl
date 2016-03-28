@@ -1,40 +1,14 @@
-\begin{thebibliography}{5}
+\begin{thebibliography}{1}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
   \providecommand{\doi}[1]{doi: #1}\else
   \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
 
-\bibitem[Blondel et~al.(2008)Blondel, Guillaume, and
-  Renaud~Lambiotte]{modularity1}
-Vincent~D Blondel, Jean-Loup Guillaume, and Etienne~Lefebvre Renaud~Lambiotte.
-\newblock Fast unfolding of communities in large networks.
-\newblock \emph{Journal of Statistical Mechanics: Thory and Experiment},
-  10:\penalty0 1000, 2008.
-
-\bibitem[Lambiotte et~al.(2015)Lambiotte, Delvenne, and Barahona]{modularity2}
-R.~Lambiotte, J.-C. Delvenne, and M.~Barahona.
-\newblock Laplacian dynamics and multiscale modular structure in networks.
-\newblock \emph{IEEE Transactions on Network Science and Engineering},
-  1:\penalty0 76--90, 2015.
-
-\bibitem[R and C(1958)]{heatmapcluster}
-Sokal R and Michener C.
-\newblock A statistical method for evaluating systematic relationships.
-\newblock \emph{University of Kansas Science Bulletin}, 38:\penalty0
-  1409--–1438, 1958.
-
-\bibitem[et~al.(2016)]{seaborn}
-Michael~Waskom et~al.
-\newblock seaborn: v0.7.0 (january 2016).
-\newblock 2016.
-\newblock \doi{10.5281/zenodo.45133}.
-\newblock URL \url{http://dx.doi.org/10.5281/zenodo.45133}.
-
-\bibitem[Jones et~al.(2001--)Jones, Oliphant, Peterson, et~al.]{scipy}
-Eric Jones, Travis Oliphant, Pearu Peterson, et~al.
-\newblock {SciPy}: Open source scientific tools for {Python}, 2001--.
-\newblock URL \url{http://www.scipy.org/}.
-\newblock [Online; accessed 2016-03-10].
+\bibitem[glo(2016)]{glossarymachinelearning}
+"machine learning". encyclopædia britannica. encyclopædia britannica online.
+\newblock \emph{Encyclopædia Britannica Inc.}, 2016.
+\newblock URL \url{http://www.britannica.com/technology/machine-learning}.
+\newblock [Online; Accessed 2016-03-25].
 
 \end{thebibliography}
