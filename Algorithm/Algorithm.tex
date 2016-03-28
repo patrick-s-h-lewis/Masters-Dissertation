@@ -3,11 +3,11 @@
 \section{Premise}
 The aim of the machine learning phase was to apply the Word2Vec and Doc2Vec algorithms to dataset \Delta6 described in \S\ref{chapt:DATA_ACQUISITION}. An article was considered to be represented by a document consisting of its title and abstract. The aim was to represent these documents as vectors in semantic space, so that advanced computational analyses and statistical methods could be performed. 
 \section{Data Sanitisation} 
-The documents (titles and abstracts) in \Delta6 required preprocessing before they could be effectively used in training. The training process requires inputs to be as clean as possible in order to get good results (encapsulated by the well known computer science idiom `Garbage in, Garbage out'). 
+The documents (titles and abstracts) in \Delta6 required preprocessing before they could be effectively used in training. The training process requires inputs to be as clean as possible in order to get good results (encapsulated by the well-known computer science idiom `Garbage in, Garbage out'). 
 
 The first step was to cast all words to lower case, so that the algorithm did not produce different vectors for e.g.  `Molecule' and `molecule'.
 
-The raw documents also frequently contained artefacts from the source webpages (unwanted whitspace, vestigial html tags, `newline' characters and carriage returns). The algorithm training word vectors for these symbols is clearly undesired behaviour, so these were removed and whitespace normalised.
+The raw documents also frequently contained artefacts from the source webpages (unwanted whitspace, vestigial HTML tags, `newline' characters and carriage returns). The algorithm training word vectors for these symbols is clearly undesired behaviour, so these were removed and whitespace normalised.
 
 It was also observed that, as unicode text scraped from a wide variety of sources, there was varied and redundant punctuation. Punctuation would be treated as separate words by the algorithm, so had to be carefully removed. Unicode has very wide variety of different punctuations. For example, unicode encodes 24 different types of hyphen. Table \ref{fig:punct} shows the punctuation that was filtered out of the documents. Large sections of unicode script (sections of non-western languages) was also removed as the algorithm works best on a smaller vocabulary.
 
@@ -18,7 +18,7 @@ It was also observed that, as unicode text scraped from a wide variety of source
     \caption[Punctuation removed in sanitation processing]{All the punctuation removed in sanitation. Only these were found in appreciable quantities in the \Delta6. }
      \label{fig:punct}
 \end{figure}
-Removing hyphens and primes also meant chemical names were fragmented. This was considered acceptable as the fragment words had greater freedom than specific (possibly singleton) fully formed names, e.g. \texttt{5-methyl-1-heptanol} is split to \texttt{5 methyl 1 heptanol}, this allows the \texttt{heptanol} fragment to be associated with other mentions of heptanol in the training set, rather than only associate with mentions of the much less frequent 5-methyl-1-heptanol. 
+Removing hyphens and primes also meant chemical names were fragmented. This was considered acceptable as the fragment words had greater freedom than specific (possibly singleton) fully-formed names, e.g. \texttt{5-methyl-1-heptanol} is split to \texttt{5 methyl 1 heptanol}, this allows the \texttt{heptanol} fragment to be associated with other mentions of heptanol in the training set, rather than only associate with mentions of the much less frequent 5-methyl-1-heptanol. 
 
 Next, English stopwords were removed \footnote{Stopwords are commonly occurring words in a corpus that hold little information, e.g. (`the', `a', `and'...)} (stopwords were taken from the Porter stopwords corpus\cite{nltk} \cite{porter}). From inspection of the zipfian frequency table, (\S \ref{sec:CORPUSOBSERVATIONS}), it was apparent that chemistry literature also generates stopwords. Table \ref{tab:CHEMSTOP} details `Chemistry' stopwords that were identified and removed\footnote{The stopwords were chosen from high on the rank frequency table (they appeared extremely commonly) and because they were considered to encode little information; for instance, the digits appeared so frequently and in such an wide set of contexts, no meaningful vector would be trained. The word structure appeared so frequently, so as to encode very little actual information}. 
 \begin{table}[h!]
@@ -84,7 +84,7 @@ The document preprocessing pipeline is shown diagrammatically in figure \ref{fig
 \begin{figure}[H]
     \centering
     \textbf{Preprocessing pipeline}\par\medskip
-  \makebox[\textwidth][c]{\includegraphics[width=1.15\textwidth]{Algorithm/Data_Sanitation.pdf}}%
+  \makebox[\textwidth][c]{\includegraphics[width=1.15\textwidth]{Algorithm/Data_Sanitation-2.pdf}}%
     \caption[Preprocessing Pipeline]{All documents in \Delta6 were preprocessed with this pipeline schema before being used in training models}
      \label{fig:SANPIPE}
 \end{figure}
@@ -97,12 +97,12 @@ processed into:
 
 \texttt{silafluoren biphenol monom bis hydroxyphenyl silafluoren prepar dichloro silafluoren employ synthesi polyest fluoren homoditop acid chlorid}
 
-Whilst challenging to read, word order is preserved and low information words (or words with complex, diverse meanings such as numbers) have been removed to give good quality input data. Note how chemical names have been fragmented so that multiple chemical vectors can be learned, rather than the fewer complex vectors (\texttt{9,9-dichloro-9-silafluorene} vs \texttt{dichloro} and \texttt{silafluoren}).
+Whilst challenging to read, word order is preserved and low information words (or words with complex, diverse meanings such as numbers) have been removed to give good-quality input data. Note how chemical names have been fragmented so that multiple chemical vectors can be learned, rather than the fewer complex vectors (\texttt{9,9-dichloro-9-silafluorene} vs \texttt{dichloro} and \texttt{silafluoren}).
 
 \section{Word2Vec Models}
-The processed data was used to train two Word2Vec models (one CBOW, one skipgram) using the gensim python implementation \cite{gensim}.The hyperparameters used for training were consistent for the two models.
-Training was carried out on all documents in \Delta6. The model was trained with sentences formed by simple splitting of documents using full stops\footnote{Whilst not perfect, this method was a fair compromise for partitioning on actual sentences and false partitioning.}. After examination of different hyperparameters, the models were run using hyperparameters representing good balance of specificity, speed and generality. The hyper parameters used are detailed in table \ref{tab:hyperparams}.
-\begin{table}[h!]
+The processed data was used to train two Word2Vec models (one CBOW, one skipgram) using the gensim implementation \cite{gensim}.The hyperparameters used for training were consistent for the two models.
+Training was carried out on all documents in \Delta6. The model was trained with sentences formed by simple splitting of documents using full stops\footnote{Whilst not perfect, this method was a fair compromise for partitioning on actual sentences and false partitioning.}. After examination of different hyperparameters, the models were run using hyperparameters representing good balance of specificity, speed and generality. The hyperparameters used are detailed in table \ref{tab:hyperparams}.
+\begin{table}[H]
 \begin{center}
 \caption{Word2vec Parameters}
 \label{tab:hyperparams}
@@ -131,7 +131,7 @@ TF-IDF \footnote{Term - frequency Inverse - Document - Frequency} is an empirica
 multiplied by inverse document frequency $IDF(w) = log_{2} \left( \frac{|D|}{\sum_d df_{w \in d})} \right)$ where $|D|$ is the number of documents in the corpus, $df$ is 1 if word $w$ is in document $d$, otherwise otherwise 0 \cite{gensim}.
 TF-IDF assigns small weights to words that are common across the corpus. It assigns high weights to words that appear often in a document but rarely in the corpus.
 \subsection{Aggregations}
-Document vectors could be created by averaging word vectors into sentence vectors followed by averaging sentence vectors into document vectors, or by simpy averaging word vectors directly into documents. 8 models for document vectors composed of Word2Vec models were constructed, detailed in table \ref{tab:aggmods}
+Document vectors could be created by averaging word vectors into sentence vectors, followed by averaging sentence vectors into document vectors, or by simpy averaging word vectors directly into documents. 8 models for document vectors composed of Word2Vec models were constructed, detailed in table \ref{tab:aggmods}
 \begin{table}[h!]
 \begin{center}
 \caption{Word2vec Document Vector Models}
@@ -153,7 +153,7 @@ CBOW-TFIDF-S & CBOW-S with TFIDF weighting on word vectors & SG-TFIDF-S & SG-S w
 \end{table}
 
 \section{Doc2Vec Models}
-A Doc2Vec model was trained with a \emph{distributed memory} architecture\footnote{Distributed memory is the Paragraph Vector algorithm equivalent of CBOW, the performance of this architecture is optimal\cite{doc2vec}} using the gensim framework in python \cite{gensim} using \Delta6 with the same sanitiation pipeline as for the Word2Vec models. The training sentences were labelled with the document (journal article doi) they came from. 100 dimensional vectors were chosen as a compromise of training speed and specificity\footnote{as well as for computational considerations of analytical techniques, see \S\ref{chapt:VALIDATION},\S\ref{chapt:ANALYSIS}}, and also so that dimensions were consistent across all models. The Doc2Vec model was trained for 24 epochs, with hyperparamters detailed in table \ref{tab:doc2vechyperparams}
+A Doc2Vec model was trained with a \emph{distributed memory} architecture\footnote{Distributed memory is the Paragraph Vector algorithm equivalent of CBOW, the performance of this architecture is optimal\cite{doc2vec}} using the gensim framework in python \cite{gensim} using \Delta6 with the same sanitiation pipeline as for the Word2Vec models. The training sentences were labelled with the document (journal article DOI) they came from. 100 dimensional vectors were chosen as a compromise of training speed and specificity\footnote{as well as for computational considerations of analytical techniques, see \S\ref{chapt:VALIDATION},\S\ref{chapt:ANALYSIS}}, and also so that dimensions were consistent across all models. The Doc2Vec model was trained for 24 epochs, with hyperparamters detailed in table \ref{tab:doc2vechyperparams}
 \begin{table}[H]
 \begin{center}
 \label{tab:doc2vechyperparams}
@@ -177,4 +177,4 @@ CBOW Mean & Yes (Not applicable for Skipgram) \\
 \end{table}
 
 The model took considerably longer to train than Word2Vec, as there were appreciably more work required per  document. Negative sampling was disabled as per recommendations in the literature. \cite{gensim} \cite{doc2vec}.
-The Doc2Vec and Word2Vec models are assessed in  \S\ref{chapt:VALIDATION}
+The Doc2Vec and Word2Vec models are assessed in \S\ref{chapt:VALIDATION}.

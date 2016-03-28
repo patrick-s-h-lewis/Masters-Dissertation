@@ -32,7 +32,7 @@
 \glossaryentry{Corpus?\glossentry{Corpus}|setentrycounter[]{page}\glsnumberformat}{1}
 \glossaryentry{NLP?\glossentry{NLP}|setentrycounter[]{page}\glsnumberformat}{1}
 \glossaryentry{Bag Of Words?\glossentry{BagOfWords}|setentrycounter[]{page}\glsnumberformat}{1}
-\glossaryentry{BagOfCitations?\glossentry{BagOfCitations}|setentrycounter[]{page}\glsnumberformat}{1}
+\glossaryentry{Bag Of Citations?\glossentry{BagOfCitations}|setentrycounter[]{page}\glsnumberformat}{1}
 \glossaryentry{Word2Vec?\glossentry{Word2vec}|setentrycounter[]{page}\glsnumberformat}{1}
 \glossaryentry{Neural Net?\glossentry{NeuralNet}|setentrycounter[]{page}\glsnumberformat}{1}
 \glossaryentry{CBOW?\glossentry{CBOW}|setentrycounter[]{page}\glsnumberformat}{1}
@@ -50,7 +50,7 @@
 \glossaryentry{Hyperparameters?\glossentry{Hyperparameters}|setentrycounter[]{page}\glsnumberformat}{1}
 \glossaryentry{Training Epoch?\glossentry{TrainingEpoch}|setentrycounter[]{page}\glsnumberformat}{1}
 \glossaryentry{Cosine Similarity?\glossentry{CosineSim}|setentrycounter[]{page}\glsnumberformat}{1}
-\glossaryentry{EuclideanSimilarity?\glossentry{euclideansim}|setentrycounter[]{page}\glsnumberformat}{1}
+\glossaryentry{Euclidean Similarity?\glossentry{euclideansim}|setentrycounter[]{page}\glsnumberformat}{1}
 \glossaryentry{PCA?\glossentry{PCA}|setentrycounter[]{page}\glsnumberformat}{1}
 \glossaryentry{TSNE?\glossentry{TSNE}|setentrycounter[]{page}\glsnumberformat}{1}
 \glossaryentry{Hadamard Division?\glossentry{Hadamarddiv}|setentrycounter[]{page}\glsnumberformat}{1}

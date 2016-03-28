@@ -1,7 +1,7 @@
 This is makeindex, version 2.15 [TeX Live 2014] (kpathsea + Thai support).
 Scanning style file ./Dissertation.ist.............................done (29 attributes redefined, 0 ignored).
 Scanning input file Dissertation.glo....done (62 entries accepted, 0 rejected).
-Sorting entries....done (372 comparisons).
+Sorting entries....done (373 comparisons).
 Generating output file Dissertation.gls....done (147 lines written, 0 warnings).
 Output written in Dissertation.gls.
 Transcript written in Dissertation.glg.
