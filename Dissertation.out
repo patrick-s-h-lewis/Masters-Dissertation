@@ -4,3 +4,51 @@
 \BOOKMARK [1][-]{section.1.1}{Modern Scientific Publishing}{chapter.1}% 4
 \BOOKMARK [1][-]{section.1.2}{Motivation}{chapter.1}% 5
 \BOOKMARK [1][-]{section.1.3}{Aims}{chapter.1}% 6
+\BOOKMARK [0][-]{chapter.2}{Data Acquisition}{}% 7
+\BOOKMARK [1][-]{section.2.1}{Background}{chapter.2}% 8
+\BOOKMARK [2][-]{subsection.2.1.1}{HTML and Xpath}{section.2.1}% 9
+\BOOKMARK [1][-]{section.2.2}{Automatic XPath Generation}{chapter.2}% 10
+\BOOKMARK [1][-]{section.2.3}{Collection Strategy}{chapter.2}% 11
+\BOOKMARK [2][-]{subsection.2.3.1}{DOIS : Document Object Identifiers}{section.2.3}% 12
+\BOOKMARK [2][-]{subsection.2.3.2}{Scraping Program}{section.2.3}% 13
+\BOOKMARK [1][-]{section.2.4}{Collection Results}{chapter.2}% 14
+\BOOKMARK [2][-]{subsection.2.4.1}{UK University Department scraping}{section.2.4}% 15
+\BOOKMARK [2][-]{subsection.2.4.2}{Global Scale Scraping}{section.2.4}% 16
+\BOOKMARK [2][-]{subsection.2.4.3}{Problems with ACS and Taylor \046 Francis}{section.2.4}% 17
+\BOOKMARK [2][-]{subsection.2.4.4}{Analysis of collected data}{section.2.4}% 18
+\BOOKMARK [3][-]{section*.5}{Observations}{subsection.2.4.4}% 19
+\BOOKMARK [0][-]{chapter.3}{Techniques for Language Processing}{}% 20
+\BOOKMARK [1][-]{section.3.1}{Background}{chapter.3}% 21
+\BOOKMARK [1][-]{section.3.2}{Bag of Words}{chapter.3}% 22
+\BOOKMARK [1][-]{section.3.3}{Word2Vec}{chapter.3}% 23
+\BOOKMARK [1][-]{section.3.4}{Doc2Vec}{chapter.3}% 24
+\BOOKMARK [0][-]{chapter.4}{Algorithm Development}{}% 25
+\BOOKMARK [1][-]{section.4.1}{Premise}{chapter.4}% 26
+\BOOKMARK [1][-]{section.4.2}{Data Sanitisation}{chapter.4}% 27
+\BOOKMARK [1][-]{section.4.3}{Word2Vec Models}{chapter.4}% 28
+\BOOKMARK [2][-]{subsection.4.3.1}{TF-IDF}{section.4.3}% 29
+\BOOKMARK [2][-]{subsection.4.3.2}{Aggregations}{section.4.3}% 30
+\BOOKMARK [1][-]{section.4.4}{Doc2Vec Models}{chapter.4}% 31
+\BOOKMARK [0][-]{chapter.5}{Model Examination}{}% 32
+\BOOKMARK [1][-]{section.5.1}{Word Similarities}{chapter.5}% 33
+\BOOKMARK [1][-]{section.5.2}{Document Similarities}{chapter.5}% 34
+\BOOKMARK [1][-]{section.5.3}{Visualisation Techniques}{chapter.5}% 35
+\BOOKMARK [2][-]{subsection.5.3.1}{Network Visualisation}{section.5.3}% 36
+\BOOKMARK [2][-]{subsection.5.3.2}{Networks and Network Visualisation}{section.5.3}% 37
+\BOOKMARK [0][-]{chapter.6}{Analysis with Sample Dataset}{}% 38
+\BOOKMARK [1][-]{section.6.1}{Cambridge Chemistry research clusters}{chapter.6}% 39
+\BOOKMARK [1][-]{section.6.2}{Cambridge Staff Member Similarities}{chapter.6}% 40
+\BOOKMARK [1][-]{section.6.3}{Combining research clusters and authors}{chapter.6}% 41
+\BOOKMARK [0][-]{chapter.7}{Conclusions}{}% 42
+\BOOKMARK [0][-]{chapter.8}{Recommendations for Further Work}{}% 43
+\BOOKMARK [1][-]{section.8.1}{Greater Dimensionality and Training Improvements}{chapter.8}% 44
+\BOOKMARK [1][-]{section.8.2}{Greater use of word vectors}{chapter.8}% 45
+\BOOKMARK [1][-]{section.8.3}{Time resolution in clustering}{chapter.8}% 46
+\BOOKMARK [1][-]{section.8.4}{Open Source Chemistry Vectors}{chapter.8}% 47
+\BOOKMARK [1][-]{section.8.5}{Structure stemming}{chapter.8}% 48
+\BOOKMARK [1][-]{section.8.6}{Multiply labelled Documents}{chapter.8}% 49
+\BOOKMARK [0][-]{chapter*.6}{Bibliography}{}% 50
+\BOOKMARK [0][-]{chapter.9}{Appendix}{}% 51
+\BOOKMARK [1][-]{section.9.1}{UK Departments scraped}{chapter.9}% 52
+\BOOKMARK [1][-]{section.9.2}{Publishers Considered in UK scraping}{chapter.9}% 53
+\BOOKMARK [1][-]{section.9.3}{Scaled Communities for staff members in Cambridge}{chapter.9}% 54

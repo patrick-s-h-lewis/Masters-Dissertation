@@ -1,9 +1,41 @@
-\begin{thebibliography}{15}
+\begin{thebibliography}{35}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
   \providecommand{\doi}[1]{doi: #1}\else
   \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[Everitt(1998)]{dendrogram}
+Brian~S. Everitt.
+\newblock \emph{Cambridge Dictionary of Statistics}.
+\newblock Cambridge University Press, 1998.
+\newblock ISBN 0521593468.
+
+\bibitem[et~al.(2016)]{seaborn}
+Michael~Waskom et~al.
+\newblock seaborn: v0.7.0 (january 2016).
+\newblock 2016.
+\newblock \doi{10.5281/zenodo.45133}.
+\newblock URL \url{http://dx.doi.org/10.5281/zenodo.45133}.
+
+\bibitem[Jones et~al.(2001--)Jones, Oliphant, Peterson, et~al.]{scipy}
+Eric Jones, Travis Oliphant, Pearu Peterson, et~al.
+\newblock {SciPy}: Open source scientific tools for {Python}, 2001--.
+\newblock URL \url{http://www.scipy.org/}.
+\newblock [Online; accessed 2016-03-10].
+
+\bibitem[Blondel et~al.(2008)Blondel, Guillaume, and
+  Renaud~Lambiotte]{modularity1}
+Vincent~D Blondel, Jean-Loup Guillaume, and Etienne~Lefebvre Renaud~Lambiotte.
+\newblock Fast unfolding of communities in large networks.
+\newblock \emph{Journal of Statistical Mechanics: Thory and Experiment},
+  10:\penalty0 1000, 2008.
+
+\bibitem[Lambiotte et~al.(2015)Lambiotte, Delvenne, and Barahona]{modularity2}
+R.~Lambiotte, J.-C. Delvenne, and M.~Barahona.
+\newblock Laplacian dynamics and multiscale modular structure in networks.
+\newblock \emph{IEEE Transactions on Network Science and Engineering},
+  1:\penalty0 76--90, 2015.
 
 \bibitem[Foundation(2009)]{crossref-formation}
 Crossref Foundation.
@@ -14,7 +46,8 @@ Crossref Foundation.
 
 \bibitem[Paskin(2010)]{glossarydoi}
 Norman Paskin.
-\newblock Digital object identifier (doi\textsuperscript{\registered}) system.
+\newblock Digital object identifier (doi\textsuperscript{\textregistered})
+  system.
 \newblock \emph{Encyclopedia of Libary and Information Sciences}, pages
   1586--1592, 2010.
 
@@ -38,6 +71,15 @@ Chris~D. Paice.
 \newblock URL \url{http://www.britannica.com/technology/machine-learning}.
 \newblock [Online; Accessed 2016-03-25].
 
+\bibitem[Pearson(1901)]{PCA}
+Karl Pearson.
+\newblock {LIII}. on lines and planes of closest fit to systems of points in
+  space.
+\newblock \emph{Philosophical Magazine Series 6}, 2\penalty0 (11):\penalty0
+  559--572, nov 1901.
+\newblock \doi{10.1080/14786440109462720}.
+\newblock URL \url{http://dx.doi.org/10.1080/14786440109462720}.
+
 \bibitem[Porter(1980)]{porter}
 M.~F. Porter.
 \newblock \emph{An Algorithm for Suffix Stripping}, volume~14.
@@ -46,6 +88,18 @@ M.~F. Porter.
 \bibitem[Porter(2002)]{snowball}
 M.~F. Porter.
 \newblock {The Porter2 stemming algorithm}, 2002.
+
+\bibitem[van~der Maaten(2008)]{TSNE}
+G.E. van~der Maaten, L.J.P.;~Hinton.
+\newblock Visualizing high-dimensional data using t-sne.
+\newblock \emph{Journal of Machine Learning Research}, 9:\penalty0 2579--2605,
+  2008.
+
+\bibitem[R and C(1958)]{heatmapcluster}
+Sokal R and Michener C.
+\newblock A statistical method for evaluating systematic relationships.
+\newblock \emph{University of Kansas Science Bulletin}, 38:\penalty0
+  1409--–1438, 1958.
 
 \bibitem[Consortium(2010)]{utf8}
 The~Unicode Consortium.
@@ -98,5 +152,98 @@ A.~Ullah and D.E.A. Giles.
 \newblock Statistics: A Series of Textbooks and Monographs. CRC Press, 2010.
 \newblock ISBN 9781420070361.
 \newblock URL \url{https://books.google.co.uk/books?id=QAUv9R6bJzwC}.
+
+\bibitem[doi(2016)]{doi_handbook1}
+The doi handbook - numbering (2014).
+\newblock 2016.
+\newblock URL \url{https://www.doi.org/doi_handbook/2_Numbering.html#2.2.2}.
+\newblock [online; Accessed 2016-03-25].
+
+\bibitem[the(2014)]{thelaw}
+The copyright and rights in performances (research, education, libraries and
+  archives) regulations, no. 1372 regulation 3.
+\newblock 2014.
+\newblock URL
+  \url{http://www.legislation.gov.uk/uksi/2014/1372/regulation/3/made}.
+\newblock [Online;accessed 2016-03-22].
+
+\bibitem[con(2015)]{contentminelegal}
+Responsible content mining.
+\newblock 2015.
+\newblock URL
+  \url{http://contentmine.org/wp-content/uploads/2015/06/responsible-content-mining-1.pdf}.
+\newblock [Online; accessed 2016-03-22].
+
+\bibitem[Mikolov et~al.(2013{\natexlab{c}})Mikolov, tau Yih, and
+  Zweig]{word2veckingqueen}
+Tomas Mikolov, Wen tau Yih, and Geoffrey Zweig.
+\newblock Linguistic regularities in continuous space word representations.
+\newblock In \emph{Proceedings of the 2013 Conference of the North American
+  Chapter of the Association for Computational Linguistics: Human Language
+  Technologies (NAACL-HLT-2013)}. Association for Computational Linguistics,
+  May 2013{\natexlab{c}}.
+\newblock URL
+  \url{http://research.microsoft.com/apps/pubs/default.aspx?id=189726}.
+
+\bibitem[Rumelhart et~al.(1986)Rumelhart, McClelland, and PDP
+  Research~Group]{distributedrepresentations}
+David~E. Rumelhart, James~L. McClelland, and CORPORATE PDP Research~Group,
+  editors.
+\newblock \emph{Parallel Distributed Processing: Explorations in the
+  Microstructure of Cognition, Vol. 1: Foundations}.
+\newblock MIT Press, Cambridge, MA, USA, 1986.
+\newblock ISBN 0-262-68053-X.
+
+\bibitem[{\v R}eh{\r u}{\v r}ek and Sojka(2010)]{gensim}
+Radim {\v R}eh{\r u}{\v r}ek and Petr Sojka.
+\newblock {Software Framework for Topic Modelling with Large Corpora}.
+\newblock In \emph{{Proceedings of the LREC 2010 Workshop on New Challenges for
+  NLP Frameworks}}, pages 45--50, Valletta, Malta, May 2010. ELRA.
+\newblock \url{http://is.muni.cz/publication/884893/en}.
+
+\bibitem[Le and Mikolov(2014)]{doc2vec}
+Quoc~V. Le and Tomas Mikolov.
+\newblock Distributed representations of sentences and documents.
+\newblock \emph{CoRR}, abs/1405.4053, 2014.
+\newblock URL \url{http://arxiv.org/abs/1405.4053}.
+
+\bibitem[Bird et~al.(2009)Bird, Klein, and Loper]{nltk}
+Steven Bird, Ewan Klein, and Edward Loper.
+\newblock \emph{Natural Language Processing with Python}.
+\newblock O'Reilly Media, Inc., 1st edition, 2009.
+\newblock ISBN 0596516495, 9780596516499.
+
+\bibitem[Seesukphronrarak and Takata(2007)]{sanex}
+Surasak Seesukphronrarak and Toshikazu Takata.
+\newblock Novel fluorene-based biphenolic monomer: 9,
+  9-bis(4-hydroxyphenyl)-9-silafluorene.
+\newblock \emph{Chem. Lett.}, 36\penalty0 (9):\penalty0 1138--1139, 2007.
+\newblock \doi{10.1246/cl.2007.1138}.
+\newblock URL \url{http://dx.doi.org/10.1246/cl.2007.1138}.
+
+\bibitem[Tsaplev(2012)]{docassay}
+Yu.~B. Tsaplev.
+\newblock Photochemical transformations of anthraquinone in polymeric alcohols.
+\newblock \emph{Russian Journal of Physical Chemistry A}, 86\penalty0
+  (12):\penalty0 1909--1914, oct 2012.
+\newblock \doi{10.1134/s0036024412120266}.
+\newblock URL \url{http://dx.doi.org/10.1134/s0036024412120266}.
+
+\bibitem[Pedregosa et~al.(2011)Pedregosa, Varoquaux, Gramfort, Michel, Thirion,
+  Grisel, Blondel, Prettenhofer, Weiss, Dubourg, Vanderplas, Passos,
+  Cournapeau, Brucher, Perrot, and Duchesnay]{scikitlearn}
+F.~Pedregosa, G.~Varoquaux, A.~Gramfort, V.~Michel, B.~Thirion, O.~Grisel,
+  M.~Blondel, P.~Prettenhofer, R.~Weiss, V.~Dubourg, J.~Vanderplas, A.~Passos,
+  D.~Cournapeau, M.~Brucher, M.~Perrot, and E.~Duchesnay.
+\newblock Scikit-learn: Machine learning in {P}ython.
+\newblock \emph{Journal of Machine Learning Research}, 12:\penalty0 2825--2830,
+  2011.
+
+\bibitem[Bastian et~al.(2009)Bastian, Heymann, and Jacomy]{gephi}
+Mathieu Bastian, Sebastien Heymann, and Mathieu Jacomy.
+\newblock Gephi: An open source software for exploring and manipulating
+  networks.
+\newblock 2009.
+\newblock URL \url{http://www.aaai.org/ocs/index.php/ICWSM/09/paper/view/154}.
 
 \end{thebibliography}

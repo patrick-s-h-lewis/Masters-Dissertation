@@ -1,20 +1,20 @@
 \chapter{Analysis with Sample Dataset}
 \label{chapt:ANALYSIS}
-Having developed a framework to examine the models, attention was turned to some analyses that could be carried out within the time frame and scope of the project\footnote{Please refer to  \S\ref{chapt:RECOMMENDATIONS} for recommendations for further work}. With this in mind, it was decided to focus analysis on the a smaller subset of \Delta6, namely documents from the University of Cambridge Chemistry Department. This dataset is henceforth referred to as \Delta7.
+Having developed a framework to examine the models, attention was turned to some analyses that could be carried out within the time frame and scope of the project\footnote{Please refer to  \S\ref{chapt:RECOMMENDATIONS} for recommendations for further work}. With this in mind, it was decided to focus analysis on the a smaller subset of $\Delta6$, namely documents from the University of Cambridge Chemistry Department. This dataset was labelled $\Delta7$.
 \section{Cambridge Chemistry research clusters}
 \label{sec:RESEARCHCLUSTERS}
-\Delta7 contained 9467 documents. The cosine matrix was calculated and a network was constructed from the matrix. \emph{Communities} within the network (clusters of strongly-connected nodes) were identified by applying a high throughput modularity algorithm\cite{modularity1}\cite{modularity2}. The result is shown in figure \ref{fig:CAMCOMMUNITIES}.
+$\Delta7$ contained 9467 documents. The cosine matrix was calculated and a network was constructed from the matrix. \emph{Communities} within the network (clusters of strongly-connected nodes) were identified by applying a high throughput modularity algorithm\cite{modularity1}\cite{modularity2}. The result is shown in figure \ref{fig:CAMCOMMUNITIES}.
 \begin{center}
 \begin{figure}[H]
   \centering
-  \textbf{\Delta7 Network Visualisation}
+  \textbf{$\Delta7$ Network Visualisation}
     \includegraphics[width=\textwidth]{Analysis/cam.png}
-    \caption[Network Visualisation of University of Cambridge Chemistry Department Documents]{A Network visualisation of  \Delta7. Edges were placed between nodes with weights corresponding to cosine similarity if $S_{cosine}$. Nodes are coloured by their detected communities, and node size is proportional to the number of connections a node has. Nodes are arranged by modelling edges as springs.}
+    \caption[Network Visualisation of University of Cambridge Chemistry Department Documents]{A Network visualisation of  $\Delta7$. Edges were placed between nodes with weights corresponding to cosine similarity if $S_{cosine}$. Nodes are coloured by their detected communities, and node size is proportional to the number of connections a node has. Nodes are arranged by modelling edges as springs.}
     \label{fig:CAMCOMMUNITIES}
 
 \end{figure} 
 \end{center}
-It was apparent that \Delta7 contained clear communities of documents. This corresponds to different fields of research within the department. Some communities detected were small, but some quite large (green, orange, etc...). The algorithm was then applied only to the `green' community, which revealed subcommunities within the `green' documents. A program was then written to recursively detect subcommunities in \Delta7. This resulted in \Delta7 being divided into 300 communities of comparable size. The smallest communities were singleton documents, the largest community was 434 documents, and the mean population was 34.5. The community-finding subdivision process is shown in figure \ref{fig:COMMTREE}
+It was apparent that $\Delta7$ contained clear communities of documents. This corresponds to different fields of research within the department. Some communities detected were small, but some quite large (green, orange, etc...). The algorithm was then applied only to the `green' community, which revealed subcommunities within the `green' documents. A program was then written to recursively detect subcommunities in $\Delta7$. This resulted in $\Delta7$ being divided into 300 communities of comparable size. The smallest communities were singleton documents, the largest community was 434 documents, and the mean population was 34.5. The community-finding subdivision process is shown in figure \ref{fig:COMMTREE}
 \begin{center}
 \begin{figure}[H]
   \centering
@@ -66,7 +66,7 @@ The uses of this kind of analysis include:
 
 It is not only articles themselves that can be grouped and analysed, but articles can be aggregated together to represent higher order concepts, such as staff members or research groups, or potentially even departments. 
 
-To investigate this further, \texttt{http://www.ch.cam.ac.uk/publications/authors} was scraped in order to associate the documents in \Delta7 with particular staff members. A staff member vector $\textbf{f}$ was defined as $\mathbf{f}=\frac{1}{N}\sum_{i}^{N} \mathbf{v}_i$ , for an author with $N$ published articles in \Delta7, with document vectors $\mathbf{v}_i$ (vector mean).
+To investigate this further, \texttt{http://www.ch.cam.ac.uk/publications/authors} was scraped in order to associate the documents in $\Delta7$ with particular staff members. A staff member vector $\textbf{f}$ was defined as $\mathbf{f}=\frac{1}{N}\sum_{i}^{N} \mathbf{v}_i$ , for an author with $N$ published articles in $\Delta7$, with document vectors $\mathbf{v}_i$ (vector mean).
 
 To investigate author relationships, a cosine matrix was created for each pair of authors A and B, with $\alpha$ and $\beta$ documents respectively, $\mathbf{C^{\left( A \right ) , \left( B \right)}}$ (see \S\ref{sec:COSINEMAT}). The similarity between the author pair was defined as 
 $$S_{A , B} = \sum_{i}^{\alpha} \sum_{j}^{\beta} C^{\left( A \right) , \left( B \right) }_{ i , j }$$
@@ -140,7 +140,7 @@ Where $C$ is the total number of communities. An association matrix was created,
 \end{center}
 Figure \ref{fig:commHEATMAP} displays where authors have been detected to have similar research community occupations. High values should indicate that authors should ideally collaborate/communicate because they publish in the same research communities. Note also that the square patterns of higher values close to the diagonal of the map reproduces the clustering in figure \ref{fig:AUTHORSIMS}, lending weight to the validity of both analyses.\footnote{This is because the heatmap has been arranged according to the clustering found in \S\ref{sec:AUTHORCLUSTERS}, but the matrix in figure \ref{fig:commHEATMAP} is derived with a completely different method (without applying any clustering algorithm to authors). As clustering is qualitatively visible in figure \ref{fig:commHEATMAP}, there is a correlation between the two methods, i.e. they are consistent}.
 
-Having defined a framework for finding where authors share research interest, the next step was to find where authors were \emph{actually} collaborating. It was possible to identify approximately 700 documents in \Delta7 that were co-authored by staff members in the analysis. A heatmap for actual collaboration between authors is shown below, as well as a metric equivalent to the $\mathbf{S}^{assoc,scaled}$ with elements as the sum of the number of communities both staff members have collaborated in.
+Having defined a framework for finding where authors share research interest, the next step was to find where authors were \emph{actually} collaborating. It was possible to identify approximately 700 documents in $\Delta7$ that were co-authored by staff members in the analysis. A heatmap for actual collaboration between authors is shown below, as well as a metric equivalent to the $\mathbf{S}^{assoc,scaled}$ with elements as the sum of the number of communities both staff members have collaborated in.
 \begin{figure}[H]
   \centering
   \textbf{Author Collaboration Heatmap}
