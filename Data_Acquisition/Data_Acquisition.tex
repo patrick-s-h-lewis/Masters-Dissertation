@@ -128,25 +128,13 @@ Much more data would be required to train a successful machine learning model. O
 
 The program was instructed to scrape the search results pages of these queries. Because the scraping job was large, it was programmed to `pause' before publisher abstract collection. The results up to this point were examined before setting off the second stage to collect abstracts.
 
-At the intermediate point, the program had collected 1,267,495 records, which was deemed successful, and would provide enough data to train a powerful machine learning algorithm. This database was labelled $\Delta3$.
+At the intermediate point, the program had collected 1,267,495 records, which would provide enough data to train a powerful machine learning algorithm. This database was labelled $\Delta3$.
 
-The publisher distributions were then considered. Some of this analysis is presented in \S\ref{sec:SCRAPEANALYSIS}. After careful considerations of request server loads and predicting capture probabilities, the second half of the scraping routine was set off to run for three days.
+The publisher distributions were then considered\footnote{Some of this analysis is presented in \S\ref{sec:SCRAPEANALYSIS}.}. After careful considerations of request server loads and predicting capture probabilities, the second half of the scraping routine was set off to run for three days.
 \label{sec:CROSSREFSCRAPE}
 \subsection{Problems with ACS and Taylor \& Francis}
-Some publishers automatically track request volumes sent to their site as they wish to discourage automatic scraping of their data. Scraping their websites constitutes fair use and is legal in the UK , and despite the university owning a Licence to full access of these publishers' publications, the material collected was freely available without licence\cite{thelaw} \cite{contentminelegal}. However, during the scraping run, a bug in the randomisation of request frequencies resulted in detection by the ACS \footnote{American Chemical Society} and Taylor \& Francis. Both publishers responded by banning the IP address of the computer running the program. The department librarians were able to restore access, and it was agreed that no further scraping runs would be performed. 
-
-Taylor \& Francis banned the IP address after it detected over 100 requests were made within five minutes. This corresponds to a request every three seconds. This was a modest server load compared to other publishers, and was not foreseen to cause problems.
-
-The ACS banning occurred because of a bug in the randomisation of requests. The program was instructed to take a DOI from a random publisher every time it made a request, rather than just a random DOI. Since the largest publisher was ACS, the program eventually exhausted DOIs from the other publishers, until there were only ACS DOIs to `randomly' draw requests from. This meant the request frequency to the ACS server went up dramatically. This increase broke the threshold of allowed requests at the ACS server which then banned the IP (approximately 10 requests a second).
-
-\begin{figure}[H]
-    \centering
-    \textbf{ACS BANNING}\par\medskip
-    \includegraphics[width=\textwidth]{Data_Acquisition/ACS_crash_line.png}
-    \caption[Request Frequency Leading to ACS Ban]{The request frequency is plotted in blue, the received pages frequency in red. The vertical dashed line shows where the server detected the scape and banned the IP.}
-     \label{fig:ACSBAN}
-\end{figure}
-The program was capable of making a total number of approximately 30 requests per second. As can be seen in figure \ref{fig:ACSBAN}, the program began to run out of requests to other publishers after approximately 140,000 seconds, resulting in an increase in the proportion of total requests per second to ACS. The ban occurred after approximately 150,000 seconds, after which there were no more responses received.
+\label{sec:banning1}
+Most publishers track request volumes sent to their servers to discourage automatic downloading. However, scraping constitutes fair use and complies to UK copyright law. Despite the university owning a full-access licence to these publishers' publications, the collected material was freely available without licence\cite{thelaw} \cite{contentminelegal}. During the scraping run, a bug in the randomisation of requests resulted in detection by ACS and Taylor \& Francis, which responded by banning the scraping computer's IP address (Explored further in \S\ref{sec:banning2}). The department librarians were able to restore access, and it was agreed that no further scraping would be performed.
 \subsection{Analysis of collected data}
 The yield of the global-scale scraping run was cut significantly by the ACS banning event. A summary is tabulated in table \ref{tab:LARGESCRAPERES} and shown graphically in figure \ref{fig:LARGESANK}. The complete records were stored in a database $\Delta4$.
 \begin{table}[h!]
@@ -183,7 +171,7 @@ Missing Publications \& Program Errors & 195989 & 15.5\%\\
 
 The overall efficiency of the process is 56.4\%, but excluding lost ACS records, the program's efficiency jumped to 74.0\%, similar to the efficiency of the UK scraping run (\S\ref{sec:UKSCRAPE}). \footnote{Also note that 100\% of DOIs were converted to DOIs with metadata. This is because the format of the webpages scraped was consistent for every DOI collected.}
 
-The successfully captured 714,370 records were inspected and merged with the UK results. Records were rejected with short titles or abstracts (likely to be addenda, informal articles, retractions etc.) Records were also removed if the majority of the title and abstract were not written in ascii characters\footnote{ascii is an encoding for English characters a-z, A-Z, some punctuation and 1-9.} (removing majority Japanese and Chinese script). This was done to provide higher-quality data for training the algorithm described in  \S\ref{chapt:ALGORITHM}. This filtering resulted in a final training database of 464712 articles. This dataset is henceforth referred to as $\Delta6$. The entire database formation process is shown in figure \ref{fig:DATABASES} and table \ref{tab:DATABASES}.
+The successfully captured 714,370 records merged with the UK results\footnote{The merged Dataset was labelled $\Delta5$}. Records were rejected with short titles or abstracts, or if the majority of the title and abstract were not written in ascii characters\footnote{likely to be addenda, informal articles, retractions etc, and removing removing majority Japanese and Chinese script}. This was done to provide higher-quality data for training the algorithm (see \S\ref{chapt:ALGORITHM}). This filtering resulted in a final training database of 464712 articles. This dataset was labelled $\Delta6$. The entire database formation process is shown in figure \ref{fig:DATABASES} and table \ref{tab:DATABASES}.
 \begin{figure}[H]
     \centering
     \textbf{Summary of Database Preparation}\par\medskip
@@ -207,54 +195,4 @@ $\Delta6$ & Records appropriate for training taken from $\Delta5$ & 464,712 \\
 \end{table}
 
 
-It was instructive to examine these databases and derive some simple statistical results. The following section briefly explores some of these.
-\subsubsection{Observations}
-\label{sec:CORPUSOBSERVATIONS}
-The publisher `market share' can be approximated from examining $\Delta3$.
-\begin{figure}[H]
-    \centering
-    \textbf{Publisher Share in Chemistry Literature}\par\medskip
-    \includegraphics[width=\textwidth]{Data_Acquisition/publishers_pie.png}
-    \caption[Publisher Share in Chemistry Literature]{Articles grouped by publisher in $\Delta3$. Only the top 12 publishers are shown.}
-     \label{fig:PUBPI}
-\end{figure}
-As shown in  shown in figure \ref{fig:PUBPI}, it can be seen that 90\% of all the chemistry literature collected was published by just 12 publishers, the majority from ACS, Wiley-Blackwell, Springer and Elsevier BV. Looking at the UK scraping DOI dataset (Figure \ref{fig:UKPUBPI}), the same large publishers are represented, but the Royal Society of Chemistry has a much larger share. This is to be expected, as the RSC is a UK based body. In the UK, there is a more even distribution between the large publishers. 
-
-\begin{figure}[H]
-    \centering
-    \textbf{Publisher Share in UK Chemistry Literature}\par\medskip
-    \includegraphics[width=\textwidth]{Data_Acquisition/uk_publishers_pie.png}
-    \caption[Publisher Share in UK Chemistry Literature]{Articles grouped by publisher in $\Delta1$. Only the top 12 publishers are shown.}
-     \label{fig:UKPUBPI}
-\end{figure}
-
-The corpus of combined titles and abstracts in $\Delta6$ was then examined. The word frequencies across all the data were found to be approximately Zipfian, with a gradient of -1.11\footnote{A Zipfian distribution is a subset of the Pareto distribution, stating that the frequency of a word is proportional to its ranking in the word frequencies table. Ideally, the gradient of a log(frequency) vs log(rank) should be -1.0 \cite{zipf}} See figure \ref{fig:ZIPF}
-\begin{figure}[H]
-    \centering
-    \textbf{Approximate Zipfian Distribution of Collected Corpus}\par\medskip
-    \includegraphics[scale=0.6]{Data_Acquisition/zipf.png}
-    \caption[Zipfian Plot of Collected Corpus]{The log Frequency of words vs the log of their position in the rank in the word frequency table in blue. Best fit line in red, gradient = -1.11, intercept 6.3. }
-     \label{fig:ZIPF}
-\end{figure}
-A summary of the corpus statistics are shown below:
-\begin{table}[h!]
-\caption{Titles and Abstracts in Training Database}
-\label{tab:CORPUS STATS}
-\begin{center}
-\begin{tabular}{||l|c||}
-\hline
-Total Word Count & 61,296,410\\
-Total Unique Words & 2,326,725\\
-Total Document Count & 464,712\\
-Mode Words per Title &  11\\
-Mean Words per Title &  12.2\\
-Mode Words per Abstract & 156\\
-Mean Words per Abstract & 119.7\\
-Mode Sentences per Abstract & 4\\
-Mean Sentences per Abstract & 5.4\\
-\hline
-\end{tabular}
-\end{center}
-\end{table}
-
-\label{sec:SCRAPEANALYSIS}
+It was instructive to examine these databases and derive some simple statistical results, explored in \S\ref{sec:CORPUSOBSERVATIONS}.
