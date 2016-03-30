@@ -1,4 +1,4 @@
-\begin{thebibliography}{35}
+\begin{thebibliography}{40}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -22,7 +22,7 @@ Michael~Waskom et~al.
 Eric Jones, Travis Oliphant, Pearu Peterson, et~al.
 \newblock {SciPy}: Open source scientific tools for {Python}, 2001--.
 \newblock URL \url{http://www.scipy.org/}.
-\newblock [Online; accessed 2016-03-10].
+\newblock [Online; accessed 2016-03-30].
 
 \bibitem[Blondel et~al.(2008)Blondel, Guillaume, and
   Renaud~Lambiotte]{modularity1}
@@ -229,6 +229,13 @@ Yu.~B. Tsaplev.
 \newblock \doi{10.1134/s0036024412120266}.
 \newblock URL \url{http://dx.doi.org/10.1134/s0036024412120266}.
 
+\bibitem[van~der Maaten(2014)]{bhtsne}
+Laurens van~der Maaten.
+\newblock Accelerating t-sne using tree-based algorithms.
+\newblock \emph{Journal of Machine Learning Research}, 15:\penalty0 3221--3245,
+  2014.
+\newblock URL \url{http://jmlr.org/papers/v15/vandermaaten14a.html}.
+
 \bibitem[Pedregosa et~al.(2011)Pedregosa, Varoquaux, Gramfort, Michel, Thirion,
   Grisel, Blondel, Prettenhofer, Weiss, Dubourg, Vanderplas, Passos,
   Cournapeau, Brucher, Perrot, and Duchesnay]{scikitlearn}
@@ -245,5 +252,27 @@ Mathieu Bastian, Sebastien Heymann, and Mathieu Jacomy.
   networks.
 \newblock 2009.
 \newblock URL \url{http://www.aaai.org/ocs/index.php/ICWSM/09/paper/view/154}.
+
+\bibitem[P\'erez and Granger(2007)]{jupyter}
+Fernando P\'erez and Brian~E. Granger.
+\newblock {IP}ython: a system for interactive scientific computing.
+\newblock \emph{Computing in Science and Engineering}, 9\penalty0 (3):\penalty0
+  21--29, May 2007.
+\newblock ISSN 1521-9615.
+\newblock \doi{10.1109/MCSE.2007.53}.
+\newblock URL \url{http://ipython.org}.
+
+\bibitem[Hunter(2007)]{matplotlib}
+John~D. Hunter.
+\newblock Matplotlib: A 2d graphics environment, 2007.
+
+\bibitem[Stéfan van~der Walt and Varoquaux(2011)]{numpy}
+S.~Chris~Colbert Stéfan van~der Walt and Gaël Varoquaux.
+\newblock The numpy array: A structure for efficient numerical computation,
+  2011.
+
+\bibitem[McKinney(2010)]{pandas}
+Wes McKinney.
+\newblock Data structures of statistical computing in python, 2010.
 
 \end{thebibliography}

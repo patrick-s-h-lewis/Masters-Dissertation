@@ -1,3 +1,76 @@
+\subsection{Publisher Denial of Service}
+\label{sec:banning2}
+As mentioned in \S\ref{sec:banning1}, Taylor \& Francis and ACS banned the scraping computer's IP address during the second stage of global scraping. This section explores why this happened.
+
+
+Taylor \& Francis banned the IP address after it detected over 100 requests were made within five minutes. This corresponds to a request every three seconds. This was a modest server load compared to other publishers, and was not foreseen to cause problems.
+
+The ACS banning occurred because of a bug in the randomisation of requests. The program was instructed to take a DOI from a random publisher every time it made a request, rather than just a random DOI. Since the largest publisher was ACS, the program eventually exhausted DOIs from the other publishers, until there were only ACS DOIs to `randomly' draw requests from. This meant the request frequency to the ACS server went up dramatically. This increase broke the threshold of allowed requests at the ACS server which then banned the IP (approximately 10 requests a second).
+
+\begin{figure}[H]
+    \centering
+    \textbf{ACS BANNING}\par\medskip
+    \includegraphics[width=\textwidth]{Data_Acquisition/ACS_crash_line.png}
+    \caption[Request Frequency Leading to ACS Ban]{The request frequency is plotted in blue, the received pages frequency in red. The vertical dashed line shows where the server detected the scape and banned the IP.}
+     \label{fig:ACSBAN}
+\end{figure}
+The program was capable of making a total number of approximately 30 requests per second. As can be seen in figure \ref{fig:ACSBAN}, the program began to run out of requests to other publishers after approximately 140,000 seconds, resulting in an increase in the proportion of total requests per second to ACS. The ban occurred after approximately 150,000 seconds, after which there were no more responses received.
+
+\subsection{Some Observations on $\Delta1$ through $\Delta6$}
+\label{sec:CORPUSOBSERVATIONS}
+There is much to be learnt by examination and simple statistics of the collected data. This section details some of this analysis which was used in development of the scraping program and to inform upon algorithm and processing design choices.
+
+When deciding how many XPaths were required, it was necessary to examine publication profiles.
+The publisher `market share' can be approximated from examining $\Delta3$.
+\begin{figure}[H]
+    \centering
+    \textbf{Publisher Share in Chemistry Literature}\par\medskip
+    \includegraphics[width=\textwidth]{Data_Acquisition/publishers_pie.png}
+    \caption[Publisher Share in Chemistry Literature]{Articles grouped by publisher in $\Delta3$. Only the top 12 publishers are shown.}
+     \label{fig:PUBPI}
+\end{figure}
+As shown in  shown in figure \ref{fig:PUBPI}, it can be seen that 90\% of all the chemistry literature collected was published by just 12 publishers, the majority from ACS, Wiley-Blackwell, Springer and Elsevier BV. Looking at the UK scraping DOI dataset (Figure \ref{fig:UKPUBPI}), the same large publishers are represented, but the Royal Society of Chemistry has a much larger share. This is to be expected, as the RSC is a UK based body. In the UK, there is a more even distribution between the large publishers. 
+
+\begin{figure}[H]
+    \centering
+    \textbf{Publisher Share in UK Chemistry Literature}\par\medskip
+    \includegraphics[width=\textwidth]{Data_Acquisition/uk_publishers_pie.png}
+    \caption[Publisher Share in UK Chemistry Literature]{Articles grouped by publisher in $\Delta1$. Only the top 12 publishers are shown.}
+     \label{fig:UKPUBPI}
+\end{figure}
+
+The corpus of combined titles and abstracts in $\Delta6$ was then examined. An understanding of word distributions would inform data sanitiation practices. It is is included here for interes and completeness. The word frequencies across all the data were found to be approximately Zipfian, with a gradient of -1.11\footnote{A Zipfian distribution is a subset of the Pareto distribution, stating that the frequency of a word is proportional to its ranking in the word frequencies table. Ideally, the gradient of a log(frequency) vs log(rank) should be -1.0 \cite{zipf}} See figure \ref{fig:ZIPF}
+\begin{figure}[H]
+    \centering
+    \textbf{Approximate Zipfian Distribution of Collected Corpus}\par\medskip
+    \includegraphics[scale=0.6]{Data_Acquisition/zipf.png}
+    \caption[Zipfian Plot of Collected Corpus]{The log Frequency of words vs the log of their position in the rank in the word frequency table in blue. Best fit line in red, gradient = -1.11, intercept 6.3. }
+     \label{fig:ZIPF}
+\end{figure}
+A summary of the corpus statistics are shown below:
+\begin{table}[h!]
+\caption{Titles and Abstracts in Training Database}
+\label{tab:CORPUS STATS}
+\begin{center}
+\begin{tabular}{||l|c||}
+\hline
+Total Word Count & 61,296,410\\
+Total Unique Words & 2,326,725\\
+Total Document Count & 464,712\\
+Mode Words per Title &  11\\
+Mean Words per Title &  12.2\\
+Mode Words per Abstract & 156\\
+Mean Words per Abstract & 119.7\\
+Mode Sentences per Abstract & 4\\
+Mean Sentences per Abstract & 5.4\\
+\hline
+\end{tabular}
+\end{center}
+\end{table}
+
+\label{sec:SCRAPEANALYSIS}
+
+
 \subsection{UK Departments}
 University Chemistry departments with suitable websites were considered when building the input list for the scraping program. Table \ref{tab:uk_scrape_depts} details all the departments that were included. A crawler program was written to navigate through these websites and store urls which had DOIs in them for the main program to scrape.
 \begin{table}[H]
@@ -146,70 +219,4 @@ EDP Sciences                                      \\
 \hline
 \end{tabular}
 \end{table}
-\subsection{Some Observations on $\Delta1$ through $\Delta6$}
-\label{sec:CORPUSOBSERVATIONS}
-The publisher `market share' can be approximated from examining $\Delta3$.
-\begin{figure}[H]
-    \centering
-    \textbf{Publisher Share in Chemistry Literature}\par\medskip
-    \includegraphics[width=\textwidth]{Data_Acquisition/publishers_pie.png}
-    \caption[Publisher Share in Chemistry Literature]{Articles grouped by publisher in $\Delta3$. Only the top 12 publishers are shown.}
-     \label{fig:PUBPI}
-\end{figure}
-As shown in  shown in figure \ref{fig:PUBPI}, it can be seen that 90\% of all the chemistry literature collected was published by just 12 publishers, the majority from ACS, Wiley-Blackwell, Springer and Elsevier BV. Looking at the UK scraping DOI dataset (Figure \ref{fig:UKPUBPI}), the same large publishers are represented, but the Royal Society of Chemistry has a much larger share. This is to be expected, as the RSC is a UK based body. In the UK, there is a more even distribution between the large publishers. 
 
-\begin{figure}[H]
-    \centering
-    \textbf{Publisher Share in UK Chemistry Literature}\par\medskip
-    \includegraphics[width=\textwidth]{Data_Acquisition/uk_publishers_pie.png}
-    \caption[Publisher Share in UK Chemistry Literature]{Articles grouped by publisher in $\Delta1$. Only the top 12 publishers are shown.}
-     \label{fig:UKPUBPI}
-\end{figure}
-
-The corpus of combined titles and abstracts in $\Delta6$ was then examined. The word frequencies across all the data were found to be approximately Zipfian, with a gradient of -1.11\footnote{A Zipfian distribution is a subset of the Pareto distribution, stating that the frequency of a word is proportional to its ranking in the word frequencies table. Ideally, the gradient of a log(frequency) vs log(rank) should be -1.0 \cite{zipf}} See figure \ref{fig:ZIPF}
-\begin{figure}[H]
-    \centering
-    \textbf{Approximate Zipfian Distribution of Collected Corpus}\par\medskip
-    \includegraphics[scale=0.6]{Data_Acquisition/zipf.png}
-    \caption[Zipfian Plot of Collected Corpus]{The log Frequency of words vs the log of their position in the rank in the word frequency table in blue. Best fit line in red, gradient = -1.11, intercept 6.3. }
-     \label{fig:ZIPF}
-\end{figure}
-A summary of the corpus statistics are shown below:
-\begin{table}[h!]
-\caption{Titles and Abstracts in Training Database}
-\label{tab:CORPUS STATS}
-\begin{center}
-\begin{tabular}{||l|c||}
-\hline
-Total Word Count & 61,296,410\\
-Total Unique Words & 2,326,725\\
-Total Document Count & 464,712\\
-Mode Words per Title &  11\\
-Mean Words per Title &  12.2\\
-Mode Words per Abstract & 156\\
-Mean Words per Abstract & 119.7\\
-Mode Sentences per Abstract & 4\\
-Mean Sentences per Abstract & 5.4\\
-\hline
-\end{tabular}
-\end{center}
-\end{table}
-
-\label{sec:SCRAPEANALYSIS}
-\subsection{Publisher Denial of Service}
-\label{sec:banning2}
-As mentioned in \S\ref{sec:banning1}, Taylor \& Francis and ACS banned the scraping computer's IP address during the second stage of global scraping. This section explores why this happened.
-
-
-Taylor \& Francis banned the IP address after it detected over 100 requests were made within five minutes. This corresponds to a request every three seconds. This was a modest server load compared to other publishers, and was not foreseen to cause problems.
-
-The ACS banning occurred because of a bug in the randomisation of requests. The program was instructed to take a DOI from a random publisher every time it made a request, rather than just a random DOI. Since the largest publisher was ACS, the program eventually exhausted DOIs from the other publishers, until there were only ACS DOIs to `randomly' draw requests from. This meant the request frequency to the ACS server went up dramatically. This increase broke the threshold of allowed requests at the ACS server which then banned the IP (approximately 10 requests a second).
-
-\begin{figure}[H]
-    \centering
-    \textbf{ACS BANNING}\par\medskip
-    \includegraphics[width=\textwidth]{Data_Acquisition/ACS_crash_line.png}
-    \caption[Request Frequency Leading to ACS Ban]{The request frequency is plotted in blue, the received pages frequency in red. The vertical dashed line shows where the server detected the scape and banned the IP.}
-     \label{fig:ACSBAN}
-\end{figure}
-The program was capable of making a total number of approximately 30 requests per second. As can be seen in figure \ref{fig:ACSBAN}, the program began to run out of requests to other publishers after approximately 140,000 seconds, resulting in an increase in the proportion of total requests per second to ACS. The ban occurred after approximately 150,000 seconds, after which there were no more responses received.

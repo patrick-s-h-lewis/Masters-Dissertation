@@ -2,7 +2,12 @@ This is BibTeX, Version 0.99d (TeX Live 2014)
 Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: Dissertation.aux
 The style file: unsrtnat.bst
-Database file #1: References.bib
+Case mismatch error between cite keys tsne and TSNE
+---line 189 of file Dissertation.aux
+ : \citation{tsne
+ :               }
+I'm skipping whatever remains of this command
+Database file #1: References/References.bib
 Warning--empty journal in seaborn
 Warning--empty publisher in crossref-formation
 Warning--empty author in doi_handbook2
@@ -17,45 +22,45 @@ Warning--empty journal in thelaw
 Warning--empty author in contentminelegal
 Warning--empty journal in contentminelegal
 Warning--empty journal in gephi
-You've used 35 entries,
+You've used 40 entries,
             2481 wiz_defined-function locations,
-            767 strings with 10404 characters,
-and the built_in function-call counts, 11990 in all, are:
-= -- 1056
-> -- 501
-< -- 23
-+ -- 218
-- -- 146
-* -- 858
-:= -- 1901
-add.period$ -- 142
-call.type$ -- 35
-change.case$ -- 61
-chr.to.int$ -- 33
-cite$ -- 54
-duplicate$ -- 664
-empty$ -- 1142
-format.name$ -- 188
-if$ -- 2561
+            800 strings with 11173 characters,
+and the built_in function-call counts, 13555 in all, are:
+= -- 1199
+> -- 552
+< -- 28
++ -- 242
+- -- 160
+* -- 953
+:= -- 2139
+add.period$ -- 158
+call.type$ -- 40
+change.case$ -- 71
+chr.to.int$ -- 38
+cite$ -- 59
+duplicate$ -- 744
+empty$ -- 1307
+format.name$ -- 211
+if$ -- 2902
 int.to.chr$ -- 3
-int.to.str$ -- 36
-missing$ -- 38
-newline$ -- 217
-num.names$ -- 91
-pop$ -- 299
+int.to.str$ -- 41
+missing$ -- 40
+newline$ -- 243
+num.names$ -- 106
+pop$ -- 348
 preamble$ -- 1
-purify$ -- 35
+purify$ -- 40
 quote$ -- 0
-skip$ -- 392
+skip$ -- 451
 stack$ -- 0
-substring$ -- 374
-swap$ -- 94
+substring$ -- 434
+swap$ -- 105
 text.length$ -- 3
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 221
+type$ -- 256
 warning$ -- 14
-while$ -- 82
+while$ -- 96
 width$ -- 0
-write$ -- 507
-(There were 14 warnings)
+write$ -- 571
+(There was 1 error message)

@@ -8,28 +8,36 @@ A simple approach to representing a document is a \emph{bag of words} model. The
 Document A: \texttt{A good yield was obtained for a nucleophile}
 
 Document B: \texttt{The nucleophile is a good donor}
+
+Document C: \texttt{A gaussian basis was used}
 \begin{table}[H]
 \label{tab:BAGOFWORDS}
 \caption{Bag of words}
 \begin{center}
-\begin{tabular}{||c|c|c||}
+\begin{tabular}{||c|c|c|c||}
 \hline
-Vocabulary &  $\mathbf{v}_A$ & $\mathbf{v}_B$\\
+Vocabulary &  $\mathbf{v}_A$ & $\mathbf{v}_B$ & $\mathbf{v}_C$\\
 \hline
-A & 2 & 1\\
-Good & 1 & 1\\
-Nucleophile & 1 & 1 \\
-Yield & 1 & 0\\
-For & 1& 0\\
-Is & 0 & 1\\
-The & 1 & 0\\
-Donor & 0 & 1\\
-Was & 1 & 0\\
+A & 2 & 1 & 1\\
+Good & 1 & 1 & 0\\
+Nucleophile & 1 & 1 & 0 \\
+Yield & 1 & 0 & 0\\
+For & 1& 0 & 0\\
+Is & 0 & 1 & 0\\
+The & 1 & 0 & 0\\
+Donor & 0 & 1 & 0\\
+Was & 1 & 0 & 1\\
+Gaussian & 0 & 0 & 1\\
+Basis & 0 & 0 & 1\\
+Used & 0 & 0 & 1\\
 \hline
 \end{tabular}
 \end{center}
 \end{table}
-Table \ref{tab:BAGOFWORDS} shows the vector representations for Documents A and B. The higher the scalar product of normalised $\mathbf{v}_A \cdot \mathbf{v}_A$, the more similar the documents are predicted to be. This model is used extensively in industry. A related model, the \emph{bag of citations} model, sets vector components according to the  presence or absence of citations. Both models are used by the scientific publishing industry\footnote{Colin Batchelor  (Senior Data Scientist, Royal Society of Chemistry), personal communication, February 2016} \footnote{P.E. Peter Murray-Rust, personal communication, February 2016}.
+Table \ref{tab:BAGOFWORDS} shows vector representations for Documents A, B and C. The higher the scalar product of normalised $\mathbf{v}_A \cdot \mathbf{v}_A$, the more similar the documents are predicted to be. In the example:
+ $$\mathbf{v}_A \cdot \mathbf{v}_A = 0.567 \ \ \ \mathbf{v}_A \cdot \mathbf{v}_C = 0.424 \ \ \ \mathbf{v}_B \cdot \mathbf{v}_C=0.200$$ 
+and so documents A and B are the most similar in this demonstration corpus.
+The related \emph{bag of citations} model sets vector components according to the presence of citations. Both models are used by the scientific publishing industry\footnote{Dr. Colin Batchelor  (Senior Data Scientist, Royal Society of Chemistry), personal communication, February 2016} \footnote{P.E. Peter Murray-Rust, personal communication, February 2016}.
 \section{Word2Vec}
 \label{sec:WORD2VEC}
 The \emph{Bag of Words} model treats words as atomic units, beneficial for robust and fast computation. However, words can have degrees of similarity to each other, and these relationships are not captured by bag of words models \cite{word2veckingqueen}. Distributed representations of words have been used to address this for some time \cite{distributedrepresentations}.
