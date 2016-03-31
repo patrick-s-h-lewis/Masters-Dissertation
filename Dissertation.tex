@@ -8,22 +8,27 @@
 \usepackage{subfiles}
 \usepackage{multirow}
 \usepackage{array}
+\usepackage[font={footnotesize,it}]{caption}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{float}
+\usepackage[nottoc]{tocbibind}
+\usepackage{hyperref}
+\usepackage[numbers]{natbib}
+\usepackage{hhline}
+\usepackage[toc,nonumberlist]{glossaries}
+
 \newcolumntype{L}{>{\centering\arraybackslash}m{3.2cm}}
 \newcolumntype{N}{>{\centering\arraybackslash}m{2.5cm}}
 \newcolumntype{Z}{>{\centering\arraybackslash}m{3cm}}
 \newcolumntype{X}{>{\centering\arraybackslash}m{9cm}}
 \newcolumntype{Y}{>{\centering\arraybackslash}m{10cm}}
 
-\usepackage{amssymb}
-\usepackage{amsmath}
-\usepackage{float}
 \title{Part III Project \\Automatic Chemical Analysis - Big Data and Machine Learning in Online Chemistry Literature }
 \author{Patrick Lewis \\Queens' College}
-\date{March 2016}							% Activate to display a given date or no date
-\usepackage[nottoc]{tocbibind}
-\usepackage{hyperref}
-\usepackage[numbers]{natbib}
- \usepackage{hhline}
+\date{March 2016}	
+					% Activate to display a given date or no date
+
 \bibliographystyle{unsrtnat}
 
 \makeatletter
@@ -77,14 +82,15 @@
     {\par\vfil\null\endtitlepage}
 
 \makeatother
-\usepackage[toc,nonumberlist]{glossaries}
+
 \makeglossaries
 \renewcommand*{\glsgroupskip}{}
 
 \input{Glossary/Glossary}
 \begin{document}
 \glsaddall
-\maketitle
+%\maketitle
+\input{Title_Page/titlepage}
 \begin{disclaimer}
 \input{Disclaimer/Disclaimer}
 \end{disclaimer}
@@ -98,13 +104,13 @@
 \tableofcontents
 \listoffigures
 \printglossaries
-\input{Introduction/Introduction}
-\input{Data_Acquisition/Data_Acquisition}
-\input{Natural_Language_Processing/Natural_Language_Processing}
-\input{Algorithm/Algorithm}
-\input{Validation/Validation}
-\input{Analysis/Analysis}
-\input{Conclusions/Conclusions}
+%\input{Introduction/Introduction}
+%\input{Data_Acquisition/Data_Acquisition}
+%\input{Natural_Language_Processing/Natural_Language_Processing}
+%\input{Algorithm/Algorithm}
+%\input{Validation/Validation}
+%\input{Analysis/Analysis}
+%\input{Conclusions/Conclusions}
 \input{Appendix/Appendix}
 \bibliography{References/References}
 \end{document}  

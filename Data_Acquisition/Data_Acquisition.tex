@@ -11,8 +11,7 @@ A program written to automatically interpret webpages to extract information is 
     \textbf{HTML and XPaths}\par\medskip
     \includegraphics[width=\textwidth]{Data_Acquisition/html_tree.pdf}
     \caption[Tree representation of HTML Code]{Tree representation of HTML code. The html code here displays a table with three rows. The page has two pieces of meta-data associated with it, stored in the `head'.}
-        \label{fig:HTMLTREE}
-
+\label{fig:HTMLTREE}
 \end{figure}
 XPaths are just paths through the document tree to the desired information. In order the `scrape' the data in the table, the following XPath could be used:
 \begin{center}
@@ -35,14 +34,14 @@ The initial approach was to analyse the HTML tree to automatically recognise use
 The heuristic thresholds are adjustable parameters. The approach was successful for webpages with large numbers of records, formatted in repeating fashion, but performed poorly for smaller collections of data. As such it was not sufficiently flexible for the task of scraping large quantities of chemical data, and was not developed further.
 \section{Collection Strategy}
 As generating XPaths proved unsuitable, a new strategy was required. Chemical information is usually disseminated as journal articles, mostly accompanied by a DOI. By programmatically collecting DOIs, (\S\ref{sec:DOI}) it was possible to build up a large database of chemical information (see  \S\ref{sec:SCRAPING_PROGRAM})
-\subsection{DOIS : Document Object Identifiers}
+\subsection{DOIs : Document Object Identifiers}
 \label{sec:DOI}
 DOIs are computer-friendly labels for articles. DOIs are issued by a number of accredited bodies, with the vast majority of chemistry-related articles issued by Crossref.\footnote{Crossref is a not-for-profit body comprised from Publishers International Linking Association (PILA), an association of many academic publishers} \cite{crossref-formation}. By pre-pending a DOI string with the url stub \texttt{http://dx.doi.org/}, the International DOI foundation (IDF) service redirects the request to the publisher's website to display the article the DOI refers to. The structure of a DOI is shown in Figure \ref{fig:DOI}.
 \begin{figure}[H]
     \centering
     \textbf{Anatomy of a DOI}\par\medskip
     \includegraphics[width=\textwidth]{Data_Acquisition/DOI2.png}
-    \caption[Anatomy of a DOI]{DOI structure. The structure consists of a numeric prefix (X and Y must be integers) and alphanumeric suffix (Z can be any Unicode-encoded character) \label{fig:DOI}}
+    \caption[Anatomy of a DOI]{DOI structure. The structure consists of a numeric prefix (X and Y must be integers) and alphanumeric suffix (Z can be any Unicode-encoded character)} \label{fig:DOI}
 \end{figure}
 DOIs consist of a prefix and a suffix. The prefix is subdivided into the ‘Directory Indicator’ (always integer ‘10’) separated from the ‘Registrant Code’, assigned by the issuing body \cite{doi_handbook1}. Registrant codes are numeric and can be a minimum of three integers, with further optional subdivisions separated by full stops. The suffix is provided by the registrant themselves and can be any form of unicode-encoded text \cite{doi_handbook1}.
 
@@ -52,7 +51,7 @@ It was possible to write a `Regular Expression' pattern matcher (regex) to autom
     \centering
     \textbf{Pattern Matching Procedure for DOIs}\par\medskip
     \includegraphics[width=\textwidth]{Data_Acquisition/Regex.pdf}
-    \caption[Pattern Matching Procdure for DOIs]{Perl Syntax Regex Code that can identify the vast majority of DOIs within free text) \label{fig:REGEX}}
+    \caption[Pattern Matching Procdure for DOIs]{Perl Syntax Regex Code that can identify the vast majority of DOIs within free text)} \label{fig:REGEX}
 \end{figure}
 Despite this, the regex was able to identify 90.4\% of the dois on the Cambridge University Chemistry Department website \url{http://www.ch.cam.ac.uk/publications}. 
 \subsection{Scraping Program}
@@ -65,7 +64,7 @@ With this methodology in place, a scraping program was written to collect DOIs f
     \textbf{Scraping Procedure}\par\medskip
     \includegraphics[width=\textwidth]{Data_Acquisition/Cherry2.pdf}
     \caption[Data Flow in Scraping Procedure]{The data flow of the scraping program. Websites from an inputted list of websites are visited and DOIs are extracted in the process described in  \S\ref{sec:DOI}. The Crossref API service is then used to verify the extracted DOIs, and collects available meta-data. The program then accesses publisher webpages and collects abstracts. The program also produces explanation of capture failures and some general statistics}
-     \label{fig:Cherry}
+\label{fig:Cherry}
 \end{figure}
 The programmatic steps depicted in figure \ref{fig:Cherry} are:
 \begin{sloppypar}
@@ -93,7 +92,6 @@ The program was first used to collect the data from the UK. The Goodman group's 
 \begin{table}[h!]
 \caption{UK Scraping results}
 \label{tab:UKSCRAPERES}
-
 \begin{center}
 \begin{tabular}{||l|l|l||}
 \hline
@@ -140,7 +138,6 @@ The yield of the global-scale scraping run was cut significantly by the ACS bann
 \begin{table}[h!]
 \caption{Global Scraping Results}
 \label{tab:LARGESCRAPERES}
-
 \begin{center}
 \begin{tabular}{||l|l|l||}
 \hline
@@ -169,7 +166,7 @@ Missing Publications \& Program Errors & 195989 & 15.5\%\\
      \label{fig:LARGESANK}
 \end{figure}
 
-The overall efficiency of the process is 56.4\%, but excluding lost ACS records, the program's efficiency jumped to 74.0\%, similar to the efficiency of the UK scraping run (\S\ref{sec:UKSCRAPE}). \footnote{Also note that 100\% of DOIs were converted to DOIs with metadata. This is because the format of the webpages scraped was consistent for every DOI collected.}
+The overall efficiency of the process is 56.4\%, but excluding lost ACS records, the program's efficiency jumped to 74.0\%, similar to the efficiency of the UK scraping run (\S\ref{sec:UKSCRAPE}). \footnote{Also note that 100\% of DOIs were converted to DOIs with meta-data. This is because the format of the webpages scraped was consistent for every DOI collected.}
 
 The successfully captured 714,370 records merged with the UK results\footnote{The merged Dataset was labelled $\Delta5$}. Records were rejected with short titles or abstracts, or if the majority of the title and abstract were not written in ascii characters\footnote{likely to be addenda, informal articles, retractions etc, and removing removing majority Japanese and Chinese script}. This was done to provide higher-quality data for training the algorithm (see \S\ref{chapt:ALGORITHM}). This filtering resulted in a final training database of 464712 articles. This dataset was labelled $\Delta6$. The entire database formation process is shown in figure \ref{fig:DATABASES} and table \ref{tab:DATABASES}.
 \begin{figure}[H]

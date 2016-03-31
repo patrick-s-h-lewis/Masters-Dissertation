@@ -1,37 +1,8 @@
 \addvspace {10\p@ }
-\addvspace {10\p@ }
-\contentsline {figure}{\numberline {2.1}{\ignorespaces Tree representation of HTML Code}}{13}{figure.2.1}
-\contentsline {figure}{\numberline {2.2}{\ignorespaces Anatomy of a DOI}}{15}{figure.2.2}
-\contentsline {figure}{\numberline {2.3}{\ignorespaces Pattern Matching Procdure for DOIs}}{16}{figure.2.3}
-\contentsline {figure}{\numberline {2.4}{\ignorespaces Data Flow in Scraping Procedure}}{17}{figure.2.4}
-\contentsline {figure}{\numberline {2.5}{\ignorespaces Efficiency of UK Department Scraping}}{19}{figure.2.5}
-\contentsline {figure}{\numberline {2.6}{\ignorespaces Efficiency of Large Scale Scraping}}{21}{figure.2.6}
-\contentsline {figure}{\numberline {2.7}{\ignorespaces Summary of Database Preparation}}{22}{figure.2.7}
-\addvspace {10\p@ }
-\contentsline {figure}{\numberline {3.1}{\ignorespaces Word2Vec Training Architectures }}{25}{figure.3.1}
-\contentsline {figure}{\numberline {3.2}{\ignorespaces Word Vector Relationships}}{26}{figure.3.2}
-\addvspace {10\p@ }
-\contentsline {figure}{\numberline {4.1}{\ignorespaces Punctuation removed in sanitation processing}}{28}{figure.4.1}
-\contentsline {figure}{\numberline {4.2}{\ignorespaces Preprocessing Pipeline}}{30}{figure.4.2}
-\addvspace {10\p@ }
-\contentsline {figure}{\numberline {5.1}{\ignorespaces PCA Dimensional Reduction}}{38}{figure.5.1}
-\contentsline {figure}{\numberline {5.2}{\ignorespaces TSNE Dimensional Reduction}}{38}{figure.5.2}
-\contentsline {figure}{\numberline {5.3}{\ignorespaces Network Visualisation of 10,000 document random sample}}{40}{figure.5.3}
-\addvspace {10\p@ }
-\contentsline {figure}{\numberline {6.1}{\ignorespaces Network Visualisation of University of Cambridge Chemistry Department Documents}}{42}{figure.6.1}
-\contentsline {figure}{\numberline {6.2}{\ignorespaces Recursion Tree for Document Community Generation}}{43}{figure.6.2}
-\contentsline {figure}{\numberline {6.3}{\ignorespaces Cambrdige Author Similarity Clustermap}}{46}{figure.6.3}
-\contentsline {figure}{\numberline {6.4}{\ignorespaces Cambridge Author Similarity Dendrogram}}{48}{figure.6.4}
-\contentsline {figure}{\numberline {6.5}{\ignorespaces Dendrogram annotated with labelled fields}}{49}{figure.6.5}
-\contentsline {figure}{\numberline {6.6}{\ignorespaces Author community Spread}}{51}{figure.6.6}
-\contentsline {figure}{\numberline {6.7}{\ignorespaces Author Coincidence Matrix Heatmap}}{53}{figure.6.7}
-\contentsline {figure}{\numberline {6.8}{\ignorespaces Author Collaboration Heatmap}}{55}{figure.6.8}
-\contentsline {figure}{\numberline {6.9}{\ignorespaces Community-summed Author Collaboration Heatmap}}{56}{figure.6.9}
-\contentsline {figure}{\numberline {6.10}{\ignorespaces Recommended Collaboration Matrix}}{57}{figure.6.10}
-\contentsline {figure}{\numberline {6.11}{\ignorespaces Recommended Collaboration Scores for Particular Staff Member}}{59}{figure.6.11}
-\addvspace {10\p@ }
-\addvspace {10\p@ }
-\contentsline {figure}{\numberline {8.1}{\ignorespaces Request Frequency Leading to ACS Ban}}{66}{figure.8.1}
-\contentsline {figure}{\numberline {8.2}{\ignorespaces Publisher Share in Chemistry Literature}}{67}{figure.8.2}
-\contentsline {figure}{\numberline {8.3}{\ignorespaces Publisher Share in UK Chemistry Literature}}{68}{figure.8.3}
-\contentsline {figure}{\numberline {8.4}{\ignorespaces Zipfian Plot of Collected Corpus}}{69}{figure.8.4}
+\contentsline {figure}{\numberline {1.1}{\ignorespaces Dendrogram for UPGMA clustering of chemical element vectors}}{13}{figure.caption.5}
+\contentsline {figure}{\numberline {1.2}{\ignorespaces Graph visualisation of chemical element vectors}}{15}{figure.caption.6}
+\contentsline {figure}{\numberline {1.3}{\ignorespaces Selected metallic elements' cosine similarity to palladium vector}}{17}{figure.caption.7}
+\contentsline {figure}{\numberline {1.4}{\ignorespaces Request Frequency Leading to ACS Ban}}{19}{figure.caption.8}
+\contentsline {figure}{\numberline {1.5}{\ignorespaces Publisher Share in Chemistry Literature}}{20}{figure.caption.9}
+\contentsline {figure}{\numberline {1.6}{\ignorespaces Publisher Share in UK Chemistry Literature}}{21}{figure.caption.10}
+\contentsline {figure}{\numberline {1.7}{\ignorespaces Zipfian Plot of Collected Corpus}}{22}{figure.caption.11}
