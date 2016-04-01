@@ -24,7 +24,7 @@ The publisher `market share' can be approximated from examining $\Delta3$.
 \begin{figure}[H]
     \centering
     \textbf{Publisher Share in Chemistry Literature}\par\medskip
-    \includegraphics[width=\textwidth]{Data_Acquisition/publishers_pie2.png}
+    \includegraphics[width=\textwidth]{Data_Acquisition/publishers_pie3.png}
     \caption[Publisher Share in Chemistry Literature]{Articles grouped by publisher in $\Delta3$. Only the top 12 publishers are shown.}
      \label{fig:PUBPI}
 \end{figure}
@@ -48,25 +48,35 @@ The corpus of combined titles and abstracts in $\Delta6$ was then examined. An u
 \end{figure}
 A summary of the corpus statistics are shown below:
 \begin{table}[h!]
-\caption{Titles and Abstracts in Training Database}
+\caption{Titles and Abstracts in Databases}
 \label{tab:CORPUS STATS}
 \begin{center}
-\begin{tabular}{||l|c||}
+\begin{tabular}{||l|c|c||}
 \hline
-Total Word Count & 61,296,410\\
-Total Unique Words & 2,326,725\\
-Total Document Count & 464,712\\
-Mode Words per Title &  11\\
-Mean Words per Title &  12.2\\
-Mode Words per Abstract & 156\\
-Mean Words per Abstract & 119.7\\
-Mode Sentences per Abstract & 4\\
-Mean Sentences per Abstract & 5.4\\
+&$\Delta4$ (Global)& $\Delta2$ (UK)\\
+\hline
+Total Word Count & 61,296,410 & 2,256,722 \\
+Total Unique Words & 2,326,725 & 60,166\\
+Total Document Count & 464,712 & 16,363\\
+Mode Words per Title &  11 & 11\\
+Mean Words per Title &  12.2 & 14.0\\
+Mode Words per Abstract & 156 & 52\\
+Mean Words per Abstract & 119.7 & 158.4\\
+Mode Sentences per Abstract & 4 & 4\\
+Mean Sentences per Abstract & 5.4 & 6.0\\
 \hline
 \end{tabular}
 \end{center}
 \end{table}
-
+Note that the mean scores are slightly higher for the UK, suggesting UK universities tend to publish slightly more verbose publications. The mode abstract length for the UK abstracts is significantly below the mean. This is indicative of a skewed, `noisy distribution', which is indeed found when the distribution is plotted (figure \ref{fig:abstract_sens}).
+ \begin{figure}[H]
+    \centering
+    \textbf{Distribution of Abstract lengths in $\Delta2$ (articles from UK scrape)}\par\medskip
+    \includegraphics[width=0.7\textwidth]{Appendix/Data_Acquisition/abstracts.png}
+    \caption[Distribution of Abstract lengths in $\Delta2$ (Articles from UK)]{Skewed distribution for number of words in abstracts. The mode is marked in red, the mean in green.}
+     \label{fig:abstract_sens}
+\end{figure}
+As can be seen in the plot, there is significant variation in abstract lengths, with anything from 25 to 200 words commonly observed.
 \label{sec:SCRAPEANALYSIS}
 
 

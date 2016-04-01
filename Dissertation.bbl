@@ -1,4 +1,4 @@
-\begin{thebibliography}{40}
+\begin{thebibliography}{44}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -274,5 +274,36 @@ S.~Chris~Colbert Stéfan van~der Walt and Gaël Varoquaux.
 \bibitem[McKinney(2010)]{pandas}
 Wes McKinney.
 \newblock Data structures of statistical computing in python, 2010.
+
+\bibitem[Tsuji(2004)]{palladium}
+Jiro Tsuji.
+\newblock \emph{Palladium Reagents and Catalysts: New Perspectives for the 21st
+  Century}.
+\newblock Wiley, 2004.
+\newblock ISBN 0470850329.
+
+\bibitem[pgm(2000)]{pgm}
+\emph{Ullmann's Encyclopedia of Industrial Chemistry}.
+\newblock Wiley-Blackwell, jun 2000.
+\newblock \doi{10.1002/14356007}.
+\newblock URL \url{http://dx.doi.org/10.1002/14356007}.
+
+\bibitem[Bricout et~al.(1998)Bricout, Carpentier, and Mortreux]{nickel}
+Herv{\'{e}} Bricout, Jean-Fran{\c{c}}ois Carpentier, and Andr{\'{e}} Mortreux.
+\newblock Nickel vs. palladium catalysts for coupling reactions of allyl
+  alcohol with soft nucleophiles: activities and deactivation processes.
+\newblock \emph{Journal of Molecular Catalysis A: Chemical}, 136\penalty0
+  (3):\penalty0 243--251, dec 1998.
+\newblock \doi{10.1016/s1381-1169(98)00067-3}.
+\newblock URL \url{http://dx.doi.org/10.1016/S1381-1169(98)00067-3}.
+
+\bibitem[Bonarowska et~al.(2014)Bonarowska, Machynskyy, {\L}omot, Kemnitz, and
+  Karpi{\'{n}}ski]{copper}
+M.~Bonarowska, O.~Machynskyy, D.~{\L}omot, E.~Kemnitz, and Z.~Karpi{\'{n}}ski.
+\newblock Supported palladium{\textendash}copper catalysts: Preparation and
+  catalytic behavior in hydrogen-related reactions.
+\newblock \emph{Catalysis Today}, 235:\penalty0 144--151, oct 2014.
+\newblock \doi{10.1016/j.cattod.2014.01.029}.
+\newblock URL \url{http://dx.doi.org/10.1016/j.cattod.2014.01.029}.
 
 \end{thebibliography}

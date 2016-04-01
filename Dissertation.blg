@@ -3,7 +3,7 @@ Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: Dissertation.aux
 The style file: unsrtnat.bst
 Case mismatch error between cite keys tsne and TSNE
----line 189 of file Dissertation.aux
+---line 191 of file Dissertation.aux
  : \citation{tsne
  :               }
 I'm skipping whatever remains of this command
@@ -22,45 +22,46 @@ Warning--empty journal in thelaw
 Warning--empty author in contentminelegal
 Warning--empty journal in contentminelegal
 Warning--empty journal in gephi
-You've used 40 entries,
+Warning--empty author and editor in pgm
+You've used 44 entries,
             2481 wiz_defined-function locations,
-            800 strings with 11173 characters,
-and the built_in function-call counts, 13555 in all, are:
-= -- 1199
-> -- 552
-< -- 28
-+ -- 242
-- -- 160
-* -- 953
-:= -- 2139
-add.period$ -- 158
-call.type$ -- 40
-change.case$ -- 71
-chr.to.int$ -- 38
-cite$ -- 59
-duplicate$ -- 744
-empty$ -- 1307
-format.name$ -- 211
-if$ -- 2902
+            830 strings with 12099 characters,
+and the built_in function-call counts, 15017 in all, are:
+= -- 1330
+> -- 613
+< -- 29
++ -- 268
+- -- 178
+* -- 1077
+:= -- 2369
+add.period$ -- 176
+call.type$ -- 44
+change.case$ -- 77
+chr.to.int$ -- 42
+cite$ -- 65
+duplicate$ -- 822
+empty$ -- 1448
+format.name$ -- 232
+if$ -- 3213
 int.to.chr$ -- 3
-int.to.str$ -- 41
-missing$ -- 40
-newline$ -- 243
-num.names$ -- 106
-pop$ -- 348
+int.to.str$ -- 45
+missing$ -- 45
+newline$ -- 269
+num.names$ -- 115
+pop$ -- 380
 preamble$ -- 1
-purify$ -- 40
+purify$ -- 44
 quote$ -- 0
-skip$ -- 451
+skip$ -- 488
 stack$ -- 0
-substring$ -- 434
-swap$ -- 105
+substring$ -- 493
+swap$ -- 116
 text.length$ -- 3
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 256
-warning$ -- 14
-while$ -- 96
+type$ -- 278
+warning$ -- 15
+while$ -- 106
 width$ -- 0
-write$ -- 571
+write$ -- 633
 (There was 1 error message)
