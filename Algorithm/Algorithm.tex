@@ -153,11 +153,11 @@ CBOW-TFIDF-S & CBOW-S with TFIDF weighting on word vectors & SG-TFIDF-S & SG-S w
 \end{table}
 
 \section{Doc2Vec Models}
-A Doc2Vec model was trained with a \emph{distributed memory} architecture\footnote{Distributed memory is the Paragraph Vector algorithm equivalent of CBOW, the performance of this architecture is optimal\cite{doc2vec}} using the gensim framework in python \cite{gensim} using $\Delta6$ with the same sanitiation pipeline as for the Word2Vec models. The training sentences were labelled with the document (journal article DOI) they came from. 100 dimensional vectors were chosen as a compromise of training speed and specificity\footnote{as well as for computational considerations of analytical techniques, see \S\ref{chapt:VALIDATION},\S\ref{chapt:ANALYSIS}}, and also so that dimensions were consistent across all models. The Doc2Vec model was trained for 24 epochs, with hyperparamters detailed in table \ref{tab:doc2vechyperparams}
+A Doc2Vec model was trained with a \emph{distributed memory} architecture\footnote{Distributed memory is the Paragraph Vector algorithm equivalent of CBOW, the performance of this architecture is optimal\cite{doc2vec}} using the gensim framework in python \cite{gensim} using $\Delta6$ with the same sanitiation pipeline as for the Word2Vec models. The training sentences were labelled with the document (journal article DOI) they came from. 100 dimensional vectors were chosen as a compromise of training speed and specificity\footnote{as well as for computational considerations of analytical techniques, see \S\ref{chapt:VALIDATION},\S\ref{chapt:ANALYSIS}}, and also so that dimensions were consistent across all models. The Doc2Vec model was trained for 24 epochs, with hyperparameters detailed in table \ref{tab:doc2vechyperparams}
 \begin{table}[H]
 \begin{center}
-\label{tab:doc2vechyperparams}
 \caption{Word2vec Parameters}
+\label{tab:doc2vechyperparams}
 \begin{tabular}{||c|c||}
 \hline
 Model Parameter & value\\

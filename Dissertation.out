@@ -47,16 +47,18 @@
 \BOOKMARK [2][-]{subsection.8.1.4}{Open Source Chemistry Vectors}{section.8.1}% 47
 \BOOKMARK [2][-]{subsection.8.1.5}{Structure stemming}{section.8.1}% 48
 \BOOKMARK [2][-]{subsection.8.1.6}{Multiply labelled Documents}{section.8.1}% 49
-\BOOKMARK [1][-]{section.8.2}{Technical Details}{chapter.8}% 50
-\BOOKMARK [2][-]{subsection.8.2.1}{Code Artefacts}{section.8.2}% 51
-\BOOKMARK [2][-]{subsection.8.2.2}{Data Artefacts}{section.8.2}% 52
-\BOOKMARK [1][-]{section.8.3}{Word Vector Analysis of Chemical Elements}{chapter.8}% 53
-\BOOKMARK [1][-]{section.8.4}{Finding Unexpected Links}{chapter.8}% 54
-\BOOKMARK [1][-]{section.8.5}{Comments on Recommended Collaboration Table}{chapter.8}% 55
-\BOOKMARK [1][-]{section.8.6}{Comments on Singletons}{chapter.8}% 56
-\BOOKMARK [1][-]{section.8.7}{Data Acquisition Supplementary Information}{chapter.8}% 57
-\BOOKMARK [2][-]{subsection.8.7.1}{Publisher Denial of Service}{section.8.7}% 58
-\BOOKMARK [2][-]{subsection.8.7.2}{Some Observations on 1 through 6}{section.8.7}% 59
-\BOOKMARK [2][-]{subsection.8.7.3}{UK Departments}{section.8.7}% 60
-\BOOKMARK [2][-]{subsection.8.7.4}{Publishers Considered in UK scraping}{section.8.7}% 61
-\BOOKMARK [0][-]{chapter*.58}{Bibliography}{}% 62
+\BOOKMARK [2][-]{subsection.8.1.7}{TSNE Maps}{section.8.1}% 50
+\BOOKMARK [1][-]{section.8.2}{Technical Details}{chapter.8}% 51
+\BOOKMARK [2][-]{subsection.8.2.1}{Code Artefacts}{section.8.2}% 52
+\BOOKMARK [2][-]{subsection.8.2.2}{Data Artefacts}{section.8.2}% 53
+\BOOKMARK [1][-]{section.8.3}{Word Vector Analysis of Chemical Elements}{chapter.8}% 54
+\BOOKMARK [1][-]{section.8.4}{Finding Unexpected Links}{chapter.8}% 55
+\BOOKMARK [1][-]{section.8.5}{Comments on Recommended Collaboration Table}{chapter.8}% 56
+\BOOKMARK [1][-]{section.8.6}{Comments on Singletons}{chapter.8}% 57
+\BOOKMARK [1][-]{section.8.7}{Data Acquisition Supplementary Information}{chapter.8}% 58
+\BOOKMARK [2][-]{subsection.8.7.1}{Publisher Denial of Service}{section.8.7}% 59
+\BOOKMARK [2][-]{subsection.8.7.2}{Some Observations on 1 through 6}{section.8.7}% 60
+\BOOKMARK [2][-]{subsection.8.7.3}{UK Departments}{section.8.7}% 61
+\BOOKMARK [2][-]{subsection.8.7.4}{Publishers Considered in UK scraping}{section.8.7}% 62
+\BOOKMARK [1][-]{section.8.8}{Automatic XPath Generation}{chapter.8}% 63
+\BOOKMARK [0][-]{chapter*.58}{Bibliography}{}% 64

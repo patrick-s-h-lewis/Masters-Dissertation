@@ -89,8 +89,8 @@ M.~F. Porter.
 M.~F. Porter.
 \newblock {The Porter2 stemming algorithm}, 2002.
 
-\bibitem[van~der Maaten(2008)]{TSNE}
-G.E. van~der Maaten, L.J.P.;~Hinton.
+\bibitem[LJP van~der Maaten(2008)]{tsne1}
+GE~Hinton LJP van~der Maaten.
 \newblock Visualizing high-dimensional data using t-sne.
 \newblock \emph{Journal of Machine Learning Research}, 9:\penalty0 2579--2605,
   2008.

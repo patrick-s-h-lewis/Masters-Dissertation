@@ -1,15 +1,15 @@
 \chapter{Model Examination}
 \label{chapt:VALIDATION}
-The models created in  \S\ref{chapt:ALGORITHM} were then examined and assessed. As an unsupervised learning algorithm, it is difficult to assess model quality, due to a lack of concrete metrics to comparisons\footnote{This is to say, there is no objective `similarity' relationship value between two words.}. The Word2Vec development team tested models against $\sim$ 10,000 semantic and syntactic relationships (See Figure \ref{fig:KINGQUEEN})\cite{word2vec1} \cite{word2vec2} \cite{word2veckingqueen}. The scope of this project does not extend to such elaborate tests. In the section, some examples of model strengths are given and techniques for using word vectors and visualisation are presented. 
+The models created in \S\ref{chapt:ALGORITHM} were then examined and assessed. As an unsupervised learning algorithm, it is challenging to assess model quality, due to a lack of concrete metrics for comparisons\footnote{This is to say, there is no objective `similarity' relationship value between two words to compare models to.}. The Word2Vec development team tested against approximately 10,000 semantic and syntactic relationships (See Figure \ref{fig:KINGQUEEN})\cite{word2vec1} \cite{word2vec2} \cite{word2veckingqueen}. The scope of this project does not extend to such elaborate tests. In the section, some examples of model strengths are given and techniques for using word vectors and visualisation are presented. 
 \section{Word Similarities}
-Word similarities can be be obtained by direct comparison of their word vectors. For words $\alpha$ and $\beta$, with vectors $\mathbf{\nu^\alpha}$ and $\mathbf{\nu^\beta}$.  A possible metric is to compute euclidean distance between $\mathbf{\nu^\alpha}$ and $\mathbf{\nu^\beta}$, 
+Word similarities can be be obtained by direct comparison of their word vectors. A possible metric is to compute euclidean distance.  For words $\alpha$ and $\beta$, with vectors $\mathbf{\nu^\alpha}$ and $\mathbf{\nu^\beta}$, 
 
 $$S_{euclid} = \sqrt{\sum_{i=1}^{D}(\nu_i^{\alpha}-\nu_i^{\beta})^{2}} $$
 
-where $D$ is the dimensionality ($D$=100). This metric simply describes the distance between the end points of $\mathbf{\nu^\alpha}$ and $\mathbf{\nu^\beta}$. A larger $S_{euclid}$ indicates weaker similarity. A second similarity metric is the \emph{cosine similarity}, a measure of the directionality of $\mathbf{\nu^\alpha}$ and $\mathbf{\nu^\beta}$. A value close to 1 corresponds to high similarity of $\alpha$ and $\beta$. Cosine similarity is computed as:
+where $D$ is the dimensionality ($D$=100). $S_{euclid}$ simply describes the distance between the end points of $\mathbf{\nu^\alpha}$ and $\mathbf{\nu^\beta}$. A larger $S_{euclid}$ indicates weaker similarity. A second similarity metric is \emph{cosine similarity}, a measure of the directionality. A value close to 1 corresponds to high similarity of $\alpha$ and $\beta$. Cosine similarity is computed as:
 $$S_{cos}=\frac{\mathbf{\nu^\alpha} \cdot \mathbf{\nu^\beta}}{|\mathbf{\nu^\alpha}| |\mathbf{\nu^\beta}|} = \frac{\displaystyle\sum_{i=1}^{D} \nu^{(\alpha)}_{i}\nu^{(\beta)}_{i}}{\left(\displaystyle\sum_{i=1}^{D} (\nu^{(\alpha)}_{i})^2\right)^{1/2} \left(\displaystyle\sum_{i=1}^{D} (\nu^{(\beta)}_{i})^2\right)^{1/2}}
 $$
-The CBOW and skip-gram models were examined using these metrics. For a given word, they were requested to return the three words in the corpus with highest similarity. Some examples are given in tables \ref{tab:COSINESIMS} and \ref{tab:EUCLIDSIMS}.
+The CBOW and skipgram models were examined using these metrics. For a given word, they were requested to return the three words in the corpus with highest similarity. Some examples are given in tables \ref{tab:COSINESIMS} and \ref{tab:EUCLIDSIMS}.
 \begin{table}[H]
 \begin{center}
 \caption[Word similarity examinations with cosine similarity]{Closest words to test words using cosine similarity}
@@ -61,17 +61,17 @@ Skip-gram &                   &  Catalyt            &   Molybdena  &  Nimo   \\
 \end{tabular}
 \end{center}
 \end{table}
-As shown above, the models perform well, returning intuitively similar words to the test word.\footnote{Note that returned words are 'stemmed' from use of stemming algorithm before training. It is not difficult to interpret derived words from their stems}. In most cases, chemical inference is represented in some way (e.g. the models understood that catalysts and nanocatalysts are closely-connected concepts).
+As shown above, the models perform well, returning intuitively similar words to the test word.\footnote{Note that returned words are 'stemmed' from use of stemming algorithm before training. It is not difficult to interpret derived words from their stems}. In most cases, chemical inference is represented in some way \footnote{e.g. the models understood that catalysts and nanocatalysts are closely-connected concepts}.
 
-It was observed that the skip-gram model gave misleading positives more frequently. \footnote{in the catalyst case above, skip-gram associated a stemming false negative and gave a specific catalysed compound to the `catalyst' test word than more obvious, fundamental associations}. The CBOW model was considered to be superior for word-word comparisons. It was also noted that CBOW had stronger agreement between euclidean and cosine similarity metrics, however, euclidean similarity gave poorer general perform.\footnote{`NRL' in the `Plastic' category of skip-gram is a typical example of poorer euclidean performance. NRL appears to be a reference to the Navy Reseach Laboratory. }. It is noted that cosine similarity is the accepted similarity metric in the literature \cite{word2vec1} \cite{word2vec2} \cite{doc2vec}.
+It was observed that the skipgram model gave misleading positives more frequently. \footnote{in the catalyst case above, skipsgram associated a stemming false negative and gave a specific catalysed compound to the `catalyst' test word than more obvious, fundamental associations}. CBOW  was considered to be superior for word-word comparisons. It was also noted that CBOW had closer agreement between $S_{euclid}$ and $S_{cosine}$, however, euclidean similarity gave poorer general performance.\footnote{`NRL' in the `Plastic' category of skip-gram is a typical example of poorer euclidean performance. NRL appears to be a reference to the Navy Reseach Laboratory. }. It was noted that $S_{Cosine}$ is the accepted similarity metric in the literature \cite{word2vec1} \cite{word2vec2} \cite{doc2vec}.
 
 \section{Document Similarities}
-The models detailed in \S\ref{chapt:ALGORITHM} were then tested for document vector similarity. A document was chosen from the corpus, the three most similar articles were computed for each model and results assessed. One test document was \texttt{DOI: 10.1134/s0036024412120266} \cite{docassay}, the title:
+The models detailed in \S\ref{chapt:ALGORITHM} were then tested for document vector similarity. A document was chosen from the corpus, the three most similar articles were computed for each model and results assessed. One test document was \texttt{DOI: 10.1134/s0036024412120266} \cite{docassay}:
 
 
 \texttt{`Photochemical transformations of anthraquinone in polymeric alcohols'}.
 
- The TF-IDF models (CBOW-TFIDF-S, CBOW-TFIDF-W, SG-TFIDF-S, SG-TFIDF-W) suffered from mathematical conditioning problems, and gave poor predictions. The remaining models' most similar documents \footnote{Cosine similarity was used, as it performed better than euclidean similarity for document vectors.} for this test document are shown in table \ref{tab:DOCSIMS}:
+ The TF-IDF models (CBOW-TFIDF-S, CBOW-TFIDF-W, SG-TFIDF-S, SG-TFIDF-W) suffered from mathematical conditioning problems, giving poor predictions. The remaining models' most similar documents \footnote{Cosine similarity was used, as it performed better than euclidean similarity for document vectors.} for this test document are shown in table \ref{tab:DOCSIMS}:
 \begin{table}[H]
 \centering
 \caption[Examination of Document Vector similarities]{Document Vector Similarities to \cite {docassay}}
@@ -94,10 +94,10 @@ doc2vec                    &  10.1002/ pola.10059              &  \footnotesize{
                  \\ \hline
 \end{tabular}
 \end{table}
-The document vectors generated by the Doc2Vec model had considerably better performance, and thus were taken forward as the model of choice for further analysis.  
+The document vectors generated by the Doc2Vec model had considerably better general performance, and were selected as the model of choice for further analysis.  
 \section{Visualisation Techniques}
 \subsection{Network Visualisation}
-High Dimensional systems are hard to visualise but there are several methods available to visualise high-dimensional data. PCA\footnote{Principle Component Analysis}\cite{PCA}, a well-established technique reduces dimensionality by a series of orthogonal transformations. T-SNE\footnote{t-distributed stochastic network embedding }, a state of the art technique to reduce dimensionality by preserving spatial clusters of vectors at high dimensions \cite{tsne}\cite{bhtsne}. These techniques allows 100-dimensional document vectors to be collapsed to points on an arbitrary 2D plane, to give a visualised `snapshot' of the semantic space. 
+High Dimensional systems are difficult to visualise but there are several methods available to visualise high-dimensional data. PCA\footnote{See Glossary} \cite{PCA} and TSNE\footnote{See Glossary}\cite{tsne1}\cite{bhtsne} techniques allow 100-dimensional document vectors to be collapsed to points on an arbitrary 2D plane, to give a visual `snapshot' of the semantic space. 
 Figures \ref{fig:PCA_snap} and \ref{fig:TSNE_snap} show PCA and TSNE reductions\footnote{performed using scikitlearn and python} on 10,000 document vectors randomly selected from the Doc2Vec model representation of $\Delta6$. \cite{scikitlearn}.
 
 \begin{figure}[H]
@@ -105,23 +105,23 @@ Figures \ref{fig:PCA_snap} and \ref{fig:TSNE_snap} show PCA and TSNE reductions\
   \begin{minipage}[b]{0.49\textwidth}
 	\begin{center}\textbf{PCA Dimensional Reduction}\end{center}
     \includegraphics[width=\textwidth]{Validation/pca2.png}
-    \caption[PCA Dimensional Reduction]{PCA map of 10,000 documents in the corpus. PCA has not any particular structure. The dimensional reduction task is probably too difficult for PCA.}
+    \caption[PCA Dimensional Reduction]{PCA map of 10,000 documents in the corpus. PCA has not resolved any particular structure. The dimensional reduction task is probably too challenging for PCA.}
       \label{fig:PCA_snap}
   \end{minipage}
   \hfill
   \begin{minipage}[b]{0.49\textwidth}
   \begin{center}\textbf{TSNE Dimensional Reduction}\end{center}
     \includegraphics[width=\textwidth]{Validation/tsne2.png}
-    \caption[TSNE Dimensional Reduction]{TSNE map of the same 10,000 documents. Document vectors have gathered into noticeable clusters, with non negligible outlier documents between clusters. Performed using Barnes-Hut TSNE implementation as sample size is large. }
+    \caption[TSNE Dimensional Reduction]{TSNE map of the same 10,000 documents. TSNE is a much more sophisticated, state of the art technique, that seeks to preserve high dimensional clusters. Document vectors have gathered into noticeable clusters, with non negligible outlier documents between clusters. Performed using Barnes-Hut TSNE implementation as sample size is large. }
       \label{fig:TSNE_snap}
 
   \end{minipage}
 \end{figure}
-The PCA reduction shows a dark central area, suggesting most vectors are `smeared' about a common direction. The map is not entirely symmetric which is what would be expected for random vectors. It was expected that document vectors would be distributed into clusters representing particular research fields within the literature. This is borne out by the TSNE reduction, which has resolved many clusters. There is a significant portion of document vectors scattered between dark cluster spots, which may be could interpreted as `interdisciplinary'.
-TSNE is based upon euclidean distance, which is noted not to be the best similarity measure so, whilst qualitatively useful, TSNE maps were interpreted cautiously.
+The PCA reduction shows a dark central area, suggesting most vectors are `smeared' about a common direction. The map is not symmetric which is what would be expected for random vectors. It was expected that document vectors would be distributed in clusters representing particular research fields within the literature. This is indeed seen in the TSNE reduction, which resolved many clusters. There are document vectors scattered between dark cluster spots, which may be could interpreted as `interdisciplinary'\footnote{More in-depth analysis of TSNE maps forms part of the recommended work section, \S\ref{chapt:RECOMMENDATIONS}}.
+TSNE is based upon euclidean distance, which is noted not to be the best similarity measure. Whilst qualitatively useful, TSNE maps were interpreted cautiously.
 \subsection{Networks and Network Visualisation}
 \label{sec:COSINEMAT}
-A similarity matrix $\mathbf{C}$ was defined between a sets of documents. For a set of documents  A (with $a$ documents) and B (with $b$ documents) define document matrices of document vectors $\mathbf{A}$ and $\mathbf{B}$ such that 
+A $S_{cosine}$ matrix $\mathbf{C}$ was defined between sets of documents. For a set of documents  A (with $a$ documents) and B (with $b$ documents) document matrices of document vectors were defined, $\mathbf{A}$ and $\mathbf{B}$, such that 
 
 $$\mathbf{A} = \left( \begin{array}{cccc}
 \vdots & \vdots & \vdots & \vdots \\
@@ -130,9 +130,9 @@ $$\mathbf{A} = \left( \begin{array}{cccc}
 \vdots & \vdots & \vdots & \vdots \\
 \mathbf{v}_1 & \mathbf{v}_1 & \cdots & \mathbf{v}_b \\
 \vdots & \vdots & \vdots & \vdots \\ \end{array} \right)$$ where $w$ and $v$ are document vectors.
-The cosine matrix $\mathbf{C}$ is then defined as $\mathbf{C}_{i , j} = cosine \left(\theta_{i , j} \right)$ where element i j contains the cosine between $i$th document vector in A and $j$th document vector in B:
+$\mathbf{C}$ was then defined as $\mathbf{C}_{i , j} = cosine \left(\theta_{i , j} \right)$ where element i j contains the cosine between $i$th vector in A and $j$th vector in B:
 $$\mathbf{C}=\mathbf{A}^T \mathbf{B} \oslash \left( diag(\mathbf{A}^T \mathbf{A})^T diag(\mathbf{B}^T \mathbf{B}) \right)^{\circ\frac12}$$
-where $\oslash$ and $^{\circ\frac12}$ indicate Hadamard division and Hadamard square root \footnote{Elementwise division and Elementwise square root}, $diag(Q)$ the $1 \times n$ matrix formed from the diagonal of matrix $Q$. This matrix represents a network where each document in A is a node with an edge to every document in B with a weight equal to the cosine. If A is B, then the matrix is a fully connected network\footnote{That is to say, every document node has an edge to every other document in the set}. This network can be visualised using specialist software\footnote{Gephi, a powerful, open source network visualisation and analysis suite, was used for this purpose. } \cite{gephi}. Figure \ref{fig:gephi_exp} visualises the same 10,000 document sample as a network graph.
+where $\oslash$ and $^{\circ\frac12}$ indicate Hadamard division and Hadamard square root, $diag(Q)$ the $1 \times n$ matrix formed from the diagonal of $Q$. $\mathbf{C}$ represents a network where each document in A is a node with an edge to every document in B with weights equal to the cosine. If A=B, then the matrix is a fully connected network\footnote{That is to say, if A and B are the same set of documents, every document node has an edge to every other document in the set}. This network can be visualised using specialist software\footnote{Gephi, a powerful, open source network visualisation and analysis suite, was used for this purpose. } \cite{gephi}. Figure \ref{fig:gephi_exp} visualises the same 10,000 document sample as a network graph.
 \begin{center}
 \begin{figure}[H]
   \centering
@@ -143,4 +143,4 @@ where $\oslash$ and $^{\circ\frac12}$ indicate Hadamard division and Hadamard sq
 
 \end{figure} 
 \end{center}
-It can be seen that concentrations of documents also form in the network visualisation. There are noticeable outlier documents far from the central clusters \footnote{These articles are predicted to be short, or qualitatively different from, the majority, e.g. addenda or retraction notices, rather than proper articles.}. Also note that the network visualisation technique is dependent only on cosine similarity, so was considered a more reliable analytical tool than TSNE. Treating the system as a network graph also enables powerful network analytic algorithms to be applied.
+Concentrations of documents also form in the network visualisation. There are noticeable outlier documents far from the central clusters \footnote{These articles are predicted to be short, or qualitatively different from, the majority, e.g. addenda or retraction notices, rather than proper articles. See \S\ref{sec:singletons} in appendix for examination of some of these singletons}. Also note that the network visualisation technique is dependent only on cosine similarity, so was considered a more reliable analytical tool than TSNE. Treating the system as a network graph also enables powerful network analysis algorithms to be applied.

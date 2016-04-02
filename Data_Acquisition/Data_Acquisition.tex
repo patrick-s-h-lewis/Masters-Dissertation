@@ -5,7 +5,7 @@
 
 Internet webpages are written in HTML\footnote{See Glossary}. When a webpage is accessed, the HTML code is sent to the user, and the browser processes and displays the webpage in a human-readable format. 
 
-A program written to automatically interpret webpages to extract information is known as a `scraping' program. The program must process the raw HTML file and access the useful information on the page in an automated fashion. Information is arranged in an HTML document in a tree-like structure (figure \ref{fig:HTMLTREE}). This example page would display in a browser as a table with three rows, each row containing `Table Data A/B/C'. The method of tree traversal is by specifying a path through the document tree on the right, using an `XPath'. 
+A scraping program must process the raw HTML file and access the useful information on the page in an automated fashion. Information is arranged in an HTML document in a tree-like structure (figure \ref{fig:HTMLTREE}). This example page would display as a table with three rows, each row containing `Table Data A/B/C'. This data is accessible programmatically using an `XPath'. 
 \begin{figure}[H]
     \centering
     \textbf{HTML and XPaths}\par\medskip
@@ -13,11 +13,11 @@ A program written to automatically interpret webpages to extract information is 
     \caption[Tree representation of HTML Code]{Tree representation of HTML code. The html code here displays a table with three rows. The page has two pieces of meta-data associated with it, stored in the `head'.}
 \label{fig:HTMLTREE}
 \end{figure}
-XPaths are just paths through the document tree to the desired information. In order the `scrape' the data in the table, the following XPath could be used:
+XPaths are simply paths through the tree to the desired information. In order the `scrape' the data in the table, the following XPath could be used:
 \begin{center}
 \texttt{//html/body/tr/*}
 \end{center}
-This presents an immediate problem, as scraping a millions of webpages requires millions of potentially different XPaths to be known. It is impractical to specify them manually, thus the challenge of large-scale scraping is how to identify and collect useful data on webages without manually specifying many XPaths.
+Scraping millions of webpages potentially requires millions of different XPaths. It is impractical to specify them manually, thus the challenge of large-scale scraping is how to identify and collect useful data on webages without manually specifying many XPaths.
 \section{Automatic XPath Generation}
 The initial approach was to analyse the HTML tree to automatically recognise useful tabulated or listed data. The program started at the tree's root and repeatedly followed the branch with the most `repeating substructure'. The recursive algorithm is summarised below:
 \begin{sloppypar}
@@ -33,32 +33,31 @@ The initial approach was to analyse the HTML tree to automatically recognise use
 \end{sloppypar}
 The heuristic thresholds are adjustable parameters. The approach was successful for webpages with large numbers of records, formatted in repeating fashion, but performed poorly for smaller collections of data. As such it was not sufficiently flexible for the task of scraping large quantities of chemical data, and was not developed further.
 \section{Collection Strategy}
-As generating XPaths proved unsuitable, a new strategy was required. Chemical information is usually disseminated as journal articles, mostly accompanied by a DOI. By programmatically collecting DOIs, (\S\ref{sec:DOI}) it was possible to build up a large database of chemical information (see  \S\ref{sec:SCRAPING_PROGRAM})
+The initial approach was to analyse the HTML tree to automatically recognise useful data generate XPaths\footnote{This approach is detailed in the appendix, \S\ref{sec:auto_xpaths}}. When this strategy proved unsuitable, a new method was required. Chemical information is usually disseminated as journal articles accompanied by a DOI. By programmatically collecting DOIs, (\S\ref{sec:DOI}) it was possible to build up a large database of chemical information (see \S\ref{sec:SCRAPING_PROGRAM})
 \subsection{DOIs : Document Object Identifiers}
 \label{sec:DOI}
-DOIs are computer-friendly labels for articles. DOIs are issued by a number of accredited bodies, with the vast majority of chemistry-related articles issued by Crossref.\footnote{Crossref is a not-for-profit body comprised from Publishers International Linking Association (PILA), an association of many academic publishers} \cite{crossref-formation}. By pre-pending a DOI string with the url stub \texttt{http://dx.doi.org/}, the International DOI foundation (IDF) service redirects the request to the publisher's website to display the article the DOI refers to. The structure of a DOI is shown in Figure \ref{fig:DOI}.
+DOIs are computer-friendly labels for articles. DOIs are issued by a number of accredited bodies, with the majority issued by Crossref \cite{crossref-formation}. By pre-pending a DOI with the url stub \texttt{http://dx.doi.org/}, The IDF service redirects the request to the publisher's website to display the article the DOI refers to. The DOI structure is shown in Figure \ref{fig:DOI}.
 \begin{figure}[H]
     \centering
     \textbf{Anatomy of a DOI}\par\medskip
     \includegraphics[width=\textwidth]{Data_Acquisition/DOI2.png}
     \caption[Anatomy of a DOI]{DOI structure. The structure consists of a numeric prefix (X and Y must be integers) and alphanumeric suffix (Z can be any Unicode-encoded character)} \label{fig:DOI}
 \end{figure}
-DOIs consist of a prefix and a suffix. The prefix is subdivided into the ‘Directory Indicator’ (always integer ‘10’) separated from the ‘Registrant Code’, assigned by the issuing body \cite{doi_handbook1}. Registrant codes are numeric and can be a minimum of three integers, with further optional subdivisions separated by full stops. The suffix is provided by the registrant themselves and can be any form of unicode-encoded text \cite{doi_handbook1}.
+DOIs consist of a prefix and a suffix. The prefix is subdivided into the ‘Directory Indicator’ \footnote{The Directory indicator has always been integer ‘10’ for every DOI issued at time of writing.} separated from the ‘Registrant Code’, assigned by the issuing body \cite{doi_handbook1}. Registrant codes are a minimum of three integers, with further optional subdivisions separated by full stops. The suffix is provided by the registrant and can be any form of unicode-encoded text \cite{doi_handbook1}.
 
-
-It was possible to write a `Regular Expression' pattern matcher (regex) to automatically recognise DOIs within a body of text (see Figure \ref{fig:REGEX}). The flexibility of the registrant code specification means that DOIs cannot always be unambiguously identified in HTML documents. 
+It was possible to write a `Regular Expression' pattern (regex) to automatically recognise DOIs within a body of text (Figure \ref{fig:REGEX}). The flexibility of the registrant code specification means that DOIs cannot always be unambiguously identified in HTML. 
 \begin{figure}[H]
     \centering
     \textbf{Pattern Matching Procedure for DOIs}\par\medskip
     \includegraphics[width=\textwidth]{Data_Acquisition/Regex.pdf}
     \caption[Pattern Matching Procdure for DOIs]{Perl Syntax Regex Code that can identify the vast majority of DOIs within free text)} \label{fig:REGEX}
 \end{figure}
-Despite this, the regex was able to identify 90.4\% of the dois on the Cambridge University Chemistry Department website \url{http://www.ch.cam.ac.uk/publications}. 
+The regex was able to identify 90.4\% of the DOIs on \url{http://www.ch.cam.ac.uk/publications}. 
 \subsection{Scraping Program}
 \label{sec:SCRAPING_PROGRAM}
-The Regex approach does not require XPaths in order to extract DOIs from a webpage. This facilitates large scale scraping from a large set of websites. Some meta-data associated with a DOI can be accessed using an online API exposed by Crossref. Further metadata can be accessed by following the \texttt{http://dx.doi.org/\{DOI\}} redirecting service by DOI$^{\circledR}$.org. to visit publishers' websites to collect remaining meta-data. 
+The regex approach does not require XPaths in order to extract DOIs from a webpage. This facilitates large-scale scraping from many websites. Some meta-data\footnote{See Glossary for project-specific definition of meta-data} associated with a DOI can be accessed using an online API exposed by Crossref. The remaining meta-data can be accessed by following the \texttt{http://dx.doi.org/\{DOI\}} link to visit publishers' webpages.
 
-With this methodology in place, a scraping program was written to collect DOIs from a list of webpages and collect meta-data in a two stage process. The Crossref API provides article titles, journals, authors, publisher and publication date meta-data, but not article abstracts. These had to be collected by visiting publisher webpages, and collecting with hand written XPaths\footnote{Since there are comparatively few publisher websites, only 26 publisher XPaths were required for decent capture coverage.}. The procedure is summarised in figure \ref{fig:Cherry}.
+With this methodology in place, a scraping program was written to collect DOIs from a list of webpages, collecting meta-data in a two stage process. The Crossref API provides article titles, journals, authors, publisher and publication date meta-data, but not article abstracts. These had to be collected by visiting publisher webpages, and collecting with hand written XPaths\footnote{Since there are comparatively few publisher websites, only 26 publisher XPaths were required for respectable capture coverage.}. The procedure is summarised in figure \ref{fig:Cherry}.
 \begin{figure}[H]
     \centering
     \textbf{Scraping Procedure}\par\medskip
@@ -84,11 +83,11 @@ The programmatic steps depicted in figure \ref{fig:Cherry} are:
 \item \texttt{Use XPath to collect article abstracts}
 \end{enumerate}
 \end{sloppypar}
-The program exports complete records as .json files, but also feeds directly to a MongoDB database. Once the program was written, the next priority was to obtain a list of webpages to scrape. This is described in  \S\ref{sec:UKSCRAPE} and \S\ref{sec:CROSSREFSCRAPE} 
+The program exports complete records as .json files, but also feeds to a MongoDB database. Once the program was written, a list of webpages to scrape was required. \S\ref{sec:UKSCRAPE} and \S\ref{sec:CROSSREFSCRAPE} describe how this was achieved.
 \section{Collection Results}
 \subsection{UK University Department scraping}
 \label{sec:UKSCRAPE}
-The program was first used to collect the data from the UK. The Goodman group's website hosts a list of UK chemistry departments \url{http://www-jmg.ch.cam.ac.uk/data/c2k/uk.html}. The list was manually checked and some URLs were changed to give a list of 68 departments\footnote{Details can be found in the appendix}. The program was run with this list as input, the results of which are detailed in table \ref{tab:UKSCRAPERES}. The DOIs collected were stored in database $\Delta1$ and the complete results were stored in database $\Delta2$.
+The program was first used to collect the data from the UK. The Goodman group's website hosts a list of UK chemistry departments \url{http://www-jmg.ch.cam.ac.uk/data/c2k/uk.html}. The list was manually checked and edited to give a list of 68 departments\footnote{Details can be found in the appendix, \S\ref{sec:data_acc_appendix}}. The program was run using this list, the results of which are detailed in table \ref{tab:UKSCRAPERES}. The DOIs collected were stored in database $\Delta1$ and the complete results were stored in database $\Delta2$.
 \begin{table}[h!]
 \caption{UK Scraping results}
 \label{tab:UKSCRAPERES}
@@ -107,7 +106,7 @@ Missing Publication Errors & 3148 & 14.0\% \\
 \end{tabular}
 \end{center}
 \end{table}
-Conversion losses were due to four components. 45 losses for non-existant DOIs, 2753 losses to request errors (404 : not-found errors or permission problems), 133 to the program errors and 3148 conversions were lost due missing publication XPaths. The 26 specified XPaths \footnote{Corresponding to 37 publishers} were sufficient to convert 83.8\% of successful requests. This was deemed acceptable, as most major publishers had been covered\footnote{see appendix for list of covered publishers}, and the missing publishers each covered a small number of articles\footnote{It would take another 11 XPaths of the missing most popular publishers to increase the conversion rate from 83.8\% to 90\%.}
+Conversion losses were due to four components. 45 losses for non-existant DOIs, 2753 to request errors (404 : not-found errors or permission problems), 133 to the program errors and 3148 to missing publication XPaths. The 26 specified XPaths \footnote{Corresponding to 37 publishers} were sufficient to convert 83.8\% of successful requests. This was deemed acceptable, as most major publishers had been covered\footnote{see appendix for list of covered publishers, \S\ref{sec:data_acc_appendix}}, and the missing publishers each covered a small number of articles\footnote{It would take another 11 XPaths of the missing most popular publishers to increase the conversion rate from 83.8\% to 90\%.}
 The efficiency is depicted in figure \ref{fig:UKSANK}.
 
 \begin{figure}[H]
@@ -118,23 +117,21 @@ The efficiency is depicted in figure \ref{fig:UKSANK}.
      \label{fig:UKSANK}
 \end{figure}
 
-Interestingly, 9467 out of 16363 successful collections were sourced from \url{http://www.ch.cam.ac.uk}. This could be because the department at Cambridge has an extensive website and also hosts the majority of its information under its own domain name, whereas other departments' data are hosted on central university domains. The scraping program was confined to scrape only webpages belonging directly to chemistry department domains, not the university website as a whole. As a result, it is worth bearing in mind that the Cambridge chemistry department may be overrepresented in the UK chemistry data set.
+Interestingly, 9467 out of 16363 successful collections were sourced from \url{http://www.ch.cam.ac.uk}. This could be because the department at Cambridge has an extensive website and  hosts the majority of its information under its own domain name, whereas other departments' data are hosted on central university domains. The program was instructed to only scrape webpages belonging to chemistry department domains, not university websites as a whole. It is noted that the Cambridge chemistry department may be overrepresented in $\Delta2$.
 
 \subsection{Global Scale Scraping}
 \label{sec:CROSSREFSCRAPE}
-Much more data would be required to train a successful machine learning model. One approach would have been to expand the scrape to world-wide chemistry departments, and other learn\`{e}d bodies. However, Crossref also exposes a search service that can be used to query its vast internal database. The program was then set up to query the Crossref service for search terms `Chemistry', `Chemical', `Molecule' and `Molecular' for journal articles and journal titles. This suggested possible yields in the millions of articles. 
+Much more data would be required to train a successful machine learning model. One approach would have been to expand to world-wide chemistry departments and other learn\`{e}d bodies. However, Crossref also exposes a search service that can be used to query its vast internal database. The program was set up to query the Crossref service for search terms `Chemistry', `Chemical', `Molecule' and `Molecular' for journal articles and journal titles. This suggested possible yields in the millions of articles. 
 
-The program was instructed to scrape the search results pages of these queries. Because the scraping job was large, it was programmed to `pause' before publisher abstract collection. The results up to this point were examined before setting off the second stage to collect abstracts.
+The program was instructed to scrape the search-result pages of these queries. Because the scraping job was large, it was programmed to `pause' before publisher abstract collection. The results up to this point were examined before setting off the second stage to collect abstracts.
 
-At the intermediate point, the program had collected 1,267,495 records, which would provide enough data to train a powerful machine learning algorithm. This database was labelled $\Delta3$.
-
-The publisher distributions were then considered\footnote{Some of this analysis is presented in \S\ref{sec:SCRAPEANALYSIS}.}. After careful considerations of request server loads and predicting capture probabilities, the second half of the scraping routine was set off to run for three days.
+At the intermediate point, the program had collected 1,267,495 records. This database was labelled $\Delta3$. Publisher distributions and potential server loads were then carefully considered and capture probabilities were predicted before\footnote{Some of this analysis is presented in \S\ref{sec:SCRAPEANALYSIS}.} the second half of the scraping routine was set off to run for three days.
 \label{sec:CROSSREFSCRAPE}
 \subsection{Problems with ACS and Taylor \& Francis}
 \label{sec:banning1}
-Most publishers track request volumes sent to their servers to discourage automatic downloading. However, scraping constitutes fair use and complies to UK copyright law. Despite the university owning a full-access licence to these publishers' publications, the collected material was freely available without licence\cite{thelaw} \cite{contentminelegal}. During the scraping run, a bug in the randomisation of requests resulted in detection by ACS and Taylor \& Francis, which responded by banning the scraping computer's IP address (Explored further in \S\ref{sec:banning2}). The department librarians were able to restore access, and it was agreed that no further scraping would be performed.
+Most publishers track request volumes sent to their servers to discourage automatic downloading. Scraping constitutes fair use and complies to UK copyright law. Despite the university owning a full-access licence to these publishers' publications, the collected material was freely available without licence\cite{thelaw} \cite{contentminelegal}. During the scraping run, a bug in the randomisation of requests resulted in detection by ACS and Taylor \& Francis, which responded by banning the computer's IP address \footnote{Explored in \S\ref{sec:banning2}}. The department librarians were able to restore access, and it was agreed that no further scraping would be performed.
 \subsection{Analysis of collected data}
-The yield of the global-scale scraping run was cut significantly by the ACS banning event. A summary is tabulated in table \ref{tab:LARGESCRAPERES} and shown graphically in figure \ref{fig:LARGESANK}. The complete records were stored in a database $\Delta4$.
+The yield of the global-scale scraping run was cut significantly by the ACS banning. A summary is tabulated in table \ref{tab:LARGESCRAPERES} and shown graphically in figure \ref{fig:LARGESANK}. The complete records were stored in database $\Delta4$.
 \begin{table}[h!]
 \caption{Global Scraping Results}
 \label{tab:LARGESCRAPERES}
@@ -166,9 +163,9 @@ Missing Publications \& Program Errors & 195989 & 15.5\%\\
      \label{fig:LARGESANK}
 \end{figure}
 
-The overall efficiency of the process is 56.4\%, but excluding lost ACS records, the program's efficiency jumped to 74.0\%, similar to the efficiency of the UK scraping run (\S\ref{sec:UKSCRAPE}). \footnote{Also note that 100\% of DOIs were converted to DOIs with meta-data. This is because the format of the webpages scraped was consistent for every DOI collected.}
+The overall efficiency of the process is 56.4\%, but excluding lost ACS records, the program's efficiency was 74.0\%, similar to the efficiency of the UK scrape (\S\ref{sec:UKSCRAPE}). \footnote{Also note that 100\% of DOIs were converted to DOIs with meta-data. This was because the format of the webpages scraped was consistent for every DOI collected.}
 
-The successfully captured 714,370 records merged with the UK results\footnote{The merged Dataset was labelled $\Delta5$}. Records were rejected with short titles or abstracts, or if the majority of the title and abstract were not written in ascii characters\footnote{likely to be addenda, informal articles, retractions etc, and removing removing majority Japanese and Chinese script}. This was done to provide higher-quality data for training the algorithm (see \S\ref{chapt:ALGORITHM}). This filtering resulted in a final training database of 464712 articles. This dataset was labelled $\Delta6$. The entire database formation process is shown in figure \ref{fig:DATABASES} and table \ref{tab:DATABASES}.
+The successful 714,370 records were merged with the UK results\footnote{The merged Dataset was labelled $\Delta5$}. Records were rejected with short titles or abstracts, or if the majority of the title and abstract were not written in ascii characters\footnote{likely to be addenda, informal articles, retractions etc, and removing removing majority Japanese and Chinese script}. This was done to provide higher-quality data for algorithm training (see \S\ref{chapt:ALGORITHM}). This filtering resulted in a final training database of 464712 articles. This dataset was labelled $\Delta6$. The database formation process is summarised in figure \ref{fig:DATABASES} and table \ref{tab:DATABASES}.
 \begin{figure}[H]
     \centering
     \textbf{Summary of Database Preparation}\par\medskip
@@ -190,6 +187,5 @@ $\Delta5$ & Complete records obtained from combining $\Delta2$ and $\Delta4$ & 7
 $\Delta6$ & Records appropriate for training taken from $\Delta5$ & 464,712 \\
 \end{tabular}
 \end{table}
-
 
 It was instructive to examine these databases and derive some simple statistical results, explored in \S\ref{sec:CORPUSOBSERVATIONS}.
