@@ -1,6 +1,6 @@
 \chapter{Analysis with Sample Dataset}
 \label{chapt:ANALYSIS}
-Having developed a framework to examine the models, attention was turned to some analyses that could be carried out within the time frame and scope of the project\footnote{Please refer to  \S\ref{chapt:RECOMMENDATIONS} for recommendations for further work}. With this in mind, it was decided to focus analysis on a smaller subset of $\Delta6$, documents from the University of Cambridge Chemistry Department. This dataset was labelled $\Delta7$.
+Having developed a framework to examine the models, attention was turned to some analyses that could be carried out within the time frame and scope of the project\footnote{Please refer to  \S\ref{chapt:RECOMMENDATIONS} for recommendations for further work.}. With this in mind, it was decided to focus analysis on a smaller subset of $\Delta6$, documents from the University of Cambridge Chemistry Department. This dataset was labelled $\Delta7$.
 \section{Cambridge Chemistry research clusters}
 \label{sec:RESEARCHCLUSTERS}
 $\Delta7$ contained 9467 documents. The cosine matrix was calculated and a network was constructed from the matrix. \emph{Communities} within the network (clusters of strongly-connected nodes) were identified by applying a modularity algorithm\cite{modularity1}\cite{modularity2}. The result is shown in figure \ref{fig:CAMCOMMUNITIES}.
@@ -14,7 +14,7 @@ $\Delta7$ contained 9467 documents. The cosine matrix was calculated and a netwo
 
 \end{figure} 
 \end{center}
-It was apparent that $\Delta7$ contained clear communities. This corresponds to different fields of research within the department. Some communities were small, but some most large (green, orange, etc...). The algorithm was then re-applied only to the `green' community, which revealed subcommunities. A program was then written to recursively find subcommunities in $\Delta7$. This resulted in $\Delta7$ being divided into 300 communities of comparable size. The smallest communities were singleton documents, the largest was 434 documents, and the mean population was 34.5. The community-finding subdivision process is shown in figure \ref{fig:COMMTREE}
+It was apparent that $\Delta7$ contained clear communities. This corresponds to different fields of research within the department. Some communities were small, but most large (green, orange, etc...). The algorithm was then re-applied only to the `green' community, which revealed subcommunities. A program was then written to recursively find subcommunities in $\Delta7$. This resulted in $\Delta7$ being divided into 300 communities of comparable size. The smallest communities were singleton documents, the largest was 434 documents, and the mean population was 34.5. The community-finding subdivision process is shown in figure \ref{fig:COMMTREE}
 \begin{center}
 \begin{figure}[H]
   \centering
@@ -50,10 +50,10 @@ Community members                & (Some omitted for brevity)                   
 \end{tabular}
 \end{table}
 
-Table \ref{tab:com275} shows that this particular research community refers mainly to toxicology studies of neonicotinoids,  bees and flowers\footnote{Note only some members of the community are shown above. Care was taken to give a representative sample of all 15 articles. The rest refer to Neonicotinoid insecticide studies with honey bees, and honey bee affinity to corn and pollen}. The connections mostly make sense. Note the surprising inclusion of the cosmetics and silicate studies. Upon investigation, both studies used very similar analytical techniques used elsewhere in the community, and both examined intercalation\footnote{Some further discussion of community 275 can be found in \S\ref{sec:neonicotinoids}}.
+Table \ref{tab:com275} shows that this particular research community refers mainly to toxicology studies of neonicotinoids,  bees and flowers\footnote{Note only some members of the community are shown above. Care was taken to give a representative sample of all 15 articles. The rest refer to Neonicotinoid insecticide studies with honey bees, and honey bee affinity to corn and pollen.}. The connections mostly make sense. Note the surprising inclusion of the cosmetics and silicate studies. Upon investigation, both studies used very similar analytical techniques used elsewhere in the community, and both examined intercalation\footnote{Some further discussion of community 275 can be found in \S\ref{sec:neonicotinoids}}.
 \footnote{Both used made use of powder X-ray diffraction, and the silicates paper used thermogravimetry, the cosmetics study uses FID and several types of liquid chromatography, all methods used in the bee/neonicotinoid studies.}
 
-Note also that the mean vector for the community was closest to a paper in $\Delta6$ that summarised the community extremely well\footnote{The paper happened to be in the community itself, but was not restricted to be so}. This paper could be considered as a \emph{Summary paper.}
+Note also that the mean vector for the community was closest to a paper in $\Delta6$ that summarised the community extremely well\footnote{The summary paper happened to be in the community itself, but was taken from a free choice of $\Delta6$ }. This paper could be considered as a \emph{Summary paper.}
 The uses of this kind of analysis include:
 \begin{itemize}
 \item Analysis of literature field -  trees such as figure \ref{fig:COMMTREE} can give an understanding of how facets of a field link up. 
@@ -69,12 +69,12 @@ It is not only articles themselves that can be grouped and analysed. Articles ca
 A cosine matrix was created for each pair of authors A and B, authoring $\alpha$ and $\beta$ documents respectively, $\mathbf{C^{\left( A \right ) , \left( B \right)}}$ (see \S\ref{sec:COSINEMAT}). The similarity between the author pair was defined as 
 $$S_{A , B} = \sum_{i}^{\alpha} \sum_{j}^{\beta} C^{\left( A \right) , \left( B \right) }_{ i , j }$$
 An \emph{author similarity matrix} can then be built up, $\mathbf{M}^{Auth. Sim.}$, with elements $\mathbf{M}^{Auth. Sim.}_{ A , B }=S_{ A , B }$.
-A similar technique to that described in  \S\ref{sec:RESEARCHCLUSTERS} could have been used to create clusters of authors. Since the sample size was now much smaller (47 authors compared to 9467 papers) a more appropriate technique, Dedicated Hierarchical Clustering, specifically UPGMA was applied \cite{heatmapcluster} \footnote{See glossary}. This method clusters the authors pairwise in a hierarchical fashion.  An effective visualisation of the similarities between staff was to plot a \emph{clustermap} \cite{seaborn} \cite{scipy}.
+A similar technique to that described in  \S\ref{sec:RESEARCHCLUSTERS} could have been used to create clusters of authors. Since the sample size was now much smaller (47 authors compared to 9467 papers) a more appropriate technique, Dedicated Hierarchical Clustering, specifically UPGMA was applied\cite{heatmapcluster}\footnote{See glossary}. This method clusters the authors pairwise in a hierarchical fashion.  An effective visualisation of the similarities between staff was to plot a \emph{clustermap},\cite{seaborn},\cite{scipy}.
 \begin{center}
 \begin{figure}[H]
   \centering
   \textbf{Cambridge Author Similarity Clustermap}
-    \makebox[\textwidth][c]{\includegraphics[width=1.2\textwidth]{Analysis/authorsims.png}}
+    \makebox[\textwidth][c]{\includegraphics[width=\textwidth]{Analysis/authorsims.png}}
     \caption[Cambrdige Author Similarity Clustermap]{This figure shows a heatmap of author similarity. Dark pixels correspond to the author in the pixel's row having similar research interests to the author in the pixel's column. The authors are labelled by crsid. The matrix has been scaled to the range ($0 \rightarrow 1$).  The authors are arranged by clusters found in UPGMA. The hierarchical clustering structure is demonstrated by the dendrogram tree connecting author pairs together.}
     \label{fig:AUTHORSIMS}
 
@@ -86,10 +86,9 @@ Figure \ref{fig:AUTHORSIMS} shows the result of generating $\textbf{M}^{Auth. Si
   \centering
   \textbf{Cambridge Author Similarity Dendrogram}
     \includegraphics[width=\textwidth]{Analysis/dendro.png}
-    \caption[Cambridge Author Similarity Dendrogram]{The dendrogram of figure \ref{fig:AUTHORSIMS}} plotted for clarity
+    \caption[Cambridge Author Similarity Dendrogram]{The dendrogram of figure \ref{fig:AUTHORSIMS} plotted for clarity}
 \end{figure} 
 \label{fig:DENDRO}
-
 \end{center}
 A striking feature of figure \ref{fig:AUTHORSIMS} is the cluster in the bottom-right corner. The dendrogram shows the members of this cluster occupy a separate branch of research space than the rest of the department. The staff members involved\footnote{Professors Jones and Pyle, Drs. Harris, Archibald and Kalberer} are all members of the Centre for Atmospheric Science. The unsupervised model thus successfully `predicted' their department, and indicated that their work is separate from most of the Chemistry Department. This is a real success for the model. The dendrogram was then further examined and broken into distinct branches. Each branch was examined and manually labelled (see figure \ref{fig:LABELLEDDENDRO}). Most clusters make intuitive sense, but there is a core of well-connected, more disparate members (wj10 to jrn34). These members could be interpreted as forming an interdisciplinary cluster.  
 \begin{center}
@@ -119,11 +118,10 @@ It was noted that there was significant variation in the number of communities t
     \includegraphics[width=\textwidth]{Analysis/Community_detection_with_ordering.png}
     \caption[Author community Spread]{Number of research communities authors are associated with. High values (towards red) indicate an author publishing across many communities and suggest more interdisciplinary work, but also higher publication count per author. The authors are ordered by publication count (highest at top). As expected, there is a correlation between publication count and number of communities an author appears in. The blue dotted line-of-best-fit divided the authors into those that publish more widely given their publication count (bar to the right of the line) form those who publish more narrowly for their publication count (bar to the left of the line)}
 \label{fig:commbar}
-
 \end{figure} 
 \end{center}
 It can be seen that some authors were widely distributed between communities, whereas others were concentrated.
-It was noted that communities were not uniformly distributed. For example, there were many communities in `Life Sciences' but few in Atmospheric Chemistry, as such, interpretation of high values in Figure \ref{fig:commbar} directly corresponding to wide research interests should be tentative\footnote{It should also be noted that this method (shown in figure \ref{fig:commbar}) treats strong connects equally to weak connections, i.e. 100 papers published in one community is just as strong a connection to a single paper published in a community}.
+It was noted that communities were not uniformly distributed. For example, there were many communities in `Life Sciences' but few in Atmospheric Chemistry, as such, interpretation of high values in figure \ref{fig:commbar} directly corresponding to wide research interests should be tentative\footnote{It should also be noted that this method (shown in figure \ref{fig:commbar}) treats strong connects equally to weak connections, i.e. 100 papers published in one community is just as strong a connection to a single paper published in a community}.
 
 An association metric $S_{coincidence}$ between authors $\mathfrak{A}$ and $\mathfrak{B}$ was then defined as $$S_{coincidence}\left( \mathfrak{A} , \mathfrak{B} \right) = \sum_c^C \left(f_{assoc} \left( \mathfrak{C}_c , \mathfrak{A} \right)\times f_{assoc}\left( \mathfrak{C}_c , \mathfrak{B} \right) \right) $$
 Where $C$ is the total number of communities. An author association matrix was created, $\mathbf{M}^{Auth. Coinc.}_{\mathfrak{A} , \mathfrak{B}} = S_{coincidence}\left( \mathfrak{A} , \mathfrak{B} \right)$, where high values for author pair $\mathfrak{A} , \mathfrak{B}$ indicate they appear in many research communities together. The matrix was then scaled such that: $\mathbf{M}^{Auth. Coinc.scaled}_{\mathfrak{A} , \mathfrak{B}} =  \mathbf{M}^{Auth. Coinc}_{\mathfrak{A} , \mathfrak{B}} /  \left( \mathbf{M}^{Auth. Coinc}_{\mathfrak{A} , \mathfrak{A}} + \mathbf{M}^{Auth. Coinc}_{\mathfrak{B} , \mathfrak{B}} \right) $, and normalised from $0 \rightarrow 1$. This was a measure of how often authors published in the same communities. The matrix is shown below:
@@ -138,7 +136,7 @@ Where $C$ is the total number of communities. An author association matrix was c
 \end{center}
 Figure \ref{fig:commHEATMAP} displays where authors have similar research community occupations. High values should indicate that authors should ideally collaborate/communicate because they publish in the same research communities. Note also the square patterns of high values close to the diagonal of the map reproduce the clustering in figure \ref{fig:AUTHORSIMS}, lending weight to the validity of both analyses.\footnote{This is because the heatmap has been arranged according to the clustering found in \S\ref{sec:AUTHORCLUSTERS}, but the matrix in figure \ref{fig:commHEATMAP} is derived with a completely different method (without applying any clustering algorithm to authors). As clustering is qualitatively visible in figure \ref{fig:commHEATMAP}, there is a correlation between the two methods, i.e. they are consistent}.
 
-Having defined a framework for finding shared research interests, the next step was to find where authors were \emph{actually} collaborating. It was possible to identify approximately 700 documents in $\Delta7$ that were co-authored by staff members. A heatmap for co-authorship between authors is shown below, $M^{Raw\ Collab.}$\footnote{Elements of $M^{Raw\ Collab.}_i.j$ are set to the number of times the authors have co-authored}, as well as a metric equivalent to the $\mathbf{M}^{Auth. Coinc.scaled}$ with elements as the sum of the number of communities in which both staff members have co-authored, $M^{Community\ Collab.}$.
+Having defined a framework for finding shared research interests, the next step was to find where authors were \emph{actually} collaborating. It was possible to identify approximately 700 documents in $\Delta7$ that were co-authored by staff members. A heatmap for co-authorship between authors is shown below, $M^{Raw\ Collab.}$ \footnote{Elements of $M^{Raw\ Collab.}_{i , j}$ are set to the number of times the authors have co-authored}, as well as a metric equivalent to the $\mathbf{M}^{Auth. Coinc.scaled}$ with elements as the sum of the number of communities in which both staff members have co-authored, $M^{Community\ Collab.}$.
 \begin{figure}[H]
   \centering
   \textbf{Author Collaboration Heatmap, $M^{Raw\ Collab.}$}
@@ -153,9 +151,11 @@ Having defined a framework for finding shared research interests, the next step 
     \caption[Community-summed Author Collaboration Heatmap]{Matrix formed by summing collaboration of author pairs over research communities (values scaled to range $0 \rightarrow 1$). Qualitatively similar to figure \ref{fig:rawcollabs}. Hot spots near diagonal again suggest authors closely clustered in \S\ref{sec:AUTHORCLUSTERS} collaborate more frequently.}
       \label{fig:collcollabs}
 \end{figure}
-Both maps show similar qualitative pictures. Similar author pairs (close to diagonal) are more likely to collaborate. 
+Both maps show similar qualitative pictures: Similar author pairs (close to diagonal) are more likely to collaborate. 
 
-As a final data step, a matrix defined as the difference between an author similarity matrix e.g figures \ref{fig:AUTHORSIMS} ($M^{Auth. Sim}$), \ref{fig:commHEATMAP} ($M^{Auth. Coinc.}$) and an author collaboration matrix e.g. figures \ref{fig:rawcollabs} ($M^{Raw\ Collab.}$), \ref{fig:collcollabs}( $M^{Community\ Collab.}$) could be interpreted as a \emph{recommended collaboration matrix}, \footnote{i.e. where values close to 1 indicate high similarity but low evidence of collaboration, values close to 0 indicate effective collaboration and values close to -1 indicate high collaboration but low author similarity.} Author Pairs with values to 1 should be encouraged to consider working together. Matrix $M^{Recommend}$(=$M^{Auth. Coinc.}-M^{Raw Collab.}$) is one possible example, shown below:
+As a final data step, a matrix defined as the difference between an author similarity matrix e.g figures \ref{fig:AUTHORSIMS} ($M^{Auth. Sim}$), \ref{fig:commHEATMAP} ($M^{Auth. Coinc.}$) and an author collaboration matrix (e.g. figures \ref{fig:rawcollabs},$M^{Raw\ Collab.}$, \ref{fig:collcollabs},$M^{Community\ Collab.}$) could be interpreted as a \emph{recommended collaboration matrix}. \footnote{i.e. where values close to 1 indicate high similarity but low evidence of collaboration, values close to 0 indicate effective collaboration and values close to -1 indicate high collaboration but low author similarity.} 
+
+Author Pairs with values to 1 should be encouraged to consider working together. Matrix $M^{Recommend}$(=$M^{Auth. Coinc.}-M^{Raw Collab.}$) is one possible example, shown below:
 \begin{center}
 \begin{figure}[H]
   \centering
@@ -165,7 +165,7 @@ As a final data step, a matrix defined as the difference between an author simil
     \label{fig:RECOMM_MAT}
 \end{figure} 
 \end{center}
-This final piece of the analysis section illustrates how the framework developed over the research project reveals where it might be profitable for authors to collaborate. Table \ref{tab:topcollabs} shows the top 20 scores in $M^{Recommend}$, where there is stronger evidence to suggest these author pairs \emph{should} collaborate but little evidence was found that they \emph{are} collaborating\footnote{Please see \S\ref{sec:collabtable} for a brief exploration of the the table}.
+This final piece of the analysis section illustrates how the framework developed over the research project reveals where it might be profitable for authors to collaborate. Table \ref{tab:topcollabs} shows the top 20 scores in $M^{Recommend}$, where there is stronger evidence to suggest these author pairs \emph{should} collaborate but little evidence was found that they \emph{are} collaborating\footnote{Please see \S\ref{sec:collabtable} for a brief exploration of the table}.
 \begin{table}[H]
 \centering
 \caption{Community 275}
@@ -208,5 +208,5 @@ The matrix row of $M^{Recommend}$ for a particular staff member (Professor Goodm
     \label{fig:RECOMM_BAR}
 \end{figure} 
 \end{center}
-The aim is that these maps and plots may trigger constructive debate, and promote effective collaboration in the department. \footnote{The analyses presented in this section are not exhaustive, and there is potential for more fruitful insights to be found. Please see \S\ref{chapt:RECOMMENDATIONS}} It should also be noted that the evidence for collaboration is from quite a small sample, and the collaboration metric could be improved by considering other factors than just co-authorship \footnote{Please see appendix \S\ref{sec:collabtable} for further exploration of collaboration metrics}.
+The aim is that these maps and plots may trigger constructive debate, and promote effective collaboration in the department\footnote{The analyses presented in this section are not exhaustive, and there is potential for more fruitful insights to be found. Please see \S\ref{chapt:RECOMMENDATIONS}}. It should also be noted that the evidence for collaboration is from quite a small sample, and the collaboration metric could be improved by considering other factors than just co-authorship\footnote{Please see appendix \S\ref{sec:collabtable} for further exploration of collaboration metrics}.
 

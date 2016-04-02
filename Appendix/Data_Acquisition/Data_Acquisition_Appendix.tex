@@ -10,7 +10,7 @@ The ACS banning occurred because of a bug in the randomisation of requests. The 
 \begin{figure}[H]
     \centering
     \textbf{ACS BANNING}\par\medskip
-    \includegraphics[width=\textwidth]{Data_Acquisition/ACS_crash_line.png}
+    \includegraphics[width=0.9\textwidth]{Data_Acquisition/ACS_crash_line.png}
     \caption[Request Frequency Leading to ACS Ban]{The request frequency is plotted in blue, the received pages frequency in red. The vertical dashed line shows where the server detected the scape and banned the IP.}
      \label{fig:ACSBAN}
 \end{figure}
@@ -43,7 +43,7 @@ The corpus of combined titles and abstracts in $\Delta6$ was then examined. An u
 \begin{figure}[H]
     \centering
     \textbf{Approximate Zipfian Distribution of Collected Corpus}\par\medskip
-    \includegraphics[scale=0.6]{Data_Acquisition/zipf.png}
+    \includegraphics[scale=0.5]{Data_Acquisition/zipf.png}
     \caption[Zipfian Plot of Collected Corpus]{The log Frequency of words vs the log of their position in the rank in the word frequency table in blue. Best fit line in red, gradient = -1.11, intercept 6.3. }
      \label{fig:ZIPF}
 \end{figure}
@@ -73,7 +73,7 @@ Note that the mean scores are slightly higher for the UK, suggesting UK universi
  \begin{figure}[H]
     \centering
     \textbf{Distribution of Abstract lengths in $\Delta2$ (articles from UK scrape)}\par\medskip
-    \includegraphics[width=0.7\textwidth]{Appendix/Data_Acquisition/abstracts.png}
+    \includegraphics[width=0.8\textwidth]{Appendix/Data_Acquisition/abstracts.png}
     \caption[Distribution of Abstract lengths in $\Delta2$ (Articles from UK)]{Skewed distribution for number of words in abstracts. The mode is marked in red, the mean in green.}
      \label{fig:abstract_sens}
 \end{figure}
@@ -86,39 +86,44 @@ University Chemistry departments with suitable websites were considered when bui
 \begin{table}[H]
 \caption{UK Chemistry Departments considered in Scraping}
 \label{tab:uk_scrape_depts}
-\begin{tabular}{||p{2.5cm}|Y||}
+\begin{tabular}{||p{3.5cm}|W||}
 \hline
  Department                         & URL \\
 \hline
- \footnotesize{Aberdeen                       }    & \footnotesize{\url{http://www.abdn.ac.uk/chemistry/}}                                                                                                     \\
- \footnotesize{Aston                         }     & \footnotesize{\url{http://www.aston.ac.uk/eas/about-eas/academic-groups/ceac/}}                                                                           \\
- \footnotesize{Bangor                       }      & \footnotesize{\url{http://www.bangor.ac.uk/chemistry/index.php}}                                                                                          \\
- \footnotesize{Bath                        }       & \footnotesize{\url{http://www.bath.ac.uk/chemistry/}}                                                                                                     \\
- \footnotesize{Belfast (Queen's)          }        & \footnotesize{\url{http://www.qub.ac.uk/schools/SchoolofChemistryandChemicalEngineering/}}                                                                \\
-\footnotesize{Birmingham                }         & \footnotesize{\url{http://www.birmingham.ac.uk/schools/chemistry/index.aspx}}                                                                             \\
-\footnotesize{Bradford                 }          & \footnotesize{\url{http://www.brad.ac.uk/acad/chemistry/}                                                                                               } \\
- \footnotesize{Brighton                }           & \footnotesize{\url{http://about.brighton.ac.uk/pharmacy/}}                                                                                                \\
- \footnotesize{Bristol                }            & \footnotesize{\url{http://www.bris.ac.uk/Depts/Chemistry/Bristol\_Chemistry.html}}                                                                         \\
- \footnotesize{Cambridge             }             & \footnotesize{\url{http://www.ch.cam.ac.uk/}}                                                                                                             \\
- \footnotesize{Cardiff              }              & \footnotesize{\url{http://www.cardiff.ac.uk/chemistry}}                                                                                                   \\
- \footnotesize{Dundee              }               & \footnotesize{\url{http://www.lifesci.dundee.ac.uk}}                                                                                                      \\
- \footnotesize{Durham             }                & \footnotesize{\url{http://www.dur.ac.uk/chemistry/}}                                                                                                      \\
- \footnotesize{Edinburgh         }                 & \footnotesize{\url{http://www.chem.ed.ac.uk/}}                                                                                                            \\
- \footnotesize{Essex            }                  & \footnotesize{\url{http://www.essex.ac.uk/bs/}                                                                                                          } \\
- \footnotesize{Glasgow         }                   & \footnotesize{\url{http://www.chem.gla.ac.uk/}}                                                                                                           \\
- \footnotesize{Greenwich      }                    & \footnotesize{\url{http://www.gre.ac.uk/engsci/study/pharchemenv}}                                                                                        \\
- \footnotesize{Heriot-Watt   }                     & \footnotesize{\url{http://www.eps.hw.ac.uk/institutes/chemical-sciences.htm}}                                                                             \\
- \footnotesize{Hertfordshire}                      & \footnotesize{\url{http://www.herts.ac.uk/research/hhsri/research-areas-hhsri/pharmacy-and-pharmacology/pharmaceutical-chemistry}}                        \\
- \footnotesize{Huddersfield}                       & \footnotesize{\url{http://www.hud.ac.uk/sas/chemistry/}}                                                                                                  \\
- \footnotesize{Hull       }                        & \footnotesize{\url{http://www2.hull.ac.uk/science/chemistry.aspx}}                                                                                        \\
- \footnotesize{Keele     }                         & \footnotesize{\url{http://www.keele.ac.uk/chemistry/}}                                                                                                    \\
- \footnotesize{Kent at Canterbury}                 & \footnotesize{\url{http://www.kent.ac.uk/bio/}}                                                                                                           \\
- \footnotesize{Kingston     }                      & \footnotesize{\url{http://sec.kingston.ac.uk/research/research-centres/}}                    
+ \footnotesize{Aberdeen                       }    & \footnotesize{\url{www.abdn.ac.uk/chemistry/}}                                                                                                     \\
+ \footnotesize{Aston                         }     & \footnotesize{\url{www.aston.ac.uk/eas/about-eas/academic-groups/ceac/}}                                                                           \\
+ \footnotesize{Bangor                       }      & \footnotesize{\url{www.bangor.ac.uk/chemistry/index.php}}                                                                                          \\
+ \footnotesize{Bath                        }       & \footnotesize{\url{www.bath.ac.uk/chemistry/}}                                                                                                     \\
+ \footnotesize{Belfast (Queen's)          }        & \footnotesize{\url{www.qub.ac.uk/schools/SchoolofChemistryandChemicalEngineering/}}                                                                \\
+\footnotesize{Birmingham                }         & \footnotesize{\url{www.birmingham.ac.uk/schools/chemistry/index.aspx}}                                                                             \\
+\footnotesize{Bradford                 }          & \footnotesize{\url{www.brad.ac.uk/acad/chemistry/}                                                                                               } \\
+ \footnotesize{Brighton                }           & \footnotesize{\url{about.brighton.ac.uk/pharmacy/}}                                                                                                \\
+ \footnotesize{Bristol                }            & \footnotesize{\url{www.bris.ac.uk/Depts/Chemistry/Bristol\_Chemistry.html}}                                                                         \\
+ \footnotesize{Cambridge             }             & \footnotesize{\url{www.ch.cam.ac.uk/}}                                                                                                             \\
+ \footnotesize{Cardiff              }              & \footnotesize{\url{www.cardiff.ac.uk/chemistry}}                                                                                                   \\
+ \footnotesize{Dundee              }               & \footnotesize{\url{www.lifesci.dundee.ac.uk}}                                                                                                      \\
+ \footnotesize{Durham             }                & \footnotesize{\url{www.dur.ac.uk/chemistry/}}                                                                                                      \\
+ \footnotesize{Edinburgh         }                 & \footnotesize{\url{www.chem.ed.ac.uk/}}                                                                                                            \\
+ \footnotesize{Essex            }                  & \footnotesize{\url{www.essex.ac.uk/bs/}                                                                                                          } \\
+ \footnotesize{Glasgow         }                   & \footnotesize{\url{www.chem.gla.ac.uk/}}                                                                                                           \\
+ \footnotesize{Greenwich      }                    & \footnotesize{\url{www.gre.ac.uk/engsci/study/pharchemenv}}                                                                                        \\
+ \footnotesize{Heriot-Watt   }                     & \footnotesize{\url{www.eps.hw.ac.uk/institutes/chemical-sciences.htm}}                                                                             \\
+ \footnotesize{Hertfordshire}                      & \footnotesize{\url{www.herts.ac.uk/research/hhsri/research-areas-hhsri/pharmacy-and-pharmacology/pharmaceutical-chemistry}}                        \\
+ \footnotesize{Huddersfield}                       & \footnotesize{\url{www.hud.ac.uk/sas/chemistry/}}                                                                                                  \\
+ \footnotesize{Hull       }                        & \footnotesize{\url{www2.hull.ac.uk/science/chemistry.aspx}}                                                                                        \\
+ \footnotesize{Keele     }                         & \footnotesize{\url{www.keele.ac.uk/chemistry/}}                                                                                                    \\
+ \footnotesize{Kent Canterbury}                 & \footnotesize{\url{www.kent.ac.uk/bio/}}                                                                                                           \\
+ \footnotesize{Kingston     }                      & \footnotesize{\url{sec.kingston.ac.uk/research/research-centres/}}                    
  \\
- \footnotesize{Lancaster   }                       & \footnotesize{\url{http://www.lancaster.ac.uk/chemistry/}}                                                                                                \\
-\footnotesize{Leeds      }                        & \footnotesize{\url{http://www.chem.leeds.ac.uk/}}                                                                                                         \\
- \footnotesize{Leicester }                         & \footnotesize{\url{http://www.le.ac.uk/chemistry/}}                                                                                                                                                               
+ \footnotesize{Lancaster   }                       & \footnotesize{\url{www.lancaster.ac.uk/chemistry/}}                                                                                                \\
+\footnotesize{Leeds      }                        & \footnotesize{\url{www.chem.leeds.ac.uk/}}                                                                                                         \\
+ \footnotesize{Leicester }                         & \footnotesize{\url{www.le.ac.uk/chemistry/}}                                                                                                                                                               
 \\
+\footnotesize{Lincoln                        }    & \footnotesize{\url{https://www.lincoln.ac.uk/home/chemistry/}}                                                                                            \\
+ \footnotesize{Liverpool                     }     & \footnotesize{\url{www.liv.ac.uk/chemistry/}}                                                                                                      \\
+ \footnotesize{Liverpool John Moores        }      & \footnotesize{\url{https://www.ljmu.ac.uk/about-us/faculties/faculty-of-science/school-of-pharmacy-and-biomolecular-sciences}}                            \\
+ \footnotesize{London Met.         }       & \footnotesize{\url{www.londonmet.ac.uk/faculties/faculty-of-life-sciences-and-computing/school-of-human-sciences/}}                                
+ \\
 \hline 
  \end{tabular}
  \end{table}
@@ -128,59 +133,48 @@ University Chemistry departments with suitable websites were considered when bui
 \hline
  Department                         & URL \\
 \hline
- \footnotesize{Lincoln                        }    & \footnotesize{\url{https://www.lincoln.ac.uk/home/chemistry/}}                                                                                            \\
- \footnotesize{Liverpool                     }     & \footnotesize{\url{http://www.liv.ac.uk/chemistry/}}                                                                                                      \\
- \footnotesize{Liverpool John Moores        }      & \footnotesize{\url{https://www.ljmu.ac.uk/about-us/faculties/faculty-of-science/school-of-pharmacy-and-biomolecular-sciences}}                            \\
- \footnotesize{London Met.         }       & \footnotesize{\url{http://www.londonmet.ac.uk/faculties/faculty-of-life-sciences-and-computing/school-of-human-sciences/}}                                \\
- \footnotesize{Loughborough               }        & \footnotesize{\url{http://www.lboro.ac.uk/departments/chemistry}}                                                                                         \\
- \footnotesize{Manchester                }         & \footnotesize{\url{http://www.manchester.ac.uk/chemistry/}}                                                                                               \\
- \footnotesize{Manchester Met.  }          & \footnotesize{\url{http://www.sste.mmu.ac.uk}}                                                                                                            \\
- \footnotesize{Newcastle  }                        & \footnotesize{\url{http://www.ncl.ac.uk/chemistry/}}                                                                                                      \\
+\footnotesize{Loughborough               }        & \footnotesize{\url{www.lboro.ac.uk/departments/chemistry}}                                                                                         \\
+ \footnotesize{Manchester                }         & \footnotesize{\url{www.manchester.ac.uk/chemistry/}}                                                                                               \\
+ \footnotesize{Manchester Met.  }          & \footnotesize{\url{www.sste.mmu.ac.uk}}                                                                                                            \\
+ \footnotesize{Newcastle  }                        & \footnotesize{\url{www.ncl.ac.uk/chemistry/}}                                                                                                      \\
  \footnotesize{Northumbria}                        & \footnotesize{\url{https://www.northumbria.ac.uk/about-us/academic-departments/applied-sciences/}}\\
- \footnotesize{Nottingham                  }       & \footnotesize{\url{http://www.nottingham.ac.uk/chemistry/}}                                                                                               \\
- \footnotesize{Nottingham Trent}        & \footnotesize{\url{http://www.ntu.ac.uk/sat/about/academic\_teams/chemistry.html}}                                                                         \\
-\footnotesize{ Open University }                   & \footnotesize{\url{http://www.open.ac.uk/science/chemistry/}}                                                                                             \\
- \footnotesize{Oxford}                             & \footnotesize{\url{http://www.chem.ox.ac.uk/}}                                                                                                            \\
- \footnotesize{Univ. West Scotland} & \footnotesize{\url{http://www.uws.ac.uk/schools/school-of-science/departments/chemistry-and-chemical-engineering/}}                                       \\
+ \footnotesize{Nottingham                  }       & \footnotesize{\url{www.nottingham.ac.uk/chemistry/}}                                                                                               \\
+ \footnotesize{Nottingham Trent}        & \footnotesize{\url{www.ntu.ac.uk/sat/about/academic\_teams/chemistry.html}}                                                                         \\
+\footnotesize{ Open University }                   & \footnotesize{\url{www.open.ac.uk/science/chemistry/}}                                                                                             \\
+ \footnotesize{Oxford}                             & \footnotesize{\url{www.chem.ox.ac.uk/}}                                                                                                            \\
+ \footnotesize{Univ. West Scotland} & \footnotesize{\url{www.uws.ac.uk/schools/school-of-science/departments/chemistry-and-chemical-engineering/}}                                       \\
  \footnotesize{Plymouth               }            & \footnotesize{\url{https://www.plymouth.ac.uk/schools/school-of-geography-earth-and-environmental-sciences/chemistry}}                                    \\
-\footnotesize{Reading               }             & \footnotesize{\url{http://www.reading.ac.uk/chemistry/}}                                                                                                  \\
- \footnotesize{Robert Gordon        }              & \footnotesize{\url{http://www.rgu.ac.uk/about/faculties-schools-and-departments/faculty-of-health-and-social-care/school-of-pharmacy-and-life-sciences1}} \\
- \footnotesize{St Andrews          }               & \footnotesize{\url{http://ch-www.st-and.ac.uk/}}                                                                                                          \\
- \footnotesize{Salford            }                & \footnotesize{\url{http://www.salford.ac.uk/environment-life-sciences/research/biomedical}}                                                               \\
- \footnotesize{Sheffield         }                 & \footnotesize{\url{http://www.sheffield.ac.uk/chemistry}}                                                                                                 \\
- \footnotesize{Sheffield Hallam }                  & \footnotesize{\url{http://www.shu.ac.uk/schools/sci/chem/}}                                                                                               \\
- \footnotesize{South Wales  }                      & \footnotesize{\url{http://www.southwales.ac.uk/chemistry/}}                                                                                               \\
- \footnotesize{Southampton }                       & \footnotesize{\url{http://www.soton.ac.uk/chemistry/}}                                                                                                    \\
- \footnotesize{Strathclyde}                        & \footnotesize{\url{http://www.strath.ac.uk/chemistry/}}                                                                                                   \\
- \footnotesize{Sunderland}                         & \footnotesize{\url{http://www.sunderland.ac.uk/ug/subjectareas/pharmacychemistrybiomedicalsciences/}}                                                     \\
- \footnotesize{Surrey }                            & \footnotesize{\url{http://www.surrey.ac.uk/chemistry/}}                                                                                                   \\
- \footnotesize{Sussex                            } & \footnotesize{\url{http://www.sussex.ac.uk/chemistry/}}                                                                                                   \\
- \footnotesize{Teesside                         }  & \footnotesize{\url{http://www.tees.ac.uk/schools/sst/}}                                                                                                   \\
- \footnotesize{UEA                             }   & \footnotesize{\url{http://www.uea.ac.uk/chemistry}}                                                                                                       \\
- \footnotesize{Warwick                        }    & \footnotesize{\url{http://www2.warwick.ac.uk/fac/sci/chemistry/}}                                                                                         \\
- \footnotesize{York                          }     & \footnotesize{\url{http://www.york.ac.uk/depts/chem/}}                                                                                                   \\ \hline
+\footnotesize{Reading               }             & \footnotesize{\url{www.reading.ac.uk/chemistry/}}                                                                                                  \\
+ \footnotesize{Robert Gordon        }              & \footnotesize{\url{www.rgu.ac.uk/about/faculties-schools-and-departments/faculty-of-health-and-social-care/school-of-pharmacy-and-life-sciences1}} \\
+ \footnotesize{St Andrews          }               & \footnotesize{\url{ch-www.st-and.ac.uk/}}                                                                                                          \\
+ \footnotesize{Salford            }                & \footnotesize{\url{www.salford.ac.uk/environment-life-sciences/research/biomedical}}                                                               \\
+ \footnotesize{Sheffield         }                 & \footnotesize{\url{www.sheffield.ac.uk/chemistry}}                                                                                                 \\
+ \footnotesize{Sheffield Hallam }                  & \footnotesize{\url{www.shu.ac.uk/schools/sci/chem/}}                                                                                               \\
+ \footnotesize{South Wales  }                      & \footnotesize{\url{www.southwales.ac.uk/chemistry/}}                                                                                               \\
+ \footnotesize{Southampton }                       & \footnotesize{\url{www.soton.ac.uk/chemistry/}}                                                                                                    \\
+ \footnotesize{Strathclyde}                        & \footnotesize{\url{www.strath.ac.uk/chemistry/}}                                                                                                   \\
+ \footnotesize{Sunderland}                         & \footnotesize{\url{www.sunderland.ac.uk/ug/subjectareas/pharmacychemistrybiomedicalsciences/}}                                                     \\
+ \footnotesize{Surrey }                            & \footnotesize{\url{www.surrey.ac.uk/chemistry/}}                                                                                                   \\
+ \footnotesize{Sussex                            } & \footnotesize{\url{www.sussex.ac.uk/chemistry/}}                                                                                                   \\
+ \footnotesize{Teesside                         }  & \footnotesize{\url{www.tees.ac.uk/schools/sst/}}                                                                                                   \\
+ \footnotesize{UEA                             }   & \footnotesize{\url{www.uea.ac.uk/chemistry}}                                                                                                       \\
+ \footnotesize{Warwick                        }    & \footnotesize{\url{www2.warwick.ac.uk/fac/sci/chemistry/}}                                                                                         \\
+ \footnotesize{York                          }     & \footnotesize{\url{www.york.ac.uk/depts/chem/}}                                                                                                   \\ 
+ \footnotesize{Bradford Ploymer IRC         }      & \footnotesize{\url{www.brad.ac.uk/acad/irc/}}                                                                                                      \\
+ \footnotesize{Cardiff Pharmacy            }       & \footnotesize{\url{www.cardiff.ac.uk/pharmacy-pharmaceutical-sciences}}                                                                            \\
+ \footnotesize{Burbeck Chemistry          }        & \footnotesize{\url{www.bbk.ac.uk/bcs/}}                                                                                                            \\
+ \footnotesize{Burbeck Crystallography   }         & \footnotesize{\url{www.cryst.bbk.ac.uk/}}                                                                                                          \\
+ \footnotesize{Imperial College London  }          & \footnotesize{\url{www.imperial.ac.uk/chemistry/}}                                                                                                 \\
+ \footnotesize{King's College London   }          & \footnotesize{\url{www.kcl.ac.uk/nms/depts/chemistry/index.aspx}}                                                                                  \\
+ \footnotesize{Queen Mary London      }            & \footnotesize{\url{www.sbcs.qmul.ac.uk/}}                                                                                                          \\
+ \footnotesize{UCL School of Pharmacy}             & \footnotesize{\url{www.ucl.ac.uk/pharmacy}}                                                                                                        \\
+ \footnotesize{University College London}          & \footnotesize{\url{www.ucl.ac.uk/chemistry/}}                                                                                                      \\
+ \footnotesize{Sheffield Comput. Chem.}  & \footnotesize{\url{www.sheffield.ac.uk/is/research/groups/chemoinformatics}}   
+ \\
+ \hline
 \end{tabular}
 \end{table}
 
-
-\begin{table}[H]
-\begin{tabular}{||p{4cm}|Y||}
-\hline
-Department                         & URL \\
-\hline
- \footnotesize{Bradford Ploymer IRC         }      & \footnotesize{\url{http://www.brad.ac.uk/acad/irc/}}                                                                                                      \\
- \footnotesize{Cardiff Pharmacy            }       & \footnotesize{\url{http://www.cardiff.ac.uk/pharmacy-pharmaceutical-sciences}}                                                                            \\
- \footnotesize{Burbeck Chemistry          }        & \footnotesize{\url{http://www.bbk.ac.uk/bcs/}}                                                                                                            \\
- \footnotesize{Burbeck Crystallography   }         & \footnotesize{\url{http://www.cryst.bbk.ac.uk/}}                                                                                                          \\
- \footnotesize{Imperial College London  }          & \footnotesize{\url{http://www.imperial.ac.uk/chemistry/}}                                                                                                 \\
- \footnotesize{King's College London   }           & \footnotesize{\url{http://www.kcl.ac.uk/nms/depts/chemistry/index.aspx}}                                                                                  \\
- \footnotesize{Queen Mary London      }            & \footnotesize{\url{http://www.sbcs.qmul.ac.uk/}}                                                                                                          \\
- \footnotesize{UCL School of Pharmacy}             & \footnotesize{\url{http://www.ucl.ac.uk/pharmacy}}                                                                                                        \\
- \footnotesize{University College London}          & \footnotesize{\url{http://www.ucl.ac.uk/chemistry/}}                                                                                                      \\
- \footnotesize{Sheffield Comput. Chem.}  & \footnotesize{\url{http://www.sheffield.ac.uk/is/research/groups/chemoinformatics}}                                                                       \\
-\hline
-\end{tabular}
-\end{table}
 \subsection{Publishers Considered in UK scraping}
 The UK scraping run found articles published by 36 different publishers. These are detailed below in table \ref{tab:uk_publishers_table}.
 \begin{table}[H]

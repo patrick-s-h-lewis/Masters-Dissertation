@@ -1,11 +1,12 @@
 As an investigation into the utility of word vectors trained, it was decided to briefly investigate the word similarities between chemical elements. This analysis is included as an appendix as there was not sufficient space for it to be included in the main body, and due to its self-contained nature. It was hoped that this short investigation would provided evidence that methods sketched in \S\ref{sec:recomm_word_vectors} could work.
 
-The similarity matrix was produced for chemical elements mentioned in the text corpus (115 out of 118 known chemical elements). This required mapping both chemical names and symbols together (e.g. \texttt{florin}\footnote{Fluorine is stemmed to fluorin by the stemming process (\S\ref{chapt:ALGORITHM}) }  and \texttt{F} for fluorine) to represent the concept vector for the elements in question.
+The similarity matrix was produced for chemical elements mentioned in the text corpus (115 out of 118 known chemical elements). This required mapping both chemical names and symbols together (e.g. \texttt{chlorin}\footnote{Chlorine is stemmed to chlorin by the stemming process (\S\ref{chapt:ALGORITHM}) }  and \texttt{cl} for chlorine) to represent the concept vector for the elements in question.
 
 A modified data sanitation pipeline was created to substitute the chemical symbol for the chemical name. This was only done for chemical symbols longer than 1 letter to dissuade conflating different concepts to the same word vector (\texttt{S} could represent Sulfur or a stereochemical label.)
  
 A CBOW model was trained using this modified input data with the same presets as the main CBOW model, detailed in table \ref{tab:hyperparams}. The Cosine Similarity matrix was produced for the 115 elements found in the corpus. UPGMA clustering was performed\cite{scikitlearn}, as well as graph visualisation with modularity clustering \cite{modularity1},\cite{modularity2}. The dendrogram of the UPGMA clustering is shown in figure \ref{fig:elems_dendro}. The process identified 5 main branches:
 \begin{itemize}
+\itemsep-0.5em
 \item The gold region includes a sub-branch of noble gases, the other branch mainly actinoids.
 \item The magenta region contains non-metals mostly associated with organic compounds
 \item The cyan region contains mainly metalloids, actinoids and alkali metals
@@ -15,8 +16,7 @@ A CBOW model was trained using this modified input data with the same presets as
 \begin{center}
 \begin{figure}[H]
   \centering
-  \textbf{Dendrogram for UPGMA clustering of chemical element vectors}
-    \includegraphics[width=\textwidth]{Appendix/Elemental_Analysis/elements_dendro.png}
+    \includegraphics[width=1.2\textwidth]{Appendix/Elemental_Analysis/elements_dendro.png}
     \caption[Dendrogram for UPGMA clustering of chemical element vectors]{Dendrogram for UPGMA clustering of chemical element vectors. Colours indicate distinct branches}
     \label{fig:elems_dendro}
 \end{figure} 
@@ -36,6 +36,7 @@ The graph visualisation is shown in figure \ref{fig:elems_graph} (Also the front
 \end{center}
 5 distinct communities were identified:
 \begin{itemize}
+\itemsep-0.5em
 \item The Orange community contained mainly alkali metals and alkali earth metals
 \item The Blue community contained mainly lanthanoids
 \item The Light Green community contained mainly transition metals
@@ -49,7 +50,7 @@ Attention was turned to a practical example. Palladium is used widely in catalys
 \begin{figure}[H]
   \centering
   \textbf{Selected metallic elements' cosine similarity to palladium vector}
-    \includegraphics[width=\textwidth]{Appendix/Elemental_Analysis/metals_sorted.png}
+    \includegraphics[width=0.9\textwidth]{Appendix/Elemental_Analysis/metals_sorted.png}
     \caption[Selected metallic elements' cosine similarity to palladium vector]{The metals are ordered to to bottom from most similar (long bars, red) to low similarity (short bars, blue). The colours are a guide to the eye.}
     \label{fig:palladium}
 \end{figure} 
