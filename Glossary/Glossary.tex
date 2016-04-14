@@ -31,12 +31,12 @@ description={Meta-data refers to data about data. In the context of this project
 \newglossaryentry{python}
 {
 name={Python},
-description={Interpreted, dynamically typed programming language. Unless explicitly mentioned, Python was the language used for all development and analysis in this project} 
+description={Interpreted, dynamically typed programming language. Unless explicitly mentioned, Python was used for all development and analysis in this project} 
 }
 \newglossaryentry{MongoDB}
 {
 name={MongoDB},
-description={Schema-less `NoSQL' database used for document storage retrieval} 
+description={Schema-less `NoSQL' database used for document storage and retrieval} 
 }
 \newglossaryentry{HTML}
 {
@@ -46,7 +46,12 @@ description={Hypertext Markup Language. Tag-based language to encode web-pages i
 \newglossaryentry{XML}
 {
 name={XML},
-description={eXtensible Markup Language. Tag-based markup language, closely related to HTML. Method of encoding any type of data in a manner that is machine readable and intelligible by humans} 
+description={eXtensible Markup Language. Tag-based markup language, closely related to HTML. Enables encoding any type of data in a manner that is machine readable and intelligible by humans} 
+}
+\newglossaryentry{JSON}
+{
+name={JSON},
+description={JavaScript Object Notation. Key-value pair based schema for encoding data that is both machine-readable and human-readable}
 }
 \newglossaryentry{XPath}
 {
@@ -56,7 +61,7 @@ description={Query method for extracting data from XML documents. As HTML is clo
 \newglossaryentry{REGEX}
 {
 name={REGEX},
-description={REGular EXpression. A REGEX is a string that is used to inform a programming language of patterns to identify in a body of text} 
+description={REGular EXpression. Text string that is used to inform a programming language of patterns to identify in a body of text} 
 }
 \newglossaryentry{DOI}
 {
@@ -66,7 +71,7 @@ description={Digital Object Identifier. Unique identifier string used to index t
 \newglossaryentry{Crossref}
 {
 name={Crossref},
-description={Crossref is an organisation promoting inter-publisher cooperation. With a mission statement to `support ... persistent, sustainable infrastructure for scholarly communication'\cite{crossref-formation}. Crossref provides  tools for researchers to access a wide range of publishers' materials} 
+description={Organisation promoting inter-publisher cooperation with a mission statement to `support ... persistent, sustainable infrastructure for scholarly communication'\cite{crossref-formation}. Crossref provides tools for accessing a wide range of publishers' materials} 
 }
 \newglossaryentry{PILA}
 {
@@ -76,12 +81,12 @@ description={Publishers International Linking Association, Inc. . Independent no
 \newglossaryentry{IDF}
 { 
 name={IDF},
-description={International Doi Foundation. Independent not-for-profit body which governs the use and management of the DOI system. Provide definitive service for resolving a DOI to its document \cite{doi_handbook2}} 
+description={International DOI Foundation. Independent not-for-profit body governing use and management of the DOI system. Provide definitive service for resolving DOIs \cite{doi_handbook2}} 
 }
 \newglossaryentry{UTF-8}
 {
 name={UTF-8},
-description={Universal Coded Character Set + Transformation Format – 8-bit \cite{utf8}. An encoding specification for the Unicode character set, where each character is encoded by 8 bits. UTF-8 is the dominant encoding used online \cite{utf8stats}} 
+description={Universal Coded Character Set + Transformation Format – 8-bit \cite{utf8}. An encoding specification for the Unicode character set. Each character is encoded by 8 bits. UTF-8 is the dominant encoding used online \cite{utf8stats}} 
 }
 \newglossaryentry{Unicode}
 {
@@ -96,7 +101,7 @@ description={Application Programmer Interface. Set of well defined input and out
 \newglossaryentry{ACS}
 {
 name={ACS},
-description={American Chemical Society. A Scientific society specialising in the chemistry domain with a large scientific academic publishing arm. The ACS also own the Chemical Abstracts Service and SciFinder\textsuperscript{\textregistered}} 
+description={American Chemical Society. Scientific society specialising in chemistry domain with  large scientific academic publishing arm. ACS also rusn the Chemical Abstracts Service and SciFinder\textsuperscript{\textregistered}} 
 }
 \newglossaryentry{TaylorFrancis}
 {
@@ -141,7 +146,7 @@ description={Database comprised of records in database $\Delta5$ deemed suitable
 \newglossaryentry{d7}
 {
 name={$\Delta7$},
-description={Database comprised of records in Database $\Delta6$ which had originated from DOIs found on the Cambridge University Chemistry Department} 
+description={Database comprised of records in database $\Delta6$ which had originated from DOIs found on the University of Cambridge Chemistry Department} 
 }
 \newglossaryentry{RSC}
 {
@@ -156,7 +161,7 @@ description={States that the relationship of the log of the rank of a word to th
 \newglossaryentry{Corpus}
 {
 name={Corpus},
-description={In the field of language processing, a corpus is a large body of natural language text. In the context of the project, a corpus is the combined titles and abstracts of all the records in a database} 
+description={In the field of language processing, a corpus is a large body of natural language text. In the context of the project, a corpus is the combined titles and abstracts of all the article records in a database} 
 }
 \newglossaryentry{NLP}
 {
@@ -176,7 +181,7 @@ description={Simple Document Representation model which attempts to represent a 
 \newglossaryentry{Word2vec}
 {
 name={Word2Vec},
-description={Sophisticated distributed word vector model utilising a Neural Net to learn vector representations of  component words in a corpus by training sentence by sentence \cite{word2vec1}\cite{word2vec2}  } 
+description={Sophisticated distributed word vector model utilising a neural net to learn vector representations of  component words in a corpus by training sentence by sentence \cite{word2vec1}\cite{word2vec2}  } 
 }
 \newglossaryentry{NeuralNet}
 {
@@ -191,12 +196,12 @@ description={Continuous Bag Of Words. Learning architecture used by Word2Vec alg
 \newglossaryentry{Skipgram}
 {
 name={Skipgram},
-description={Learning architecture used by the Word2Vec algorithm. Word Vector predictions are made from random comparison between a word and nearby context words} 
+description={Learning architecture used by the Word2Vec algorithm. Word vector predictions are made from random comparison between a word and nearby context words} 
 }
 \newglossaryentry{Doc2Vec}
 {
 name={Doc2Vec},
-description={Gensim implementation of Paragraph Vectors algorithm (See Paragraph Vectors)} 
+description={Gensim implementation of Paragraph Vectors algorithm} 
 }
 \newglossaryentry{Paragraphvectors}
 {
@@ -216,7 +221,7 @@ description={An algorithm used to relate derived words (e.g. plurals, conjugated
 \newglossaryentry{SNOWBALL}
 {
 name={Snowball},
-description={Recent stemming algorithm \cite{snowball} (Also known as Porter2). Snowball is also the name of the programming language developed for stemming.} 
+description={Recent stemming algorithm \cite{snowball} (Also known as Porter2). Snowball is also the name of a programming language developed for stemming algorithms} 
 }
 \newglossaryentry{Lancaster}
 {
@@ -241,12 +246,12 @@ description={Term-Frequency Inverse-Document-Frequency. Method for assigning wei
 \newglossaryentry{Gensim}
 {
 name={Gensim},
-description={Gensim is an open-source library for Python programs for use in NLP applications} 
+description={Open-source library for Python programs for use in NLP applications} 
 }
 \newglossaryentry{Hyperparameters}
 {
 name={Hyperparameters},
-description={Adjustable Parameters used by a Machine Learning algorithm. Different to internal parameters automatically learnt by the algorithm} 
+description={Adjustable parameters used by a Machine Learning algorithm. Distinct from internal parameters automatically learnt by the algorithm} 
 }
 \newglossaryentry{TrainingEpoch}
 {
@@ -256,12 +261,12 @@ description={A complete iteration over the training data available to a learning
 \newglossaryentry{CosineSim}
 {
 name={Cosine Similarity},
-description={A similarity metric for vectors derived from the angle between them. $S_{cosine}=cos\left(\theta\right)$ for angle $\theta$ between two vectors} 
+description={A similarity metric for vectors derived from the angle between them. $S_{cosine}=\cos\left(\theta\right)$ for angle $\theta$ between two vectors} 
 }
 \newglossaryentry{euclideansim}
 {
 name={Euclidean Similarity},
-description={A similarity metric for vectors derived from their distance in Euclidean space. $S_{euclid} = \sqrt{\sum_{i=1}^{D}(\nu_i^{\alpha}-\nu_i^{\beta})^{2}}$ for vectors $\alpha$ and $\beta$}
+description={A similarity metric for vectors derived from their distance in euclidean space. $S_{euclid} = \sqrt{\sum_{i=1}^{D}(\nu_i^{\alpha}-\nu_i^{\beta})^{2}}$ for vectors $\alpha$ and $\beta$}
 }
 \newglossaryentry{PCA}
 {
@@ -271,7 +276,7 @@ description={Principle Component Analysis. Well established technique for reduci
 \newglossaryentry{TSNE}
 {
 name={TSNE},
-description={T-distributed Stochastic Network Embedding. State of the art technique for reducing dimensionality by preserving spatial clusters of vectors at high dimensions \cite{TSNE}} 
+description={T-distributed Stochastic Network Embedding. State-of-the-art technique for reducing dimensionality. Preserves spatial clusters at high dimensions \cite{tsne1}} 
 }
 \newglossaryentry{Hadamarddiv}
 {
@@ -281,7 +286,7 @@ description={Element-wise division matrix operation defined as $\left( \mathbf{A
 \newglossaryentry{Hadamardsqrt}
 {
 name={Hadamard Square Root},
-description={Element-wise square root matrix operation defined as $\left( A^{\circ\frac{1}{2}} \right)_{i , j} = A_{i , j}^{\frac{1}{2}} $ for matrix A} 
+description={Element-wise square root matrix operation defined as $\left( \mathbf{A}^{\circ\frac{1}{2}} \right)_{i , j} = \mathbf{A}_{i , j}^{\frac{1}{2}} $ for matrix $\mathbf{A}$} 
 }
 \newglossaryentry{Gephi}
 {

@@ -1,0 +1,14 @@
+\label{sec:auto_xpaths}
+The initial approach was to analyse the HTML tree to automatically recognise useful tabulated or listed data. The program started at the tree's root and repeatedly followed the branch with the most `repeating substructure'. The recursive algorithm is summarised below:
+\begin{sloppypar}
+\begin{enumerate}
+\item \texttt{Count \# of descendents of each child node}
+\item \begin{enumerate}
+\item \texttt{Calculate the pairwise similarities between all child nodes}
+\item \texttt{Consider  two nodes similar if pairwise similarity is above a heuristic threshold}
+\item \texttt{Calculate proportion of nodes that are considered similar}
+\end{enumerate}
+\item \texttt{If proportion calculated in (c) is above a heuristic threshold, this node represents a store of information, and the XPath has been found. Otherwise, move to child node with highest \# of descendants, return to step (1)}
+\end{enumerate}
+\end{sloppypar}
+The heuristic thresholds are adjustable parameters. The approach was successful for webpages with large numbers of records, formatted in repeating fashion (such as long tables, lists etc. ), but performed poorly for smaller or unstructured collections of data. As such it was not sufficiently flexible for the task of scraping large quantities of chemical data, and was not developed further.
