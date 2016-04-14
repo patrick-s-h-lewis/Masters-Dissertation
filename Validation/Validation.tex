@@ -2,12 +2,12 @@
 \label{chapt:VALIDATION}
 The models created in \S\ref{chapt:ALGORITHM} were then examined and assessed. As an unsupervised learning algorithm, it is challenging to assess model quality, due to a lack of concrete metrics for comparisons\footnote{This is to say, there is no objective `similarity' relationship value between two words to compare models to.}. The Word2Vec development team tested with approximately 10,000 semantic and syntactic relationships (See Figure \ref{fig:KINGQUEEN})\cite{word2vec1},\cite{word2vec2},\cite{word2veckingqueen}. The scope of this project does not extend to such elaborate tests. In the section, some examples of model strengths are given and techniques for using word vectors and visualisation are presented. 
 \section{Word Similarities}
-Word similarities can be be obtained by direct comparison of their word vectors. A possible metric is to compute euclidean distance.  For words $\alpha$ and $\beta$, with vectors $\mathbf{\nu^\alpha}$ and $\mathbf{\nu^\beta}$, 
+Word similarities can be be obtained by direct comparison of their word vectors. A possible metric is to compute euclidean distance.  For words $\alpha$ and $\beta$, with vectors $\mathbf{v^\alpha}$ and $\mathbf{v^\beta}$, 
 
-$$S_{euclid} = \sqrt{\sum_{i=1}^{D}(\nu_i^{\alpha}-\nu_i^{\beta})^{2}} $$
+$$S_{euclid} = \sqrt{\sum_{i=1}^{D}(v_i^{\alpha}-v_i^{\beta})^{2}} $$
 
-where $D$ is the dimensionality ($D$=100). $S_{euclid}$ simply describes the distance between the end points of $\mathbf{\nu^\alpha}$ and $\mathbf{\nu^\beta}$. A larger $S_{euclid}$ indicates weaker similarity. A second similarity metric is \emph{cosine similarity}, a measure of the directionality. A value close to 1 corresponds to high similarity of $\alpha$ and $\beta$. Cosine similarity is computed as:
-$$S_{cosine}=\frac{\mathbf{\nu^\alpha} \cdot \mathbf{\nu^\beta}}{|\mathbf{\nu^\alpha}| |\mathbf{\nu^\beta}|} = \frac{\displaystyle\sum_{i=1}^{D} \nu^{(\alpha)}_{i}\nu^{(\beta)}_{i}}{\left(\displaystyle\sum_{i=1}^{D} (\nu^{(\alpha)}_{i})^2\right)^{1/2} \left(\displaystyle\sum_{i=1}^{D} (\nu^{(\beta)}_{i})^2\right)^{1/2}}
+where $D$ is the dimensionality ($D$=100). $S_{euclid}$ simply describes the distance between the end points of $\mathbf{v^\alpha}$ and $\mathbf{v^\beta}$. A larger $S_{euclid}$ indicates weaker similarity. A second similarity metric is \emph{cosine similarity}, a measure of the directionality. A value close to 1 corresponds to high similarity of $\alpha$ and $\beta$. Cosine similarity is computed as:
+$$S_{cosine}=\frac{\mathbf{v^\alpha} \cdot \mathbf{v^\beta}}{|\mathbf{v^\alpha}| |\mathbf{v^\beta}|} = \frac{\displaystyle\sum_{i=1}^{D} v^{(\alpha)}_{i}v^{(\beta)}_{i}}{\left(\displaystyle\sum_{i=1}^{D} (v^{(\alpha)}_{i})^2\right)^{1/2} \left(\displaystyle\sum_{i=1}^{D} (v^{(\beta)}_{i})^2\right)^{1/2}}
 $$
 The CBOW and skipgram models were examined using these metrics. For a given word, the models were requested to return the three words in the corpus with highest similarity. Some examples are given in tables \ref{tab:COSINESIMS} and \ref{tab:EUCLIDSIMS}.
 \begin{table}[H]
