@@ -1,4 +1,5 @@
 \label{sec:auto_xpaths}
+This section briefly explains the automatic XPath generation method initially developed to collect chemical data.
 The initial approach was to analyse the HTML tree to automatically recognise useful tabulated or listed data. The program started at the tree's root and repeatedly followed the branch with the most `repeating substructure'. The recursive algorithm is summarised below:
 \begin{sloppypar}
 \begin{enumerate}

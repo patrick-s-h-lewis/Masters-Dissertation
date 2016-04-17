@@ -2,35 +2,40 @@
 \section{Modern Scientific Publishing}
 The widespread adoption of the internet in the late 1990’s and 2000’s brought  fundamental changes to the academic publishing landscape. The information revolution allowed publishers' costs to fall, and there was a mood shift in the academic sphere away from subscription-based models, towards giving open and free access to some or all of journal article contents.
 Simultaneously, learn\`{e}d institutions (such as university websites) began to post records of recent publications and other chemical information freely online. 
-Publishers still protect the vast majority of journal article content and some meta-data. Data is valuable, and the insights within, powerful. As such, publishers are unwilling to grant free access to their data, preferring to perform in-house analysis. Article meta-data, such as authors, titles and abstracts may, however, be available, and it is this dataset which the project is focussed on. 
+Publishers still protect the vast majority of journal article content and some article meta-data. This data is valuable, and the insights within, powerful. As such, publishers are unwilling to grant free access to their data, preferring to perform in-house analysis. Article meta-data, such as authors, titles and abstracts should, however, be available, and it is this dataset which the project is focussed on. 
 \section{Motivation}
-By collecting meta-data on papers found on the internet, a large representative dataset of chemical academic writing language can be built. Machine Learning techniques can be applied to find novel connections between articles, research communities, authors, institutions and fields. Machine Learning is a rapidly progressing field and data science can reveal key, non-obvious relationships to aid the scientific process. In an increasingly data-dense world, scientists require smarter tools to streamline research in order to be more productive. Several publishers provide services that perform large-scale analysis and provide literature tools, such as SciFinder\textsuperscript{\textregistered} and Web of Knowledge\textsuperscript{TM}. The techniques used and motivations behind the corporate bodies that own these services are not necessarily clear, and thus there is much to be gained from independent, original analyses of the online publishing landscape. 
+By collecting meta-data on papers found on the internet, a large representative dataset of chemical academic  language can be built. Machine Learning techniques can be applied to find novel connections between articles, authors, institutions and fields. Machine Learning is a rapidly progressing field and data science can reveal key, non-obvious relationships to aid the scientific process. In an increasingly data-dense world, scientists require smarter tools to streamline research in order to be productive. Several publishers perform large-scale analysis and provide literature tools, such as SciFinder\textsuperscript{\textregistered} and Web of Knowledge\textsuperscript{TM}. The techniques used and motivations behind the corporate bodies that own these services are not necessarily clear, and thus there is much to be gained from independent, original analyses of the online publishing landscape. 
 \section{Aims}
 The aims of the project are set out below:
 \begin{itemize}
-\item Collect large quantities of article meta-data from articles pertaining to chemistry as a general discipline
+\itemsep-0.5em
+\item Collect large quantity of article meta-data from articles pertaining to chemistry as a general discipline
 \begin{itemize}
+\itemsep-0.5em
 \item Identify websites that might contain useful chemical information
 \item Write web-scraping programs that can identify and extract chemical information
 \item Store information in human-readable, computer readable, stable, scalable formats
 \end{itemize}
 \item Develop novel machine learning techniques to enable meta-data to be interpreted in new ways
 \begin{itemize}
-\itemsep0em 
+\itemsep-0.5em 
 \item Sanitise input data effectively
-\item Devise  machine learning models to interpret article titles and abstracts to attempt to extract their chemical meaning
+\item Devise machine learning models to interpret article titles and abstracts to attempt to extract their chemical meaning
 \item Quantitatively represent an article's content using its collected meta-data
 \end{itemize}
-\item Validate the models and provide evidence of their efficacy
+\item Validate these models and provide evidence of their efficacy
 \begin{itemize}
+\itemsep-0.5em
 \item Develop visualisation techniques for interpretation of algorithm output
 \item Analyse datasets using the developed model to demonstrate new and useful information
 \item Provide usable code with which future analysis may be performed
 \end{itemize}
 \end{itemize}
 This project is thus an informatics/data project, which split naturally into two sections. The first half of the project was concerned with acquiring data. This is covered in detail in \S\ref{chapt:DATA_ACQUISITION}.
-Programs were written in the Python programming language, and two databases were created (one of UK Department chemistry, and a very large database of unrestricted chemistry-related material).
+Programs were written in the Python programming language, and databases were created (UK Department chemistry databases and very large databases of unrestricted chemistry-related material).
 
-Once the databases were set up, focus was shifted to how to use the data to find valuable insights. \S\ref{chapt:NLP} and \S\ref{chapt:ALGORITHM} provide the background of the algorithms used and the process of applying them to create useful models. 
+Once the databases were set up, focus was shifted to how to mine the data for valuable insights. \S\ref{chapt:NLP} and \S\ref{chapt:ALGORITHM} provide the background of the algorithms used and the process of applying them to create useful models. 
 
 Having built the models, it was now necessary to examine their outputs and develop methods to interpret results, covered in \S\ref{chapt:VALIDATION}. Finally, when the models were shown to be performing successfully, they were used in an analytical setting to examine relationships between authors and research communities in the University of Cambridge Chemistry Department, and eventually to recommend specific collaborations between staff (\S\ref{chapt:ANALYSIS}).
+
+The appendix goes into further detail, discusses results, implications, additional methods as well as technical details and recommended further work. There is an extensive glossary for terms used in the project.

@@ -1,7 +1,7 @@
 In the interest of future work, this section details the technical details of artefacts provided with this project.
 
 \subsection{Code Artefacts}
-The python code used in this project was written in a largely self-documenting style. The time limits did not permit for professional doc-strings to be produced, or for anaconda packages to be provided, but the code is well commented. There is also a comprehensive set of \texttt{Jupyter Notebooks} as tutorial guides for using the code\cite{jupyter}. The core code has been presented in a `package' style.  The module was named \texttt{fruitbowl} with five submodules,
+The python code used in this project was written in a largely self-documenting style. The time limits did not permit for anaconda packages to be provided, but the code is fully commented and docstrings are provided. Documentation is provided in html (recommended) and a 31 page pdf form. There are also comprehensive  \texttt{Jupyter Notebooks} as tutorial guides for using the code\cite{jupyter}. The core code has been presented in a `package' style.  The module was named \texttt{fruitbowl} with five submodules,
 \begin{itemize}
 \itemsep-.6em
 \item \texttt{Cherry} for operations concerning scraping and data collection.
@@ -10,25 +10,25 @@ The python code used in this project was written in a largely self-documenting s
 \item \texttt{Apple} for operations concerning analysis of trained models (visualisation, export management etc.)
 \item \texttt{Pomegranate} for operations interfacing with Gephi and community generation.
 \end{itemize} 
-There are approximately 30 python source files included in the module. If using the code it is recommended to read and adapt the jupyter notebooks \texttt{Fruitbowl Example 1.ipynb} to \texttt{Fruitbowl Example 3.ipynb}. It is recommended to write code in a directory that contains the \texttt{fruitbowl} module. The module is free to distribute and adapt under the MIT licence, which must be included in any copy.  The list of dependencies required for fully functional behaviour for the \texttt{fruitbowl} suite is as follows:
+There are approximately 30 python source files included in the module. If using the code it is recommended to read and adapt the jupyter notebooks \texttt{Fruitbowl Example 1.ipynb} and \texttt{Fruitbowl Example 2.ipynb}. It is recommended to write code in a directory that contains the \texttt{fruitbowl} module. The module is free to distribute and adapt under the MIT licence, which must be included in any copy.  The list of dependencies required for fully functional behaviour for the \texttt{fruitbowl} suite is as follows:
 \begin{itemize}
 \itemsep-.6em
-\item \texttt{Python 2.7} Developed on Python 2.7.11 (recommended version)
+\item \texttt{Python 2.7}: Developed on Python 2.7.11 (recommended version)
 \item Python 2 external modules required:
 	\begin{itemize}
 	\itemsep-.6em
-	\item \texttt{matplotlib 1.5.1} Plotting modules \cite{matplotlib}
-	\item \texttt{Seaborn 0.7.0} Extension to plotting modules and data analysis \cite{seaborn}
-    \item \texttt{numpy 1.10.4} Computational Library	 \cite{numpy}
-	\item \texttt{Scikit-Learn 0.17} Machine learning library \cite{scikitlearn}
-	\item \texttt{Scrapy 1.0.3} Scraping framework
-	\item \texttt{Gensim 0.12.2} Natural Langauge Processing library \cite{gensim}
-	\item \texttt{nltk 3.1} Natural Language ToolKit library \cite{nltk}
-	\item \texttt{pandas 0.17.1} Data analysis and management library \cite{pandas}
-	\item \texttt{pymongo 3.0.3} Python driver for MongoDB database 
-    \item \texttt{requests 2.9.1} Web scraping library 
-    \item \texttt{scipy 0.17.0} Scientific computing library \cite{scipy}
-	\item \texttt{jupyter 1.0.0} Jupyter notebooks will be required to use the tutorial notebooks\cite{jupyter}.
+	\item \texttt{matplotlib 1.5.1}: Plotting modules \cite{matplotlib}
+	\item \texttt{Seaborn 0.7.0}: Extension to plotting modules and data analysis \cite{seaborn}
+    \item \texttt{numpy 1.10.4}: Computational Library	 \cite{numpy}
+	\item \texttt{Scikit-Learn 0.17}: Machine learning library \cite{scikitlearn}
+	\item \texttt{Scrapy 1.0.3}: Scraping framework
+	\item \texttt{Gensim 0.12.2}: Natural Langauge Processing library \cite{gensim}
+	\item \texttt{nltk 3.1}: Natural Language ToolKit library \cite{nltk}
+	\item \texttt{pandas 0.17.1}: Data analysis and management library \cite{pandas}
+	\item \texttt{pymongo 3.0.3}: Python driver for MongoDB database 
+    \item \texttt{requests 2.9.1}: Web scraping library 
+    \item \texttt{scipy 0.17.0}: Scientific computing library \cite{scipy}
+	\item \texttt{jupyter 1.0.0}: Jupyter notebooks will be required to use the tutorial notebooks\cite{jupyter}.
     \end{itemize}
 \item \texttt{JDK} Java Development Kit - for Gephi graph analysis via gephi api
 \item \texttt{apache-maven-3.3.9} Java dependency manager - for Gephi graph analysis via gephi api

@@ -17,6 +17,8 @@
 \usepackage[numbers]{natbib}
 \usepackage{hhline}
 \usepackage[toc,nonumberlist]{glossaries}
+\usepackage{afterpage}
+\usepackage{ctable}
 
 \newcolumntype{L}{>{\centering\arraybackslash}m{3.2cm}}
 \newcolumntype{N}{>{\centering\arraybackslash}m{2.5cm}}
@@ -103,6 +105,7 @@
 \end{abstract}
 
 \tableofcontents
+\input{List_Of_Tables/List_Of_Tables}
 \listoffigures
 \printglossaries
 \input{Introduction/Introduction}
@@ -111,7 +114,7 @@
 \input{Algorithm/Algorithm}
 \input{Validation/Validation}
 \input{Analysis/Analysis}
-\input{Conclusions/Conclusions}
+\input{Conclusions/alternate_conclusions}
 \input{Appendix/Appendix}
 \bibliography{References}
-\end{document}  
+\end{document}

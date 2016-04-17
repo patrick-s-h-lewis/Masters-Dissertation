@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=latex 2014.10.14)  31 MAR 2016 14:59
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2014.10.14)  15 APR 2016 16:42
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -20,8 +20,8 @@ Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
 ! Undefined control sequence.
-l.3 	{\Large
-             Part III Project \par}
+l.3 	{\huge
+            Automatic Chemical Analysis - Big Data and Machine Learning with...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
 misspelled it (e.g., `\hobx'), type `I' and the correct
@@ -35,43 +35,8 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.3 	{\Large P
-              art III Project \par}
-You're in trouble here.  Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-Missing character: There is no P in font nullfont!
-Missing character: There is no a in font nullfont!
-Missing character: There is no r in font nullfont!
-Missing character: There is no t in font nullfont!
-Missing character: There is no I in font nullfont!
-Missing character: There is no I in font nullfont!
-Missing character: There is no I in font nullfont!
-Missing character: There is no P in font nullfont!
-Missing character: There is no r in font nullfont!
-Missing character: There is no o in font nullfont!
-Missing character: There is no j in font nullfont!
-Missing character: There is no e in font nullfont!
-Missing character: There is no c in font nullfont!
-Missing character: There is no t in font nullfont!
-! Undefined control sequence.
-l.4 	{\Large
-             Automatic Chemical Analysis - Big Data and Machine Learning in ...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-
-! LaTeX Error: Missing \begin{document}.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.4 	{\Large A
-              utomatic Chemical Analysis - Big Data and Machine Learning in ...
+l.3 	{\huge A
+             utomatic Chemical Analysis - Big Data and Machine Learning with...
 
 You're in trouble here.  Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
@@ -127,8 +92,10 @@ Missing character: There is no n in font nullfont!
 Missing character: There is no i in font nullfont!
 Missing character: There is no n in font nullfont!
 Missing character: There is no g in font nullfont!
+Missing character: There is no w in font nullfont!
 Missing character: There is no i in font nullfont!
-Missing character: There is no n in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no h in font nullfont!
 Missing character: There is no O in font nullfont!
 Missing character: There is no n in font nullfont!
 Missing character: There is no l in font nullfont!
@@ -154,15 +121,6 @@ Missing character: There is no t in font nullfont!
 Missing character: There is no u in font nullfont!
 Missing character: There is no r in font nullfont!
 Missing character: There is no e in font nullfont!
-! Undefined control sequence.
-l.5 	\includegraphics
-                     [width=0.8\textwidth]{front_page.png}\par\vspace{2cm}
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
 
 ! LaTeX Error: Missing \begin{document}.
 
@@ -170,84 +128,18 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.5 	\includegraphics[
-                      width=0.8\textwidth]{front_page.png}\par\vspace{2cm}
+l.4     \rule{0.8\textwidth}{1pt}
+                                 \par
 You're in trouble here.  Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
-Missing character: There is no [ in font nullfont!
-Missing character: There is no w in font nullfont!
-Missing character: There is no i in font nullfont!
-Missing character: There is no d in font nullfont!
-Missing character: There is no t in font nullfont!
-Missing character: There is no h in font nullfont!
-Missing character: There is no = in font nullfont!
-Missing character: There is no 0 in font nullfont!
-Missing character: There is no . in font nullfont!
-Missing character: There is no 8 in font nullfont!
-! Missing number, treated as zero.
-<to be read again> 
-                   ]
-l.5 	\includegraphics[width=0.8\textwidth]
-                                          {front_page.png}\par\vspace{2cm}
-A number should have been here; I inserted `0'.
-(If you can't figure out why I needed to see a number,
-look up `weird error' in the index to The TeXbook.)
 
-! Illegal unit of measure (pt inserted).
-<to be read again> 
-                   ]
-l.5 	\includegraphics[width=0.8\textwidth]
-                                          {front_page.png}\par\vspace{2cm}
-Dimensions can be in units of em, ex, in, pt, pc,
-cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
-I'll assume that you meant to say pt, for printer's points.
-To recover gracefully from this error, it's best to
-delete the erroneous units; e.g., type `2' to delete
-two letters. (See Chapter 27 of The TeXbook.)
-
-Missing character: There is no ] in font nullfont!
-Missing character: There is no f in font nullfont!
-Missing character: There is no r in font nullfont!
-Missing character: There is no o in font nullfont!
-Missing character: There is no n in font nullfont!
-Missing character: There is no t in font nullfont!
-! Missing $ inserted.
-<inserted text> 
-                $
-l.5 	\includegraphics[width=0.8\textwidth]{front_
-                                                 page.png}\par\vspace{2cm}
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 5.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 5.
-! Extra }, or forgotten $.
-l.5 ...aphics[width=0.8\textwidth]{front_page.png}
-                                                  \par\vspace{2cm}
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
-! Missing $ inserted.
-<inserted text> 
-                $
-l.5 ...cs[width=0.8\textwidth]{front_page.png}\par
-                                                  \vspace{2cm}
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-
-Overfull \hbox (38.63281pt too wide) in paragraph at lines 5--5
- []$[]\OML/cmm/m/it/10 age:png$ 
+Overfull \hbox (6553.62498pt too wide) in paragraph at lines 4--4
+ [][] 
  []
 
 ! Undefined control sequence.
-l.6 	{\Large
+l.5 	{\Large
             \itshape Patrick Lewis\par}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -262,24 +154,24 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.6 	{\Large\itshape P
+l.5 	{\Large\itshape P
                       atrick Lewis\par}
 You're in trouble here.  Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
 
-Overfull \hbox (31.69977pt too wide) in paragraph at lines 6--6
+Overfull \hbox (31.69977pt too wide) in paragraph at lines 5--5
  []\OT1/cmr/m/it/10 Patrick 
  []
 
 
-Overfull \hbox (24.16093pt too wide) in paragraph at lines 6--6
+Overfull \hbox (24.16093pt too wide) in paragraph at lines 5--5
  \OT1/cmr/m/it/10 Lewis 
  []
 
 ! Undefined control sequence.
-l.7 	{\Large
-            \itshape Queens' College}
+l.6 	{\Large
+            \itshape Queens' College, Cambridge \par}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
 misspelled it (e.g., `\hobx'), type `I' and the correct
@@ -293,44 +185,227 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.7 	{\Large\itshape Q
-                      ueens' College}
+l.6 	{\Large\itshape Q
+                      ueens' College, Cambridge \par}
 You're in trouble here.  Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
+
+Overfull \hbox (34.49977pt too wide) in paragraph at lines 6--6
+ []\OT1/cmr/m/it/10 Queens' 
+ []
+
+
+Overfull \hbox (18.39987pt too wide) in paragraph at lines 6--6
+ \OT1/cmr/m/it/10 Col- 
+ []
+
+
+Overfull \hbox (18.91095pt too wide) in paragraph at lines 6--6
+ \OT1/cmr/m/it/10 lege, 
+ []
+
+
+Overfull \hbox (24.02206pt too wide) in paragraph at lines 6--6
+ \OT1/cmr/m/it/10 Cam- 
+ []
+
+
+Overfull \hbox (26.19424pt too wide) in paragraph at lines 6--6
+ \OT1/cmr/m/it/10 bridge 
+ []
+
 ! Undefined control sequence.
-l.9 	{\large
-             March 2016\par}
+l.8 	\includegraphics
+                     [width=0.9\textwidth]{Title_Page/front_page.png}\par\vs...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
 misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-Missing character: There is no M in font nullfont!
-Missing character: There is no a in font nullfont!
-Missing character: There is no r in font nullfont!
-Missing character: There is no c in font nullfont!
+
+! LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.8 	\includegraphics[
+                      width=0.9\textwidth]{Title_Page/front_page.png}\par\vs...
+
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+Missing character: There is no [ in font nullfont!
+Missing character: There is no w in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no t in font nullfont!
 Missing character: There is no h in font nullfont!
+Missing character: There is no = in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no 9 in font nullfont!
+! Missing number, treated as zero.
+<to be read again> 
+                   ]
+l.8 	\includegraphics[width=0.9\textwidth]
+                                          {Title_Page/front_page.png}\par\vs...
+A number should have been here; I inserted `0'.
+(If you can't figure out why I needed to see a number,
+look up `weird error' in the index to The TeXbook.)
+
+! Illegal unit of measure (pt inserted).
+<to be read again> 
+                   ]
+l.8 	\includegraphics[width=0.9\textwidth]
+                                          {Title_Page/front_page.png}\par\vs...
+Dimensions can be in units of em, ex, in, pt, pc,
+cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
+I'll assume that you meant to say pt, for printer's points.
+To recover gracefully from this error, it's best to
+delete the erroneous units; e.g., type `2' to delete
+two letters. (See Chapter 27 of The TeXbook.)
+
+Missing character: There is no ] in font nullfont!
+Missing character: There is no T in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no e in font nullfont!
+! Missing $ inserted.
+<inserted text> 
+                $
+l.8 	\includegraphics[width=0.9\textwidth]{Title_
+                                                 Page/front_page.png}\par\vs...
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <7> on input line 8.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <5> on input line 8.
+! Extra }, or forgotten $.
+l.8 ...h=0.9\textwidth]{Title_Page/front_page.png}
+                                                  \par\vspace{0.5cm}
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.8 ...9\textwidth]{Title_Page/front_page.png}\par
+                                                  \vspace{0.5cm}
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+Overfull \hbox (90.59348pt too wide) in paragraph at lines 8--8
+ []$[]\OML/cmm/m/it/10 age=front[]age:png$ 
+ []
+
+! Undefined control sequence.
+l.9 	{\Large
+            \itshape Department of Chemistry\\University of Cambridge\par}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+! LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.9 	{\Large\itshape D
+                      epartment of Chemistry\\University of Cambridge\par}
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+Overfull \hbox (51.12184pt too wide) in paragraph at lines 9--9
+ []\OT1/cmr/m/it/10 Department 
+ []
+
+
+Overfull \hbox (8.17773pt too wide) in paragraph at lines 9--9
+ \OT1/cmr/m/it/10 of 
+ []
+
+
+Overfull \hbox (28.62202pt too wide) in paragraph at lines 9--9
+ \OT1/cmr/m/it/10 Chem- 
+ []
+
+
+Overfull \hbox (19.54985pt too wide) in paragraph at lines 9--9
+ \OT1/cmr/m/it/10 istry 
+ []
+
+
+! LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.9 	{\Large\itshape Department of Chemistry\\U
+                                               niversity of Cambridge\par}
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+Overfull \hbox (44.8719pt too wide) in paragraph at lines 9--9
+ []\OT1/cmr/m/it/10 University 
+ []
+
+
+Overfull \hbox (8.17773pt too wide) in paragraph at lines 9--9
+ \OT1/cmr/m/it/10 of 
+ []
+
+
+Overfull \hbox (24.02206pt too wide) in paragraph at lines 9--9
+ \OT1/cmr/m/it/10 Cam- 
+ []
+
+
+Overfull \hbox (26.19424pt too wide) in paragraph at lines 9--9
+ \OT1/cmr/m/it/10 bridge 
+ []
+
+! Undefined control sequence.
+l.11 	{\large
+              2016\par}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+! LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.11 	{\large 2
+               016\par}
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
 Missing character: There is no 2 in font nullfont!
 Missing character: There is no 0 in font nullfont!
 Missing character: There is no 1 in font nullfont!
 Missing character: There is no 6 in font nullfont!
-
-Overfull \hbox (34.49977pt too wide) in paragraph at lines 7--9
- []\OT1/cmr/m/it/10 Queens' 
- []
-
-
-Overfull \hbox (18.39987pt too wide) in paragraph at lines 7--9
- \OT1/cmr/m/it/10 Col- 
- []
-
-
-Overfull \hbox (15.8443pt too wide) in paragraph at lines 7--9
- \OT1/cmr/m/it/10 lege 
- []
-
 
 ! LaTeX Error: \begin{document} ended by \end{titlepage}.
 
@@ -338,7 +413,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.10 \end{titlepage}
+l.12 \end{titlepage}
                     
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
@@ -347,7 +422,7 @@ or  <return>  to continue without it.
 ! Missing } inserted.
 <inserted text> 
                 }
-l.10 \end{titlepage}
+l.12 \end{titlepage}
                     
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -363,11 +438,11 @@ my insertion and my current dilemma will both disappear.
 
  
 Here is how much of TeX's memory you used:
- 12 strings out of 493118
- 209 string characters out of 6135458
- 52906 words of memory out of 5000000
+ 12 strings out of 493117
+ 209 string characters out of 6135432
+ 53909 words of memory out of 5000000
  3574 multiletter control sequences out of 15000+600000
  3986 words of font info for 15 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 18i,1n,12p,120b,81s stack positions out of 5000i,500n,10000p,200000b,80000s
-No pages of output.
+ 18i,1n,12p,121b,93s stack positions out of 5000i,500n,10000p,200000b,80000s
+!  ==> Fatal error occurred, no output PDF file produced!

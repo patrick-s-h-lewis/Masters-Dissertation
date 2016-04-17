@@ -6,97 +6,100 @@
   \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
 
 \bibitem[Everitt(1998)]{dendrogram}
-Brian~S. Everitt.
+BS~Everitt.
 \newblock \emph{Cambridge Dictionary of Statistics}.
 \newblock Cambridge University Press, 1998.
 \newblock ISBN 0521593468.
 
 \bibitem[et~al.(2016)]{seaborn}
-Michael~Waskom et~al.
-\newblock seaborn: v0.7.0 (january 2016).
-\newblock 2016.
-\newblock \doi{10.5281/zenodo.45133}.
+M~Waskom et~al.
+\newblock seaborn: v0.7.0, 2016.
 \newblock URL \url{http://dx.doi.org/10.5281/zenodo.45133}.
+\newblock [Online; accessed 2016-03-26].
 
-\bibitem[Jones et~al.(2001--)Jones, Oliphant, Peterson, et~al.]{scipy}
-Eric Jones, Travis Oliphant, Pearu Peterson, et~al.
+\bibitem[Jones et~al.(2001--)Jones, Oliphant, and et~al.]{scipy}
+E~Jones, T~Oliphant, and P~Peterson et~al.
 \newblock {SciPy}: Open source scientific tools for {Python}, 2001--.
 \newblock URL \url{http://www.scipy.org/}.
 \newblock [Online; accessed 2016-03-30].
 
-\bibitem[Blondel et~al.(2008)Blondel, Guillaume, and
-  Renaud~Lambiotte]{modularity1}
-Vincent~D Blondel, Jean-Loup Guillaume, and Etienne~Lefebvre Renaud~Lambiotte.
+\bibitem[Blondel et~al.(2008)Blondel, Guillaume, Lambiotte, and
+  Lefebvre]{modularity1}
+VD~Blondel, JL~Guillaume, R~Lambiotte, and E~Lefebvre.
 \newblock Fast unfolding of communities in large networks.
 \newblock \emph{Journal of Statistical Mechanics: Thory and Experiment},
   10:\penalty0 1000, 2008.
 
 \bibitem[Lambiotte et~al.(2015)Lambiotte, Delvenne, and Barahona]{modularity2}
-R.~Lambiotte, J.-C. Delvenne, and M.~Barahona.
+R~Lambiotte, JC~Delvenne, and M~Barahona.
 \newblock Laplacian dynamics and multiscale modular structure in networks.
 \newblock \emph{IEEE Transactions on Network Science and Engineering},
   1:\penalty0 76--90, 2015.
+\newblock \doi{10.1109/TNSE.2015.2391998}.
 
 \bibitem[Foundation(2009)]{crossref-formation}
 Crossref Foundation.
 \newblock \emph{The Formation of CrossRef: A Short History}.
-\newblock 2009.
+\newblock Crossref, 2009.
 \newblock URL \url{http://www.crossref.org/08downloads/CrossRef10Years.pdf}.
 \newblock [Online; accessed 2016-03-10].
 
 \bibitem[Paskin(2010)]{glossarydoi}
-Norman Paskin.
+N~Paskin.
 \newblock Digital object identifier (doi\textsuperscript{\textregistered})
   system.
 \newblock \emph{Encyclopedia of Libary and Information Sciences}, pages
   1586--1592, 2010.
 
-\bibitem[doi(2014)]{doi_handbook2}
-The doi handbook - international doi foundation (2016).
+\bibitem[Foundation(2014)]{doi_handbook2}
+International~DOI Foundation.
+\newblock \emph{The DOI Handbook - International DOI Foundation (2016)}.
 \newblock 2014.
+\newblock \doi{10.1000/182}.
 \newblock URL \url{http://www.doi.org/doi_handbook/7_IDF.html#7.2.1}.
 \newblock [online; Accessed 2016-03-25].
 
 \bibitem[Paice(1990)]{lancaster}
-Chris~D. Paice.
+CD~Paice.
 \newblock Another stemmer.
-\newblock \emph{SIGIR Forum}, 24\penalty0 (3):\penalty0 56--61, November 1990.
+\newblock \emph{SIGIR Forum}, 24\penalty0 (3):\penalty0 56--61, 1990.
 \newblock ISSN 0163-5840.
 \newblock \doi{10.1145/101306.101310}.
-\newblock URL \url{http://doi.acm.org/10.1145/101306.101310}.
 
 \bibitem[glo(2016)]{glossarymachinelearning}
-"machine learning". encyclopædia britannica. encyclopædia britannica online.
-\newblock \emph{Encyclopædia Britannica Inc.}, 2016.
+``machine learning''. encyclopædia britannica. encyclopædia britannica
+  online., 2016.
 \newblock URL \url{http://www.britannica.com/technology/machine-learning}.
 \newblock [Online; Accessed 2016-03-25].
 
 \bibitem[Pearson(1901)]{PCA}
-Karl Pearson.
+K~Pearson.
 \newblock {LIII}. on lines and planes of closest fit to systems of points in
   space.
 \newblock \emph{Philosophical Magazine Series 6}, 2\penalty0 (11):\penalty0
   559--572, nov 1901.
 \newblock \doi{10.1080/14786440109462720}.
-\newblock URL \url{http://dx.doi.org/10.1080/14786440109462720}.
 
 \bibitem[Porter(1980)]{porter}
-M.~F. Porter.
+MF~Porter.
 \newblock \emph{An Algorithm for Suffix Stripping}, volume~14.
-\newblock 1980.
+\newblock Emerald Publishing, 1980.
 
 \bibitem[Porter(2002)]{snowball}
-M.~F. Porter.
+MF~Porter.
 \newblock {The Porter2 stemming algorithm}, 2002.
+\newblock URL
+  \url{http://snowball.tartarus.org/algorithms/english/stemmer.html}.
+\newblock [Online; accessed 2016-03-25].
 
-\bibitem[LJP van~der Maaten(2008)]{tsne1}
-GE~Hinton LJP van~der Maaten.
+\bibitem[van~der Maaten and Hinton(2008)]{tsne1}
+LJP van~der Maaten and GE~Hinton.
 \newblock Visualizing high-dimensional data using t-sne.
 \newblock \emph{Journal of Machine Learning Research}, 9:\penalty0 2579--2605,
   2008.
 
-\bibitem[R and C(1958)]{heatmapcluster}
-Sokal R and Michener C.
+\bibitem[Sokal and Michener(1958)]{heatmapcluster}
+R~Sokal and C~Michener.
 \newblock A statistical method for evaluating systematic relationships.
 \newblock \emph{University of Kansas Science Bulletin}, 38:\penalty0
   1409--–1438, 1958.
@@ -104,71 +107,74 @@ Sokal R and Michener C.
 \bibitem[Consortium(2010)]{utf8}
 The~Unicode Consortium.
 \newblock \emph{Unicode\textsuperscript{\textregistered} 6.0.0}.
-\newblock 2010.
+\newblock The Unicode Consortium, 2010.
 \newblock ISBN 978-1-936213-01-6.
 \newblock URL \url{http://www.unicode.org/versions/Unicode6.0.0/}.
 \newblock [online; Accessed 2016-03-25].
 
 \bibitem[Davis(2010)]{utf8stats}
-Mark Davis.
+M~Davis.
 \newblock Unicode nearing 50\% of the web.
 \newblock \emph{Official Google Blog}, 2010.
 \newblock [online; Accessed 2016-03-25].
 
 \bibitem[Mikolov et~al.(2013{\natexlab{a}})Mikolov, Chen, Corrado, and
   Dean]{word2vec1}
-Tomas Mikolov, Kai Chen, Greg Corrado, and Jeffrey Dean.
+T~Mikolov, K~Chen, G~Corrado, and Jeffrey Dean.
 \newblock Efficient estimation of word representations in vector space.
-\newblock \emph{CoRR}, abs/1301.3781, 2013{\natexlab{a}}.
+\newblock \emph{CoRR}, 2013{\natexlab{a}}.
 \newblock URL \url{http://arxiv.org/abs/1301.3781}.
 
 \bibitem[Mikolov et~al.(2013{\natexlab{b}})Mikolov, Sutskever, Chen, Corrado,
   and Dean]{word2vec2}
-Tomas Mikolov, Ilya Sutskever, Kai Chen, Greg Corrado, and Jeffrey Dean.
+T~Mikolov, I~Sutskever, K~Chen, G~Corrado, and J~Dean.
 \newblock Distributed representations of words and phrases and their
   compositionality.
-\newblock \emph{CoRR}, abs/1310.4546, 2013{\natexlab{b}}.
+\newblock \emph{CoRR}, 2013{\natexlab{b}}.
 \newblock URL \url{http://arxiv.org/abs/1310.4546}.
 
 \bibitem[Feinerer and Hornik(2016)]{wordnet1}
-Ingo Feinerer and Kurt Hornik.
+I~Feinerer and K~Hornik.
 \newblock \emph{wordnet: WordNet Interface}, 2016.
 \newblock URL \url{https://CRAN.R-project.org/package=wordnet}.
-\newblock R package version 0.1-11.
+\newblock R package version 0.1-11, [Online; accessed 2016-03-24].
 
 \bibitem[Wallace(2007)]{wordnet2}
-Mike Wallace.
+M~Wallace.
 \newblock \emph{Jawbone Java WordNet API}, 2007.
 \newblock URL \url{http://mfwallace.googlepages.com/jawbone}.
+\newblock [Online; accessed 2016-03-26].
 
 \bibitem[Fellbaum(1998)]{wordnet3}
-Christiane Fellbaum.
+C~Fellbaum.
 \newblock \emph{WordNet: An Electronic Lexical Database}.
 \newblock Bradford Books, 1998.
 
 \bibitem[Ullah and Giles(2010)]{zipf}
-A.~Ullah and D.E.A. Giles.
+A~Ullah and DEA Giles.
 \newblock \emph{Handbook of Empirical Economics and Finance}.
 \newblock Statistics: A Series of Textbooks and Monographs. CRC Press, 2010.
 \newblock ISBN 9781420070361.
-\newblock URL \url{https://books.google.co.uk/books?id=QAUv9R6bJzwC}.
 
-\bibitem[doi(2016)]{doi_handbook1}
-The doi handbook - numbering (2014).
+\bibitem[Foundation(2016)]{doi_handbook1}
+International~DOI Foundation.
+\newblock \emph{The DOI Handbook - Numbering (2014)}.
 \newblock 2016.
+\newblock \doi{10.1000/182}.
 \newblock URL \url{https://www.doi.org/doi_handbook/2_Numbering.html#2.2.2}.
 \newblock [online; Accessed 2016-03-25].
 
 \bibitem[the(2014)]{thelaw}
 The copyright and rights in performances (research, education, libraries and
-  archives) regulations, no. 1372 regulation 3.
-\newblock 2014.
+  archives) regulations, no. 1372 regulation 3., 2014.
 \newblock URL
   \url{http://www.legislation.gov.uk/uksi/2014/1372/regulation/3/made}.
 \newblock [Online;accessed 2016-03-22].
 
-\bibitem[con(2015)]{contentminelegal}
-Responsible content mining.
+\bibitem[Haeussler et~al.(2015)Haeussler, Molloy, Murray-Rust, and
+  Oppenheim]{contentminelegal}
+M~Haeussler, J~Molloy, P~Murray-Rust, and C~Oppenheim.
+\newblock Responsible content mining.
 \newblock 2015.
 \newblock URL
   \url{http://contentmine.org/wp-content/uploads/2015/06/responsible-content-mining-1.pdf}.
@@ -176,7 +182,7 @@ Responsible content mining.
 
 \bibitem[Mikolov et~al.(2013{\natexlab{c}})Mikolov, tau Yih, and
   Zweig]{word2veckingqueen}
-Tomas Mikolov, Wen tau Yih, and Geoffrey Zweig.
+T~Mikolov, Wen tau Yih, and G~Zweig.
 \newblock Linguistic regularities in continuous space word representations.
 \newblock In \emph{Proceedings of the 2013 Conference of the North American
   Chapter of the Association for Computational Linguistics: Human Language
@@ -185,52 +191,48 @@ Tomas Mikolov, Wen tau Yih, and Geoffrey Zweig.
 \newblock URL
   \url{http://research.microsoft.com/apps/pubs/default.aspx?id=189726}.
 
-\bibitem[Rumelhart et~al.(1986)Rumelhart, McClelland, and PDP
-  Research~Group]{distributedrepresentations}
-David~E. Rumelhart, James~L. McClelland, and CORPORATE PDP Research~Group,
-  editors.
+\bibitem[Rumelhart and JL~McClelland(1986)]{distributedrepresentations}
+DE~Rumelhart and PDP Research~Group JL~McClelland, editors.
 \newblock \emph{Parallel Distributed Processing: Explorations in the
   Microstructure of Cognition, Vol. 1: Foundations}.
 \newblock MIT Press, Cambridge, MA, USA, 1986.
 \newblock ISBN 0-262-68053-X.
 
 \bibitem[{\v R}eh{\r u}{\v r}ek and Sojka(2010)]{gensim}
-Radim {\v R}eh{\r u}{\v r}ek and Petr Sojka.
+R~{\v R}eh{\r u}{\v r}ek and P~Sojka.
 \newblock {Software Framework for Topic Modelling with Large Corpora}.
 \newblock In \emph{{Proceedings of the LREC 2010 Workshop on New Challenges for
   NLP Frameworks}}, pages 45--50, Valletta, Malta, May 2010. ELRA.
 \newblock \url{http://is.muni.cz/publication/884893/en}.
 
 \bibitem[Le and Mikolov(2014)]{doc2vec}
-Quoc~V. Le and Tomas Mikolov.
+QV~Le and T~Mikolov.
 \newblock Distributed representations of sentences and documents.
 \newblock \emph{CoRR}, abs/1405.4053, 2014.
 \newblock URL \url{http://arxiv.org/abs/1405.4053}.
 
 \bibitem[Bird et~al.(2009)Bird, Klein, and Loper]{nltk}
-Steven Bird, Ewan Klein, and Edward Loper.
+S~Bird, E~Klein, and E~Loper.
 \newblock \emph{Natural Language Processing with Python}.
 \newblock O'Reilly Media, Inc., 1st edition, 2009.
 \newblock ISBN 0596516495, 9780596516499.
 
 \bibitem[Seesukphronrarak and Takata(2007)]{sanex}
-Surasak Seesukphronrarak and Toshikazu Takata.
+S~Seesukphronrarak and T~Takata.
 \newblock Novel fluorene-based biphenolic monomer: 9,
   9-bis(4-hydroxyphenyl)-9-silafluorene.
 \newblock \emph{Chem. Lett.}, 36\penalty0 (9):\penalty0 1138--1139, 2007.
 \newblock \doi{10.1246/cl.2007.1138}.
-\newblock URL \url{http://dx.doi.org/10.1246/cl.2007.1138}.
 
 \bibitem[Tsaplev(2012)]{docassay}
-Yu.~B. Tsaplev.
+YB~Tsaplev.
 \newblock Photochemical transformations of anthraquinone in polymeric alcohols.
 \newblock \emph{Russian Journal of Physical Chemistry A}, 86\penalty0
   (12):\penalty0 1909--1914, oct 2012.
 \newblock \doi{10.1134/s0036024412120266}.
-\newblock URL \url{http://dx.doi.org/10.1134/s0036024412120266}.
 
 \bibitem[van~der Maaten(2014)]{bhtsne}
-Laurens van~der Maaten.
+LJP van~der Maaten.
 \newblock Accelerating t-sne using tree-based algorithms.
 \newblock \emph{Journal of Machine Learning Research}, 15:\penalty0 3221--3245,
   2014.
@@ -239,44 +241,47 @@ Laurens van~der Maaten.
 \bibitem[Pedregosa et~al.(2011)Pedregosa, Varoquaux, Gramfort, Michel, Thirion,
   Grisel, Blondel, Prettenhofer, Weiss, Dubourg, Vanderplas, Passos,
   Cournapeau, Brucher, Perrot, and Duchesnay]{scikitlearn}
-F.~Pedregosa, G.~Varoquaux, A.~Gramfort, V.~Michel, B.~Thirion, O.~Grisel,
-  M.~Blondel, P.~Prettenhofer, R.~Weiss, V.~Dubourg, J.~Vanderplas, A.~Passos,
-  D.~Cournapeau, M.~Brucher, M.~Perrot, and E.~Duchesnay.
+F~Pedregosa, G~Varoquaux, A~Gramfort, V~Michel, B~Thirion, O~Grisel, M~Blondel,
+  P~Prettenhofer, R~Weiss, V~Dubourg, J~Vanderplas, A~Passos, D.~Cournapeau,
+  M~Brucher, M.~Perrot, and E~Duchesnay.
 \newblock Scikit-learn: Machine learning in {P}ython.
 \newblock \emph{Journal of Machine Learning Research}, 12:\penalty0 2825--2830,
   2011.
 
 \bibitem[Bastian et~al.(2009)Bastian, Heymann, and Jacomy]{gephi}
-Mathieu Bastian, Sebastien Heymann, and Mathieu Jacomy.
+M~Bastian, S~Heymann, and M~Jacomy.
 \newblock Gephi: An open source software for exploring and manipulating
   networks.
-\newblock 2009.
+\newblock \emph{International AAAI Conference on Weblogs and Social Media},
+  2009.
 \newblock URL \url{http://www.aaai.org/ocs/index.php/ICWSM/09/paper/view/154}.
 
 \bibitem[P\'erez and Granger(2007)]{jupyter}
-Fernando P\'erez and Brian~E. Granger.
+F~P\'erez and BE~Granger.
 \newblock {IP}ython: a system for interactive scientific computing.
 \newblock \emph{Computing in Science and Engineering}, 9\penalty0 (3):\penalty0
-  21--29, May 2007.
+  21--29, 2007.
 \newblock ISSN 1521-9615.
 \newblock \doi{10.1109/MCSE.2007.53}.
 \newblock URL \url{http://ipython.org}.
 
 \bibitem[Hunter(2007)]{matplotlib}
-John~D. Hunter.
+JD~Hunter.
 \newblock Matplotlib: A 2d graphics environment, 2007.
+\newblock URL \url{http://matplotlib.org}.
+\newblock [Online; accessed 2016-03-26].
 
-\bibitem[Stéfan van~der Walt and Varoquaux(2011)]{numpy}
-S.~Chris~Colbert Stéfan van~der Walt and Gaël Varoquaux.
+\bibitem[van~der Walt et~al.(2011)van~der Walt, Colbert, and Varoquaux]{numpy}
+S~van~der Walt, SC~Colbert, and G~Varoquaux.
 \newblock The numpy array: A structure for efficient numerical computation,
   2011.
 
 \bibitem[McKinney(2010)]{pandas}
-Wes McKinney.
+W~McKinney.
 \newblock Data structures of statistical computing in python, 2010.
 
 \bibitem[Tsuji(2004)]{palladium}
-Jiro Tsuji.
+J~Tsuji.
 \newblock \emph{Palladium Reagents and Catalysts: New Perspectives for the 21st
   Century}.
 \newblock Wiley, 2004.
@@ -284,26 +289,23 @@ Jiro Tsuji.
 
 \bibitem[pgm(2000)]{pgm}
 \emph{Ullmann's Encyclopedia of Industrial Chemistry}.
-\newblock Wiley-Blackwell, jun 2000.
+\newblock Wiley-Blackwell, 2000.
 \newblock \doi{10.1002/14356007}.
-\newblock URL \url{http://dx.doi.org/10.1002/14356007}.
 
 \bibitem[Bricout et~al.(1998)Bricout, Carpentier, and Mortreux]{nickel}
-Herv{\'{e}} Bricout, Jean-Fran{\c{c}}ois Carpentier, and Andr{\'{e}} Mortreux.
+H~Bricout, JF~Carpentier, and A~Mortreux.
 \newblock Nickel vs. palladium catalysts for coupling reactions of allyl
   alcohol with soft nucleophiles: activities and deactivation processes.
 \newblock \emph{Journal of Molecular Catalysis A: Chemical}, 136\penalty0
-  (3):\penalty0 243--251, dec 1998.
+  (3):\penalty0 243--251, 1998.
 \newblock \doi{10.1016/s1381-1169(98)00067-3}.
-\newblock URL \url{http://dx.doi.org/10.1016/S1381-1169(98)00067-3}.
 
 \bibitem[Bonarowska et~al.(2014)Bonarowska, Machynskyy, {\L}omot, Kemnitz, and
   Karpi{\'{n}}ski]{copper}
-M.~Bonarowska, O.~Machynskyy, D.~{\L}omot, E.~Kemnitz, and Z.~Karpi{\'{n}}ski.
+M~Bonarowska, O~Machynskyy, D~{\L}omot, E~Kemnitz, and Z~Karpi{\'{n}}ski.
 \newblock Supported palladium{\textendash}copper catalysts: Preparation and
   catalytic behavior in hydrogen-related reactions.
-\newblock \emph{Catalysis Today}, 235:\penalty0 144--151, oct 2014.
+\newblock \emph{Catalysis Today}, 235:\penalty0 144--151, 2014.
 \newblock \doi{10.1016/j.cattod.2014.01.029}.
-\newblock URL \url{http://dx.doi.org/10.1016/j.cattod.2014.01.029}.
 
 \end{thebibliography}

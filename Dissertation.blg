@@ -3,60 +3,49 @@ Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: Dissertation.aux
 The style file: unsrtnat.bst
 Database file #1: References.bib
-Warning--empty journal in seaborn
-Warning--empty publisher in crossref-formation
-Warning--empty author in doi_handbook2
-Warning--empty journal in doi_handbook2
-Warning--empty author in glossarymachinelearning
-Warning--empty publisher in porter
-Warning--empty publisher in utf8
-Warning--empty author in doi_handbook1
-Warning--empty journal in doi_handbook1
-Warning--empty author in thelaw
-Warning--empty journal in thelaw
-Warning--empty author in contentminelegal
+Warning--empty publisher in doi_handbook2
+Warning--empty publisher in doi_handbook1
 Warning--empty journal in contentminelegal
-Warning--empty journal in gephi
 Warning--empty author and editor in pgm
 You've used 44 entries,
             2481 wiz_defined-function locations,
-            829 strings with 12078 characters,
-and the built_in function-call counts, 15017 in all, are:
-= -- 1330
-> -- 613
-< -- 29
-+ -- 268
-- -- 178
-* -- 1077
-:= -- 2369
+            831 strings with 11778 characters,
+and the built_in function-call counts, 15169 in all, are:
+= -- 1328
+> -- 662
+< -- 31
++ -- 282
+- -- 192
+* -- 1055
+:= -- 2424
 add.period$ -- 176
 call.type$ -- 44
-change.case$ -- 77
+change.case$ -- 75
 chr.to.int$ -- 42
-cite$ -- 65
-duplicate$ -- 822
-empty$ -- 1448
-format.name$ -- 232
-if$ -- 3213
+cite$ -- 51
+duplicate$ -- 812
+empty$ -- 1452
+format.name$ -- 251
+if$ -- 3248
 int.to.chr$ -- 3
 int.to.str$ -- 45
-missing$ -- 45
+missing$ -- 44
 newline$ -- 269
-num.names$ -- 115
-pop$ -- 380
+num.names$ -- 124
+pop$ -- 393
 preamble$ -- 1
 purify$ -- 44
 quote$ -- 0
-skip$ -- 488
+skip$ -- 487
 stack$ -- 0
-substring$ -- 493
+substring$ -- 490
 swap$ -- 116
 text.length$ -- 3
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 278
-warning$ -- 15
-while$ -- 106
+type$ -- 272
+warning$ -- 4
+while$ -- 112
 width$ -- 0
-write$ -- 633
-(There were 15 warnings)
+write$ -- 637
+(There were 4 warnings)
