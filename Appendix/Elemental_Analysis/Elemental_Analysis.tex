@@ -1,3 +1,4 @@
+\addtocounter{page}{1}
 \label{sec:Elemental_Analysis}
 As an investigation into the utility of word vectors trained, it was decided to briefly investigate the word similarities between chemical elements. This analysis is included as an appendix as there was not sufficient space for it to be included in the main body, and due to its `self-contained` nature. It was hoped that this short investigation would provided evidence that methods sketched in \S\ref{sec:recomm_word_vectors} could work.
 
@@ -16,12 +17,14 @@ A CBOW model was trained using this modified input data with the same presets as
 \end{itemize}
 
 \afterpage{%
+\addtocounter{page}{-2}
+
 \thispagestyle{empty}
 \begin{figure}[H]
 \thispagestyle{empty}  
   \centering
       \vspace*{-2cm}
-    \makebox[\textwidth][c]{\includegraphics[width=1.2\textwidth]{Appendix/Elemental_Analysis/elements_dendro.png}}
+    \makebox[\textwidth][c]{\includegraphics[width=1.2\textwidth]{Appendix/Elemental_Analysis/elements_dendro2.png}}
     \caption[Dendrogram for UPGMA Clustering of Chemical Element Vectors]{Dendrogram for UPGMA clustering of chemical element vectors. Colours indicate distinct branches}
     \label{fig:elems_dendro}
 \end{figure}
@@ -29,10 +32,10 @@ A CBOW model was trained using this modified input data with the same presets as
 \clearpage
 }
 
-The dendrogram shows that the classifications broadly fall into intelligible categories within the periodic table. There are, however, some surprises, especially the halogens, with bromine in  the actinoid subbranch, and chlorine associating with copernicium. This may be because the symbols Cl and Cn occur together often in the literature due to mentions of carbon and nitrogen, not copernicium. Similar reasoning can be used for bromine (\texttt{cf br} could refer to a CFC rather than californium and bromine) This exposes a flaw in the symbol/name association process that could be tackled in further work.
+The dendrogram shows that the classifications broadly fall into intelligible categories within the periodic table. There are, however, some surprises, especially the halogens, with bromine in  the actinoid subbranch, and chlorine associating with copernicium. This may be because the symbols Cl and Cn occur together often in the literature due to mentions of carbon and nitrogen, not copernicium (or Cp for cp$^{-}$ ligand). Similar reasoning can be used for bromine (\texttt{cf br} could refer to a CFC rather than californium and bromine) This exposes a flaw in the symbol/name association process that could be tackled in further work.
 
-The graph visualisation of the same Cosine Similarity matrix is shown in figure \ref{fig:elems_graph} (Also the front cover of this dissertation). Period 7 was removed from this graph as there were too few mentions in the corpus for reliable vectors\footnote{Uranium was kept as it had non-negligible corpus mentions}, and to remove cluttering nodes.
-
+\newpage
+\addtocounter{page}{1}
 \begin{center}
 \begin{figure}[H]
   \centering
@@ -42,6 +45,18 @@ The graph visualisation of the same Cosine Similarity matrix is shown in figure 
     \label{fig:elems_graph}
 \end{figure} 
 \end{center}
+\newpage
+The graph visualisation of the same Cosine Similarity matrix is shown in figure \ref{fig:elems_graph} (Also the front cover of this dissertation). Period 7 was removed from this graph as there were too few mentions in the corpus for reliable vectors\footnote{Uranium was kept as it had non-negligible corpus mentions}, and to remove cluttering nodes.
+
+%\begin{center}
+%\begin{figure}[H]
+%  \centering
+%  \textbf{Graph visualisation of chemical element vectors}
+%    \includegraphics[width=\textwidth]{Title_Page/front_page.png}
+%    \caption[Graph Visualisation of Chemical Element Vectors]{Nodes are coloured by their communities, and are spatially arranged by modelling edge weights as springs. Node sizes are proportional to their connectivity. Edge threshold used was 0.35 }
+%    \label{fig:elems_graph}
+%\end{figure} 
+%\end{center}
 5 distinct communities were identified:
 \begin{itemize}
 \itemsep-0.5em
@@ -54,6 +69,7 @@ The graph visualisation of the same Cosine Similarity matrix is shown in figure 
 The community finding process reflects a similar situation to the UPGMA process, but is perhaps more successful. The removal of the actinoids appears to have improved community finding. The community finding process was repeated with period 7 included, resulting in broadly the same communities, but with bromine and chlorine leaving the community marked in purple to join a a loose community of actinoids, however they remained strongly associated with each other. The degree of connectivity between nodes is similar for most nodes, but larger for some nodes, e.g. beryllium, which is difficult to interpret. 
 
 Attention was turned to a practical example. Palladium is used widely in catalysis but is rare and expensive, and alternatives would be economically and environmentally beneficial\cite{palladium}. With this in mind, the cosine similarities of all the elements to palladium vector were computed, and a selection of metallic elements with high similarity is shown in figure \ref{fig:palladium}. 
+\newpage
 \begin{center}
 \begin{figure}[H]
   \centering
@@ -63,7 +79,17 @@ Attention was turned to a practical example. Palladium is used widely in catalys
     \label{fig:palladium}
 \end{figure} 
 \end{center}
-\vspace{-1cm}
+\newpage
+%\begin{center}
+%\begin{figure}[H]
+%  \centering
+%  \textbf{Selected Metallic Elements' Cosine Similarity to Palladium Vector}
+%    \includegraphics[width=\textwidth]{Appendix/Elemental_Analysis/metals_sorted.png}
+%    \caption[Selected metallic elements' cosine similarity to palladium vector]{The metals are ordered to to bottom from most similar (long bars, red) to low similarity (short bars, blue). The colours are a guide to the eye.}
+%    \label{fig:palladium}
+%\end{figure} 
+%\end{center}
+%\vspace{-1cm}
 Platinum, rhodium, ruthenium, copper and nickel all had very high scores. The models could be interpreted as suggesting that these metals have similar properties to palladium. This is very much the case for platinum and rhodium (pd, pt and rd are all platinium group metals)\cite{pgm}. Nickel and copper are predicted to be similar to palladium, and there is evidence that nickel could be used for some palladium-catalysed reactions \cite{nickel}, whereas copper is often combined with palladium to form more effective catalysts \cite{copper}. Thus it could be argued the models suggest that more attention should be focussed to nickel catalysis.
 
 This analysis, whilst brief, is promising. This lends weight that more in-depth considerations of word vectors and concept vectors would be fruitful.

@@ -34,6 +34,30 @@
 
 \bibliographystyle{unsrtnat}
 
+\newcommand\blankpagenum{%
+    \afterpage{
+    \null    
+    %\addtocounter{page}{-1}
+    \newpage    
+    }
+}
+\newcommand\veryblankpage{%
+    \null
+    \thispagestyle{empty}%
+    \addtocounter{page}{-1}%
+    \newpage}
+
+
+\newcommand\blankpageone{%
+    \null
+    \addtocounter{page}{-1}%
+    \newpage
+    }
+
+
+
+
+
 \makeatletter
 \def\@makechapterhead#1{%
   \vspace*{50\p@}%
@@ -93,20 +117,22 @@
 \begin{document}
 \glsaddall
 %\maketitle
+
 \input{Title_Page/titlepage}
+\veryblankpage
 \begin{disclaimer}
 \input{Disclaimer/Disclaimer}
 \end{disclaimer}
+\veryblankpage
 \begin{acknowledgements}
 \input{Acknowledgements/Acknowledgements}
 \end{acknowledgements}
+\veryblankpage
 \begin{abstract}
 \input{Abstract/Abstract}
 \end{abstract}
-
 \tableofcontents
 \input{List_Of_Tables/List_Of_Tables}
-\listoffigures
 \printglossaries
 \input{Introduction/Introduction}
 \input{Data_Acquisition/Data_Acquisition}
@@ -115,6 +141,8 @@
 \input{Validation/Validation}
 \input{Analysis/Analysis}
 \input{Conclusions/alternate_conclusions}
+\newpage
+\null
 \input{Appendix/Appendix}
 \bibliography{References}
 \end{document}

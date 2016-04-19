@@ -5,6 +5,9 @@ Models should now be improved. Computing resources should be obtained to train h
 \subsection{Greater use of word vectors}
 \label{sec:recomm_word_vectors}
 This project focussed mainly on document vectors. However, word vectors may be very useful (see \S\ref{sec:Elemental_Analysis}). Methods for testing the quality of improved models should be develope, e.g  relationship-testing: e.g. \texttt{Fluorine} is to \texttt{Fluoride} as \texttt{Chlorine} is to \texttt{...} . Thousands of these relationships could be systematically built up to test model intuition\footnote{This would probably require larger, more descriptive training sets, e.g. textbook transcipts etc.} following the methodologies set out in the literature \cite{word2vec1}\cite{word2vec2}. Is it possible to predict chemical properties using semantic relationships in the literature? Vec(Compound A) + Vec(Compound B) + Vec(Lab Technique) may give vec(Product C). If so, it may be possible to highlight unexpected reactions. This could be coupled with the RInChI database to form new types of data-driven cheminformatics.
+\newpage
+\null
+\newpage
 \subsection{Time resolution in clustering}
 Methods have been described for clustering documents. The cluster centres represent the cluster content effectively. By finding early papers in the cluster, is it possible to identify influential papers/authors?
 By clustering on documents from particular years, is it possible to resolve a path for the evolving cluster centre vector? If so, it may be possible to extrapolate to \emph{predict} future research directions.

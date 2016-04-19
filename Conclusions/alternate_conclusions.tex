@@ -1,4 +1,5 @@
 \chapter{Conclusions}
+\addtocounter{page}{1}
 Focussing first on the data acquisition phase, the volumes of data collected from the UK chemistry departments was respectable, as was conversion rate from the potential results to fully-resolved records (72.9\%  to give 16363 records). The actual number of articles from UK chemistry departments can be confidently predicted to be considerably larger. The limited harvest could be down to the input list of scraping websites being too small. The procedure to identify webpages for scraping was limited where the departments did not host their own website, precluding large parts of many important departments. The data that was successfully resolved was of high relevance, with few false-positive inclusions. The scraping program was robust and efficient.
 
 The data collected in global scraping was sufficiently populous and chemistry-specific to enable effective models to be trained. It should be highlighted all the datasets were created from freely-available sources, requiring no subscription. alternative scraping tactics may be required to avoid IP banning if further scraping is required. This said, it must be acknowledged that the publisher banning was considered as a major failure in the project\footnote{The author wishes to thank the librarians and Professor Goodman addressing publisher troubles so efficiently.}.
@@ -7,7 +8,14 @@ It should be mentioned that there are existing meta-data stores available (e.g. 
 
 Thee premise of quantitative vectorial representation of articles has been realised, especially by the Doc2Vec model. The TF-IDF models failed to produce effective vectors, which is not well understood. The power of the model can begin to be seen in \S\ref{chapt:ANALYSIS}, where clustering performances were intuitive and instructive.
 Some model design choices may have limited specificity, such as the decision to use 100 dimensional vectors\footnote{Higher dimensional vectors have been shown to perform better \cite{word2vec1}}.
+\newpage
 
+\addtocounter{page}{-2}
+\null
+\newpage
+\addtocounter{page}{1}
+\null
+\newpage
 There is further potential within this project. Some further useful applications of the methodologies have been alluded to, some of which take the form of a \emph{service or tool} rather than concrete insights (on-demand similarities, clustering, recommendations of articles to read, research profiling etc.). The project scope had to be limited at some point. There are detailed discussions of recommended work, and some further investigations/analysis in the appendix \S\ref{chapt:appendix}, especially \S\ref{sec:Elemental_Analysis} on chemical element analysis\footnote{There was not room to include in the main dissertation due to length considerations but \S\ref{sec:Elemental_Analysis} illustrates further promise of the methods developed in this the project.} \footnote{It is the author's opinion that another project should be filled developing further uses of the dataset and extending the methodologies presented}.
 
 It is concluded that the aims set out in this project have been addressed, and there were no major barriers preventing the fulfilment of the project brief. 
